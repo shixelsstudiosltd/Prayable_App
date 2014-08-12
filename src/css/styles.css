@@ -10789,9 +10789,9 @@ Primary use:	Page Used for Login/Register Styles
 }
 /* line 167, ../scss/register.scss */
 .selection-container .t-glass {
-  border: 5px solid rgba(255, 255, 255, 0.2);
+  border: 5px solid rgba(255, 255, 255, 0.1);
 }
-/* line 171, ../scss/register.scss */
+/* line 170, ../scss/register.scss */
 .selection-container .select-box {
   border-radius: 2px 0 0 2px;
   height: 44px;
@@ -10802,27 +10802,27 @@ Primary use:	Page Used for Login/Register Styles
   text-align: center;
   line-height: 3.8em;
 }
-/* line 181, ../scss/register.scss */
+/* line 180, ../scss/register.scss */
 .selection-container .select-box.facebook {
   background: -moz-linear-gradient(top, #3b5998, #2b4170);
   background: -ms-linear-gradient(top, #3b5998, #2b4170);
   background: -webkit-linear-gradient(top, #3b5998, #2b4170);
 }
-/* line 187, ../scss/register.scss */
+/* line 186, ../scss/register.scss */
 .selection-container .select-box.twitter {
   background: -moz-linear-gradient(top, #00aced, #0081ce);
   background: -ms-linear-gradient(top, #00aced, #0081ce);
   background: -webkit-linear-gradient(top, #00aced, #0081ce);
 }
-/* line 194, ../scss/register.scss */
+/* line 193, ../scss/register.scss */
 .selection-container .select-box a {
   color: white;
 }
-/* line 199, ../scss/register.scss */
+/* line 198, ../scss/register.scss */
 .selection-container hr {
   width: 15%;
 }
-/* line 202, ../scss/register.scss */
+/* line 201, ../scss/register.scss */
 .selection-container p {
   /*line-height: 2.5em;*/
   font-size: 1.3em;
