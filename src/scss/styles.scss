@@ -1,0 +1,19 @@
+/*---------------------------------------------------
+[Master Stylesheet]
+
+Project:	Prayable App
+Version:	1.1
+Last change:	08/11/14 []
+Assigned to:	Earlie Clark, Muddassir Khanani
+Primary use:	Page Used for Importing Stylesheets 
+----------------------------------------------------*/
+
+
+@import "variables";
+@import "bootstrap/bootstrap";
+@import "bootstrap/_bootstrap-compass";
+@import "bootstrap/_bootstrap-mincer";
+@import "bootstrap/_bootstrap-sprockets";
+@import "fontawesome/font-awesome";
+
+@import "register";

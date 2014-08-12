@@ -1,0 +1,56 @@
+/*-------------------------------------------------
+[Variables Stylesheet]
+
+Project:	Prayable App
+Version:	1.1
+Last change:	08/11/14 []
+Assigned to:	Earlie Clark, Muddassir Khanani
+Primary use:	Page used for common styles 
+				between pages 
+--------------------------------------------------*/
+/*------------------------------*\
+    $COLORS
+\*------------------------------*/
+/*------------------------------*\
+    $STYLES
+\*------------------------------*/
+/* line 29, ../scss/variables.scss */
+.body-container {
+  min-height: 100%;
+  height: auto;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 37, ../scss/variables.scss */
+.bg-main {
+  background: url("../img/bg-login.png") no-repeat center fixed;
+  background-size: cover;
+}
+
+/* line 42, ../scss/variables.scss */
+input[type="text"], input[type="password"], input[type="submit"] {
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: white;
+}
+
+/* line 49, ../scss/variables.scss */
+input[type="text"], input[type="password"] {
+  text-indent: 25px;
+  border-radius: 0 2px 2px 0;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+/* line 55, ../scss/variables.scss */
+input[type="submit"] {
+  font-size: 16px;
+  font-weight: bolder;
+  color: white;
+  padding: 12.5px 0;
+  border-radius: 3px;
+  margin-bottom: 22.5px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}

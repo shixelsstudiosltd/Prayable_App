@@ -1,0 +1,63 @@
+/*-------------------------------------------------
+[Variables Stylesheet]
+
+Project:	Prayable App
+Version:	1.1
+Last change:	08/11/14 []
+Assigned to:	Earlie Clark, Muddassir Khanani
+Primary use:	Page used for common styles 
+				between pages 
+--------------------------------------------------*/
+
+
+
+/*------------------------------*\
+    $COLORS
+\*------------------------------*/
+
+$purple: #4e007f;
+$white: #fff;
+$white-t: rgba(255,255,255,0.7);
+$facebook: #456098;
+$twitter: #35A9DB;
+
+
+/*------------------------------*\
+    $STYLES
+\*------------------------------*/
+
+.body-container {
+	min-height: 100%;
+	height: auto;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.bg-main {
+	background: url('../img/bg-login.png') no-repeat center fixed;
+	background-size: cover;
+}
+
+input[type="text"], input[type="password"], input[type="submit"] {
+			display: block;
+			width: 100%;
+			background: transparent;
+			color: $white;
+		}
+
+input[type="text"], input[type="password"] {
+	text-indent: 25px;
+	border-radius: 0 2px 2px 0;
+	border: 1px solid $white-t;
+}
+
+input[type="submit"] {
+	font-size: 16px;
+	font-weight: bolder;
+	color: $white;
+	padding: 12.5px 0;
+	border-radius: 3px;
+	margin-bottom: 22.5px;
+	border: 2px solid $white-t;
+}
