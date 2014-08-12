@@ -10631,7 +10631,7 @@ Primary use:	Page Used for Login/Register Styles
 .page-login .img-logo, .page-register .img-logo {
   width: 100%;
   text-align: center;
-  padding: 3.125em 0;
+  padding: 50px 0 60px;
 }
 /* line 23, ../scss/register.scss */
 .page-login .img-logo img, .page-register .img-logo img {
@@ -10676,27 +10676,24 @@ Primary use:	Page Used for Login/Register Styles
   color: white;
 }
 /* line 63, ../scss/register.scss */
-.form-login p, .form-login h6.form-head, .form-register p, .form-register h6.form-head {
+.form-login p, .form-register p {
   color: white;
   font-size: 12px;
-}
-/* line 68, ../scss/register.scss */
-.form-login h6.form-head, .form-register h6.form-head {
   margin-bottom: 20px;
 }
-/* line 71, ../scss/register.scss */
-.form-login h6.form-head .register-link, .form-login h6.form-head .login-link, .form-register h6.form-head .register-link, .form-register h6.form-head .login-link {
+/* line 68, ../scss/register.scss */
+.form-login p .register-link, .form-login p .login-link, .form-register p .register-link, .form-register p .login-link {
   font-weight: bolder;
   text-decoration: none;
   color: white;
 }
 
-/* line 80, ../scss/register.scss */
+/* line 77, ../scss/register.scss */
 .glyph-container {
   display: flex;
   margin-bottom: 10px;
 }
-/* line 83, ../scss/register.scss */
+/* line 80, ../scss/register.scss */
 .glyph-container div {
   border-radius: 2px 0 0 2px;
   height: 44px;
@@ -10706,25 +10703,25 @@ Primary use:	Page Used for Login/Register Styles
   line-height: 3em;
   text-align: center;
 }
-/* line 93, ../scss/register.scss */
+/* line 90, ../scss/register.scss */
 .glyph-container.social {
   margin-bottom: 0;
 }
-/* line 96, ../scss/register.scss */
+/* line 93, ../scss/register.scss */
 .glyph-container.social.facebook, .glyph-container.social.facebook > div {
   background: -moz-linear-gradient(top, #3b5998, #2b4170);
   background: -ms-linear-gradient(top, #3b5998, #2b4170);
   background: -webkit-linear-gradient(top, #3b5998, #2b4170);
 }
-/* line 101, ../scss/register.scss */
+/* line 98, ../scss/register.scss */
 .glyph-container.social.facebook div, .glyph-container.social.facebook > div div {
   border-right: 1px solid #203B71;
 }
-/* line 104, ../scss/register.scss */
+/* line 101, ../scss/register.scss */
 .glyph-container.social.facebook a, .glyph-container.social.facebook > div a {
   font-family: Tahoma;
 }
-/* line 108, ../scss/register.scss */
+/* line 105, ../scss/register.scss */
 .glyph-container.social.facebook:hover, .glyph-container.social.facebook > div:hover {
   background-color: #3b5998;
   /* fallback color */
@@ -10732,22 +10729,22 @@ Primary use:	Page Used for Login/Register Styles
   background: -ms-linear-gradient(top, #2b4170, #3b5998);
   background: -webkit-linear-gradient(top, #2b4170, #3b5998);
 }
-/* line 115, ../scss/register.scss */
+/* line 112, ../scss/register.scss */
 .glyph-container.social.twitter, .glyph-container.social.twitter > div {
   background: -moz-linear-gradient(top, #00aced, #0081ce);
   background: -ms-linear-gradient(top, #00aced, #0081ce);
   background: -webkit-linear-gradient(top, #00aced, #0081ce);
 }
-/* line 121, ../scss/register.scss */
+/* line 118, ../scss/register.scss */
 .glyph-container.social.twitter div, .glyph-container.social.twitter > div div {
   border-right: 1px solid #0E7BA9;
   background: #35a9db;
 }
-/* line 125, ../scss/register.scss */
+/* line 122, ../scss/register.scss */
 .glyph-container.social.twitter a, .glyph-container.social.twitter > div a {
   font-family: Helvetica;
 }
-/* line 129, ../scss/register.scss */
+/* line 126, ../scss/register.scss */
 .glyph-container.social.twitter:hover, .glyph-container.social.twitter > div:hover {
   background-color: #00aced;
   /* fallback color */
@@ -10755,76 +10752,44 @@ Primary use:	Page Used for Login/Register Styles
   background: -ms-linear-gradient(top, #0081ce, #00aced);
   background: -webkit-linear-gradient(top, #0081ce, #00aced);
 }
-/* line 137, ../scss/register.scss */
+/* line 134, ../scss/register.scss */
 .glyph-container.social div {
   line-height: 4em;
 }
-/* line 141, ../scss/register.scss */
+/* line 138, ../scss/register.scss */
 .glyph-container.social a {
   line-height: 3em;
   text-indent: 1.5em;
   color: white;
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
-/* line 149, ../scss/register.scss */
+/* line 146, ../scss/register.scss */
 .glyph-container.m-bottom {
   margin-bottom: 20px;
 }
 
-/* line 153, ../scss/register.scss */
+/* line 150, ../scss/register.scss */
 .f-glass {
   border: 5px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
 
-/* line 158, ../scss/register.scss */
+/* line 155, ../scss/register.scss */
 .social-register {
   width: 80%;
   margin: 0 auto;
 }
 
+/* line 161, ../scss/register.scss */
+.selection-box {
+  display: flex;
+}
 /* line 164, ../scss/register.scss */
-.selection-container {
-  display: inline-flex;
-}
-/* line 167, ../scss/register.scss */
-.selection-container .t-glass {
-  border: 5px solid rgba(0, 0, 0, 0.2);
-}
-/* line 171, ../scss/register.scss */
-.selection-container .select-box {
-  border-radius: 2px 0 0 2px;
-  height: 44px;
-  width: 44px;
-  background: rgba(255, 255, 255, 0.7);
-  color: white;
-  line-height: 3em;
-  text-align: center;
-  line-height: 3.8em;
-}
-/* line 181, ../scss/register.scss */
-.selection-container .select-box.facebook {
-  background: -moz-linear-gradient(top, #3b5998, #2b4170);
-  background: -ms-linear-gradient(top, #3b5998, #2b4170);
-  background: -webkit-linear-gradient(top, #3b5998, #2b4170);
-}
-/* line 187, ../scss/register.scss */
-.selection-container .select-box.twitter {
-  background: -moz-linear-gradient(top, #00aced, #0081ce);
-  background: -ms-linear-gradient(top, #00aced, #0081ce);
-  background: -webkit-linear-gradient(top, #00aced, #0081ce);
-}
-/* line 194, ../scss/register.scss */
-.selection-container .select-box a {
-  color: white;
-}
-/* line 199, ../scss/register.scss */
-.selection-container hr {
+.selection-box hr {
   width: 15%;
 }
-/* line 202, ../scss/register.scss */
-.selection-container p {
-  /*line-height: 2.5em;*/
+/* line 167, ../scss/register.scss */
+.selection-box p {
+  line-height: 2.5em;
   font-size: 1.3em;
-  margin: 15px 2em;
 }
