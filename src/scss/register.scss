@@ -1,0 +1,211 @@
+/*---------------------------------------------------
+[Login/Register Stylesheets]
+
+Project:	Prayable App
+Version:	1.1
+Last change:	08/11/14 []
+Assigned to:	Earlie Clark, Muddassir Khanani
+Primary use:	Page Used for Login/Register Styles 
+----------------------------------------------------*/
+
+.page-login, .page-register {
+	position: relative;
+	min-height: 100%;
+	height: auto;
+	width: 100%;
+	text-align: center;
+
+	.img-logo {
+		width: 100%;
+		text-align: center;
+		padding: 3.125em 0;
+
+		img {
+			width: 80%;
+		}
+	}
+}
+
+.form-container {
+	width: 100%;
+}
+
+.form-login, .form-register {
+	width: 80%;
+	margin: 0 auto;
+
+	input[type="text"], input[type="password"], input[type="submit"] {
+		display: block;
+		width: 100%;
+		background: transparent;
+		color: $white;
+	}
+
+	input[type="text"], input[type="password"] {
+		text-indent: 25px;
+		border-radius: 0 2px 2px 0;
+		border: 1px solid $white-t;
+	}
+
+	input[type="submit"] {
+		font-size: 16px;
+		font-weight: bolder;
+		color: $white;
+		padding: 12.5px 0;
+		border-radius: 3px;
+		margin-bottom: 22.5px;
+		border: 2px solid $white-t;
+	}
+	input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder {
+		color: $white;
+	}
+
+	p, h6.form-head {
+		color: $white;
+		font-size: 12px;
+	}
+
+	h6.form-head {
+		margin-bottom: 20px;
+
+		.register-link, .login-link {
+			font-weight: bolder;
+			text-decoration: none;
+			color: $white;
+		}
+	}
+}
+
+
+.glyph-container {
+		display: flex;
+		margin-bottom: 10px;
+		div {
+			border-radius: 2px 0 0 2px;
+			height: 44px;
+			width: 44px;
+			background: $white-t;
+			color: $white;
+			line-height: 3em;
+			text-align: center;
+		}
+
+		&.social {
+			margin-bottom: 0;
+
+			&.facebook, &.facebook > div {
+				background: -moz-linear-gradient(top, #3b5998, #2b4170);
+				background: -ms-linear-gradient(top, #3b5998, #2b4170);
+				background: -webkit-linear-gradient(top, #3b5998, #2b4170);
+
+				div {
+					border-right: 1px solid #203B71;
+				}
+				a {
+					font-family: Tahoma;
+				}
+
+				&:hover {
+					background-color: #3b5998; /* fallback color */
+					background: -moz-linear-gradient(top, #2b4170, #3b5998);
+					background: -ms-linear-gradient(top, #2b4170, #3b5998);
+					background: -webkit-linear-gradient(top, #2b4170, #3b5998);
+				}
+			}
+			&.twitter, &.twitter > div {
+				background: -moz-linear-gradient(top, #00aced, #0081ce);
+				background: -ms-linear-gradient(top, #00aced, #0081ce);
+				background: -webkit-linear-gradient(top, #00aced, #0081ce);
+				
+
+				div {
+					border-right: 1px solid #0E7BA9;
+					background: $twitter;
+				}
+				a {
+					font-family: Helvetica;
+				}
+
+				&:hover {
+					background-color: #00aced; /* fallback color */
+					background: -moz-linear-gradient(top, #0081ce, #00aced);
+					background: -ms-linear-gradient(top, #0081ce, #00aced);
+					background: -webkit-linear-gradient(top, #0081ce, #00aced);
+				}
+			}
+
+			div {
+				line-height: 4em;
+			}
+
+			a {
+				line-height: 3em;
+				text-indent: 1.5em;
+				color: $white;
+				border-left: 1px solid rgba(255, 255, 255, 0.2);
+			}
+		}
+
+		&.m-bottom {
+			margin-bottom: 20px;
+		}
+	}
+.f-glass {
+	border: 5px solid rgba(0,0,0,0.2);
+	margin-bottom: 10px;
+}
+
+.social-register {
+	width: 80%;
+	margin: 0 auto;
+
+}
+
+.selection-container {
+	display: inline-flex;
+
+	.t-glass {
+
+		border: 5px solid rgba(255, 255, 255, 0.1);
+	}
+	.select-box {
+		border-radius: 2px 0 0 2px;
+		height: 44px;
+		width: 44px;
+		background: $white-t;
+		color: $white;
+		line-height: 3em;
+		text-align: center;
+		line-height: 3.8em;
+
+		&.facebook {
+			background: -moz-linear-gradient(top, #3b5998, #2b4170);
+			background: -ms-linear-gradient(top, #3b5998, #2b4170);
+			background: -webkit-linear-gradient(top, #3b5998, #2b4170);
+		}
+
+		&.twitter {
+			background: -moz-linear-gradient(top, #00aced, #0081ce);
+			background: -ms-linear-gradient(top, #00aced, #0081ce);
+			background: -webkit-linear-gradient(top, #00aced, #0081ce);
+			
+		}
+
+		a {
+			color: $white;
+		}
+	}
+
+	hr {
+		width: 15%;
+	}
+	p {
+		/*line-height: 2.5em;*/
+		font-size: 1.3em;
+		margin: 15px 2em;
+	}
+
+
+}
+
+
