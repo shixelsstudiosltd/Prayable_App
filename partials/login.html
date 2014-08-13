@@ -1,60 +1,51 @@
 <div>
-	<div class="bg-main body-container">
-		<!-- <div class="body-gradient">
-			<div class="">
-				<div>
-					<div class="button-circle">
-						<i class="fa fa-3x fa-long-arrow-up"></i>
-					</div>
-					<p>pray now</p>
-				</div>
-				<div>
-					<div class="button-circle">
-						<i class="fa fa-3x fa-plus"></i>
-					</div>
-					<p>Request a prayer</p>
-				</div>
-
-				<div class="menu-toggle">
-					<i class="fa fa-2x fa-bars"></i>
-				</div>
-				
+	<div class="body-container bg-main">
+		<div class="page-login">
+			<div class="img-logo">
+				<img src="img/logo.png">
 			</div>
-		</div> -->
+			<div class="form-container">
+				<div class="form-login">
+					<h6 class="form-head">Need an account? <span class="register-link" style="cursor: pointer" ng-click="go('register')">Register</span></h6>
 
-		<!-- <div class="menu">
-			<div class="menu-container">
-				<div class="menu-row">
-					<div class="menu-box">
-						<p>Inbox</p>
-					</div>
-					<div class="menu-box">
-						<p>Prayer Feed</p>
-					</div>
-					<div class="menu-box">
-						<p>My Prayers</p>
-					</div>
-				</div>
-				<div class="menu-row">
-					<div class="menu-box">
-						<p>All Prayers</p>
-					</div>
-					<div class="menu-box">
-						<p>Friends</p>
-					</div>
-					<div class='menu-box'>
-						<p>Groups</p>
-					</div>
-				</div>
-				<div class="menu-row">
-					<div class="menu-box">
-						<p>My Journal</p>
-					</div>
-					<div class="menu-box">
-						<p>My Activities</p>
+						<div class="glyph-container">
+							<div>
+								<i class="fa fa-envelope-o"></i>
+							</div>
+							<input type="text" placeholder="Email" ng-model="userData.email">
+						</div>
+						<div class="glyph-container m-bottom">
+							<div>
+								<i class="fa fa-lock"></i>
+							</div>
+							<input type="password" placeholder="Password" ng-model="userData.password">
+						</div>
+                    <span style="color:#ffffff;">{{errorMsg}}</span>
+						<input type="submit" ng-click="loginUser()" value="LOG IN">
+
+					<p>Login with:</p>
+
+					<div class="selection-container">
+						<div class="t-glass">
+							<div class="select-box facebook">
+								<a href="">
+									<i class="fa fa-2x fa-facebook"></i>
+								</a>
+								<hr>
+							</div>
+						</div>
+						<p>OR</p>
+						<div class="t-glass">
+							<div class="select-box twitter">
+								<a href="">
+									<i class="fa fa-2x fa-twitter"></i>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div> -->
+
+		</div>
 	</div>
 </div>
