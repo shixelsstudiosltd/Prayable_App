@@ -27,9 +27,10 @@ Primary use:	Page used for common styles
 .bg-main {
   background: url("../img/bg-login.png") no-repeat center fixed;
   background-size: cover;
+  position: absolute;
 }
 
-/* line 42, ../scss/variables.scss */
+/* line 43, ../scss/variables.scss */
 input[type="text"], input[type="password"], input[type="submit"] {
   display: block;
   width: 100%;
@@ -37,14 +38,14 @@ input[type="text"], input[type="password"], input[type="submit"] {
   color: white;
 }
 
-/* line 49, ../scss/variables.scss */
+/* line 50, ../scss/variables.scss */
 input[type="text"], input[type="password"] {
   text-indent: 25px;
   border-radius: 0 2px 2px 0;
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* line 55, ../scss/variables.scss */
+/* line 56, ../scss/variables.scss */
 input[type="submit"] {
   font-size: 16px;
   font-weight: bolder;
