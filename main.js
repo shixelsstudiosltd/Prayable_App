@@ -14,6 +14,46 @@ var sampleApp = angular.module("myApp",[])
                 templateUrl:'partials/register.html',
                 controller:'register'
             })
+            .when('/profile',{
+                templateUrl:'partials/profile.html',
+                controller:'profile'
+            })
+            .when('/inbox',{
+                templateUrl:'partials/inbox.html',
+                controller:'inbox'
+            })
+            .when('/requests',{
+                templateUrl:'partials/requests.html',
+                controller:'requests'
+            })
+            .when('/prayers',{
+                templateUrl:'partials/prayers.html',
+                controller:'prayers'
+            })
+            .when('/circles',{
+                templateUrl:'partials/circles.html',
+                controller:'circles'
+            })
+            .when('/friends',{
+                templateUrl:'partials/friends.html',
+                controller:'friends'
+            })
+            .when('/activities',{
+                templateUrl:'partials/activities.html',
+                controller:'activities'
+            })
+            .when('/fasts',{
+                templateUrl:'partials/fasts.html',
+                controller:'fasts'
+            })
+            .when('/notification',{
+                templateUrl:'partials/notification.html',
+                controller:'notification'
+            })
+            .when('/journal',{
+                templateUrl:'partials/journal.html',
+                controller:'journal'
+            })
 /*
             .when('/error',{
                 templateUrl:'views/error.html'

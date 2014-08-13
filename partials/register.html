@@ -7,28 +7,29 @@
 			</div>
 			<div class="section-container">
 				<div class="form-register">
-					<h6 class="form-head">Already have an account? <a href="index.html" class="login-link">Login</a></h6>
-					<form>
+					<h6 class="form-head">Already have an account? <span class="login-link" style="cursor: pointer" ng-click="go('login')">Login</span></h6>
+
 						<div class="glyph-container">
 							<div>
 								<i class="fa fa-envelope-o"></i>
 							</div>
-							<input type="text" placeholder="Email">
+							<input type="text" placeholder="Email" ng-model="userData.email">
 						</div>
 						<div class="glyph-container">
 							<div>
 								<i class="fa fa-lock"></i>
 							</div>
-							<input type="password" placeholder="Password">
+							<input type="password" placeholder="Password" ng-model="userData.password">
 						</div>
 						<div class="glyph-container m-bottom">
 							<div>
 								<i class="fa fa-lock"></i>
 							</div>
-							<input type="password" placeholder="Password">
+							<input type="password" placeholder="Password" ng-model="rePass">
 						</div>
-						<input type="submit" value="SIGN UP">
-					</form>
+                    <span style="color:#ffffff;">{{errorMsg}}</span>
+						<input type="submit" ng-click="regUser()" value="SIGN UP">
+
 					
 					<p>Sign up with:</p>
 
