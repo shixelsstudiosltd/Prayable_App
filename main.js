@@ -1,4 +1,4 @@
-var sampleApp = angular.module("myApp",[])
+var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate'])
     .config(['$routeProvider',function($routeProvider){
 
         $routeProvider
@@ -64,6 +64,38 @@ var sampleApp = angular.module("myApp",[])
 
     }]);//Config
 
-/*sampleApp.controller('navController',function($rootScope,$scope,$location,$http){
+sampleApp.config(function ($translateProvider) {
+    $translateProvider.translations('en', {
+        email: 'Email',
+        password: 'Password.',
+        login: 'LOG IN',
+        signup: 'SIGN UP',
+        register:'Register',
+        needaccount:'Need an account?',
+        or:'OR',
+        alreadyhaveaccount:'Already have an account',
+        signupwith:'Sign up with',
+        loginwith:"Login with"
+    });
+    $translateProvider.translations('de', {
+        email: 'Email InGerman',
+        password: 'Password.InGerman',
+        login: 'LOG IN InGerman',
+        signup: 'SIGN UP InGerman',
+        register:'Register InGerman',
+        needaccount:'Need an account? InGerman',
+        or:'OR InGerman',
+        alreadyhaveaccount:'Already have an account InGerman',
+        signupwith:'Sign up with InGerman',
+        loginwith:"Login with InGerman"
+
+    });
+    $translateProvider.preferredLanguage('en');
+});
+
+/*sampleApp.controller('navController',function($rootScope,$scope,$location,$http,$cookies,$translate){
+    $scope.changeLanguage = function (key) {
+        $translate.use(key);
+    };
 
 });*/

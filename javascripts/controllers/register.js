@@ -1,4 +1,4 @@
-sampleApp.controller('register',function($scope,$rootScope,$location,$http){
+sampleApp.controller('register',function($scope,$rootScope,$location,$http,$translate){
 
     $scope.userData = {email:'',password:''};
     $scope.rePass = ''

@@ -1,4 +1,4 @@
-sampleApp.controller('login',function($rootScope,$scope,$location,$http){
+sampleApp.controller('login',function($rootScope,$scope,$location,$http,$translate){
     $scope.userData = {email:'',password:''};
     $scope.errorMsg = ''
     $scope.loginUser = function(){

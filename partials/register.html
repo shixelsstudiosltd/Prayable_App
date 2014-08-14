@@ -7,31 +7,31 @@
 			</div>
 			<div class="section-container">
 				<div class="form-register">
-					<h6 class="form-head">Already have an account? <span class="login-link" style="cursor: pointer" ng-click="go('login')">Login</span></h6>
+					<h6 class="form-head">{{ 'alreadyhaveaccount' | translate }}<span class="login-link" style="cursor: pointer" ng-click="go('login')">{{ 'login' | translate }}</span></h6>
 
 						<div class="glyph-container">
 							<div>
 								<i class="fa fa-envelope-o"></i>
 							</div>
-							<input type="text" placeholder="Email" ng-model="userData.email">
+							<input type="text" placeholder="{{ 'email' | translate }}" ng-model="userData.email">
 						</div>
 						<div class="glyph-container">
 							<div>
 								<i class="fa fa-lock"></i>
 							</div>
-							<input type="password" placeholder="Password" ng-model="userData.password">
+							<input type="password" placeholder="{{ 'password' | translate }}" ng-model="userData.password">
 						</div>
 						<div class="glyph-container m-bottom">
 							<div>
 								<i class="fa fa-lock"></i>
 							</div>
-							<input type="password" placeholder="Password" ng-model="rePass">
+							<input type="password" placeholder="{{ 'password' | translate }}" ng-model="rePass">
 						</div>
                     <span style="color:#ffffff;">{{errorMsg}}</span>
-						<input type="submit" ng-click="regUser()" value="SIGN UP">
+						<input type="submit" ng-click="regUser()" value="{{ 'signup' | translate }}">
 
 					
-					<p>Sign up with:</p>
+					<p>{{ 'signupwith' | translate }}:</p>
 
 					<div class="selection-container">
 						<div class="t-glass">
@@ -41,7 +41,7 @@
 								</a>
 							</div>
 						</div>
-						<p>OR</p>
+						<p>{{ 'or' | translate }}</p>
 						<div class="t-glass">
 							<div class="select-box twitter">
 								<a href="">
