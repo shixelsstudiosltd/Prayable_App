@@ -17,3 +17,102 @@ Primary use:	Page Used for Importing Stylesheets
 @import "fontawesome/font-awesome";
 
 @import "register";
+@import "prayers";
+@import "home";
+
+.app-header {
+	width: 100%;
+	height: 60px;
+	color: $white;
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	line-height: 5em;
+	font-weight: 100;
+
+	.app-header-back-button {
+		width: 20%;
+		float: left;
+		height: 60px;
+		text-align: center;
+		font-size: 4em;
+
+		i {
+			cursor: pointer;
+		}
+
+		&:hover {
+			color: $purple;
+		}
+	}
+
+	.app-header-title {
+		width: 60%;
+		height: 60px;
+		float: left;
+		text-align: center;
+		font-size: 1.5em;
+	}
+
+	.app-header-notifications {
+		width: 20%;
+		float: left;
+		height: 60px;
+		text-align: center;
+		font-size: 2.5em;
+		cursor: pointer;
+
+		&:hover {
+			color: $purple;
+		}
+	}
+}
+
+.prayable-nav-icon {
+	background: $dark-purple;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 100px;
+	margin: 0 auto;
+	font-size: 2em;
+	cursor: pointer;
+	position: relative;
+	top: 650px;
+	color: $white;
+	text-align: center;
+
+	&:hover {
+		background: darken($dark-purple, 5%);
+	}
+}
+
+.prayable-nav-container {
+	width: 100%;
+	padding: 0;
+	background: $dark-purple;
+	position: fixed;
+	color: $white;
+	bottom: -530px;
+
+	.prayable-nav-items {
+		list-style: none;
+		padding: 0;
+		text-align: left;
+		li {
+			width: 100%;
+			height: 60px;
+			line-height: 30px;
+			font-size: 1.5em;
+			font-weight: 100;
+			text-transform: capitalize;
+			padding: 15px 25px;
+			border-bottom: 1px solid $darker-purple;
+
+			.prayable-nav-item-icon {
+				padding-right: 20px;
+				color: $light-purple;
+			}
+		}
+	}
+}

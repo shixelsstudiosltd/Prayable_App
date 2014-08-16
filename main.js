@@ -75,7 +75,21 @@ sampleApp.config(function ($translateProvider) {
         or:'OR',
         alreadyhaveaccount:'Already have an account',
         signupwith:'Sign up with',
-        loginwith:"Login with"
+        loginwith:"Login with",
+        prayNowTitle: "Pray Now",
+        prayersFor: "Prayer's for",
+        when: "when",
+        searchCats: "Search Categories...",
+        myAccount: "My Account",
+        inbox: "Inbox",
+        prayerFeed: "Prayer Feed",
+        myPrayers: "My Prayers",
+        friends: "Friends",
+        prayerCircles: "Prayer Circles",
+        myJournal: "My Journal",
+        myActivities: "My Activities",
+        settings: "Settings",
+        addAPrayer: "add a prayer"
     });
     $translateProvider.translations('de', {
         email: 'Email InGerman',
@@ -87,7 +101,21 @@ sampleApp.config(function ($translateProvider) {
         or:'OR InGerman',
         alreadyhaveaccount:'Already have an account InGerman',
         signupwith:'Sign up with InGerman',
-        loginwith:"Login with InGerman"
+        loginwith:"Login with InGerman",
+        prayNowTitle: "Pray Now InGerman",
+        prayersFor: "Prayer's for InGerman",
+        when: "when InGerman",
+        searchCats: "Search Categories... InGerman",
+        myAccount: "My Account InGerman",
+        inbox: "Inbox InGerman",
+        prayerFeed: "Prayer Feed InGerman",
+        myPrayers: "My Prayers InGerman",
+        friends: "Friends InGerman",
+        prayerCircles: "Prayer Circles InGerman",
+        myJournal: "My Journal InGerman",
+        myActivities: "My Activities InGerman",
+        settings: "Settings InGerman",
+        addAPrayer: "add a prayer InGerman"
 
     });
     $translateProvider.preferredLanguage('en');

@@ -1,50 +1,23 @@
-<div >
-    <div class="body-container bg-main" style="padding-bottom: 3.2%">
-        <div class="page-login">
-            <div class="img-logo">
-                <img src="img/logo.png">
+<div>
+    <div class="body-container bg-home">
+        <div class="page-home">
+           <ul class="app-header">
+                <li class="app-header-back-button"></li>
+                <li class="app-header-title"></li>
+                <li class="app-header-notifications"><i class="fa fa-bell"></i></li>
+           </ul>
+        </div>
+        <div class="home-menu">
+            <div class="pray-now">
+                <i class="fa fa-arrow-up"></i>
+                <div class="pray-now-circle"></div>
+                <div class="pray-now-title">{{'prayNowTitle' | translate}}</div>
             </div>
-            <div class="form-container">
-                <div class="form-login">
-                    <h6 class="form-head">Need an account? <a href="register.html" class="register-link">Register</a></h6>
-                    <form>
-                        <div class="glyph-container">
-                            <div>
-                                <i class="fa fa-envelope-o"></i>
-                            </div>
-                            <input type="text" placeholder="Email">
-                        </div>
-                        <div class="glyph-container m-bottom">
-                            <div>
-                                <i class="fa fa-lock"></i>
-                            </div>
-                            <input type="password" placeholder="Password">
-                        </div>
-                        <input type="submit" value="LOG IN">
-                    </form>
-
-                    <p>Login with:</p>
-
-                    <div class="selection-container">
-                        <div class="t-glass">
-                            <div class="select-box facebook">
-                                <a href="">
-                                    <i class="fa fa-2x fa-facebook"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <p>OR</p>
-                        <div class="t-glass">
-                            <div class="select-box twitter">
-                                <a href="">
-                                    <i class="fa fa-2x fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="add-prayer">
+                <i class="fa fa-plus"></i>
+                <div class="pray-now-circle"></div>
+                <div class="pray-now-title">{{'addAPrayer' | translate}}</div>
             </div>
-
         </div>
     </div>
 </div>

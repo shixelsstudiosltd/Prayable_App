@@ -1,0 +1,49 @@
+/* line 1, ../scss/home.scss */
+.home-menu {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  margin-top: -40px;
+}
+/* line 8, ../scss/home.scss */
+.home-menu .pray-now-circle {
+  background: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin: 0 auto;
+  opacity: 0.3;
+  cursor: pointer;
+}
+/* line 17, ../scss/home.scss */
+.home-menu .pray-now-circle:hover {
+  opacity: 0.5;
+}
+/* line 21, ../scss/home.scss */
+.home-menu .pray-now-title {
+  font-size: 1.5em;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+/* line 29, ../scss/home.scss */
+.home-menu .pray-now {
+  height: 250px;
+}
+/* line 32, ../scss/home.scss */
+.home-menu .pray-now i {
+  font-size: 4em;
+  position: relative;
+  top: 130px;
+}
+/* line 38, ../scss/home.scss */
+.home-menu .add-prayer {
+  margin-top: 20px;
+}
+/* line 40, ../scss/home.scss */
+.home-menu .add-prayer i {
+  font-size: 4em;
+  position: relative;
+  top: 130px;
+}

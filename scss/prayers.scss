@@ -1,0 +1,75 @@
+
+
+.prayers-search-bar-with-icon {
+	width: 100%;
+	height: 50px;
+	padding: 0 25px;
+
+	.prayers-search-bar {
+			background: $dark-purple !important;
+			border: 0 !important;
+			width: 80% !important;
+			margin: 0 auto;
+			height: 50px;
+			border-top-left-radius: 100px !important;
+			color: $white !important;
+			float: left;
+			border-bottom-left-radius: 100px !important;
+		
+
+		&:focus {
+			outline: none !important;
+		}
+	}
+
+	.prayers-search-bar-icon {
+		cursor: pointer;
+		float: right;
+		width: 20%;
+		height: 50px;
+		background: $dark-purple;
+		border-top-right-radius: 100px;
+		border-bottom-right-radius: 100px;
+		line-height: 50px;
+		font-size: 2em;
+		position: relative;
+		color: $white;
+		text-align: center;
+
+		&:hover {
+			color: $purple;
+		}
+	}
+}
+
+.prayers-search-title {
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding: 15px 0;
+	color: $white;
+	font-weight: 100;
+	font-size: 16px;
+
+	.bold {
+		font-weight: 400;
+	}
+}
+
+.prayers-search-results {
+	float: left;
+	width: 100%;
+	list-style: none;
+	color: $white;
+	padding: 0 25px;
+	max-height: 420px;
+	overflow: scroll;
+	overflow: -moz-scrollbars-vertical;
+
+	li {
+		font-size: 1.5em;
+		font-weight: 100;
+		padding: 5px 0;
+	}
+
+}
