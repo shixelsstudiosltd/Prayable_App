@@ -1,4 +1,4 @@
-var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate'])
+var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','twitterApp.services'])
     .config(['$routeProvider',function($routeProvider){
 
         $routeProvider
