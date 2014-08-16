@@ -36,8 +36,13 @@ angular.module('twitterApp.services', []).factory('twitterService', function($q)
 
             if (!error) {
 
-                authorizationResult = result;
 
+                //console.log(result)
+                result.me().done(function(data) {
+                   // console.log(data);
+                    authorizationResult = data;
+                    // do something with `data`, e.g. print data.name
+                })
                 deferred.resolve();
 
             } else {
@@ -66,7 +71,7 @@ angular.module('twitterApp.services', []).factory('twitterService', function($q)
 
         var deferred = $q.defer();
 
-        var promise = authorizationResult.get('/1.1/statuses/home_timeline.json').done(function(data) { //https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline
+        var promise = authorizationResult.get('/1.1//api/apps').done(function(data) { //https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline
 
             //when the data is retrieved resolved the deferred object
 

@@ -72,7 +72,8 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
     twitterService.initialize();
     $scope.twitterLogin = function(){
         console.log("as")
-    twitterService.connectTwitter().then(function() {
+    twitterService.connectTwitter().then(function(data3) {
+        console.log(data3)
         if (twitterService.isReady()) {
             //if the authorization is successful, hide the connect button and display the tweets
             //$('#connectButton').fadeOut(function(){
