@@ -54,6 +54,10 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','tw
                 templateUrl:'partials/journal.html',
                 controller:'journal'
             })
+            .when('/requests/new',{
+                templateUrl:'partials/input.html',
+                controller:'input'
+            })
 /*
             .when('/error',{
                 templateUrl:'views/error.html'
@@ -89,7 +93,8 @@ sampleApp.config(function ($translateProvider) {
         myJournal: "My Journal",
         myActivities: "My Activities",
         settings: "Settings",
-        addAPrayer: "add a prayer"
+        addAPrayer: "add a prayer",
+        newRequest: "New Prayer Request"
     });
     $translateProvider.translations('de', {
         email: 'Email InGerman',
@@ -115,7 +120,8 @@ sampleApp.config(function ($translateProvider) {
         myJournal: "My Journal InGerman",
         myActivities: "My Activities InGerman",
         settings: "Settings InGerman",
-        addAPrayer: "add a prayer InGerman"
+        addAPrayer: "add a prayer InGerman",
+        newRequest: "New Prayer Request InGerman"
 
     });
     $translateProvider.preferredLanguage('en');
