@@ -3,45 +3,37 @@
 	height: 100%;
 	text-align: center;
 	color: #fff;
-	margin-top: -40px;
+	margin-top: -20px;
+
+	i {
+		font-size: 2em;
+		position: relative;
+		top: 75px;
+	}
+
+	a {
+		color: $white;
+	}
 
 	.pray-now-circle {
 		background: #fff;
-		width: 200px;
-		height: 200px;
+		width: 120px;
+		height: 120px;
 		border-radius: 100px;
 		margin: 0 auto;
 		opacity: 0.3;
 		cursor: pointer;
-
-		&:hover {
-			opacity: 0.5;
-		}
 	}
 	.pray-now-title {
-		font-size: 1.5em;
+		font-size: 1.2em;
 		font-weight: 100;
 		text-transform: uppercase;
 		margin: 10px 0;
 	}
-
-
-	.pray-now {
-		height: 250px;
-
-		i {
-			font-size: 4em;
-			position: relative;
-			top: 130px;
-		}
-	}
+	
+	
 	.add-prayer {
 		margin-top: 20px;
-		i {
-			font-size: 4em;
-			position: relative;
-			top: 130px;
-		}
 	}
 }
 

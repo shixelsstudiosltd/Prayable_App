@@ -10915,7 +10915,7 @@ Primary use:	Page Used for Login/Register Styles
   list-style: none;
   color: white;
   padding: 0 25px;
-  max-height: 420px;
+  max-height: 350px;
   overflow: scroll;
   overflow: -moz-scrollbars-vertical;
 }
@@ -10932,58 +10932,48 @@ Primary use:	Page Used for Login/Register Styles
   height: 100%;
   text-align: center;
   color: #fff;
-  margin-top: -40px;
+  margin-top: -20px;
 }
 /* line 8, ../scss/home.scss */
+.home-menu i {
+  font-size: 2em;
+  position: relative;
+  top: 75px;
+}
+/* line 14, ../scss/home.scss */
+.home-menu a {
+  color: white;
+}
+/* line 18, ../scss/home.scss */
 .home-menu .pray-now-circle {
   background: #fff;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   border-radius: 100px;
   margin: 0 auto;
   opacity: 0.3;
   cursor: pointer;
 }
-/* line 17, ../scss/home.scss */
-.home-menu .pray-now-circle:hover {
-  opacity: 0.5;
-}
-/* line 21, ../scss/home.scss */
+/* line 27, ../scss/home.scss */
 .home-menu .pray-now-title {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 100;
   text-transform: uppercase;
   margin: 10px 0;
 }
-/* line 29, ../scss/home.scss */
-.home-menu .pray-now {
-  height: 250px;
-}
-/* line 32, ../scss/home.scss */
-.home-menu .pray-now i {
-  font-size: 4em;
-  position: relative;
-  top: 130px;
-}
-/* line 38, ../scss/home.scss */
+/* line 35, ../scss/home.scss */
 .home-menu .add-prayer {
   margin-top: 20px;
 }
-/* line 40, ../scss/home.scss */
-.home-menu .add-prayer i {
-  font-size: 4em;
-  position: relative;
-  top: 130px;
-}
 
-/* line 48, ../scss/home.scss */
+/* line 40, ../scss/home.scss */
 .home-body {
   width: 100%;
   text-align: center;
   height: 100%;
   padding: 20px 0;
 }
-/* line 54, ../scss/home.scss */
+/* line 46, ../scss/home.scss */
 .home-body .new-input {
   width: 80%;
   height: 300px;
@@ -10994,12 +10984,19 @@ Primary use:	Page Used for Login/Register Styles
   padding: 20px;
   line-height: 20px;
 }
-/* line 64, ../scss/home.scss */
+/* line 56, ../scss/home.scss */
 .home-body .new-input:focus {
   outline: 0;
 }
 
 /* line 23, ../scss/styles.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+/* line 29, ../scss/styles.scss */
 .app-header {
   width: 100%;
   height: 60px;
@@ -11010,7 +11007,7 @@ Primary use:	Page Used for Login/Register Styles
   line-height: 5em;
   font-weight: 100;
 }
-/* line 33, ../scss/styles.scss */
+/* line 39, ../scss/styles.scss */
 .app-header .app-header-back-button {
   width: 20%;
   float: left;
@@ -11018,15 +11015,15 @@ Primary use:	Page Used for Login/Register Styles
   text-align: center;
   font-size: 4em;
 }
-/* line 40, ../scss/styles.scss */
+/* line 46, ../scss/styles.scss */
 .app-header .app-header-back-button i {
   cursor: pointer;
 }
-/* line 44, ../scss/styles.scss */
+/* line 50, ../scss/styles.scss */
 .app-header .app-header-back-button:hover {
   color: #4e007f;
 }
-/* line 49, ../scss/styles.scss */
+/* line 55, ../scss/styles.scss */
 .app-header .app-header-title {
   width: 60%;
   height: 60px;
@@ -11034,7 +11031,7 @@ Primary use:	Page Used for Login/Register Styles
   text-align: center;
   font-size: 1.5em;
 }
-/* line 57, ../scss/styles.scss */
+/* line 63, ../scss/styles.scss */
 .app-header .app-header-notifications {
   width: 20%;
   float: left;
@@ -11043,32 +11040,32 @@ Primary use:	Page Used for Login/Register Styles
   font-size: 2.5em;
   cursor: pointer;
 }
-/* line 65, ../scss/styles.scss */
+/* line 71, ../scss/styles.scss */
 .app-header .app-header-notifications:hover {
   color: #4e007f;
 }
 
-/* line 71, ../scss/styles.scss */
+/* line 77, ../scss/styles.scss */
 .prayable-nav-icon {
   background: #290440;
   width: 60px;
   height: 60px;
   line-height: 60px;
   border-radius: 100px;
-  margin: 0 auto;
   font-size: 2em;
   cursor: pointer;
-  position: relative;
-  top: 650px;
+  position: absolute;
+  bottom: 30px;
+  left: 45%;
   color: white;
   text-align: center;
 }
-/* line 85, ../scss/styles.scss */
+/* line 91, ../scss/styles.scss */
 .prayable-nav-icon:hover {
   background: #1a0228;
 }
 
-/* line 90, ../scss/styles.scss */
+/* line 96, ../scss/styles.scss */
 .prayable-nav-container {
   width: 100%;
   padding: 0;
@@ -11077,13 +11074,13 @@ Primary use:	Page Used for Login/Register Styles
   color: white;
   bottom: -530px;
 }
-/* line 98, ../scss/styles.scss */
+/* line 104, ../scss/styles.scss */
 .prayable-nav-container .prayable-nav-items {
   list-style: none;
   padding: 0;
   text-align: left;
 }
-/* line 102, ../scss/styles.scss */
+/* line 108, ../scss/styles.scss */
 .prayable-nav-container .prayable-nav-items li {
   width: 100%;
   height: 60px;
@@ -11094,7 +11091,7 @@ Primary use:	Page Used for Login/Register Styles
   padding: 15px 25px;
   border-bottom: 1px solid #1e0230;
 }
-/* line 112, ../scss/styles.scss */
+/* line 118, ../scss/styles.scss */
 .prayable-nav-container .prayable-nav-items li .prayable-nav-item-icon {
   padding-right: 20px;
   color: #8f6da8;

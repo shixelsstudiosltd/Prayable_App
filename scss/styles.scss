@@ -20,6 +20,12 @@ Primary use:	Page Used for Importing Stylesheets
 @import "prayers";
 @import "home";
 
+html, body {
+	width: 100%;
+	height:100%;
+	position: fixed;
+}
+
 .app-header {
 	width: 100%;
 	height: 60px;
@@ -74,11 +80,11 @@ Primary use:	Page Used for Importing Stylesheets
 	height: 60px;
 	line-height: 60px;
 	border-radius: 100px;
-	margin: 0 auto;
 	font-size: 2em;
 	cursor: pointer;
-	position: relative;
-	top: 650px;
+	position: absolute;
+	bottom: 30px;
+	left: 45%;
 	color: $white;
 	text-align: center;
 
