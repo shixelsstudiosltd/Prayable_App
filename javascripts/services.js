@@ -14,7 +14,7 @@ angular.module('twitterApp.services', []).factory('twitterService', function($q)
 // sVYJ90HeITnebmV3FSoGa9wIKYM
                 //vjzlCOE4LT2dE5eSVWZ8Wk6IhN4 public
                 //e6u0TKccWPGCnAqheXQYg76Vf2M  example
-        OAuth.initialize('e6u0TKccWPGCnAqheXQYg76Vf2M', {cache:true});
+        OAuth.initialize('s7uVvkzp5f3iygVIc6MkhTKQf', {cache:true});
 
         //try to create an authorization result when the page loads, this means a returning user won't have to click the twitter button again
 
