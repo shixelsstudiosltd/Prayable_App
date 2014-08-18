@@ -2,23 +2,25 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
 
     $.ajax({
         //url:"http://prayable-21641.onmodulus.net/user/1",
-        url:"http://prayable-21641.onmodulus.net/user/1",
-        method:"GET",
-        contentType: 'application/json',
-        dataType: "jsonp"
-    }).success(function(data, textstatus) {
+        url: "http://prayable-21641.onmodulus.net/user/1",
+        type: "GET",
+        //contentType: 'application/json',
+        dataType: "json",
+        success: function(data, textstatus) {
             // this callback will be called asynchronously
             // when the response is available
 
             console.log(data)
             console.log(textstatus)
-        }).error(function(data, textstatus) {
+        },
+        error: function(data, textstatus) {
 
             console.log(data)
             console.log(textstatus)
             // called asynchronously if an error occurs
             // or server returns response with an error status.
-        });
+        }
+    });
     $scope.userData = {email:'',password:''};
     $scope.errorMsg = ''
     $scope.loginUser = function(){
