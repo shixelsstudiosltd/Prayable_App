@@ -9,6 +9,27 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                 if(($scope.rePass) && ($scope.rePass == $scope.userData.password)){
                 $scope.errorMsg = "";
                 console.log('Register Function Called '+' email: '+$scope.userData.email+' Password: '+$scope.userData.password)
+                    var data ={key:'web',userData:$scope.userData}
+                    $.ajax({
+                        type:"POST",
+                        contentType: 'application/json',
+                        url:"http://prayable-21641.onmodulus.net/user",
+                        //url:"http://prayable-21641.onmodulus.net/user",
+                        data:data
+                        //dataType: "json"
+                    }).success(function(data, textstatus) {
+                            // this callback will be called asynchronously
+                            // when the response is available
+
+                            console.log(data)
+                            console.log(textstatus)
+                        }).error(function(data, textstatus) {
+
+                            console.log(data)
+                            console.log(textstatus)
+                            // called asynchronously if an error occurs
+                            // or server returns response with an error status.
+                        });
                 }else{
                     $scope.errorMsg = "*Both Password Doesn't match"
                 }
