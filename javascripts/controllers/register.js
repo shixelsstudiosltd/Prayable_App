@@ -14,8 +14,8 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                     $.ajax({
                         method:"POST",
                         //contentType: 'application/json',
-                        url:"http://localhost:3000/user",
-                        //url:"http://prayable-21641.onmodulus.net/user",
+                        //url:"http://localhost:3000/user",
+                        url:"http://prayable-21641.onmodulus.net/user",
                         data:data,
                         crossDomain: true,
                         dataType: "json"
@@ -88,8 +88,8 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                     $.ajax({
                         method:"POST",
                         //contentType: 'application/json',
-                        url:"http://localhost:3000/user",
-                        //url:"http://prayable-21641.onmodulus.net/user",
+                        //url:"http://localhost:3000/user",
+                        url:"http://prayable-21641.onmodulus.net/user",
                         data:data,
                         crossDomain: true,
                         dataType: "json"

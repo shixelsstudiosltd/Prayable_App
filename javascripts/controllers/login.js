@@ -13,8 +13,8 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
                 $.ajax({
                     method:"POST",
                     //contentType: 'application/json',
-                    url:"http://localhost:3000/loginUser",
-                    //url:"http://prayable-21641.onmodulus.net/user",
+                    //url:"http://localhost:3000/loginUser",
+                    url:"http://prayable-21641.onmodulus.net/loginUser",
                     data:data,
                     crossDomain: true,
                     dataType: "json"
