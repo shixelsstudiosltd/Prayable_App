@@ -1,4 +1,4 @@
-sampleApp.controller('register',function($scope,$rootScope,$location,$http,$translate){
+sampleApp.controller('register',function($scope,$rootScope,$location,$http,$translate,$q, twitterService){
 
     $scope.userData = {email:'',password:''};
     $scope.rePass = ''
@@ -117,6 +117,33 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
 
         }, {scope: 'public_profile,email,user_friends,user_hometown,religion'});
     };
+
+    twitterService.initialize();
+    $scope.twitterLogin = function(){
+        console.log("as")
+        twitterService.connectTwitter().then(function(data3) {
+            console.log(data3)
+            if (twitterService.isReady()) {
+                //if the authorization is successful, hide the connect button and display the tweets
+                //$('#connectButton').fadeOut(function(){
+                //   $('#getTimelineButton, #signOut').fadeIn();
+                //   $scope.refreshTimeline();
+                //});
+                twitterService.getLatestTweets().then(function(data) {
+                    $scope.tweets = data;
+                });
+                console.log("twitterLogin")
+                console.log($scope.tweets)
+            }
+        });
+    }
+    if (twitterService.isReady()) {
+        // $('#connectButton').hide();
+        //$('#getTimelineButton, #signOut').show();
+        //$scope.refreshTimeline();
+        twitterService.clearCache();
+        console.log("isReady")
+    }
 
     function validateEmail(email) {
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
