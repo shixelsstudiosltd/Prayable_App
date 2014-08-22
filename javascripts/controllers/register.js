@@ -10,13 +10,15 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                 $scope.errorMsg = "";
                 console.log('Register Function Called '+' email: '+$scope.userData.email+' Password: '+$scope.userData.password)
                     var data ={key:'web',userData:$scope.userData}
+                    //var data ='{"key":"web"}'
                     $.ajax({
-                        type:"POST",
-                        contentType: 'application/json',
-                        url:"http://prayable-21641.onmodulus.net/user",
+                        method:"POST",
+                        //contentType: 'application/json',
+                        url:"http://localhost:3000/user",
                         //url:"http://prayable-21641.onmodulus.net/user",
-                        data:data
-                        //dataType: "json"
+                        data:data,
+                        crossDomain: true,
+                        dataType: "json"
                     }).success(function(data, textstatus) {
                             // this callback will be called asynchronously
                             // when the response is available
@@ -79,10 +81,31 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                 console.log( userData);
 
                 FB.api('/me/picture?redirect=false', function(pic) {
-                    console.log(pic);
+                    $scope.userData = {firstName:userData.first_name,fbId:userData.id,pictureUrl:pic}
 
+                    var data ={key:'fb',userData:$scope.userData}
                     ////Here the API will be CAlled
+                    $.ajax({
+                        method:"POST",
+                        //contentType: 'application/json',
+                        url:"http://localhost:3000/user",
+                        //url:"http://prayable-21641.onmodulus.net/user",
+                        data:data,
+                        crossDomain: true,
+                        dataType: "json"
+                    }).success(function(data, textstatus) {
+                            // this callback will be called asynchronously
+                            // when the response is available
 
+                            console.log(data)
+                            console.log(textstatus)
+                        }).error(function(data, textstatus) {
+
+                            console.log(data)
+                            console.log(textstatus)
+                            // called asynchronously if an error occurs
+                            // or server returns response with an error status.
+                        });
 
 
                 });//me/picture
