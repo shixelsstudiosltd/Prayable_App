@@ -120,22 +120,18 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
 
     twitterService.initialize();
     $scope.twitterLogin = function(){
-        console.log("as")
-        twitterService.connectTwitter().then(function(data3) {
-            console.log(data3)
+
+        twitterService.connectTwitter('R').then(function(data) {
+
             if (twitterService.isReady()) {
-                //if the authorization is successful, hide the connect button and display the tweets
-                //$('#connectButton').fadeOut(function(){
-                //   $('#getTimelineButton, #signOut').fadeIn();
-                //   $scope.refreshTimeline();
-                //});
+
                 twitterService.getLatestTweets().then(function(data) {
                     $scope.tweets = data;
                 });
-                console.log("twitterLogin")
-                console.log($scope.tweets)
+
             }
         });
+
     }
     if (twitterService.isReady()) {
         // $('#connectButton').hide();

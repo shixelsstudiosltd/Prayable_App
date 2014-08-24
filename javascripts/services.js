@@ -14,7 +14,9 @@ angular.module('twitterApp.services', []).factory('twitterService', function($q)
 // sVYJ90HeITnebmV3FSoGa9wIKYM
                 //vjzlCOE4LT2dE5eSVWZ8Wk6IhN4 public
                 //e6u0TKccWPGCnAqheXQYg76Vf2M  example
-        OAuth.initialize('s7uVvkzp5f3iygVIc6MkhTKQf', {cache:true});
+
+                //s7uVvkzp5f3iygVIc6MkhTKQf
+        OAuth.initialize('fyPxHEyYc7kOjHPRDio-4NWGyBk', {cache:true});
 
         //try to create an authorization result when the page loads, this means a returning user won't have to click the twitter button again
 
@@ -28,7 +30,8 @@ angular.module('twitterApp.services', []).factory('twitterService', function($q)
 
     },
 
-    connectTwitter: function() {
+    connectTwitter: function(a) {
+          var key ;
 
         var deferred = $q.defer();
 
@@ -39,11 +42,42 @@ angular.module('twitterApp.services', []).factory('twitterService', function($q)
 
                 //console.log(result)
                 result.me().done(function(data) {
-                   // console.log(data);
+                    console.log(data);
                     authorizationResult = data;
-                    // do something with `data`, e.g. print data.name
+                    var userData = {firstName:data.name,lastName:data.alias,pictureUrl:data.avatar,twitId:data.raw.id}
+                    var data ={key:'twit',userData:userData}
+                    var link;
+                    if(a == 'R'){
+                        link= 'user'
+                    }else{
+                        link = 'loginUser';
+                    }
+                    $.ajax({
+                        method:"POST",
+                        //contentType: 'application/json',
+                        url:"http://localhost:3000/"+link,
+                        //url:"http://prayable-21641.onmodulus.net/"+link,
+                        data:data,
+                        crossDomain: true,
+                        dataType: "json"
+                    }).success(function(data, textstatus) {
+                            // this callback will be called asynchronously
+                            // when the response is available
+
+                            console.log(data)
+                            console.log(textstatus)
+                        }).error(function(data, textstatus) {
+
+                            console.log(data)
+                            console.log(textstatus)
+                            // called asynchronously if an error occurs
+                            // or server returns response with an error status.
+                        });
+
+                    deferred.resolve();
+
                 })
-                deferred.resolve();
+
 
             } else {
 
@@ -71,7 +105,7 @@ angular.module('twitterApp.services', []).factory('twitterService', function($q)
 
         var deferred = $q.defer();
 
-        var promise = authorizationResult.get('/1.1//api/apps').done(function(data) { //https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline
+        var promise = authorizationResult.get('/1.1//api/users/show').done(function(data) { //https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline
 
             //when the data is retrieved resolved the deferred object
 
