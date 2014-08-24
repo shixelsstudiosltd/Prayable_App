@@ -55,8 +55,8 @@ angular.module('twitterApp.services', []).factory('twitterService', function($q)
                     $.ajax({
                         method:"POST",
                         //contentType: 'application/json',
-                        url:"http://localhost:3000/"+link,
-                        //url:"http://prayable-21641.onmodulus.net/"+link,
+                        //url:"http://localhost:3000/"+link,
+                        url:"http://prayable-21641.onmodulus.net/"+link,
                         data:data,
                         crossDomain: true,
                         dataType: "json"

@@ -96,7 +96,13 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
     twitterService.initialize();
     $scope.twitterLogin = function(){
     twitterService.connectTwitter().then(function(data) {
+        if (twitterService.isReady()) {
 
+            twitterService.getLatestTweets().then(function(data) {
+                $scope.tweets = data;
+            });
+
+        }
     });
     }
     if (twitterService.isReady()) {
