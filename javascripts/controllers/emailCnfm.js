@@ -9,11 +9,11 @@ sampleApp.controller('emailCnfm',function($rootScope,$scope,$location,$http){
         method:"POST"
     }).success( function(res,textStatus){
 if(res == 'errot'){
-    $scope.status =false;
+
 }else{
-    $scope.status =true;
-    $scope.go('/profURL/'+res.userProbfile)
-    if(!$scope.$$phase) $scope.$apply();
+
+    //$scope.go('/profURL/'+res.userProbfile)
+    //if(!$scope.$$phase) $scope.$apply();
 
 }
 
