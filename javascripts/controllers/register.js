@@ -22,7 +22,15 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                     }).success(function(data, textstatus) {
                             // this callback will be called asynchronously
                             // when the response is available
-
+                            $.ajax({
+                                url:"http://prayable-21641.onmodulus.net/sendVerfMail",
+                              //  url:"http://prayable-21641.onmodulus.net/sendVerfMail",
+                                data:{email:data.data.email,key:"verify",userID:data.data._id},
+                                method:"POST"
+                            }).success( function(res,textStatus){
+                                    //$scope.go('/emailSent');
+                                    //if(!$scope.$$phase) $scope.$apply();
+                                })
                             console.log(data)
                             console.log(textstatus)
                         }).error(function(data, textstatus) {
@@ -98,11 +106,11 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                             // when the response is available
 
                             console.log(data)
-                            console.log(textstatus)
+                            //console.log(textstatus)
                         }).error(function(data, textstatus) {
 
                             console.log(data)
-                            console.log(textstatus)
+                            //console.log(textstatus)
                             // called asynchronously if an error occurs
                             // or server returns response with an error status.
                         });

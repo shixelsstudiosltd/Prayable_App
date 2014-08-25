@@ -58,6 +58,10 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','tw
                 templateUrl:'partials/input.html',
                 controller:'input'
             })
+            .when('/emailCnfm/:verificationCode',{
+                templateUrl:'views/emailCnfm.html',
+                controller:'emailCnfm'
+            })
 /*
             .when('/error',{
                 templateUrl:'views/error.html'
