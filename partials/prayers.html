@@ -7,24 +7,13 @@
            		<li class="app-header-notifications"><i class="fa fa-bell"></i></li>
            </ul>
            <div class="prayers-search-bar-with-icon">
-           		<input class="prayers-search-bar" type="text" placeholder="{{'searchCats' | translate}}">
+           		<input class="prayers-search-bar searchField" ng-change="change()" ng-model="searchQuery" type="text"   placeholder="{{'searchCats' | translate}}">
            		<div class="prayers-search-bar-icon"><i class="fa fa-search"></i></div>
            		<div class="prayers-search-title">{{ 'prayersFor' | translate}} <span class="bold">{{ 'when' | translate}}</span></div>
            		<ul class="prayers-search-results">
            		<!-- I left the translation out because this list will be populated -->
-           			<li>Afraid</li>
-					<li>In Debt</li>
-					<li>Sick & need healing</li>
-					<li>Dissapointed</li>
-					<li>Dealing with a difficult boss</li>
-					<li>Having marital problems</li>
-					<li>Your children are in trouble</li>
-					<li>Facing trouble at work</li>
-					<li>Rejected and hated</li>
-					<li>Depressed and sad</li>
-					<li>Lonely</li>
-					<li>Choosing a partner</li>
-					<li>Business in trouble or fails</li>
+           			<li ng-repeat="pray in prayerSerachList">{{pray.topic}}</li>
+
            		</ul>
            </div>
         </div>
