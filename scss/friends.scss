@@ -1,0 +1,82 @@
+.friends-body-container {
+	height: 400px;
+	overflow: scroll;
+	.friends-container {
+		width: 100%;
+		height: auto;
+		background: $white;
+		border-top: 1px solid rgba(0,0,0,0.1);
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		.container {
+			display: flex;
+			position: relative;
+			.user-img {
+				border-radius: 50%;
+				margin: 7px 10px 0 0;
+				height: 65px;
+				width: 65px;
+				border: 1px solid $gray;
+
+				&.user-img-bg {
+					background: url('../img/user-img.jpg') no-repeat center;
+					background-size: contain;
+				}
+			}
+			.user-desc {
+				.user-name {
+					font-weight: bold;
+				}
+				.user-denomination {
+					margin-bottom: 0;
+					font-style: italic;
+				}
+				.user-church {
+					margin-top: 2px;
+					margin-bottom: 13px;
+				}
+			}
+			.user-arrow {
+				position: absolute;
+				line-height: 80px;
+				right: 5%;
+			}
+		}
+	}
+}
+
+.fade-arrow {
+	position: fixed;
+	z-index: 10;
+	bottom: 65px;
+	text-align: center;
+	height: 44px;
+	width: 100%;
+	background: $white;
+	line-height: 44px;
+
+	.fa {
+		-webkit-animation: myfade 1.5s infinite; /* Chrome, Safari, Opera */
+		animation: mymove 1.5s infinite;
+	}
+}
+
+@-webkit-keyframes myfade {
+  0%   { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes myfade {
+  0%   { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-o-keyframes myfade {
+  0%   { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes myfade {
+  0%   { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
