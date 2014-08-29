@@ -58,6 +58,10 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','tw
                 templateUrl:'partials/input.html',
                 controller:'input'
             })
+            .when('/emailCnfm/:verificationCode',{
+                templateUrl:'views/emailCnfm.html',
+                controller:'emailCnfm'
+            })
 /*
             .when('/error',{
                 templateUrl:'views/error.html'
@@ -95,7 +99,8 @@ sampleApp.config(function ($translateProvider) {
         settings: "Settings",
         addAPrayer: "add a prayer",
         newRequest: "New Prayer Request",
-        profile: "Profile"
+        profile: "Profile",
+        facebookSignUp: "Sign up with Facebook"
     });
     $translateProvider.translations('de', {
         email: 'Email InGerman',
@@ -123,7 +128,8 @@ sampleApp.config(function ($translateProvider) {
         settings: "Settings InGerman",
         addAPrayer: "add a prayer InGerman",
         newRequest: "New Prayer Request InGerman",
-        profile: "Profile InGerman"
+        profile: "Profile InGerman",
+        facebookSignUp: "Sign up with Facebook InGerman"
 
     });
     $translateProvider.preferredLanguage('en');

@@ -1,4 +1,4 @@
-sampleApp.controller('register',function($scope,$rootScope,$location,$http,$translate){
+sampleApp.controller('register',function($scope,$rootScope,$location,$http,$translate,$q, twitterService){
 
     $scope.userData = {email:'',password:''};
     $scope.rePass = ''
@@ -9,6 +9,37 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                 if(($scope.rePass) && ($scope.rePass == $scope.userData.password)){
                 $scope.errorMsg = "";
                 console.log('Register Function Called '+' email: '+$scope.userData.email+' Password: '+$scope.userData.password)
+                    var data ={key:'web',userData:$scope.userData}
+                    //var data ='{"key":"web"}'
+                    $.ajax({
+                        method:"POST",
+                        //contentType: 'application/json',
+                        //url:"http://localhost:3000/user",
+                        url:"http://prayable-21641.onmodulus.net/user",
+                        data:data,
+                        crossDomain: true,
+                        dataType: "json"
+                    }).success(function(data, textstatus) {
+                            // this callback will be called asynchronously
+                            // when the response is available
+                            $.ajax({
+                                url:"http://prayable-21641.onmodulus.net/sendVerfMail",
+                              //  url:"http://prayable-21641.onmodulus.net/sendVerfMail",
+                                data:{email:data.data.email,key:"verify",userID:data.data._id},
+                                method:"POST"
+                            }).success( function(res,textStatus){
+                                    //$scope.go('/emailSent');
+                                    //if(!$scope.$$phase) $scope.$apply();
+                                })
+                            console.log(data)
+                            console.log(textstatus)
+                        }).error(function(data, textstatus) {
+
+                            console.log(data)
+                            console.log(textstatus)
+                            // called asynchronously if an error occurs
+                            // or server returns response with an error status.
+                        });
                 }else{
                     $scope.errorMsg = "*Both Password Doesn't match"
                 }
@@ -58,10 +89,31 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                 console.log( userData);
 
                 FB.api('/me/picture?redirect=false', function(pic) {
-                    console.log(pic);
+                    $scope.userData = {firstName:userData.first_name,fbId:userData.id,pictureUrl:pic}
 
+                    var data ={key:'fb',userData:$scope.userData}
                     ////Here the API will be CAlled
+                    $.ajax({
+                        method:"POST",
+                        //contentType: 'application/json',
+                        //url:"http://localhost:3000/user",
+                        url:"http://prayable-21641.onmodulus.net/user",
+                        data:data,
+                        crossDomain: true,
+                        dataType: "json"
+                    }).success(function(data, textstatus) {
+                            // this callback will be called asynchronously
+                            // when the response is available
 
+                            console.log(data)
+                            //console.log(textstatus)
+                        }).error(function(data, textstatus) {
+
+                            console.log(data)
+                            //console.log(textstatus)
+                            // called asynchronously if an error occurs
+                            // or server returns response with an error status.
+                        });
 
 
                 });//me/picture
@@ -73,6 +125,29 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
 
         }, {scope: 'public_profile,email,user_friends,user_hometown,religion'});
     };
+
+    twitterService.initialize();
+    $scope.twitterLogin = function(){
+
+        twitterService.connectTwitter('R').then(function(data) {
+
+            if (twitterService.isReady()) {
+
+                twitterService.getLatestTweets().then(function(data) {
+                    $scope.tweets = data;
+                });
+
+            }
+        });
+
+    }
+    if (twitterService.isReady()) {
+        // $('#connectButton').hide();
+        //$('#getTimelineButton, #signOut').show();
+        //$scope.refreshTimeline();
+        twitterService.clearCache();
+        console.log("isReady")
+    }
 
     function validateEmail(email) {
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

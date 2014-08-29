@@ -7,24 +7,12 @@
            		<li class="app-header-notifications"><i class="fa fa-bell"></i></li>
            </ul>
            <div class="prayers-search-bar-with-icon">
-           		<input class="prayers-search-bar" type="text" placeholder="{{'searchCats' | translate}}">
+           		<input class="prayers-search-bar searchField" ng-change="change()" ng-model="searchQuery" type="text"   placeholder="{{'searchCats' | translate}}">
            		<div class="prayers-search-bar-icon"><i class="fa fa-search"></i></div>
            		<div class="prayers-search-title">{{ 'prayersFor' | translate}} <span class="bold">{{ 'when' | translate}}</span></div>
            		<ul class="prayers-search-results">
            		<!-- I left the translation out because this list will be populated -->
-           			<li>Afraid<span>2 prayers</span></li>
-      					<li>In Debt<span>12 prayers</span></li>
-      					<li>Sick & need healing<span>22 prayers</span></li>
-      					<li>Dissapointed<span>17 prayers</span></li>
-      					<li>Dealing with a difficult boss<span>2 prayers</span></li>
-      					<li>Having marital problems<span>20 prayers</span></li>
-      					<li>Your children are in trouble<span>200 prayers</span></li>
-      					<li>Facing trouble at work<span>24 prayers</span></li>
-      					<li>Rejected and hated<span>25 prayers</span></li>
-      					<li>Depressed and sad<span>7 prayers</span></li>
-      					<li>Lonely<span>2 prayers</span></li>
-      					<li>Choosing a partner<span>none available</span></li>
-      					<li>Business in trouble or fails<span>1 prayer(s)</span></li>
+           			<li ng-repeat="pray in prayerSerachList">{{pray.topic}}<span>0 prayers</span></li>
            		</ul>
            </div>
         </div>

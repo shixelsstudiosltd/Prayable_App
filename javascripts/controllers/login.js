@@ -1,26 +1,6 @@
 sampleApp.controller('login',function($rootScope,$scope,$location,$http,$translate,$q, twitterService){
 
-    $.ajax({
-        //url:"http://prayable-21641.onmodulus.net/user/1",
-        url: "http://prayable-21641.onmodulus.net/user/1",
-        type: "GET",
-        //contentType: 'application/json',
-        dataType: "json",
-        success: function(data, textstatus) {
-            // this callback will be called asynchronously
-            // when the response is available
 
-            console.log(data)
-            console.log(textstatus)
-        },
-        error: function(data, textstatus) {
-
-            console.log(data)
-            console.log(textstatus)
-            // called asynchronously if an error occurs
-            // or server returns response with an error status.
-        }
-    });
     $scope.userData = {email:'',password:''};
     $scope.errorMsg = ''
     $scope.loginUser = function(){
@@ -28,6 +8,29 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
             if(($scope.userData.password) && ($scope.userData.password.length > 5 && $scope.userData.password.length < 15)){
                 $scope.errorMsg = "";
                 console.log('login Function Called '+' email: '+$scope.userData.email+' Password: '+$scope.userData.password)
+                var data ={key:'web',userData:$scope.userData}
+                //var data ='{"key":"web"}'
+                $.ajax({
+                    method:"POST",
+                    //contentType: 'application/json',
+                    //url:"http://localhost:3000/loginUser",
+                    url:"http://prayable-21641.onmodulus.net/loginUser",
+                    data:data,
+                    crossDomain: true,
+                    dataType: "json"
+                }).success(function(data, textstatus) {
+                        // this callback will be called asynchronously
+                        // when the response is available
+
+                        console.log(data)
+                        console.log(textstatus)
+                    }).error(function(data, textstatus) {
+
+                        console.log(data)
+                        console.log(textstatus)
+                        // called asynchronously if an error occurs
+                        // or server returns response with an error status.
+                    });
             }else{
                 $scope.errorMsg = "*Mistake in password"
             }
@@ -92,20 +95,13 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
 
     twitterService.initialize();
     $scope.twitterLogin = function(){
-        console.log("as")
-    twitterService.connectTwitter().then(function(data3) {
-        console.log(data3)
+    twitterService.connectTwitter().then(function(data) {
         if (twitterService.isReady()) {
-            //if the authorization is successful, hide the connect button and display the tweets
-            //$('#connectButton').fadeOut(function(){
-             //   $('#getTimelineButton, #signOut').fadeIn();
-             //   $scope.refreshTimeline();
-            //});
+
             twitterService.getLatestTweets().then(function(data) {
                 $scope.tweets = data;
             });
-            console.log("twitterLogin")
-            console.log($scope.tweets)
+
         }
     });
     }
