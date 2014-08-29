@@ -29,27 +29,22 @@
 						</div>
                     <span style="color:#ffffff;">{{errorMsg}}</span>
 						<input type="submit" ng-click="regUser()" value="{{ 'signup' | translate }}">
-
 					
-					<p>{{ 'signupwith' | translate }}:</p>
+					<p>{{ 'or' | translate }}:</p>
 
 					<div class="selection-container">
 						<div class="t-glass">
 							<div class="select-box facebook">
-
+								<div class="border-right">
 									<i style="cursor: pointer" ng-click="fbLogin()" class="fa fa-2x fa-facebook"></i>
-
-							</div>
-						</div>
-						<p>{{ 'or' | translate }}</p>
-						<div class="t-glass">
-							<div class="select-box twitter">
-								<a href="">
-									<i class="fa fa-2x fa-twitter"></i>
-								</a>
+								</div>
+								<div class="border-left">
+									<h5>Sign up with Facebook</h5>
+								</div>
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>

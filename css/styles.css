@@ -23,7 +23,7 @@ Primary use:	Page used for common styles
 /*------------------------------*\
     $STYLES
 \*------------------------------*/
-/* line 32, ../scss/variables.scss */
+/* line 37, ../scss/variables.scss */
 .body-container {
   min-height: 100%;
   height: auto;
@@ -32,35 +32,35 @@ Primary use:	Page used for common styles
   margin: 0 auto;
 }
 
-/* line 40, ../scss/variables.scss */
+/* line 45, ../scss/variables.scss */
 .bg-main {
   background: url("../img/bg-login.png") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 46, ../scss/variables.scss */
+/* line 51, ../scss/variables.scss */
 .bg-input {
   background: url("../img/bg-main.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 52, ../scss/variables.scss */
+/* line 57, ../scss/variables.scss */
 .bg-prayers {
   background: url("../img/bg-prayers.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 58, ../scss/variables.scss */
+/* line 63, ../scss/variables.scss */
 .bg-home {
   background: url("../img/bg-home.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 64, ../scss/variables.scss */
+/* line 69, ../scss/variables.scss */
 input[type="text"], input[type="password"], input[type="submit"] {
   display: block;
   width: 100%;
@@ -68,14 +68,14 @@ input[type="text"], input[type="password"], input[type="submit"] {
   color: white;
 }
 
-/* line 71, ../scss/variables.scss */
+/* line 76, ../scss/variables.scss */
 input[type="text"], input[type="password"] {
   text-indent: 25px;
   border-radius: 0 2px 2px 0;
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* line 77, ../scss/variables.scss */
+/* line 82, ../scss/variables.scss */
 input[type="submit"] {
   font-size: 16px;
   font-weight: bolder;
@@ -3575,7 +3575,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.42857;
-  color: #555555;
+  color: lightgrey;
 }
 
 /* line 115, ../scss/bootstrap/bootstrap/_forms.scss */
@@ -3586,7 +3586,7 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
-  color: #555555;
+  color: lightgrey;
   background-color: white;
   background-image: none;
   border: 1px solid #cccccc;
@@ -4896,7 +4896,7 @@ tbody.collapse.in {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #555555;
+  color: lightgrey;
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #cccccc;
@@ -5068,7 +5068,7 @@ tbody.collapse.in {
 }
 /* line 98, ../scss/bootstrap/bootstrap/_navs.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  color: #555555;
+  color: lightgrey;
   background-color: white;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
@@ -10657,7 +10657,7 @@ Primary use:	Page Used for Login/Register Styles
 }
 /* line 23, ../scss/register.scss */
 .page-login .img-logo img, .page-register .img-logo img {
-  width: 80%;
+  max-width: 80%;
 }
 
 /* line 29, ../scss/register.scss */
@@ -10729,122 +10729,67 @@ Primary use:	Page Used for Login/Register Styles
   text-align: center;
 }
 /* line 93, ../scss/register.scss */
-.glyph-container.social {
-  margin-bottom: 0;
-}
-/* line 96, ../scss/register.scss */
-.glyph-container.social.facebook, .glyph-container.social.facebook > div {
-  background: -moz-linear-gradient(top, #3b5998, #2b4170);
-  background: -ms-linear-gradient(top, #3b5998, #2b4170);
-  background: -webkit-linear-gradient(top, #3b5998, #2b4170);
-}
-/* line 101, ../scss/register.scss */
-.glyph-container.social.facebook div, .glyph-container.social.facebook > div div {
-  border-right: 1px solid #203B71;
-}
-/* line 104, ../scss/register.scss */
-.glyph-container.social.facebook a, .glyph-container.social.facebook > div a {
-  font-family: Tahoma;
-}
-/* line 108, ../scss/register.scss */
-.glyph-container.social.facebook:hover, .glyph-container.social.facebook > div:hover {
-  background-color: #3b5998;
-  /* fallback color */
-  background: -moz-linear-gradient(top, #2b4170, #3b5998);
-  background: -ms-linear-gradient(top, #2b4170, #3b5998);
-  background: -webkit-linear-gradient(top, #2b4170, #3b5998);
-}
-/* line 115, ../scss/register.scss */
-.glyph-container.social.twitter, .glyph-container.social.twitter > div {
-  background: -moz-linear-gradient(top, #00aced, #0081ce);
-  background: -ms-linear-gradient(top, #00aced, #0081ce);
-  background: -webkit-linear-gradient(top, #00aced, #0081ce);
-}
-/* line 121, ../scss/register.scss */
-.glyph-container.social.twitter div, .glyph-container.social.twitter > div div {
-  border-right: 1px solid #0E7BA9;
-  background: #35a9db;
-}
-/* line 125, ../scss/register.scss */
-.glyph-container.social.twitter a, .glyph-container.social.twitter > div a {
-  font-family: Helvetica;
-}
-/* line 129, ../scss/register.scss */
-.glyph-container.social.twitter:hover, .glyph-container.social.twitter > div:hover {
-  background-color: #00aced;
-  /* fallback color */
-  background: -moz-linear-gradient(top, #0081ce, #00aced);
-  background: -ms-linear-gradient(top, #0081ce, #00aced);
-  background: -webkit-linear-gradient(top, #0081ce, #00aced);
-}
-/* line 137, ../scss/register.scss */
-.glyph-container.social div {
-  line-height: 4em;
-}
-/* line 141, ../scss/register.scss */
-.glyph-container.social a {
-  line-height: 3em;
-  text-indent: 1.5em;
-  color: white;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-}
-/* line 149, ../scss/register.scss */
 .glyph-container.m-bottom {
   margin-bottom: 20px;
 }
 
-/* line 153, ../scss/register.scss */
+/* line 97, ../scss/register.scss */
 .f-glass {
   border: 5px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
 
-/* line 158, ../scss/register.scss */
+/* line 102, ../scss/register.scss */
 .social-register {
   width: 80%;
   margin: 0 auto;
 }
 
-/* line 164, ../scss/register.scss */
-.selection-container {
-  display: inline-flex;
-}
-/* line 167, ../scss/register.scss */
+/* line 110, ../scss/register.scss */
 .selection-container .t-glass {
-  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
 }
-/* line 170, ../scss/register.scss */
+/* line 113, ../scss/register.scss */
 .selection-container .select-box {
-  border-radius: 2px 0 0 2px;
+  border-radius: 2px;
   height: 44px;
-  width: 44px;
+  width: 100%;
   background: rgba(255, 255, 255, 0.7);
   color: white;
   line-height: 3em;
   text-align: center;
   line-height: 3.8em;
+  display: flex;
 }
-/* line 180, ../scss/register.scss */
+/* line 124, ../scss/register.scss */
+.selection-container .select-box .border-right {
+  padding: 0em 1.5em;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* line 128, ../scss/register.scss */
+.selection-container .select-box .border-left {
+  padding-left: 1.5em;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+/* line 132, ../scss/register.scss */
+.selection-container .select-box .border-left h5 {
+  line-height: 1.5em;
+}
+/* line 137, ../scss/register.scss */
 .selection-container .select-box.facebook {
   background: -moz-linear-gradient(top, #3b5998, #2b4170);
   background: -ms-linear-gradient(top, #3b5998, #2b4170);
   background: -webkit-linear-gradient(top, #3b5998, #2b4170);
 }
-/* line 186, ../scss/register.scss */
-.selection-container .select-box.twitter {
-  background: -moz-linear-gradient(top, #00aced, #0081ce);
-  background: -ms-linear-gradient(top, #00aced, #0081ce);
-  background: -webkit-linear-gradient(top, #00aced, #0081ce);
-}
-/* line 193, ../scss/register.scss */
+/* line 143, ../scss/register.scss */
 .selection-container .select-box a {
   color: white;
 }
-/* line 198, ../scss/register.scss */
+/* line 148, ../scss/register.scss */
 .selection-container hr {
   width: 15%;
 }
-/* line 201, ../scss/register.scss */
+/* line 151, ../scss/register.scss */
 .selection-container p {
   /*line-height: 2.5em;*/
   font-size: 1.3em;
@@ -10921,9 +10866,20 @@ Primary use:	Page Used for Login/Register Styles
 }
 /* line 69, ../scss/prayers.scss */
 .prayers-search-results li {
-  font-size: 1.5em;
-  font-weight: 100;
+  font-size: 1.25em;
+  font-weight: 300;
+  text-transform: capitalize;
   padding: 5px 0;
+}
+/* line 75, ../scss/prayers.scss */
+.prayers-search-results li span {
+  font-size: 0.75em;
+  text-transform: capitalize;
+  text-indent: 5px;
+  display: block;
+  line-height: 0.825em;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* line 1, ../scss/home.scss */
@@ -10989,14 +10945,485 @@ Primary use:	Page Used for Login/Register Styles
   outline: 0;
 }
 
-/* line 23, ../scss/styles.scss */
+/* line 1, ../scss/inbox.scss */
+.inbox-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #4e007f;
+}
+
+/* line 8, ../scss/inbox.scss */
+.app-header-search-container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+/* line 13, ../scss/inbox.scss */
+.app-header-search-container .app-search-header {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+/* line 19, ../scss/inbox.scss */
+.app-header-search-container .header-search {
+  display: flex;
+  width: 80%;
+  margin-right: 5%;
+}
+/* line 24, ../scss/inbox.scss */
+.app-header-search-container .header-search input[type="text"] {
+  border: 0;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  background: #290440;
+  color: white;
+  height: 50px;
+}
+/* line 32, ../scss/inbox.scss */
+.app-header-search-container .header-search input[type="text"]:focus {
+  outline: none !important;
+}
+/* line 37, ../scss/inbox.scss */
+.app-header-search-container .header-search .app-search-bar-icon {
+  font-size: 2em;
+  background: #290440;
+  color: white;
+  height: 50px;
+  width: 75px;
+  text-align: center;
+  line-height: 50px;
+  border-bottom-right-radius: 100px;
+  border-top-right-radius: 100px;
+}
+/* line 50, ../scss/inbox.scss */
+.app-header-search-container .app-message-compose-container {
+  width: 25%;
+  position: relative;
+}
+/* line 54, ../scss/inbox.scss */
+.app-header-search-container .app-message-compose-container .message-compose {
+  font-size: 2em;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #290440;
+  color: white;
+  border-radius: 100px;
+  position: absolute;
+  right: 0;
+}
+
+/* line 69, ../scss/inbox.scss */
+.message-container {
+  height: 450px;
+  width: 100%;
+  overflow-y: scroll;
+}
+/* line 73, ../scss/inbox.scss */
+.message-container .message-box {
+  background: #4e007f;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  height: 75px;
+  padding: 0.5em 1.5em;
+  border-top: 1px solid rgba(179, 179, 179, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+}
+/* line 88, ../scss/inbox.scss */
+.message-container .message-box .message-content-container .message-content-header .message-date {
+  position: relative;
+}
+/* line 91, ../scss/inbox.scss */
+.message-container .message-box .message-content-container .message-content-header .message-date span {
+  position: absolute;
+  right: 0;
+  color: white;
+}
+/* line 100, ../scss/inbox.scss */
+.message-container .message-box.viewed {
+  background: #1e0230;
+}
+/* line 102, ../scss/inbox.scss */
+.message-container .message-box.viewed .message-notification {
+  display: none;
+}
+/* line 108, ../scss/inbox.scss */
+.message-container .message-box.viewed .message-content-container .message-content-header .message-sender h4 {
+  color: #9c9c9c;
+}
+/* line 112, ../scss/inbox.scss */
+.message-container .message-box.viewed .message-content-container .message-content-header .message-date {
+  position: relative;
+}
+/* line 114, ../scss/inbox.scss */
+.message-container .message-box.viewed .message-content-container .message-content-header .message-date h5 {
+  color: #9c9c9c;
+}
+/* line 117, ../scss/inbox.scss */
+.message-container .message-box.viewed .message-content-container .message-content-header .message-date span {
+  color: #4e007f;
+}
+/* line 124, ../scss/inbox.scss */
+.message-container .message-box.viewed .message-content p {
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  color: lightgrey;
+}
+/* line 132, ../scss/inbox.scss */
+.message-container .message-box .message-notification {
+  padding-top: 25px;
+}
+/* line 135, ../scss/inbox.scss */
+.message-container .message-box .message-notification div {
+  height: 9px;
+  width: 9px;
+  position: absolute;
+  margin-left: -10px;
+  border-radius: 50%;
+  background: #8f6da8;
+}
+/* line 145, ../scss/inbox.scss */
+.message-container .message-box .message-content-container {
+  padding-left: 10px;
+  width: 100%;
+}
+/* line 150, ../scss/inbox.scss */
+.message-container .message-box .message-content-container .message-content-header .message-sender h4 {
+  color: white;
+  margin-bottom: 0;
+}
+/* line 156, ../scss/inbox.scss */
+.message-container .message-box .message-content-container .message-content-header .message-date h5 {
+  color: white;
+}
+/* line 164, ../scss/inbox.scss */
+.message-container .message-box .message-content p {
+  color: #eaeaea;
+}
+
+/* line 1, ../scss/circles.scss */
+.my-personal-menu {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+/* line 7, ../scss/circles.scss */
+.my-personal-menu ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 70px;
+  width: 100%;
+  background: red;
+  border-top: 2px solid #eaeaea;
+}
+/* line 15, ../scss/circles.scss */
+.my-personal-menu ul li {
+  text-align: center;
+  line-height: 70px;
+  display: inline;
+  border-right: 1px solid #eaeaea;
+  width: 25%;
+  background: white;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, white 0%, #e5e5e5 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e5e5e5));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, white 0%, #e5e5e5 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, white 0%, #e5e5e5 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, white 0%, #e5e5e5 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 33, ../scss/circles.scss */
+.my-circle-body-container {
+  position: relative;
+  height: 372px;
+  overflow-y: scroll;
+}
+
+/* line 39, ../scss/circles.scss */
+.my-circle-container {
+  width: 100%;
+  background: white;
+}
+/* line 43, ../scss/circles.scss */
+.my-circle-container .circle-container {
+  display: flex;
+  height: 62px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 20px;
+}
+/* line 50, ../scss/circles.scss */
+.my-circle-container .circle-container .circle-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  border: 2px solid lightgrey;
+  margin-right: 10px;
+}
+/* line 57, ../scss/circles.scss */
+.my-circle-container .circle-container .circle-img.group-img {
+  background: url("../img/group-img.png") no-repeat center;
+  background-size: 35px;
+}
+/* line 62, ../scss/circles.scss */
+.my-circle-container .circle-container .circle-desc {
+  color: #333333;
+  margin-right: 15px;
+}
+/* line 66, ../scss/circles.scss */
+.my-circle-container .circle-container .circle-desc .desc-row-1 {
+  display: flex;
+}
+/* line 68, ../scss/circles.scss */
+.my-circle-container .circle-container .circle-desc .desc-row-1 .group-name {
+  text-transform: capitalize;
+  margin-top: 5px;
+}
+/* line 74, ../scss/circles.scss */
+.my-circle-container .circle-container .circle-desc .desc-row-2 {
+  display: flex;
+}
+/* line 77, ../scss/circles.scss */
+.my-circle-container .circle-container .circle-desc .desc-row-2 .group-members, .my-circle-container .circle-container .circle-desc .desc-row-2 .group-notifications {
+  margin-top: 0;
+}
+/* line 81, ../scss/circles.scss */
+.my-circle-container .circle-container .circle-desc .desc-row-2 .group-members {
+  text-transform: capitalize;
+  font-weight: 100;
+  font-style: italic;
+  margin-bottom: 0;
+  display: inline;
+  margin-right: 15px;
+}
+/* line 93, ../scss/circles.scss */
+.my-circle-container .circle-container .circle-admin-settings {
+  line-height: 60px;
+  position: absolute;
+  right: 5%;
+}
+
+/* line 1, ../scss/friends.scss */
+.friends-body-container {
+  height: 400px;
+  overflow: scroll;
+}
+/* line 4, ../scss/friends.scss */
+.friends-body-container .friends-container {
+  width: 100%;
+  height: auto;
+  background: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 10, ../scss/friends.scss */
+.friends-body-container .friends-container .container {
+  display: flex;
+  position: relative;
+}
+/* line 13, ../scss/friends.scss */
+.friends-body-container .friends-container .container .user-img {
+  border-radius: 50%;
+  margin: 7px 10px 0 0;
+  height: 65px;
+  width: 65px;
+  border: 1px solid lightgrey;
+}
+/* line 20, ../scss/friends.scss */
+.friends-body-container .friends-container .container .user-img.user-img-bg {
+  background: url("../img/user-img.jpg") no-repeat center;
+  background-size: contain;
+}
+/* line 26, ../scss/friends.scss */
+.friends-body-container .friends-container .container .user-desc .user-name {
+  font-weight: bold;
+}
+/* line 29, ../scss/friends.scss */
+.friends-body-container .friends-container .container .user-desc .user-denomination {
+  margin-bottom: 0;
+  font-style: italic;
+}
+/* line 33, ../scss/friends.scss */
+.friends-body-container .friends-container .container .user-desc .user-church {
+  margin-top: 2px;
+  margin-bottom: 13px;
+}
+/* line 38, ../scss/friends.scss */
+.friends-body-container .friends-container .container .user-arrow {
+  position: absolute;
+  line-height: 80px;
+  right: 5%;
+}
+
+/* line 47, ../scss/friends.scss */
+.fade-arrow {
+  position: fixed;
+  z-index: 10;
+  bottom: 65px;
+  text-align: center;
+  height: 44px;
+  width: 100%;
+  background: white;
+  line-height: 44px;
+}
+/* line 57, ../scss/friends.scss */
+.fade-arrow .fa {
+  -webkit-animation: myfade 1.5s infinite;
+  /* Chrome, Safari, Opera */
+  animation: mymove 1.5s infinite;
+}
+
+@-webkit-keyframes myfade {
+  /* line 64, ../scss/friends.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 65, ../scss/friends.scss */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 66, ../scss/friends.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes myfade {
+  /* line 69, ../scss/friends.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 70, ../scss/friends.scss */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 71, ../scss/friends.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes myfade {
+  /* line 74, ../scss/friends.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 75, ../scss/friends.scss */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 76, ../scss/friends.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes myfade {
+  /* line 79, ../scss/friends.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 80, ../scss/friends.scss */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 81, ../scss/friends.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 2, ../scss/profile.scss */
+.account-container .account-photo {
+  width: 100%;
+  height: 175px;
+  background: url("../img/user-img.jpg") no-repeat center;
+  background-size: cover;
+  border-top: 1px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
+}
+/* line 12, ../scss/profile.scss */
+.account-container .account-menu-container .account-menu-header {
+  padding: 10px 1em 0px;
+  height: 90px;
+  width: 100%;
+  background: white;
+}
+/* line 17, ../scss/profile.scss */
+.account-container .account-menu-container .account-menu-header .user-name {
+  font-weight: bold;
+}
+/* line 21, ../scss/profile.scss */
+.account-container .account-menu-container .account-menu-header .account-header-line ul {
+  padding: 0;
+  text-align: center;
+}
+/* line 25, ../scss/profile.scss */
+.account-container .account-menu-container .account-menu-header .account-header-line ul li {
+  display: inline;
+}
+/* line 28, ../scss/profile.scss */
+.account-container .account-menu-container .account-menu-header .account-header-line ul li:nth-child(2) {
+  margin: 0 3em;
+}
+/* line 35, ../scss/profile.scss */
+.account-container .account-menu-container .account-menu {
+  height: 233px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+/* line 40, ../scss/profile.scss */
+.account-container .account-menu-container .account-menu .account-row {
+  height: 50%;
+  border-top: 1px solid lightgrey;
+  display: flex;
+}
+/* line 45, ../scss/profile.scss */
+.account-container .account-menu-container .account-menu .account-row .row-item {
+  width: 33.33%;
+  border-right: 1px solid lightgrey;
+  background: white;
+  height: 100%;
+  text-align: center;
+}
+/* line 52, ../scss/profile.scss */
+.account-container .account-menu-container .account-menu .account-row .row-item h6 {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* line 28, ../scss/styles.scss */
 html, body {
   width: 100%;
   height: 100%;
   position: fixed;
 }
 
-/* line 29, ../scss/styles.scss */
+/* line 34, ../scss/styles.scss */
 .app-header {
   width: 100%;
   height: 60px;
@@ -11007,7 +11434,7 @@ html, body {
   line-height: 5em;
   font-weight: 100;
 }
-/* line 39, ../scss/styles.scss */
+/* line 44, ../scss/styles.scss */
 .app-header .app-header-back-button {
   width: 20%;
   float: left;
@@ -11015,15 +11442,15 @@ html, body {
   text-align: center;
   font-size: 4em;
 }
-/* line 46, ../scss/styles.scss */
+/* line 51, ../scss/styles.scss */
 .app-header .app-header-back-button i {
   cursor: pointer;
 }
-/* line 50, ../scss/styles.scss */
+/* line 55, ../scss/styles.scss */
 .app-header .app-header-back-button:hover {
   color: #4e007f;
 }
-/* line 55, ../scss/styles.scss */
+/* line 60, ../scss/styles.scss */
 .app-header .app-header-title {
   width: 60%;
   height: 60px;
@@ -11031,7 +11458,7 @@ html, body {
   text-align: center;
   font-size: 1.5em;
 }
-/* line 63, ../scss/styles.scss */
+/* line 68, ../scss/styles.scss */
 .app-header .app-header-notifications {
   width: 20%;
   float: left;
@@ -11039,13 +11466,33 @@ html, body {
   text-align: center;
   font-size: 2.5em;
   cursor: pointer;
+  position: relative;
 }
-/* line 71, ../scss/styles.scss */
+/* line 77, ../scss/styles.scss */
+.app-header .app-header-notifications .notification-counter {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  left: 50%;
+  top: 0;
+  border-radius: 100%;
+  background: #290440;
+  text-align: center;
+  margin-top: 10px;
+}
+/* line 88, ../scss/styles.scss */
+.app-header .app-header-notifications .notification-counter span {
+  position: absolute;
+  top: -23px;
+  right: 8px;
+  font-size: 0.5em;
+}
+/* line 96, ../scss/styles.scss */
 .app-header .app-header-notifications:hover {
   color: #4e007f;
 }
 
-/* line 77, ../scss/styles.scss */
+/* line 102, ../scss/styles.scss */
 .prayable-nav-icon {
   background: #290440;
   width: 60px;
@@ -11056,16 +11503,17 @@ html, body {
   cursor: pointer;
   position: absolute;
   bottom: 30px;
-  left: 45%;
+  left: 50%;
+  margin-left: -30px;
   color: white;
   text-align: center;
 }
-/* line 91, ../scss/styles.scss */
+/* line 117, ../scss/styles.scss */
 .prayable-nav-icon:hover {
   background: #1a0228;
 }
 
-/* line 96, ../scss/styles.scss */
+/* line 122, ../scss/styles.scss */
 .prayable-nav-container {
   width: 100%;
   padding: 0;
@@ -11074,13 +11522,13 @@ html, body {
   color: white;
   bottom: -530px;
 }
-/* line 104, ../scss/styles.scss */
+/* line 130, ../scss/styles.scss */
 .prayable-nav-container .prayable-nav-items {
   list-style: none;
   padding: 0;
   text-align: left;
 }
-/* line 108, ../scss/styles.scss */
+/* line 134, ../scss/styles.scss */
 .prayable-nav-container .prayable-nav-items li {
   width: 100%;
   height: 60px;
@@ -11091,7 +11539,7 @@ html, body {
   padding: 15px 25px;
   border-bottom: 1px solid #1e0230;
 }
-/* line 118, ../scss/styles.scss */
+/* line 144, ../scss/styles.scss */
 .prayable-nav-container .prayable-nav-items li .prayable-nav-item-icon {
   padding-right: 20px;
   color: #8f6da8;

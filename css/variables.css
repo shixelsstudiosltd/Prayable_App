@@ -14,7 +14,7 @@ Primary use:	Page used for common styles
 /*------------------------------*\
     $STYLES
 \*------------------------------*/
-/* line 32, ../scss/variables.scss */
+/* line 37, ../scss/variables.scss */
 .body-container {
   min-height: 100%;
   height: auto;
@@ -23,35 +23,35 @@ Primary use:	Page used for common styles
   margin: 0 auto;
 }
 
-/* line 40, ../scss/variables.scss */
+/* line 45, ../scss/variables.scss */
 .bg-main {
   background: url("../img/bg-login.png") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 46, ../scss/variables.scss */
+/* line 51, ../scss/variables.scss */
 .bg-input {
   background: url("../img/bg-main.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 52, ../scss/variables.scss */
+/* line 57, ../scss/variables.scss */
 .bg-prayers {
   background: url("../img/bg-prayers.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 58, ../scss/variables.scss */
+/* line 63, ../scss/variables.scss */
 .bg-home {
   background: url("../img/bg-home.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 64, ../scss/variables.scss */
+/* line 69, ../scss/variables.scss */
 input[type="text"], input[type="password"], input[type="submit"] {
   display: block;
   width: 100%;
@@ -59,14 +59,14 @@ input[type="text"], input[type="password"], input[type="submit"] {
   color: white;
 }
 
-/* line 71, ../scss/variables.scss */
+/* line 76, ../scss/variables.scss */
 input[type="text"], input[type="password"] {
   text-indent: 25px;
   border-radius: 0 2px 2px 0;
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* line 77, ../scss/variables.scss */
+/* line 82, ../scss/variables.scss */
 input[type="submit"] {
   font-size: 16px;
   font-weight: bolder;

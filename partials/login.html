@@ -23,25 +23,21 @@
                     <span style="color:#ffffff;">{{errorMsg}}</span>
 						<input type="submit" ng-click="loginUser()" value="{{ 'login' | translate }}">
 
-					<p>{{ 'loginwith' | translate }}:</p>
+
+					<p>{{ 'or' | translate }}</p>
 
 					<div class="selection-container">
 						<div class="t-glass">
 							<div class="select-box facebook">
-
+								<div class="border-right">
 									<i style="cursor: pointer" ng-click="fbLogin()" class="fa fa-2x fa-facebook"></i>
-
-								<hr>
+								</div>
+								<div class="border-left">
+									<h5>Log In With Facebook</h5>
+								</div>
 							</div>
 						</div>
-						<p>{{ 'or' | translate }}</p>
-						<div class="t-glass">
-							<div class="select-box twitter">
-
-									<i ng-click="twitterLogin()" class="fa fa-2x fa-twitter"></i>
-
-							</div>
-						</div>
+	
 					</div>
 				</div>
 			</div>

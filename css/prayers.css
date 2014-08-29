@@ -1,9 +1,9 @@
 /*
 Syntax error: Undefined variable: "$dark-purple".
-        on line 9 of /Users/rac/Development/Shixels Studios Ltd/Repos/Prayable_App/scss/prayers.scss
+        on line 9 of /Users/main/Development/Prayable_App/scss/prayers.scss
 
 Backtrace:
-/Users/rac/Development/Shixels Studios Ltd/Repos/Prayable_App/scss/prayers.scss:9
+/Users/main/Development/Prayable_App/scss/prayers.scss:9
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/script/variable.rb:49:in `_perform'
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/script/node.rb:40:in `perform'
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/script/list.rb:70:in `_perform'
@@ -91,4 +91,4 @@ org/jruby/RubyKernel.java:1419:in `loop'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$dark-purple\".\A         on line 9 of /Users/rac/Development/Shixels Studios Ltd/Repos/Prayable_App/scss/prayers.scss"; }
+  content: "Syntax error: Undefined variable: \"$dark-purple\".\A         on line 9 of /Users/main/Development/Prayable_App/scss/prayers.scss"; }

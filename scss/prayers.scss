@@ -67,9 +67,20 @@
 	overflow: -moz-scrollbars-vertical;
 
 	li {
-		font-size: 1.5em;
-		font-weight: 100;
+		font-size: 1.25em;
+		font-weight: 300;
+		text-transform: capitalize;
 		padding: 5px 0;
+
+		span {
+			font-size: 0.75em;
+			text-transform: capitalize;
+			text-indent: 5px;
+			display: block;
+			line-height: 0.825em;
+			font-weight: 100;
+			color: $white-t;
+		}
 	}
 
 }
