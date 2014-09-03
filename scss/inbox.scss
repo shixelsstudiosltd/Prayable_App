@@ -67,9 +67,11 @@
 }
 
 .message-container {
-	height: 450px;
+	position: absolute;
+	height: 100%;
 	width: 100%;
 	overflow-y: scroll;
+	
 	.message-box {
 		background: $purple;
 		overflow: hidden;
