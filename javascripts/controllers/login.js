@@ -89,7 +89,7 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
 
 
 
-        }, {scope: 'public_profile,email,user_friends,user_hometown,religion'});
+        }, {scope: 'public_profile,email,user_birthday,user_friends,user_hometown,religion'});
     };
     $scope.tweets; //array of tweets
 
