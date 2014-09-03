@@ -12,7 +12,7 @@
            		<div class="prayers-search-title">{{ 'prayersFor' | translate}} <span class="bold">{{ 'when' | translate}}</span></div>
            		<ul class="prayers-search-results">
            		<!-- I left the translation out because this list will be populated -->
-           			<li ng-repeat="pray in prayerSerachList">{{pray.topic}}<span>0 prayers</span></li>
+           			<li ng-repeat="prayer in prayerSerachList">{{prayer.topic}}<span>{{pray.prayersCount}}</span></li>
            		</ul>
            </div>
         </div>
