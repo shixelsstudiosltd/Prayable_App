@@ -31,8 +31,9 @@
 }
 
 .my-circle-body-container {
-		position: relative;
-		height: 372px;
+		position: absolute;
+		height: 100%;
+		width: 100%;
 		overflow-y: scroll;
 }
 

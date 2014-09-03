@@ -23,6 +23,7 @@ Primary use:	Page Used for Importing Stylesheets
 @import "circles";
 @import "friends";
 @import "profile";
+@import "prayer";
 
 
 html, body {
@@ -38,8 +39,15 @@ html, body {
 	list-style: none;
 	display: inline-block;
 	padding: 0;
+	position: relative;
+	z-index: 5;
 	line-height: 5em;
 	font-weight: 100;
+
+	&.bg-transparent {
+		background: $black-t;
+		margin-bottom: 0;
+	}
 
 	.app-header-back-button {
 		width: 20%;
@@ -63,6 +71,13 @@ html, body {
 		float: left;
 		text-align: center;
 		font-size: 1.5em;
+	}
+
+	.app-header-toggle-settings {
+		span {
+			line-height: 1.5em;
+			font-weight: bold;
+		}
 	}
 
 	.app-header-notifications {

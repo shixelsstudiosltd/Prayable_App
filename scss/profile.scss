@@ -1,7 +1,13 @@
 .account-container {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+
 	.account-photo {
 		width: 100%;
-		height: 175px;
+		height: 35%;
+		position: relative;
 		background: url('../img/user-img.jpg') no-repeat center;
 		background-size: cover;
 		border-top: 1px solid $gray;
@@ -9,12 +15,24 @@
 	}
 
 	.account-menu-container {
+		height: 65%;
+		width: 100%;
+		background: red;
+		position: absolute;
 		.account-menu-header {
 			padding: 10px 1em 0px;
-			height: 90px;
+			position: relative;
+			height: 35%;
 			width: 100%;
 			background: $white;
 			.user-name {
+				font-weight: bold;
+			}
+			.user-denomination {
+				font-weight: 100;
+				font-style: italic;
+			}
+			.user-church {
 				font-weight: bold;
 			}
 			.account-header-line {
@@ -31,9 +49,26 @@
 					}
 				}
 			}
+			.user-add {
+				position: absolute;
+				right: 0;
+				display: flex;
+				text-transform: capitalize;
+				background: $light-purple;
+				padding: 1px 10px 1px 1px;
+				top: 25%;
+				transform: translate(0%, -50%);
+				color: $white;
+
+				.fa {
+					padding: 0 0.5em;
+					line-height: 2.5em;
+					margin-right: 0.5em;
+				}
+			}
 		}
 		.account-menu {
-			height: 233px;
+			height: 65%;
 			position: relative;
 			z-index: 1;
 			width: 100%;
@@ -48,11 +83,20 @@
 					background: $white;
 					height: 100%;
 					text-align: center;
+					position: relative;
+
+					div {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+					}
 
 					h6 {
 						text-transform: uppercase;
 						font-weight: 300;
 						letter-spacing: 1px;
+						margin-bottom: 0;
 					}
 				}
 			}
