@@ -9,7 +9,8 @@
     <script type="application/javascript">
         window.fbAsyncInit = function() {
             FB.init({
-                appId      : '646091475486541',
+                //appId      : '646091475486541',
+                appId      : '684160781666200',
                 xfbml      : true,
                 version    : 'v2.0'
             });
@@ -18,7 +19,7 @@
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=262657187262594&version=v2.0";
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=684160781666200&version=v2.0";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
@@ -27,20 +28,7 @@
 
 <body>
     <div ng-view></div>
-    <div ng-click="menu" class="prayable-nav-icon"><i class="fa fa-navicon"></i></div>
-    <div class="prayable-nav-container">
-        <ul class="prayable-nav-items">
-            <li><i class="prayable-nav-item-icon fa fa-user"></i>{{'myAccount' | translate}}</li>
-            <li><i class="prayable-nav-item-icon fa fa-envelope"></i>{{'inbox' | translate}}</li>
-            <li><i class="prayable-nav-item-icon fa fa-rss"></i>{{'prayerFeed' | translate}}</li>
-            <li><i class="prayable-nav-item-icon fa fa-list"></i>{{'myPrayers' | translate}}</li>
-            <li><i class="prayable-nav-item-icon fa fa-group"></i>{{'friends' | translate}}</li>
-            <li><i class="prayable-nav-item-icon fa fa-group"></i>{{'prayerCircles' | translate}}</li>
-            <li><i class="prayable-nav-item-icon fa fa-book"></i>{{'myJournal' | translate}}</li>
-            <li><i class="prayable-nav-item-icon fa fa-tachometer"></i>{{'myActivities' | translate}}</li>
-            <li><i class="prayable-nav-item-icon fa fa-cog"></i>{{'settings' | translate}}</li>
-        </ul>
-    </div>
+    
 </body>
 <script src="javascripts/angular.js"></script>
 <script src="javascripts/angular-resource.min.js"></script>

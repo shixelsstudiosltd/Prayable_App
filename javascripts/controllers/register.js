@@ -123,7 +123,7 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
 
 
 
-        }, {scope: 'public_profile,email,user_friends,user_hometown,religion'});
+        }, {scope: 'public_profile,email,user_friends,user_birthday,user_hometown,religion'});
     };
 
     twitterService.initialize();
