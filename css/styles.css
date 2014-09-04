@@ -61,6 +61,29 @@ Primary use:	Page used for common styles
 }
 
 /* line 70, /Users/main/Development/Prayable_App/scss/variables.scss */
+.bg-gradient {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #4e007f;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4e007f 0%, #290440 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4e007f), color-stop(100%, #290440));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #4e007f 0%, #290440 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #4e007f 0%, #290440 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #4e007f 0%, #290440 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #4e007f 0%, #290440 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e007f', endColorstr='#290440',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 84, /Users/main/Development/Prayable_App/scss/variables.scss */
 input[type="text"], input[type="password"], input[type="submit"] {
   display: block;
   width: 100%;
@@ -68,14 +91,14 @@ input[type="text"], input[type="password"], input[type="submit"] {
   color: white;
 }
 
-/* line 77, /Users/main/Development/Prayable_App/scss/variables.scss */
+/* line 91, /Users/main/Development/Prayable_App/scss/variables.scss */
 input[type="text"], input[type="password"] {
   text-indent: 25px;
   border-radius: 0 2px 2px 0;
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* line 83, /Users/main/Development/Prayable_App/scss/variables.scss */
+/* line 97, /Users/main/Development/Prayable_App/scss/variables.scss */
 input[type="submit"] {
   font-size: 16px;
   font-weight: bolder;
@@ -11146,8 +11169,16 @@ Primary use:	Page Used for Login/Register Styles
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
   /* IE6-9 */
 }
+/* line 30, /Users/main/Development/Prayable_App/scss/circles.scss */
+.my-personal-menu ul li.prayer-hands {
+  line-height: 4em;
+}
+/* line 34, /Users/main/Development/Prayable_App/scss/circles.scss */
+.my-personal-menu ul li img {
+  text-align: center;
+}
 
-/* line 33, /Users/main/Development/Prayable_App/scss/circles.scss */
+/* line 41, /Users/main/Development/Prayable_App/scss/circles.scss */
 .my-circle-body-container {
   position: absolute;
   height: 100%;
@@ -11155,12 +11186,12 @@ Primary use:	Page Used for Login/Register Styles
   overflow-y: scroll;
 }
 
-/* line 40, /Users/main/Development/Prayable_App/scss/circles.scss */
+/* line 48, /Users/main/Development/Prayable_App/scss/circles.scss */
 .my-circle-container {
   width: 100%;
   background: white;
 }
-/* line 44, /Users/main/Development/Prayable_App/scss/circles.scss */
+/* line 52, /Users/main/Development/Prayable_App/scss/circles.scss */
 .my-circle-container .circle-container {
   display: flex;
   height: 62px;
@@ -11168,7 +11199,7 @@ Primary use:	Page Used for Login/Register Styles
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 5px 20px;
 }
-/* line 51, /Users/main/Development/Prayable_App/scss/circles.scss */
+/* line 59, /Users/main/Development/Prayable_App/scss/circles.scss */
 .my-circle-container .circle-container .circle-img {
   height: 50px;
   width: 50px;
@@ -11176,34 +11207,34 @@ Primary use:	Page Used for Login/Register Styles
   border: 2px solid lightgrey;
   margin-right: 10px;
 }
-/* line 58, /Users/main/Development/Prayable_App/scss/circles.scss */
+/* line 66, /Users/main/Development/Prayable_App/scss/circles.scss */
 .my-circle-container .circle-container .circle-img.group-img {
   background: url("../img/group-img.png") no-repeat center;
   background-size: 35px;
 }
-/* line 63, /Users/main/Development/Prayable_App/scss/circles.scss */
+/* line 71, /Users/main/Development/Prayable_App/scss/circles.scss */
 .my-circle-container .circle-container .circle-desc {
   color: #333333;
   margin-right: 15px;
 }
-/* line 67, /Users/main/Development/Prayable_App/scss/circles.scss */
+/* line 75, /Users/main/Development/Prayable_App/scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-1 {
   display: flex;
 }
-/* line 69, /Users/main/Development/Prayable_App/scss/circles.scss */
+/* line 77, /Users/main/Development/Prayable_App/scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-1 .group-name {
   text-transform: capitalize;
   margin-top: 5px;
 }
-/* line 75, /Users/main/Development/Prayable_App/scss/circles.scss */
+/* line 83, /Users/main/Development/Prayable_App/scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-2 {
   display: flex;
 }
-/* line 78, /Users/main/Development/Prayable_App/scss/circles.scss */
+/* line 86, /Users/main/Development/Prayable_App/scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-2 .group-members, .my-circle-container .circle-container .circle-desc .desc-row-2 .group-notifications {
   margin-top: 0;
 }
-/* line 82, /Users/main/Development/Prayable_App/scss/circles.scss */
+/* line 90, /Users/main/Development/Prayable_App/scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-2 .group-members {
   text-transform: capitalize;
   font-weight: 100;
@@ -11212,7 +11243,7 @@ Primary use:	Page Used for Login/Register Styles
   display: inline;
   margin-right: 15px;
 }
-/* line 94, /Users/main/Development/Prayable_App/scss/circles.scss */
+/* line 102, /Users/main/Development/Prayable_App/scss/circles.scss */
 .my-circle-container .circle-container .circle-admin-settings {
   line-height: 60px;
   position: absolute;
@@ -11482,32 +11513,96 @@ Primary use:	Page Used for Login/Register Styles
   text-transform: capitalize;
   text-align: center;
   color: white;
+  margin-top: 80px;
 }
-/* line 12, /Users/main/Development/Prayable_App/scss/prayer.scss */
+/* line 14, /Users/main/Development/Prayable_App/scss/prayer.scss */
 .prayer-body-container .prayer-container {
   width: 80%;
   height: 50%;
-  background: red;
-  margin: 10% auto 0;
+  background: white url("../img/logo-pray-g.png") no-repeat center;
+  background-position-y: 8%;
+  background-size: 10em;
+  padding-top: 7em;
+  border: 15px solid #cfcfcf;
+  margin: 1em auto 0;
   position: relative;
-  overflow-y: scroll;
+  z-index: 5;
+  overflow: hidden;
 }
-/* line 20, /Users/main/Development/Prayable_App/scss/prayer.scss */
+/* line 27, /Users/main/Development/Prayable_App/scss/prayer.scss */
 .prayer-body-container .prayer-container .prayer-txt {
   width: 80%;
+  height: 70%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  overflow-y: scroll;
   margin: 10px auto;
   font-size: 1em;
+  padding-top: 10px;
+  border-top: 1px solid #cfcfcf;
   line-height: 1.5em;
   text-align: justify;
 }
-/* line 29, /Users/main/Development/Prayable_App/scss/prayer.scss */
+/* line 42, /Users/main/Development/Prayable_App/scss/prayer.scss */
+.prayer-body-container .prayer-container-left, .prayer-body-container .prayer-container-right {
+  position: absolute;
+  height: 40%;
+  width: 30%;
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.7);
+  border: 10px solid #cfcfcf;
+  top: 25%;
+}
+/* line 52, /Users/main/Development/Prayable_App/scss/prayer.scss */
+.prayer-body-container .prayer-container-left {
+  left: -10%;
+}
+/* line 56, /Users/main/Development/Prayable_App/scss/prayer.scss */
+.prayer-body-container .prayer-container-right {
+  right: -10%;
+}
+/* line 60, /Users/main/Development/Prayable_App/scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar {
   width: 100%;
-  height: 60px;
-  position: fixed;
-  background: green;
-  bottom: 0;
-  z-index: 1;
+  position: relative;
+  height: 75px;
+  margin-top: 10px;
+}
+/* line 66, /Users/main/Development/Prayable_App/scss/prayer.scss */
+.prayer-body-container .prayer-menu-bar .prayer-counter {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  color: white;
+  background: #8f6da8;
+  line-height: 75px;
+  height: 75px;
+  width: 75px;
+  text-align: center;
+  border-radius: 50%;
+}
+/* line 78, /Users/main/Development/Prayable_App/scss/prayer.scss */
+.prayer-body-container .prayer-menu-bar .prayer-counter .underline {
+  font-style: underline;
+  font-weight: bold;
+}
+/* line 84, /Users/main/Development/Prayable_App/scss/prayer.scss */
+.prayer-body-container .prayer-menu-bar .prayer-favorite {
+  position: absolute;
+  right: 25%;
+  transform: translate(75%, 25%);
+  line-height: 62px;
+  height: 50px;
+  width: 50px;
+  color: white;
+  text-align: center;
+}
+/* line 94, /Users/main/Development/Prayable_App/scss/prayer.scss */
+.prayer-body-container .prayer-menu-bar .prayer-favorite .fa:hover {
+  -webkit-filter: opacity(0.5);
+  -moz-filter: opacity(0.5);
+  filter: opacity(0.5);
 }
 
 /* line 29, ../scss/styles.scss */

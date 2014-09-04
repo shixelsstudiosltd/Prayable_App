@@ -52,6 +52,29 @@ Primary use:	Page used for common styles
 }
 
 /* line 70, ../scss/variables.scss */
+.bg-gradient {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #4e007f;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4e007f 0%, #290440 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4e007f), color-stop(100%, #290440));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #4e007f 0%, #290440 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #4e007f 0%, #290440 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #4e007f 0%, #290440 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #4e007f 0%, #290440 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e007f', endColorstr='#290440',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 84, ../scss/variables.scss */
 input[type="text"], input[type="password"], input[type="submit"] {
   display: block;
   width: 100%;
@@ -59,14 +82,14 @@ input[type="text"], input[type="password"], input[type="submit"] {
   color: white;
 }
 
-/* line 77, ../scss/variables.scss */
+/* line 91, ../scss/variables.scss */
 input[type="text"], input[type="password"] {
   text-indent: 25px;
   border-radius: 0 2px 2px 0;
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* line 83, ../scss/variables.scss */
+/* line 97, ../scss/variables.scss */
 input[type="submit"] {
   font-size: 16px;
   font-weight: bolder;
