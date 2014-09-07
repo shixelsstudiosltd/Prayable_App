@@ -14,7 +14,7 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 templateUrl:'partials/register.html',
                 controller:'register'
             })
-            .when('/profile',{
+            .when('/profile/:userProbfileId',{
                 templateUrl:'partials/profile.html',
                 controller:'profile'
             })
@@ -63,7 +63,7 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 controller:'input'
             })
             .when('/emailCnfm/:verificationCode',{
-                templateUrl:'views/emailCnfm.html',
+                templateUrl:'partials/emailCnfm.html',
                 controller:'emailCnfm'
             })
 /*
