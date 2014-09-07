@@ -1,4 +1,4 @@
-angular.module('twitterApp.services', []).factory('twitterService', function($q) {
+angular.module('facebook.services', []).factory('facebookService', function($q) {
 
 
 
@@ -30,22 +30,21 @@ angular.module('twitterApp.services', []).factory('twitterService', function($q)
 
     },
 
-    connectTwitter: function(a) {
+    connectFacebook: function(a) {
           var key ;
 
         var deferred = $q.defer();
 
-        OAuth.popup('twitter', {cache:true}, function(error, result) { //cache means to execute the callback if the tokens are already present
+        OAuth.popup('facebook', {cache:true}, function(error, result) { //cache means to execute the callback if the tokens are already present
 
             if (!error) {
-
 
                 //console.log(result)
                 result.me().done(function(data) {
                     console.log(data);
                     authorizationResult = data;
-                    var userData = {firstName:data.name,lastName:data.alias,pictureUrl:data.avatar,twitId:data.raw.id}
-                    var data ={key:'twit',userData:userData}
+                    var userData = {firstName:data.firstname,lastName:data.lastname,pictureUrl:data.avatar,fbId:data.id}
+                    var data ={key:'fb',userData:userData}
                     var link;
                     if(a == 'R'){
                         link= 'user'
@@ -93,19 +92,19 @@ angular.module('twitterApp.services', []).factory('twitterService', function($q)
 
     clearCache: function() {
 
-        OAuth.clearCache('twitter');
+        OAuth.clearCache('facebook');
 
         authorizationResult = false;
 
     },
 
-    getLatestTweets: function () {
+    getLatestInfo: function () {
 
         //create a deferred object using Angular's $q service
 
         var deferred = $q.defer();
 
-        var promise = authorizationResult.get('/1.1//api/users/show').done(function(data) { //https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline
+        var promise = authorizationResult.get('/me').done(function(data) { //https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline
 
             //when the data is retrieved resolved the deferred object
 

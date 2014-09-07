@@ -1,4 +1,4 @@
-sampleApp.controller('login',function($rootScope,$scope,$location,$http,$translate,$q, twitterService){
+sampleApp.controller('login',function($rootScope,$scope,$location,$http,$translate,$q, facebookService){
 
 
     $scope.userData = {email:'',password:''};
@@ -39,80 +39,29 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
         }
 
     };
+
+    facebookService.initialize();
     $scope.fbLogin = function(){
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
+
+        facebookService.connectFacebook('R').then(function(data) {
+
+            if (facebookService.isReady()) {
+
+                facebookService.getLatestInfo().then(function(data) {
+                    $scope.tweets = data;
+                });
+
+            }
         });
-    }
-
-    function statusChangeCallback(response) {
-        console.log('statusChangeCallback');
-        console.log(response);
-        // The response object is returned with a status field that lets the
-        // app know the current login status of the person.
-        // Full docs on the response object can be found in the documentation
-        // for FB.getLoginStatus().
-        if (response.status === 'connected') {
-            // Logged into your app and Facebook.
-            console.log('already connect')
-            fetchData();
-        } else if (response.status === 'Facebook, but not your app.') {
-            // The person is logged into Facebook, but not your app.
-            userLogin();
-            console.log('not_authorized')
-        } else {
-            // The person is not logged into Facebook, so we're not sure if
-            // they are logged into this app or not.
-            userLogin();
-            console.log('not_authorized')
-        }
 
     }
-    function userLogin(){
-        FB.login(function(response) {
-            // handle the response
-            //console.log(response)
-            FB.api('/me', function(userData) {
-                console.log( userData);
-
-                FB.api('/me/picture?redirect=false', function(pic) {
-                    console.log(pic);
-
-                ////Here the API will be CAlled
-
-
-
-                });//me/picture
-            });//me
-
-
-
-
-
-        }, {scope: 'public_profile,email,user_birthday,user_friends,user_hometown,religion'});
-    };
-    $scope.tweets; //array of tweets
-
-    twitterService.initialize();
-    $scope.twitterLogin = function(){
-    twitterService.connectTwitter().then(function(data) {
-        if (twitterService.isReady()) {
-
-            twitterService.getLatestTweets().then(function(data) {
-                $scope.tweets = data;
-            });
-
-        }
-    });
-    }
-    if (twitterService.isReady()) {
-       // $('#connectButton').hide();
+    if (facebookService.isReady()) {
+        // $('#connectButton').hide();
         //$('#getTimelineButton, #signOut').show();
         //$scope.refreshTimeline();
-        twitterService.clearCache();
+        facebookService.clearCache();
         console.log("isReady")
     }
-
     function validateEmail(email) {
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
