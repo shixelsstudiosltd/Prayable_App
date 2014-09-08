@@ -14,7 +14,7 @@ Primary use:	Page used for common styles
 /*------------------------------*\
     $STYLES
 \*------------------------------*/
-/* line 38, ../scss/variables.scss */
+/* line 39, ../scss/variables.scss */
 .body-container {
   min-height: 100%;
   height: auto;
@@ -23,35 +23,43 @@ Primary use:	Page used for common styles
   margin: 0 auto;
 }
 
-/* line 46, ../scss/variables.scss */
+/* line 47, ../scss/variables.scss */
 .bg-main {
   background: url("../img/bg-login.png") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 52, ../scss/variables.scss */
+/* line 53, ../scss/variables.scss */
 .bg-input {
   background: url("../img/bg-main.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 58, ../scss/variables.scss */
+/* line 59, ../scss/variables.scss */
 .bg-prayers {
   background: url("../img/bg-prayers.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 64, ../scss/variables.scss */
+/* line 65, ../scss/variables.scss */
 .bg-home {
   background: url("../img/bg-home.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 70, ../scss/variables.scss */
+/* line 71, ../scss/variables.scss */
+.bg-pic-gradient {
+  background: url("../img/bg-gradient.png") no-repeat center fixed;
+  background-size: 300%;
+  position: absolute;
+  background-position: bottom;
+}
+
+/* line 78, ../scss/variables.scss */
 .bg-gradient {
   height: 100%;
   width: 100%;
@@ -74,7 +82,7 @@ Primary use:	Page used for common styles
   /* IE6-9 */
 }
 
-/* line 84, ../scss/variables.scss */
+/* line 92, ../scss/variables.scss */
 input[type="text"], input[type="password"], input[type="submit"] {
   display: block;
   width: 100%;
@@ -82,14 +90,14 @@ input[type="text"], input[type="password"], input[type="submit"] {
   color: white;
 }
 
-/* line 91, ../scss/variables.scss */
+/* line 99, ../scss/variables.scss */
 input[type="text"], input[type="password"] {
   text-indent: 25px;
   border-radius: 0 2px 2px 0;
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* line 97, ../scss/variables.scss */
+/* line 105, ../scss/variables.scss */
 input[type="submit"] {
   font-size: 16px;
   font-weight: bolder;

@@ -58,6 +58,10 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','tw
                 templateUrl:'partials/journal.html',
                 controller:'journal'
             })
+            .when('/pray',{
+                templateUrl:'partials/pray.html',
+                controller:'pray'
+            })
             .when('/prayers/add',{
                 templateUrl:'partials/input.html',
                 controller:'input'
@@ -88,7 +92,7 @@ sampleApp.config(function ($translateProvider) {
         alreadyhaveaccount:'Already have an account',
         signupwith:'Sign up with',
         loginwith:"Login with",
-        prayNowTitle: "Pray Now",
+        pray: "Pray Now",
         prayersFor: "Prayer's for",
         prayer: "Prayers",
         when: "when",
@@ -118,7 +122,7 @@ sampleApp.config(function ($translateProvider) {
         alreadyhaveaccount:'Already have an account InGerman',
         signupwith:'Sign up with InGerman',
         loginwith:"Login with InGerman",
-        prayNowTitle: "Pray Now InGerman",
+        pray: "Pray Now InGerman",
         prayersFor: "Prayer's for InGerman",
         prayer: "Prayers InGerman",
         when: "when InGerman",
