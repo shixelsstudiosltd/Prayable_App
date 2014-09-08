@@ -1,4 +1,4 @@
-var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','twitterApp.services'])
+var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','facebook.services'])
     .config(['$routeProvider',function($routeProvider){
 
         $routeProvider
@@ -14,7 +14,7 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','tw
                 templateUrl:'partials/register.html',
                 controller:'register'
             })
-            .when('/profile',{
+            .when('/profile/:userProbfileId',{
                 templateUrl:'partials/profile.html',
                 controller:'profile'
             })
@@ -67,7 +67,7 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','tw
                 controller:'input'
             })
             .when('/emailCnfm/:verificationCode',{
-                templateUrl:'views/emailCnfm.html',
+                templateUrl:'partials/emailCnfm.html',
                 controller:'emailCnfm'
             })
 /*

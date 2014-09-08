@@ -3,17 +3,20 @@ sampleApp.controller('emailCnfm',function($rootScope,$scope,$location,$http){
     $scope.name = "";
 
     var userData;
-    var verificationCode =     Url.substr(11,Url.length)
+    var verificationCode = Url.substr(11,Url.length)
+    console.log(verificationCode)
     $http({
-        url:"http://prayable-21641.onmodulus.net/emailCnfm/"+verificationCode,
+        url:"http://localhost:3000/emailCnfm/"+verificationCode,
+        //url:"http://prayable-21641.onmodulus.net/emailCnfm/"+verificationCode,
         method:"POST"
     }).success( function(res,textStatus){
-if(res == 'errot'){
-
+if(res == 'error'){
+console.log('error')
 }else{
-
-    //$scope.go('/profURL/'+res.userProbfile)
-    //if(!$scope.$$phase) $scope.$apply();
+    console.log('success Code verified'+res.userProbfile)
+    userProbfile =res.userProbfile
+    $scope.go('/profile/'+userProbfile)
+    if(!$scope.$$phase) $scope.$apply();
 
 }
 

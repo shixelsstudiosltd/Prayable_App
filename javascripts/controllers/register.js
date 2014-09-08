@@ -1,4 +1,4 @@
-sampleApp.controller('register',function($scope,$rootScope,$location,$http,$translate,$q, twitterService){
+sampleApp.controller('register',function($scope,$rootScope,$location,$http,$translate,$q, facebookService){
 
     $scope.userData = {email:'',password:''};
     $scope.rePass = ''
@@ -52,88 +52,16 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
 
     }
 
+
+
+    facebookService.initialize();
     $scope.fbLogin = function(){
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-        });
-    }
 
-    function statusChangeCallback(response) {
-        console.log('statusChangeCallback');
-        console.log(response);
-        // The response object is returned with a status field that lets the
-        // app know the current login status of the person.
-        // Full docs on the response object can be found in the documentation
-        // for FB.getLoginStatus().
-        if (response.status === 'connected') {
-            // Logged into your app and Facebook.
-            console.log('already connect')
-            fetchData();
-        } else if (response.status === 'Facebook, but not your app.') {
-            // The person is logged into Facebook, but not your app.
-            userLogin();
-            console.log('not_authorized')
-        } else {
-            // The person is not logged into Facebook, so we're not sure if
-            // they are logged into this app or not.
-            userLogin();
-            console.log('not_authorized')
-        }
+        facebookService.connectFacebook('R').then(function(data) {
 
-    }
-    function userLogin(){
-        FB.login(function(response) {
-            // handle the response
-            //console.log(response)
-            FB.api('/me', function(userData) {
-                console.log( userData);
+            if (facebookService.isReady()) {
 
-                FB.api('/me/picture?redirect=false', function(pic) {
-                    $scope.userData = {firstName:userData.first_name,fbId:userData.id,pictureUrl:pic}
-
-                    var data ={key:'fb',userData:$scope.userData}
-                    ////Here the API will be CAlled
-                    $.ajax({
-                        method:"POST",
-                        //contentType: 'application/json',
-                        //url:"http://localhost:3000/user",
-                        url:"http://prayable-21641.onmodulus.net/user",
-                        data:data,
-                        crossDomain: true,
-                        dataType: "json"
-                    }).success(function(data, textstatus) {
-                            // this callback will be called asynchronously
-                            // when the response is available
-
-                            console.log(data)
-                            //console.log(textstatus)
-                        }).error(function(data, textstatus) {
-
-                            console.log(data)
-                            //console.log(textstatus)
-                            // called asynchronously if an error occurs
-                            // or server returns response with an error status.
-                        });
-
-
-                });//me/picture
-            });//me
-
-
-
-
-
-        }, {scope: 'public_profile,email,user_friends,user_birthday,user_hometown,religion'});
-    };
-
-    twitterService.initialize();
-    $scope.twitterLogin = function(){
-
-        twitterService.connectTwitter('R').then(function(data) {
-
-            if (twitterService.isReady()) {
-
-                twitterService.getLatestTweets().then(function(data) {
+                facebookService.getLatestInfo().then(function(data) {
                     $scope.tweets = data;
                 });
 
@@ -141,11 +69,11 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
         });
 
     }
-    if (twitterService.isReady()) {
+    if (facebookService.isReady()) {
         // $('#connectButton').hide();
         //$('#getTimelineButton, #signOut').show();
         //$scope.refreshTimeline();
-        twitterService.clearCache();
+        facebookService.clearCache();
         console.log("isReady")
     }
 
