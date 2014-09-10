@@ -4,7 +4,7 @@ sampleApp.controller('emailCnfm',function($rootScope,$scope,$location,$http){
 
     var userData;
     var verificationCode = Url.substr(11,Url.length)
-    console.log(verificationCode)
+
     $http({
         url:"http://localhost:3000/emailCnfm/"+verificationCode,
         //url:"http://prayable-21641.onmodulus.net/emailCnfm/"+verificationCode,
