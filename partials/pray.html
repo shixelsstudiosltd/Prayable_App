@@ -9,7 +9,7 @@
 	<div class="settings-body-container">
 		<div class="settings-prayer settings">
 			<div class="prayer-prayer">
-				<input type="text" placeholder="Write Prayer..." maxlength="45">
+				<input type="text" placeholder="Write Prayer..." maxlength="45"  ng-model="prayerInfo.prayer_text">
 			</div>
 		</div>
 		<div class="settings-group settings">
@@ -18,18 +18,18 @@
 			</div>
 			<div class="group-groups">
 				<div class="group-row">
-					<div class="sgroup">
+					<div class="sgroup" ng-click="selectGrp()">
 						<p><i class="fa fa-users"></i> Groups</p>
 					</div>
-					<div class="sgroup">
+					<div class="sgroup" ng-click="selectfeed()">
 						<p><i class="fa fa-rss"></i> Prayer Feed</p>
 					</div>
 				</div>
 				<div class="group-row">
-					<div class="sgroup">
+					<div class="sgroup" ng-click="selectjrl()">
 						<p><i class="fa fa-book"></i> Journal</p>
 					</div>
-					<div class="sgroup">
+					<div class="sgroup" ng-click="selectmsg()">
 						<p><i class="fa fa-envelope-o"></i> Message</p>
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 				<div title=".slideTwo">
 				    <!-- .slideTwo -->
 				    <div class="slideTwo">  
-				     	<input type="checkbox" value="None" id="slideTwo" name="check" checked />
+				     	<input type="checkbox" value="None" id="slideTwo" name="check" ng-model="prayerInfo.gps_enabled" checked />
 				      	<label for="slideTwo"></label>
 				    </div>
 				    <!-- end .slideTwo -->
@@ -70,7 +70,7 @@
 						<div title=".slideTwo">
 				    <!-- .slideTwo -->
 						    <div class="slideTwo">  
-						     	<input type="checkbox" value="None" id="slideTwo" name="check" checked />
+						     	<input type="checkbox" value="None" id="slideTwo" name="check" ng-model="prayerInfo.is_private" checked />
 						      	<label for="slideTwo"></label>
 						    </div>
 						    <!-- end .slideTwo -->
@@ -82,7 +82,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="settings-submit settings">
+		<div class="settings-submit settings" ng-click="savePrayer()">
 			<h4>Pray It  <i class="fa fa-long-arrow-right"></i></h4>
 		</div>
 	</div>
