@@ -1,0 +1,358 @@
+.settings-body-container {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	padding-top: 65px;
+
+	.settings {
+		width: 100%;
+		position: relative;
+
+		h4, h5 {
+			margin: 0 !important;
+		}
+	}
+
+	.settings-prayer {
+		height: 25%;
+		background: transparent;
+		border-bottom: 1px solid $light-gray;
+		border-top: 1px solid $light-gray;
+		display: flex;
+
+		.prayer-photo-container {
+			height: 100%;
+			width: 40%;
+			display: list-item;
+			position: relative;
+
+			.container-photo {
+				
+				width: 50%;
+				position: relative;
+				margin: 0 auto;
+
+				&::before {
+					content: "";
+					display: block;
+					padding-top: 100%;
+				}
+
+				.user-photo {
+					position: absolute;
+					top: 0; left: 0; bottom: 0; right: 0;
+					background: url('../img/user-img.jpg') no-repeat center;
+					background-size: contain;
+					margin: 10px auto;
+					border-radius: 50%;
+				}
+			}
+
+			.container-photo-upload {
+				height: 100%;
+				width: 100%;
+				line-height: 100%;
+				display: -webkit-inline-box;
+				position: absolute;
+				z-index: 5;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, 10%);
+
+				.upload-button {
+					height: 80%;
+					width: 70%;
+					margin: 0 auto;
+					font-weight: 500;
+					text-align: center;
+					color: $gray;
+					display: table;
+
+					p {
+						margin: 0 auto;
+						display: table-cell;
+						vertical-align: middle;
+					}
+				}
+			}
+
+			
+		}
+		.prayer-prayer {
+			background: transparent;
+			height: 100%;
+			width: 60%;
+
+			input[type="text"] {
+				height: 100%;
+				width: 100%;
+				background: transparent;
+				border: 0;
+			}
+			input[type="text"]::-webkit-input-placeholder {
+				color: $white !important;
+			}
+		}
+	}
+	.settings-group {
+		height: 20%;
+		background: transparent;
+
+		.group-add {
+			height: 25%;
+			width: 100%;
+			background: $white-t-l;
+			border-bottom: 1px solid $light-gray;
+			text-indent: 5%;
+			display: table;
+
+			h5 {
+				display: table-cell;
+				vertical-align: middle;
+				color: $white;
+			}
+		}
+		.group-groups {
+			height: 75%;
+			background: transparent;
+
+			.group-row {
+				height: 50%;
+				border-bottom: 1px solid $light-gray;
+				display: flex;
+
+				.sgroup:nth-child(2) {
+					border-right: 0;
+				}
+
+				.sgroup {
+					height: 100%;
+					width: 50%;
+					border-right: 1px solid $light-gray;
+					display: table;
+
+					p {
+						margin: 0 !important;
+						display: table-cell;
+						vertical-align: middle;
+						text-align: center;
+						color: $white;
+					}
+
+					&:hover {
+						background: rgb(255,255,255); /* Old browsers */
+						background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+						background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+						
+						p {
+							color: $darker-gray;
+						}
+					}
+				}
+			}
+		}
+	}
+	.settings-share {
+		height: 25%;
+		background: transparent;
+
+		.share-separator {
+			height: 12%;
+			background: white;
+		}
+		.share-location {
+			height: 24%;
+			width: 100%;
+			text-indent: 5%;
+			display: table;
+			border-bottom: 1px solid $light-gray;
+			background: $white-t-l;
+
+			h5 {
+				display: table-cell;
+				vertical-align: middle;
+				color: $white;
+			}
+		}
+		.share-share {
+			height: 24%;
+			background: $white-t-l;
+			width: 100%;
+			display: table;
+			border-bottom: 1px solid $light-gray;
+
+			h5 {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				color: $white;
+			}
+		}
+		.share-media {
+			height: 40%;
+			display: flex;
+
+			.media-facebook {
+
+			}
+
+			.media-twitter {
+
+			}
+
+			.smedia:nth-child(2) {
+				border-right: 0;
+			}
+			
+			.smedia {
+				width: 50%;
+				height: 100%;
+				border-right: 1px solid $light-gray;
+				text-align: center;
+				position: relative;
+				border-bottom: 1px solid $light-gray;
+
+				p {
+					margin: 0;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					color: $white;
+				}
+			}
+		}
+	}
+	.settings-privacy {
+		height: 20%;
+		background: transparent;
+		border-bottom: 1px solid $light-gray; 
+		display: table;
+		position: relative;
+
+		.privacy-container {
+			display: table-cell;
+			vertical-align: middle;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			.p-container {
+				display: flex;
+
+				.p-ele {
+					display: inline;
+					color: $white;
+				}
+
+				.p-toggle {
+					margin: 0 30px;
+				}	
+			}	
+		}
+	}
+	.settings-submit {
+		height: 10%;
+		text-align: center;
+		display: table;
+		background: rgb(255,255,255); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+			
+
+		h4 {
+			display: table-cell;
+			vertical-align: middle;
+			color: $darker-gray;
+		}
+	}
+ }
+
+
+
+/* .slideTwo */
+.slideTwo {
+  width: 80px;
+  height: 30px;
+  background: transparent;
+  margin: 0 auto;
+  position: relative;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.slideTwo:after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  height: 6px;
+  width: 52px;
+  background: $white;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.slideTwo label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  position: absolute;
+  top: 4px;
+  z-index: 1;
+  left: 4px;
+  background: #fcfff4;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+}
+.slideTwo label:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: #333;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px black, 0px 1px 0px rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: inset 0px 1px 1px black, 0px 1px 0px rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0px 1px 1px black, 0px 1px 0px rgba(255, 255, 255, 0.9);
+}
+.slideTwo input[type=checkbox] {
+  visibility: hidden;
+}
+.slideTwo input[type=checkbox]:checked + label {
+  left: 54px;
+}
+.slideTwo input[type=checkbox]:checked + label:after {
+  background: $light-purple;
+}
+
+/* end .slideTwo */
+

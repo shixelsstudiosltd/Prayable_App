@@ -20,6 +20,7 @@ $black: #000;
 $black-t: rgba(0,0,0,0.4);
 $white: #fff;
 $white-t: rgba(255,255,255,0.7);
+$white-t-l: rgba(255,255,255,0.3);
 $light-gray: #EAEAEA;
 $gray: #D3D3D3;
 $dark-gray: #9C9C9C;
@@ -65,6 +66,13 @@ $light-purple: #8f6da8;
 	background: url('../img/bg-home.jpg') no-repeat center fixed;
 	background-size: cover;
 	position: absolute;
+}
+
+.bg-pic-gradient {
+	background: url('../img/bg-gradient.png') no-repeat center fixed;
+	background-size: 300%;
+	position: absolute;
+	background-position: bottom;
 }
 
 .bg-gradient {
