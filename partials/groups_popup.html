@@ -1,6 +1,12 @@
 <div class="ngdialog-message">
     <div class="container" style="">
         <h1>Groups POPUP</h1>
+        <ul>
+            <!-- I left the translation out because this list will be populated -->
+
+                <li ng-repeat="group in groupList"><input type="checkbox" name="selectedGroups[]" value="{{group._id}}" ng-click="toggleSelection(group._id)" > {{group.title}}</li>
+        </ul>
+
     </div>
 
 </div>
