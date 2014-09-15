@@ -18,8 +18,8 @@ $scope.savePrayer =function(){
         $http({
             method:"POST",
             //contentType: 'application/json',
-            url:"http://localhost:3000/allGroup",
-            // url:"http://prayable-21641.onmodulus.net/allGroup",
+            //url:"http://localhost:3000/allGroup",
+             url:"http://prayable-21641.onmodulus.net/allGroup",
             data:data,
             crossDomain: true,
             dataType: "json"
@@ -91,8 +91,8 @@ $scope.savePrayer =function(){
         $http({
             method:"POST",
             //contentType: 'application/json',
-            url:"http://localhost:3000/allJournal",
-            // url:"http://prayable-21641.onmodulus.net/allJournal",
+            //url:"http://localhost:3000/allJournal",
+             url:"http://prayable-21641.onmodulus.net/allJournal",
             data:data,
             crossDomain: true,
             dataType: "json"
