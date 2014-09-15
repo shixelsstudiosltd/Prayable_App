@@ -27,7 +27,7 @@ $scope.savePrayer =function(){
                 // this callback will be called asynchronously
                 // when the response is available
                 $scope.groupList = data;
-                console.log(data)
+                //console.log(data)
                 ngDialog.open({
                     template: './partials/groups_popup.html',
                     className: 'group_popup',
@@ -56,7 +56,14 @@ $scope.savePrayer =function(){
         else {
             $scope.selection.push(selectionID);
         }
+
     };
+
+    $scope.saveGroup = function(){
+        $scope.prayerInfo.group_id = $scope.selection
+    }
+
+
     $scope.selectjrl =function(){
         ngDialog.open({
             template: './partials/journal_popup.html',

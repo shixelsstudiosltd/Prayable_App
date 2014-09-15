@@ -1,10 +1,10 @@
 <div class="ngdialog-message">
+    <button type="button" class="close ngdialog-close" ng-click="saveGroup()"></button>
     <div class="container" style="">
         <h1>Groups POPUP</h1>
         <ul>
             <!-- I left the translation out because this list will be populated -->
-
-                <li ng-repeat="group in groupList"><input type="checkbox" name="selectedGroups[]" value="{{group._id}}" ng-click="toggleSelection(group._id)" > {{group.title}}</li>
+                <li ng-repeat="group in groupList"><input type="checkbox" name="selectedGroups[]" value="{{group._id}}" ng-click="toggleSelection(group._id)" ng-checked="selection.indexOf(group._id) > -1" > {{group.title}}</li>
         </ul>
 
     </div>
