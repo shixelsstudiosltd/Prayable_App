@@ -28,11 +28,9 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                                 data:{email:data.data.email,key:"verify",userID:data.data._id},
                                 method:"POST"
                             }).success( function(res,textStatus){
-                                    //$scope.go('/emailSent');
-                                    //if(!$scope.$$phase) $scope.$apply();
+                                    $scope.go('/login');
+                                    if(!$scope.$$phase) $scope.$apply();
                                 })
-                            console.log(data)
-                            console.log(textstatus)
                         }).error(function(data, textstatus) {
 
                             console.log(data)
@@ -57,12 +55,11 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
     facebookService.initialize();
     $scope.fbLogin = function(){
 
-        facebookService.connectFacebook('R').then(function(data) {
-
+        facebookService.connectFacebook('R',$scope).then(function(data) {
             if (facebookService.isReady()) {
 
                 facebookService.getLatestInfo().then(function(data) {
-                    $scope.tweets = data;
+                    sessionStorage.setItem('userData',JSON.stringify(data.data));
                 });
 
             }

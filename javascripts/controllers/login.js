@@ -21,9 +21,16 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
                 }).success(function(data, textstatus) {
                         // this callback will be called asynchronously
                         // when the response is available
+                        if(data.code == 400){
+                            alert(data.msg)
+                        }else{
+                            sessionStorage.setItem('userData',JSON.stringify(data.data));
+                            $scope.go('/');
+                            if(!$scope.$$phase) $scope.$apply();
+                        }
 
-                        console.log(data)
-                        console.log(textstatus)
+                        //console.log(data)
+                        //console.log(textstatus)
                     }).error(function(data, textstatus) {
 
                         console.log(data)
@@ -43,12 +50,12 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
     facebookService.initialize();
     $scope.fbLogin = function(){
 
-        facebookService.connectFacebook('R').then(function(data) {
+        facebookService.connectFacebook('L',$scope).then(function(data) {
 
             if (facebookService.isReady()) {
 
                 facebookService.getLatestInfo().then(function(data) {
-                    $scope.tweets = data;
+                    sessionStorage.setItem('userData',JSON.stringify(data.data));
                 });
 
             }

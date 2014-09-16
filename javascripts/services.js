@@ -3,7 +3,7 @@ angular.module('facebook.services', []).factory('facebookService', function($q) 
 
 
     var authorizationResult = false;
-
+var temp;
 
 
     return {
@@ -30,7 +30,7 @@ angular.module('facebook.services', []).factory('facebookService', function($q) 
 
     },
 
-    connectFacebook: function(a) {
+    connectFacebook: function(a,scope) {
           var key ;
 
         var deferred = $q.defer();
@@ -41,8 +41,8 @@ angular.module('facebook.services', []).factory('facebookService', function($q) 
 
                 //console.log(result)
                 result.me().done(function(data) {
-                    console.log(data);
-                    authorizationResult = data;
+
+                    temp = data;
                     var userData = {firstName:data.firstname,lastName:data.lastname,pictureUrl:data.avatar,fbId:data.id}
                     var data ={key:'fb',userData:userData}
                     var link;
@@ -62,13 +62,17 @@ angular.module('facebook.services', []).factory('facebookService', function($q) 
                     }).success(function(data, textstatus) {
                             // this callback will be called asynchronously
                             // when the response is available
-
-                            console.log(data)
-                            console.log(textstatus)
+                            sessionStorage.setItem('userData',JSON.stringify(data.data));
+                            scope.go('/');
+                            if(!scope.$$phase) scope.$apply();
+                            //console.log(data)
+                            //console.log(textstatus)
                         }).error(function(data, textstatus) {
 
                             console.log(data)
                             console.log(textstatus)
+
+
                             // called asynchronously if an error occurs
                             // or server returns response with an error status.
                         });

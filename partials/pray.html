@@ -1,11 +1,11 @@
-<div>
+<div ng-show="isLogged">
 	<div class="body-container bg-pic-gradient">
 		<ul class="app-header">
        		<li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
        		<li class="app-header-title">{{ 'pray' | translate }}</li>
        		<li class="app-header-notifications"><i class="fa fa-bell"></i></li>
        </ul>
-	</div>
+	</div   >
 	<div class="settings-body-container">
 		<div class="settings-prayer settings">
 			<div class="prayer-prayer">
@@ -70,7 +70,7 @@
 						<div title=".slideTwo">
 				    <!-- .slideTwo -->
 						    <div class="slideTwo">  
-						     	<input type="checkbox" value="None" id="slideTwo" name="check" ng-model="prayerInfo.is_private" checked />
+						     	<input type="checkbox" value="None" id="slideTwo" name="check2" ng-model="prayerInfo.is_private" checked />
 						      	<label for="slideTwo"></label>
 						    </div>
 						    <!-- end .slideTwo -->
