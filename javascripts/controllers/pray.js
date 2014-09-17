@@ -19,13 +19,13 @@ sampleApp.controller('pray',function($rootScope,$scope,$location,ngDialog,$http)
         $scope.savePrayer =function(){
             //console.log('clicked')
             console.log($scope.prayerInfo)
-            var data = {key:'U',prayerData:$scope.prayerInfo}
+            var data = {key:'R',prayerData:$scope.prayerInfo}
             if($scope.prayerInfo.prayer_text.length > 10){
                 $.ajax({
                     method:"POST",
                     //contentType: 'application/json',
-                    //url:"http://localhost:3000/prayer",
-                    url:"http://prayable-21641.onmodulus.net/prayer",
+                    url:"http://localhost:3000/prayer",
+                    //url:"http://prayable-21641.onmodulus.net/prayer",
                     data:data,
                     crossDomain: true,
                     dataType: "json"
@@ -35,9 +35,10 @@ sampleApp.controller('pray',function($rootScope,$scope,$location,ngDialog,$http)
                         if(data.code == 400){
                             alert(data.msg)
                         }else{
-                            sessionStorage.setItem('userData',JSON.stringify(data.data));
-                            $scope.go('/');
-                            if(!$scope.$$phase) $scope.$apply();
+                            console.log(data.id)
+                            alert('Prayer is Created')
+                           /* $scope.go('/');
+                            if(!$scope.$$phase) $scope.$apply();*/
                         }
 
                         //console.log(data)
@@ -175,7 +176,7 @@ sampleApp.controller('pray',function($rootScope,$scope,$location,ngDialog,$http)
             $scope.prayerInfo.twitShare = true;
         }
     }else{
-        $scope.go('/');
+        $location.path('/')
         if(!$scope.$$phase) $scope.$apply();
     }
 

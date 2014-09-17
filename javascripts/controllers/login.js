@@ -7,7 +7,7 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
         if(($scope.userData.email) && (validateEmail($scope.userData.email))){
             if(($scope.userData.password) && ($scope.userData.password.length > 5 && $scope.userData.password.length < 15)){
                 $scope.errorMsg = "";
-                console.log('login Function Called '+' email: '+$scope.userData.email+' Password: '+$scope.userData.password)
+                //console.log('login Function Called '+' email: '+$scope.userData.email+' Password: '+$scope.userData.password)
                 var data ={key:'web',userData:$scope.userData}
                 //var data ='{"key":"web"}'
                 $.ajax({
