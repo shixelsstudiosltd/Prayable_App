@@ -24,8 +24,8 @@ sampleApp.controller('pray',function($rootScope,$scope,$location,ngDialog,$http)
                 $.ajax({
                     method:"POST",
                     //contentType: 'application/json',
-                    url:"http://localhost:3000/prayer",
-                    //url:"http://prayable-21641.onmodulus.net/prayer",
+                    //url:"http://localhost:3000/prayer",
+                    url:"http://prayable-21641.onmodulus.net/prayer",
                     data:data,
                     crossDomain: true,
                     dataType: "json"

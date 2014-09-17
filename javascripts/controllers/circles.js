@@ -8,8 +8,8 @@ sampleApp.controller('circles',function($rootScope,$scope,$location,$http){
         $http({
             method:"POST",
             //contentType: 'application/json',
-            url:"http://localhost:3000/allGroup",
-            //url:"http://prayable-21641.onmodulus.net/allGroup",
+            //url:"http://localhost:3000/allGroup",
+            url:"http://prayable-21641.onmodulus.net/allGroup",
             data:data,
             crossDomain: true,
             dataType: "json"
