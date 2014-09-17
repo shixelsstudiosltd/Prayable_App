@@ -1,4 +1,4 @@
-<div>
+<div ng-show="isLogged">
 	
 
 	<div class="body-container bg-prayers">
@@ -13,7 +13,7 @@
        	<div class="app-header-search-container">
 			<div class="app-search-header">
 				<div class="header-search">
-					<input type="text" placeholder="Search Inbox...">
+					<input type="text" class="circleSearchField" ng-change="change()" ng-model="searchQuery" placeholder="Search Inbox...">
 					<div class="app-search-bar-icon"><i class="fa fa-search"></i></div>
 				</div>
 				<div class="app-message-compose-container">
@@ -25,188 +25,28 @@
 		</div>
 
 		<div class="my-circle-body-container">
-			<div class="my-circle-container">
+
+
+            <div class="my-circle-container" ng-repeat="group in groupSearchList">
 				<div class="circle-container">
 					<div class="circle-img group-img"></div>
 					<div class="circle-desc">
 						<div class="desc-row-1">
-							<h5 class="group-name">Washed in the Blood</h5>
+							<h5 class="group-name">{{group.title}}</h5>
 						</div>
 						
 						<div class="desc-row-2">
-							<h6 class="group-members">20 members</h6>
+							<h6 class="group-members">{{group.members.length}} members</h6>
 							<h6 class="group-notifications"><i class="fa fa-bell"></i> 1</h6>
 						</div>
 					</div>
 					<div class="circle-admin-settings">
 						<i class="fa fa-2x fa-wrench"></i>
-					</div>
-				</div>
-			</div>
-			<div class="my-circle-container">
-				<div class="circle-container">
-					<div class="circle-img group-img"></div>
-					<div class="circle-desc">
-						<div class="desc-row-1">
-							<h5 class="group-name">Crusaders for Christ</h5>
-						</div>
-						
-						<div class="desc-row-2">
-							<h6 class="group-members">20 members</h6>
-							<h6 class="group-notifications"><i class="fa fa-bell"></i> 1</h6>
-						</div>
-					</div>
-					<div class="circle-admin-settings">
-						
-					</div>
-				</div>
-			</div>
-			<div class="my-circle-container">
-				<div class="circle-container">
-					<div class="circle-img group-img"></div>
-					<div class="circle-desc">
-						<div class="desc-row-1">
-							<h5 class="group-name">A Brighter Day</h5>
-						</div>
-						
-						<div class="desc-row-2">
-							<h6 class="group-members">109 members</h6>
-							<h6 class="group-notifications"><i class="fa fa-bell"></i> 1</h6>
-						</div>
-					</div>
-					<div class="circle-admin-settings">
-						</i>
-					</div>
-				</div>
-			</div>
-			<div class="my-circle-container">
-				<div class="circle-container">
-					<div class="circle-img group-img"></div>
-					<div class="circle-desc">
-						<div class="desc-row-1">
-							<h5 class="group-name">Mindless</h5>
-						</div>
-						
-						<div class="desc-row-2">
-							<h6 class="group-members">2 members</h6>
-							<h6 class="group-notifications"><i class="fa fa-bell"></i> 1</h6>
-						</div>
-					</div>
-					<div class="circle-admin-settings">
-						<i class="fa fa-2x fa-wrench"></i>
-					</div>
-				</div>
-			</div>
-			<div class="my-circle-container">
-				<div class="circle-container">
-					<div class="circle-img group-img"></div>
-					<div class="circle-desc">
-						<div class="desc-row-1">
-							<h5 class="group-name">I am a Champion</h5>
-						</div>
-						
-						<div class="desc-row-2">
-							<h6 class="group-members">20 members</h6>
-							<h6 class="group-notifications"><i class="fa fa-bell"></i> 1</h6>
-						</div>
-					</div>
-					<div class="circle-admin-settings">
-						
-					</div>
-				</div>
-			</div>
-			<div class="my-circle-container">
-				<div class="circle-container">
-					<div class="circle-img group-img"></div>
-					<div class="circle-desc">
-						<div class="desc-row-1">
-							<h5 class="group-name">Worship Warriors</h5>
-						</div>
-						
-						<div class="desc-row-2">
-							<h6 class="group-members">201 members</h6>
-							<h6 class="group-notifications"><i class="fa fa-bell"></i> 1</h6>
-						</div>
-					</div>
-					<div class="circle-admin-settings">
-						<i class="fa fa-2x fa-wrench"></i>
-					</div>
-				</div>
-			</div>
-			<div class="my-circle-container">
-				<div class="circle-container">
-					<div class="circle-img group-img"></div>
-					<div class="circle-desc">
-						<div class="desc-row-1">
-							<h5 class="group-name">The Second Coming</h5>
-						</div>
-						
-						<div class="desc-row-2">
-							<h6 class="group-members">20 members</h6>
-							<h6 class="group-notifications"><i class="fa fa-bell"></i> 1</h6>
-						</div>
-					</div>
-					<div class="circle-admin-settings">
-						
-					</div>
-				</div>
-			</div>
-			<div class="my-circle-container">
-				<div class="circle-container">
-					<div class="circle-img group-img"></div>
-					<div class="circle-desc">
-						<div class="desc-row-1">
-							<h5 class="group-name">Please Take Me</h5>
-						</div>
-						
-						<div class="desc-row-2">
-							<h6 class="group-members">75 members</h6>
-							<h6 class="group-notifications"><i class="fa fa-bell"></i> 1</h6>
-						</div>
-					</div>
-					<div class="circle-admin-settings">
-						
 					</div>
 				</div>
 			</div>
 
-			<div class="my-circle-container">
-				<div class="circle-container">
-					<div class="circle-img group-img"></div>
-					<div class="circle-desc">
-						<div class="desc-row-1">
-							<h5 class="group-name">Please Take Me</h5>
-						</div>
-						
-						<div class="desc-row-2">
-							<h6 class="group-members">75 members</h6>
-							<h6 class="group-notifications"><i class="fa fa-bell"></i> 1</h6>
-						</div>
-					</div>
-					<div class="circle-admin-settings">
-						
-					</div>
-				</div>
-			</div>
 
-			<div class="my-circle-container">
-				<div class="circle-container">
-					<div class="circle-img group-img"></div>
-					<div class="circle-desc">
-						<div class="desc-row-1">
-							<h5 class="group-name">Please Take Me</h5>
-						</div>
-						
-						<div class="desc-row-2">
-							<h6 class="group-members">75 members</h6>
-							<h6 class="group-notifications"><i class="fa fa-bell"></i> 1</h6>
-						</div>
-					</div>
-					<div class="circle-admin-settings">
-						
-					</div>
-				</div>
-			</div>
 		</div>
 
 	</div>
