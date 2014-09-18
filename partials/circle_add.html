@@ -1,0 +1,87 @@
+<div ng-show="isLogged">
+	<div class="body-container bg-pic-gradient">
+		<ul class="app-header">
+       		<li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
+       		<li class="app-header-title">{{ 'addCircle' | translate }}</li>
+       		<li class="app-header-notifications"><i class="fa fa-bell"></i></li>
+       </ul>
+	</div   >
+	<div class="settings-body-container">
+		
+		<div class="settings-prayer circle-prayer-add-container settings">
+			<div class="circle-photo-container">
+				<div class="photo-container">
+					<div class="circle-photo">
+						<div class="content"></div>
+					</div>
+				</div>
+				<div class="photo-upload-container">
+					<i class="fa fa-2x fa-camera upload-button"></i>
+				</div>
+			</div>
+			<div class="circle-prayer-container">
+				<textarea placeholder="Write Prayer..."  ng-model="prayerInfo.prayer_text"></textarea>
+			</div>
+		</div>
+
+		<div class="settings-group group-add-container settings">
+			<div class="circle-add-header">
+				<h5>Share Circle:</h5>
+			</div>
+			<div class="circle-add-container">
+				<p class="circle-add-user">
+					<i class="fa fa-users"></i> Add A Friend
+				</p>
+			</div>
+		</div>
+
+		<div class="settings-share settings">
+			<div class="share-separator"></div>
+			<div class="share-location">
+				<h5>Use My Location:</h5>
+				<div title=".toggle-location">
+				    <div class="toggle-location">  
+				     	<input type="checkbox" value="None" id="toggle-location" name="check" ng-model="prayerInfo.gps_enabled" checked />
+				      	<label for="toggle-location"></label>
+				    </div>
+				</div>
+			</div>
+			<div class="share-share">
+				<h5>Share To:</h5>
+			</div>
+			<div class="share-media">
+				<div class="media-facebook smedia">
+					<p><i class="fa fa-2x fa-facebook"></i> facebook</p>
+				</div>
+				<div class="media-twitter smedia">
+					<p><i class="fa fa-2x fa-twitter"></i> twitter</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="settings-privacy circle-privacy-settings settings">
+			<div class="privacy-container">
+				<div class="p-container">
+					<div class="p-unlock p-ele">
+						<i class="fa fa-2x fa-unlock"></i>
+					</div>
+					<div class="p-toggle p-ele">
+						<div title=".toggle-lock">
+						    <div class="toggle-lock">  
+						     	<input type="checkbox" value="None" id="toggle-lock" name="check2" ng-model="prayerInfo.is_private" checked />
+						      	<label for="toggle-lock"></label>
+						    </div>
+						</div>
+					</div>
+					<div class="p-lock">
+						<i class="fa fa-2x fa-lock p-ele"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="settings-submit settings" ng-click="savePrayer()">
+			<h4>Pray It  <i class="fa fa-long-arrow-right"></i></h4>
+		</div>
+	</div>
+</div>

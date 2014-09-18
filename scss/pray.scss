@@ -20,76 +20,21 @@
 		border-top: 1px solid $light-gray;
 		display: flex;
 
-		.prayer-photo-container {
-			height: 100%;
-			width: 40%;
-			display: list-item;
-			position: relative;
-
-			.container-photo {
-				
-				width: 50%;
-				position: relative;
-				margin: 0 auto;
-
-				&::before {
-					content: "";
-					display: block;
-					padding-top: 100%;
-				}
-
-				.user-photo {
-					position: absolute;
-					top: 0; left: 0; bottom: 0; right: 0;
-					background: url('../img/user-img.jpg') no-repeat center;
-					background-size: contain;
-					margin: 10px auto;
-					border-radius: 50%;
-				}
-			}
-
-			.container-photo-upload {
-				height: 100%;
-				width: 100%;
-				line-height: 100%;
-				display: -webkit-inline-box;
-				position: absolute;
-				z-index: 5;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, 10%);
-
-				.upload-button {
-					height: 80%;
-					width: 70%;
-					margin: 0 auto;
-					font-weight: 500;
-					text-align: center;
-					color: $gray;
-					display: table;
-
-					p {
-						margin: 0 auto;
-						display: table-cell;
-						vertical-align: middle;
-					}
-				}
-			}
-
-			
-		}
 		.prayer-prayer {
 			background: transparent;
 			height: 100%;
 			width: 100%;
 
-			input[type="text"] {
+			textarea {
 				height: 100%;
 				width: 100%;
 				background: transparent;
 				border: 0;
+				color: $white;
+				padding: 5%;
+				resize: none;
 			}
-			input[type="text"]::-webkit-input-placeholder {
+			textarea::-webkit-input-placeholder {
 				color: $white !important;
 			}
 		}
@@ -118,8 +63,11 @@
 
 			.group-row {
 				height: 50%;
-				border-bottom: 1px solid $light-gray;
 				display: flex;
+
+				&.top-row {
+					border-bottom: 1px solid $light-gray;	
+				}
 
 				.sgroup:nth-child(2) {
 					border-right: 0;
@@ -129,14 +77,19 @@
 					height: 100%;
 					width: 50%;
 					border-right: 1px solid $light-gray;
-					display: table;
+					display: table-cell;
+					position: relative;
 
 					p {
-						margin: 0 !important;
 						display: table-cell;
-						vertical-align: middle;
-						text-align: center;
 						color: $white;
+						position: absolute;
+						left: 50%;
+						transform: translate(-50%, 50%);
+					}
+
+					&:nth-child(2) {
+						border-right: 0;
 					}
 
 					&:hover {
@@ -197,11 +150,35 @@
 			display: flex;
 
 			.media-facebook {
+				/*background-color: #2b4170;
+				background: -moz-linear-gradient(top, #3b5998, #2b4170);
+				background: -ms-linear-gradient(top, #3b5998, #2b4170);
+				background: -webkit-linear-gradient(top, #3b5998, #2b4170);
+				border: 1px solid #2b4170;
+				text-shadow: 0 -1px -1px #1f2f52;*/
 
+				&:hover {
+					background-color: #3b5998; /* fallback color */
+					background: -moz-linear-gradient(top, #2b4170, #3b5998);
+					background: -ms-linear-gradient(top, #2b4170, #3b5998);
+					background: -webkit-linear-gradient(top, #2b4170, #3b5998);
+				}
 			}
 
 			.media-twitter {
+				/*background-color: #0081ce; 
+				background: -moz-linear-gradient(top, #00aced, #0081ce);
+				background: -ms-linear-gradient(top, #00aced, #0081ce);
+				background: -webkit-linear-gradient(top, #00aced, #0081ce);
+				border: 1px solid #0081ce;
+				text-shadow: 0 -1px -1px #005ea3; */
 
+				&:hover {
+					background-color: #00aced; /* fallback color */
+					background: -moz-linear-gradient(top, #0081ce, #00aced);
+					background: -ms-linear-gradient(top, #0081ce, #00aced);
+					background: -webkit-linear-gradient(top, #0081ce, #00aced);
+				}
 			}
 
 			.smedia:nth-child(2) {
@@ -268,6 +245,15 @@
 		background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
 		background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
 			
+		&:hover {
+			background: rgb(230,230,230); /* Old browsers */
+			background: -moz-linear-gradient(top,  rgba(230,230,230,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(230,230,230,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  rgba(230,230,230,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  rgba(230,230,230,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  rgba(230,230,230,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  rgba(230,230,230,1) 0%,rgba(229,229,229,1) 100%); /* W3C */	
+		}
 
 		h4 {
 			display: table-cell;
@@ -279,8 +265,9 @@
 
 
 
-/* .slideTwo */
-.slideTwo {
+
+.toggle-location, 
+.toggle-lock {
   width: 80px;
   height: 30px;
   background: transparent;
@@ -290,7 +277,8 @@
   -webkit-border-radius: 50px;
   border-radius: 50px;
 }
-.slideTwo:after {
+.toggle-location:after, 
+.toggle-lock:after {
   content: '';
   position: absolute;
   top: 12px;
@@ -305,7 +293,8 @@
   -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
 }
-.slideTwo label {
+.toggle-location label, 
+.toggle-lock label {
   display: block;
   width: 22px;
   height: 22px;
@@ -329,7 +318,8 @@
   background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
   background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
 }
-.slideTwo label:after {
+.toggle-location label:after,
+.toggle-lock label:after {
   content: '';
   width: 10px;
   height: 10px;
@@ -344,15 +334,15 @@
   -webkit-box-shadow: inset 0px 1px 1px black, 0px 1px 0px rgba(255, 255, 255, 0.9);
   box-shadow: inset 0px 1px 1px black, 0px 1px 0px rgba(255, 255, 255, 0.9);
 }
-.slideTwo input[type=checkbox] {
+.toggle-location input[type=checkbox],
+.toggle-lock input[type=checkbox]{
   visibility: hidden;
 }
-.slideTwo input[type=checkbox]:checked + label {
+.toggle-location input[type=checkbox]:checked + label,
+.toggle-lock input[type=checkbox]:checked + label{
   left: 54px;
 }
-.slideTwo input[type=checkbox]:checked + label:after {
+.toggle-location input[type=checkbox]:checked + label:after,
+.toggle-lock input[type=checkbox]:checked + label:after{
   background: $light-purple;
 }
-
-/* end .slideTwo */
-

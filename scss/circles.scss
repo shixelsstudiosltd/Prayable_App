@@ -26,6 +26,16 @@
 			background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
 			background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+
+			&:hover {
+				background: rgb(230,230,230); /* Old browsers */
+				background: -moz-linear-gradient(top,  rgba(230,230,230,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(230,230,230,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  rgba(230,230,230,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  rgba(230,230,230,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  rgba(230,230,230,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  rgba(230,230,230,1) 0%,rgba(229,229,229,1) 100%); /* W3C */	
+			}
 			
 			&.prayer-hands {
 				line-height: 4em;
@@ -105,4 +115,151 @@
 			right: 5%;
 		}
 	}
+}
+
+/////////////////////////
+//* ADD PRAYER CIRCLE *//
+/////////////////////////
+
+.settings-prayer {
+	
+	.circle-photo-container {
+		height: 100%;
+		width: 40%;
+		position: relative;
+
+		.photo-container {
+			
+			width: 80%;
+			height: 100%;
+			position: relative;
+			margin: 0 auto;
+			display: table;
+			padding: 15px;
+
+			.circle-photo {
+				position: relative;
+				margin: 0px auto;
+				width: 100%;
+				display: table-cell;
+				vertical-align: middle;
+
+				.content {
+					position: absolute;
+					top: 0; left: 0; bottom: 0; right: 0;
+					background: url('../img/user-img.jpg') no-repeat center;
+					background-size: contain;
+					padding: 50px;
+					display: table-cell;
+					vertical-align: middle;
+
+					&::before {
+						content: "";
+						display: block;
+						padding-top: 100%;
+					}
+				}
+			}
+		}
+
+		.photo-upload-container {
+			height: 100%;
+			width: 100%;
+			line-height: 100%;
+			display: none;
+			position: absolute;
+			z-index: 5;
+			left: 50%;
+			top: 0;
+			transform: translate(-50%);
+
+			.upload-button {
+				height: 100%;
+				width: 100%;
+				margin: 0 auto;
+				font-weight: 500;
+				text-align: center;
+				color: $gray;
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}	
+	}
+	.circle-prayer-container {
+		height: 100%;
+		width: 60%;
+
+		textarea {
+				height: 100%;
+				width: 100%;
+				background: transparent;
+				border: 0;
+				color: $white;
+				padding: 5%;
+				resize: none;
+		}
+		textarea::-webkit-input-placeholder {
+			color: $white !important;
+		}
+	}
+}
+
+.circle-add-container {
+	height: 68%;
+	background: transparent;
+	width: 100%;
+	position: relative;
+	text-align: center;
+
+	&:hover {
+		background: rgb(255,255,255); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+		
+		.circle-add-user {
+			color: $black;
+		}
+	}
+
+	.circle-add-user {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		vertical-align: middle;
+		color: $white;
+		font-size: 16px;
+
+	}
+}
+
+.circle-add-header {
+	height: 33%;
+	width: 100%;
+	display: table;
+	background: $white-t-l;
+	border-bottom: 1px solid $light-gray;
+	text-indent: 5%;
+
+	h5 {
+		display: table-cell;
+		vertical-align: middle;
+		color: $white;
+	}
+}
+
+.group-add-container {
+	height: 15% !important;
+}
+
+.circle-prayer-add-container {
+	height: 35% !important;
+}
+
+.circle-privacy-settings {
+	height: 15% !important;
 }

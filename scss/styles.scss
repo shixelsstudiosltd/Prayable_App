@@ -141,7 +141,7 @@ html, body {
 	background: $dark-purple;
 	position: fixed;
 	color: $white;
-	bottom: -530px;
+	bottom: -446px;
 
 	.prayable-nav-items {
 		list-style: none;
@@ -149,12 +149,12 @@ html, body {
 		text-align: left;
 		li {
 			width: 100%;
-			height: 60px;
-			line-height: 30px;
+			height: 50px;
+			line-height: 25px;
 			font-size: 1.5em;
 			font-weight: 100;
 			text-transform: capitalize;
-			padding: 15px 25px;
+			padding: 10px 25px;
 			border-bottom: 1px solid $darker-purple;
 
 			.prayable-nav-item-icon {

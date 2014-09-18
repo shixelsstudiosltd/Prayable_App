@@ -6,8 +6,20 @@ sampleApp.controller('home',function($rootScope,$scope,$location){
             $location.path(path);
         }
 
+$slideMobile = 0;
 
-
+$('.prayable-nav-icon').click(function(){
+    if ($slideMobile === 0) {
+            $('.body-container').animate({top:'-446px'});
+            $('.prayable-nav-container').animate({bottom:'-10px'});
+            $slideMobile = 1;
+            console.log("test");
+        }  else if ($slideMobile === 1) {
+            $('.body-container').animate({top:'0px'});
+            $('.prayable-nav-container').animate({bottom:'-446px'});
+            $slideMobile = 0;
+      }
+});
 
 /*
 toggleMenu: function(e) {
