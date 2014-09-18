@@ -11344,10 +11344,23 @@ Primary use:	Page Used for Login/Register Styles
 .settings-prayer .circle-prayer-container {
   height: 100%;
   width: 60%;
+  border-left: 1px solid white;
 }
-/* line 192, ../scss/circles.scss */
-.settings-prayer .circle-prayer-container textarea {
-  height: 100%;
+/* line 193, ../scss/circles.scss */
+.settings-prayer .circle-prayer-container .circle-group-title {
+  height: 25%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid white;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  padding: 5%;
+  color: white;
+}
+/* line 202, ../scss/circles.scss */
+.settings-prayer .circle-prayer-container .circle-group-desc {
+  height: 75%;
   width: 100%;
   background: transparent;
   border: 0;
@@ -11355,12 +11368,18 @@ Primary use:	Page Used for Login/Register Styles
   padding: 5%;
   resize: none;
 }
-/* line 201, ../scss/circles.scss */
-.settings-prayer .circle-prayer-container textarea::-webkit-input-placeholder {
-  color: white !important;
+/* line 211, ../scss/circles.scss */
+.settings-prayer .circle-prayer-container .circle-group-desc::-webkit-input-placeholder {
+  color: #8f6da8 !important;
+  font-style: italic;
+}
+/* line 216, ../scss/circles.scss */
+.settings-prayer .circle-prayer-container .circle-group-title::-webkit-input-placeholder {
+  color: #290440 !important;
+  font-style: italic;
 }
 
-/* line 207, ../scss/circles.scss */
+/* line 223, ../scss/circles.scss */
 .circle-add-container {
   height: 68%;
   background: transparent;
@@ -11368,7 +11387,7 @@ Primary use:	Page Used for Login/Register Styles
   position: relative;
   text-align: center;
 }
-/* line 214, ../scss/circles.scss */
+/* line 230, ../scss/circles.scss */
 .circle-add-container:hover {
   background: white;
   /* Old browsers */
@@ -11385,11 +11404,11 @@ Primary use:	Page Used for Login/Register Styles
   background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
   /* W3C */
 }
-/* line 223, ../scss/circles.scss */
+/* line 239, ../scss/circles.scss */
 .circle-add-container:hover .circle-add-user {
   color: black;
 }
-/* line 228, ../scss/circles.scss */
+/* line 244, ../scss/circles.scss */
 .circle-add-container .circle-add-user {
   position: absolute;
   left: 50%;
@@ -11400,7 +11419,7 @@ Primary use:	Page Used for Login/Register Styles
   font-size: 16px;
 }
 
-/* line 240, ../scss/circles.scss */
+/* line 256, ../scss/circles.scss */
 .circle-add-header {
   height: 33%;
   width: 100%;
@@ -11409,24 +11428,24 @@ Primary use:	Page Used for Login/Register Styles
   border-bottom: 1px solid #eaeaea;
   text-indent: 5%;
 }
-/* line 248, ../scss/circles.scss */
+/* line 264, ../scss/circles.scss */
 .circle-add-header h5 {
   display: table-cell;
   vertical-align: middle;
   color: white;
 }
 
-/* line 255, ../scss/circles.scss */
+/* line 271, ../scss/circles.scss */
 .group-add-container {
   height: 15% !important;
 }
 
-/* line 259, ../scss/circles.scss */
+/* line 275, ../scss/circles.scss */
 .circle-prayer-add-container {
   height: 35% !important;
 }
 
-/* line 263, ../scss/circles.scss */
+/* line 279, ../scss/circles.scss */
 .circle-privacy-settings {
   height: 15% !important;
 }
@@ -12081,10 +12100,13 @@ Primary use:	Page Used for Login/Register Styles
 .settings-body-container .settings-submit h4 {
   display: table-cell;
   vertical-align: middle;
-  color: #333333;
+  color: #290440;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.125em;
 }
 
-/* line 270, ../scss/pray.scss */
+/* line 273, ../scss/pray.scss */
 .toggle-location,
 .toggle-lock {
   width: 80px;
@@ -12097,7 +12119,7 @@ Primary use:	Page Used for Login/Register Styles
   border-radius: 50px;
 }
 
-/* line 281, ../scss/pray.scss */
+/* line 284, ../scss/pray.scss */
 .toggle-location:after,
 .toggle-lock:after {
   content: '';
@@ -12115,7 +12137,7 @@ Primary use:	Page Used for Login/Register Styles
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
 }
 
-/* line 297, ../scss/pray.scss */
+/* line 300, ../scss/pray.scss */
 .toggle-location label,
 .toggle-lock label {
   display: block;
@@ -12142,7 +12164,7 @@ Primary use:	Page Used for Login/Register Styles
   background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
 }
 
-/* line 322, ../scss/pray.scss */
+/* line 325, ../scss/pray.scss */
 .toggle-location label:after,
 .toggle-lock label:after {
   content: '';
@@ -12160,19 +12182,19 @@ Primary use:	Page Used for Login/Register Styles
   box-shadow: inset 0px 1px 1px black, 0px 1px 0px rgba(255, 255, 255, 0.9);
 }
 
-/* line 338, ../scss/pray.scss */
+/* line 341, ../scss/pray.scss */
 .toggle-location input[type=checkbox],
 .toggle-lock input[type=checkbox] {
   visibility: hidden;
 }
 
-/* line 342, ../scss/pray.scss */
+/* line 345, ../scss/pray.scss */
 .toggle-location input[type=checkbox]:checked + label,
 .toggle-lock input[type=checkbox]:checked + label {
   left: 54px;
 }
 
-/* line 346, ../scss/pray.scss */
+/* line 349, ../scss/pray.scss */
 .toggle-location input[type=checkbox]:checked + label:after,
 .toggle-lock input[type=checkbox]:checked + label:after {
   background: #8f6da8;

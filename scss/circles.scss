@@ -188,18 +188,34 @@
 	.circle-prayer-container {
 		height: 100%;
 		width: 60%;
+		border-left: 1px solid $white;
 
-		textarea {
-				height: 100%;
-				width: 100%;
-				background: transparent;
-				border: 0;
-				color: $white;
-				padding: 5%;
-				resize: none;
+		.circle-group-title {
+			height: 25%;
+			width: 100%;
+			background: $white-t-l;
+			border-bottom: 1px solid $white;
+			border-top:0; border-left:0; border-right:0;
+			padding: 5%;
+			color: $white;
 		}
-		textarea::-webkit-input-placeholder {
-			color: $white !important;
+		.circle-group-desc {
+			height: 75%;
+			width: 100%;
+			background: transparent;
+			border: 0;
+			color: $white;
+			padding: 5%;
+			resize: none;
+		}
+		.circle-group-desc::-webkit-input-placeholder {
+			color: $light-purple !important;
+			font-style: italic;
+		}
+
+		.circle-group-title::-webkit-input-placeholder {
+			color: $dark-purple !important;
+			font-style: italic;
 		}
 	}
 }

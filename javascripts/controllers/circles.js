@@ -1,5 +1,13 @@
 sampleApp.controller('circles',function($rootScope,$scope,$location,$http){
 
+   $scope.back = function (path){
+        history.back();
+    };
+
+    $scope.go = function (path){
+        $location.path(path);
+    };
+
     $scope.isLogged = false
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     if(userData && (Object.keys(userData).length > 0)){

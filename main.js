@@ -38,7 +38,7 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 templateUrl:'partials/circles.html',
                 controller:'circles'
             })
-            .when('/circles/circle_add',{
+            .when('/circles/add',{
                 templateUrl:'partials/circle_add.html',
                 controller:'circles'
             })
