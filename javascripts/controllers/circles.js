@@ -4,54 +4,64 @@ sampleApp.controller('circles',function($rootScope,$scope,$location,$http){
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     if(userData && (Object.keys(userData).length > 0)){
         $scope.isLogged = true;
-        var data = {userid:userData._id}
-        $http({
-            method:"POST",
-            //contentType: 'application/json',
-            //url:"http://localhost:3000/allGroup",
-            url:"http://prayable-21641.onmodulus.net/allGroup",
-            data:data,
-            crossDomain: true,
-            dataType: "json"
-        }).success(function(data, textstatus) {
-                // this callback will be called asynchronously
-                // when the response is available
+        FB.ui({
+            method: 'share',
+            href: 'https://developers.facebook.com/docs/'
+        }, function(response){});
+        //var data = {userid:userData._id}
 
-                $scope.groupList = data;
-                $scope.groupSearchList = data;
-                console.log(data)
-                $scope.searchQuery=''
-                $scope.change = function(){
-                    var str = $(".circleSearchField").val();
+        $scope.getallGruops =function(){
+            var data = {key:'A'}
+            $http({
+                method:"POST",
+                //contentType: 'application/json',
+                url:"http://localhost:3000/allGroup",
+                //url:"http://prayable-21641.onmodulus.net/allGroup",
+                data:data,
+                crossDomain: true,
+                dataType: "json"
+            }).success(function(data, textstatus) {
+                    // this callback will be called asynchronously
+                    // when the response is available
 
-                    switch (event.keyCode){
-                        case 32:{
-                            if(str.length > 1 ){
-                                filterResult(str)
-                            }else{
+                    $scope.groupList = data;
+                    $scope.groupSearchList = data;
+                    console.log(data)
+                    $scope.searchQuery=''
+                    $scope.change = function(){
+                        var str = $(".circleSearchField").val();
 
-                            }
-                            break;
-                        };
-                        default :{
-                            filterResult(str);
-                            break;
+                        switch (event.keyCode){
+                            case 32:{
+                                if(str.length > 1 ){
+                                    filterResult(str)
+                                }else{
+
+                                }
+                                break;
+                            };
+                            default :{
+                                filterResult(str);
+                                break;
+                            };
+
                         };
 
                     };
 
-                };
 
 
+                    // console.log(textstatus)
+                }).error(function(data, textstatus) {
 
-                // console.log(textstatus)
-            }).error(function(data, textstatus) {
+                    //console.log(data)
+                    console.log(textstatus)
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+                });
+        }
 
-                //console.log(data)
-                console.log(textstatus)
-                // called asynchronously if an error occurs
-                // or server returns response with an error status.
-            });
+        $scope.getallGruops();
 
 
         function filterResult(str){
@@ -68,10 +78,114 @@ sampleApp.controller('circles',function($rootScope,$scope,$location,$http){
 
             //}
 
+
+
+
         }
 
+        $scope.userGroup = function(){
+            var data = {userid:userData._id}
+
+            $http({
+                method:"POST",
+                //contentType: 'application/json',
+                url:"http://localhost:3000/allGroup",
+                //url:"http://prayable-21641.onmodulus.net/allGroup",
+                data:data,
+                crossDomain: true,
+                dataType: "json"
+            }).success(function(data, textstatus) {
+                    // this callback will be called asynchronously
+                    // when the response is available
+
+                    $scope.groupList = data;
+                    $scope.groupSearchList = data;
+                    console.log(data)
+                    $scope.searchQuery=''
+                    $scope.change = function(){
+                        var str = $(".circleSearchField").val();
+
+                        switch (event.keyCode){
+                            case 32:{
+                                if(str.length > 1 ){
+                                    filterResult(str)
+                                }else{
+
+                                }
+                                break;
+                            };
+                            default :{
+                                filterResult(str);
+                                break;
+                            };
+
+                        };
+
+                    };
 
 
+
+                    // console.log(textstatus)
+                }).error(function(data, textstatus) {
+
+                    //console.log(data)
+                    console.log(textstatus)
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+                });
+
+        }
+
+        $scope.getallGruops =function(){
+            var data = {key:'A'}
+            $http({
+                method:"POST",
+                //contentType: 'application/json',
+                url:"http://localhost:3000/allGroup",
+                //url:"http://prayable-21641.onmodulus.net/allGroup",
+                data:data,
+                crossDomain: true,
+                dataType: "json"
+            }).success(function(data, textstatus) {
+                    // this callback will be called asynchronously
+                    // when the response is available
+
+                    $scope.groupList = data;
+                    $scope.groupSearchList = data;
+                    console.log(data)
+                    $scope.searchQuery=''
+                    $scope.change = function(){
+                        var str = $(".circleSearchField").val();
+
+                        switch (event.keyCode){
+                            case 32:{
+                                if(str.length > 1 ){
+                                    filterResult(str)
+                                }else{
+
+                                }
+                                break;
+                            };
+                            default :{
+                                filterResult(str);
+                                break;
+                            };
+
+                        };
+
+                    };
+
+
+
+                    // console.log(textstatus)
+                }).error(function(data, textstatus) {
+
+                    //console.log(data)
+                    console.log(textstatus)
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+                });
+        }
 
     }else{
         $location.path('/')
