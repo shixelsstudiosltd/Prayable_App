@@ -2,14 +2,14 @@
 	<div class="body-container bg-pic-gradient">
 		<ul class="app-header">
        		<li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
-       		<li class="app-header-title">{{ 'pray' | translate }}</li>
+       		<li class="app-header-title">{{ 'prayerShare' | translate }}</li>
        		<li class="app-header-notifications"><i class="fa fa-bell"></i></li>
        </ul>
 	</div   >
 	<div class="settings-body-container">
 		<div class="settings-prayer settings">
 			<div class="prayer-prayer">
-				<input type="text" placeholder="Write Prayer..." maxlength="45"  ng-model="prayerInfo.prayer_text">
+				<textarea placeholder="Write Prayer..." maxlength="45" ng-model="prayerInfo.prayer_text"></textarea>
 			</div>
 		</div>
 		<div class="settings-group settings">
@@ -17,7 +17,7 @@
 				<h5>Add Prayer To:</h5>
 			</div>
 			<div class="group-groups">
-				<div class="group-row">
+				<div class="group-row top-row">
 					<div class="sgroup" ng-click="selectGrp()">
 						<p><i class="fa fa-users"></i> Groups</p>
 					</div>
@@ -39,13 +39,11 @@
 			<div class="share-separator"></div>
 			<div class="share-location">
 				<h5>Use My Location:</h5>
-				<div title=".slideTwo">
-				    <!-- .slideTwo -->
-				    <div class="slideTwo">  
-				     	<input type="checkbox" value="None" id="slideTwo" name="check" ng-model="prayerInfo.gps_enabled" checked />
-				      	<label for="slideTwo"></label>
+				<div title=".toggle-location">
+				    <div class="toggle-location">  
+				     	<input type="checkbox" value="None" id="toggle-location" name="check" ng-model="prayerInfo.gps_enabled" checked />
+				      	<label for="toggle-location"></label>
 				    </div>
-				    <!-- end .slideTwo -->
 				</div>
 			</div>
 			<div class="share-share">
@@ -67,13 +65,11 @@
 						<i class="fa fa-2x fa-unlock"></i>
 					</div>
 					<div class="p-toggle p-ele">
-						<div title=".slideTwo">
-				    <!-- .slideTwo -->
-						    <div class="slideTwo">  
-						     	<input type="checkbox" value="None" id="slideTwo" name="check2" ng-model="prayerInfo.is_private" checked />
-						      	<label for="slideTwo"></label>
+						<div title=".toggle-lock">
+				     <div class="toggle-lock">  
+						     	<input type="checkbox" value="None" id="toggle-lock" name="check2" ng-model="prayerInfo.is_private" checked />
+						      	<label for="toggle-lock"></label>
 						    </div>
-						    <!-- end .slideTwo -->
 						</div>
 					</div>
 					<div class="p-lock">

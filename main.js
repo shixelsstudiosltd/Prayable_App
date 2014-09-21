@@ -38,6 +38,10 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 templateUrl:'partials/circles.html',
                 controller:'circles'
             })
+            .when('/circles/add',{
+                templateUrl:'partials/circle_add.html',
+                controller:'circles'
+            })
             .when('/friends',{
                 templateUrl:'partials/friends.html',
                 controller:'friends'
@@ -58,9 +62,9 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 templateUrl:'partials/journal.html',
                 controller:'journal'
             })
-            .when('/pray',{
-                templateUrl:'partials/pray.html',
-                controller:'pray'
+            .when('/prayer_share',{
+                templateUrl:'partials/prayer_share.html',
+                controller:'prayerShare'
             })
             .when('/prayers/add',{
                 templateUrl:'partials/input.html',
@@ -82,6 +86,7 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
 
 sampleApp.config(function ($translateProvider) {
     $translateProvider.translations('en', {
+        addCircle: 'Add Prayer Circle',
         email: 'Email',
         password: 'Password.',
         login: 'LOG IN',
@@ -92,7 +97,7 @@ sampleApp.config(function ($translateProvider) {
         alreadyhaveaccount:'Already have an account',
         signupwith:'Sign up with',
         loginwith:"Login with",
-        pray: "Pray Now",
+        prayerShare: "Share a Prayer",
         prayersFor: "Prayer's for",
         prayer: "Prayers",
         when: "when",
@@ -112,6 +117,7 @@ sampleApp.config(function ($translateProvider) {
         facebookSignUp: "Sign up with Facebook"
     });
     $translateProvider.translations('de', {
+        addCircle: 'Add Prayer Circle InGerman',
         email: 'Email InGerman',
         password: 'Password.InGerman',
         login: 'LOG IN InGerman',
@@ -122,7 +128,7 @@ sampleApp.config(function ($translateProvider) {
         alreadyhaveaccount:'Already have an account InGerman',
         signupwith:'Sign up with InGerman',
         loginwith:"Login with InGerman",
-        pray: "Pray Now InGerman",
+        prayerShare: "Share a Prayer InGerman",
         prayersFor: "Prayer's for InGerman",
         prayer: "Prayers InGerman",
         when: "when InGerman",
