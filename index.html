@@ -7,25 +7,22 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 	<link href="css/styles.css" rel="stylesheet" media="screen" type="text/css" />
 	<link href="css/ngDailog.css" rel="stylesheet"  type="text/css" />
-    <script src="http://connect.facebook.net/en_US/all.js"></script>
     <script type="application/javascript">
         window.fbAsyncInit = function() {
             FB.init({
-                appId      : '646091475486541',
+                appId      : 'fyPxHEyYc7kOjHPRDio-4NWGyBk',
                 //appId      : '684160781666200',
                 xfbml      : true,
                 version    : 'v2.0'
             });
         };
-        // Load the SDK Asynchronously
-        (function(d){
-            var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-            js = d.createElement('script'); js.id = id; js.async = true;
-            js.src = "//connect.facebook.net/" +
-                    "en_US" +
-                    "/all.js";
-            d.getElementsByTagName('head')[0].appendChild(js);
-        }(document));
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
 
 </head>

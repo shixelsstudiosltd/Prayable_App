@@ -28,9 +28,30 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                                 data:{email:data.data.email,key:"verify",userID:data.data._id},
                                 method:"POST"
                             }).success( function(res,textStatus){
-                                    $scope.go('/login');
-                                    if(!$scope.$$phase) $scope.$apply();
-                                })
+
+                                    $.ajax({
+                                        //url:"http://localhost:3000/friendList",
+                                          url:"http://prayable-21641.onmodulus.net/friendList",
+                                        data:{userID:data.data._id},
+                                        method:"POST"
+                                    }).success( function(res,textStatus){
+                                            $scope.go('/login');
+                                            if(!$scope.$$phase) $scope.$apply();
+                                        }).error(function(data, textstatus) {
+
+                                            console.log(data)
+                                            console.log(textstatus)
+                                            // called asynchronously if an error occurs
+                                            // or server returns response with an error status.
+                                        });
+
+                                }).error(function(data, textstatus) {
+
+                                    console.log(data)
+                                    console.log(textstatus)
+                                    // called asynchronously if an error occurs
+                                    // or server returns response with an error status.
+                                });
                         }).error(function(data, textstatus) {
 
                             console.log(data)
