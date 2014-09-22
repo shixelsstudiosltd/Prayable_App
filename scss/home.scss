@@ -5,24 +5,52 @@
 	color: #fff;
 	margin-top: -20px;
 
-	i {
-		font-size: 2em;
-		position: relative;
-		top: 75px;
-	}
-
 	a {
 		color: $white;
 	}
 
+	.pray-now-circle-container {
+		width: 50%;
+		position: relative;
+		height: auto;
+		margin: 0 auto;
+
+		i {
+			font-size: 2em;
+			position: absolute;
+			top: 50%; left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
 	.pray-now-circle {
+		position: relative;
 		background: #fff;
-		width: 120px;
-		height: 120px;
+		width: 50%;
 		border-radius: 100px;
 		margin: 0 auto;
 		opacity: 0.3;
 		cursor: pointer;
+
+		&::before {
+			content: "";
+			display: block;
+			padding-top: 100%;
+		}
+
+		.content {
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			background: $white-t-l;
+			padding: 30px;
+			border-radius: 50%;
+
+			&::before {
+				content: "";
+				display: block;
+				padding-top: 100%;
+			}
+		}
 	}
 	.pray-now-title {
 		font-size: 1.2em;

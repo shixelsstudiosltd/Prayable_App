@@ -9,7 +9,7 @@ Primary use:	Page Used for Login/Register Styles
 ----------------------------------------------------*/
 
 .page-login, .page-register {
-	position: relative;
+	position: absolute;
 	min-height: 100%;
 	height: auto;
 	width: 100%;
@@ -18,16 +18,43 @@ Primary use:	Page Used for Login/Register Styles
 	.img-logo {
 		width: 100%;
 		text-align: center;
-		padding: 3.125em 0;
+		/*padding: 3.125em 0; */
+		position: absolute;
+		height: 30%;
 
 		img {
 			max-width: 80%;
 		}
 	}
+
+	.img-logo-register-container {
+		width: 100%;
+		text-align: center;
+		/*padding: 3.125em 0; */
+		position: absolute;
+		height: 15%;
+
+		.img-logo-register {
+			width: 50%;
+			margin: 0 auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			img {
+				max-width: 40%;
+			}
+		}
+	}
 }
 
-.form-container {
+.login-form-container {
 	width: 100%;
+	height: 70%;
+	overflow-y: scroll;
+	position: absolute;
+	top: 30%;
 }
 
 .form-login, .form-register {
@@ -76,6 +103,14 @@ Primary use:	Page Used for Login/Register Styles
 	}
 }
 
+.register-container {
+	height: 85%;
+	width: 100%;
+	position: absolute;
+	top: 15%;
+	overflow-y: scroll;
+	padding-bottom: 10px;
+}
 
 .glyph-container {
 		display: flex;
@@ -153,8 +188,6 @@ Primary use:	Page Used for Login/Register Styles
 		font-size: 1.3em;
 		margin: 15px 2em;
 	}
-
-
 }
 
 

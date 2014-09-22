@@ -2,13 +2,25 @@
 <div>
 	<div class="body-container bg-main">
 		<div class="page-register">
-			<div class="img-logo">
-				<img src="img/logo.png">
+			<div class="img-logo-register-container">
+				<div class="img-logo-register">
+					<img src="img/logo.png">
+				</div>
 			</div>
-			<div class="section-container">
+			<div class="register-container">
 				<div class="form-register">
 					<h6 class="form-head">{{ 'alreadyhaveaccount' | translate }}<span class="login-link" style="cursor: pointer" ng-click="go('login')">{{ 'login' | translate }}</span></h6>
 
+						<div class="glyph-container">
+							<div>
+							</div>
+							<input type="text" placeholder="{{ 'firstName' | translate }}" ng-model="userData.email">
+						</div>
+						<div class="glyph-container">
+							<div>
+							</div>
+							<input type="text" placeholder="{{ 'lastName' | translate }}" ng-model="userData.email">
+						</div>
 						<div class="glyph-container">
 							<div>
 								<i class="fa fa-envelope-o"></i>

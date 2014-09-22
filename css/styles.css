@@ -10674,7 +10674,7 @@ Primary use:	Page Used for Login/Register Styles
 ----------------------------------------------------*/
 /* line 11, ../scss/register.scss */
 .page-login, .page-register {
-  position: relative;
+  position: absolute;
   min-height: 100%;
   height: auto;
   width: 100%;
@@ -10684,37 +10684,66 @@ Primary use:	Page Used for Login/Register Styles
 .page-login .img-logo, .page-register .img-logo {
   width: 100%;
   text-align: center;
-  padding: 3.125em 0;
+  /*padding: 3.125em 0; */
+  position: absolute;
+  height: 30%;
 }
-/* line 23, ../scss/register.scss */
+/* line 25, ../scss/register.scss */
 .page-login .img-logo img, .page-register .img-logo img {
   max-width: 80%;
 }
-
-/* line 29, ../scss/register.scss */
-.form-container {
+/* line 30, ../scss/register.scss */
+.page-login .img-logo-register-container, .page-register .img-logo-register-container {
   width: 100%;
+  text-align: center;
+  /*padding: 3.125em 0; */
+  position: absolute;
+  height: 15%;
+}
+/* line 37, ../scss/register.scss */
+.page-login .img-logo-register-container .img-logo-register, .page-register .img-logo-register-container .img-logo-register {
+  width: 50%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 45, ../scss/register.scss */
+.page-login .img-logo-register-container .img-logo-register img, .page-register .img-logo-register-container .img-logo-register img {
+  max-width: 40%;
+  /*position: absolute;
+  */
 }
 
-/* line 33, ../scss/register.scss */
+/* line 54, ../scss/register.scss */
+.login-form-container {
+  width: 100%;
+  height: 70%;
+  overflow-y: scroll;
+  position: absolute;
+  top: 30%;
+}
+
+/* line 62, ../scss/register.scss */
 .form-login, .form-register {
   width: 80%;
   margin: 0 auto;
 }
-/* line 37, ../scss/register.scss */
+/* line 66, ../scss/register.scss */
 .form-login input[type="text"], .form-login input[type="password"], .form-login input[type="submit"], .form-register input[type="text"], .form-register input[type="password"], .form-register input[type="submit"] {
   display: block;
   width: 100%;
   background: transparent;
   color: white;
 }
-/* line 44, ../scss/register.scss */
+/* line 73, ../scss/register.scss */
 .form-login input[type="text"], .form-login input[type="password"], .form-register input[type="text"], .form-register input[type="password"] {
   text-indent: 25px;
   border-radius: 0 2px 2px 0;
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
-/* line 50, ../scss/register.scss */
+/* line 79, ../scss/register.scss */
 .form-login input[type="submit"], .form-register input[type="submit"] {
   font-size: 16px;
   font-weight: bolder;
@@ -10724,32 +10753,42 @@ Primary use:	Page Used for Login/Register Styles
   margin-bottom: 22.5px;
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
-/* line 59, ../scss/register.scss */
+/* line 88, ../scss/register.scss */
 .form-login input[type="text"]::-webkit-input-placeholder, .form-login input[type="password"]::-webkit-input-placeholder, .form-register input[type="text"]::-webkit-input-placeholder, .form-register input[type="password"]::-webkit-input-placeholder {
   color: white;
 }
-/* line 63, ../scss/register.scss */
+/* line 92, ../scss/register.scss */
 .form-login p, .form-login h6.form-head, .form-register p, .form-register h6.form-head {
   color: white;
   font-size: 12px;
 }
-/* line 68, ../scss/register.scss */
+/* line 97, ../scss/register.scss */
 .form-login h6.form-head, .form-register h6.form-head {
   margin-bottom: 20px;
 }
-/* line 71, ../scss/register.scss */
+/* line 100, ../scss/register.scss */
 .form-login h6.form-head .register-link, .form-login h6.form-head .login-link, .form-register h6.form-head .register-link, .form-register h6.form-head .login-link {
   font-weight: bolder;
   text-decoration: none;
   color: white;
 }
 
-/* line 80, ../scss/register.scss */
+/* line 108, ../scss/register.scss */
+.register-container {
+  height: 85%;
+  width: 100%;
+  position: absolute;
+  top: 15%;
+  overflow-y: scroll;
+  padding-bottom: 10px;
+}
+
+/* line 117, ../scss/register.scss */
 .glyph-container {
   display: flex;
   margin-bottom: 10px;
 }
-/* line 83, ../scss/register.scss */
+/* line 120, ../scss/register.scss */
 .glyph-container div {
   border-radius: 2px 0 0 2px;
   height: 44px;
@@ -10759,28 +10798,28 @@ Primary use:	Page Used for Login/Register Styles
   line-height: 3em;
   text-align: center;
 }
-/* line 93, ../scss/register.scss */
+/* line 130, ../scss/register.scss */
 .glyph-container.m-bottom {
   margin-bottom: 20px;
 }
 
-/* line 97, ../scss/register.scss */
+/* line 134, ../scss/register.scss */
 .f-glass {
   border: 5px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
 
-/* line 102, ../scss/register.scss */
+/* line 139, ../scss/register.scss */
 .social-register {
   width: 80%;
   margin: 0 auto;
 }
 
-/* line 110, ../scss/register.scss */
+/* line 147, ../scss/register.scss */
 .selection-container .t-glass {
   border-radius: 5px;
 }
-/* line 113, ../scss/register.scss */
+/* line 150, ../scss/register.scss */
 .selection-container .select-box {
   border-radius: 2px;
   height: 44px;
@@ -10792,35 +10831,35 @@ Primary use:	Page Used for Login/Register Styles
   line-height: 3.8em;
   display: flex;
 }
-/* line 124, ../scss/register.scss */
+/* line 161, ../scss/register.scss */
 .selection-container .select-box .border-right {
   padding: 0em 1.5em;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
-/* line 128, ../scss/register.scss */
+/* line 165, ../scss/register.scss */
 .selection-container .select-box .border-left {
   padding-left: 1.5em;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
-/* line 132, ../scss/register.scss */
+/* line 169, ../scss/register.scss */
 .selection-container .select-box .border-left h5 {
   line-height: 1.5em;
 }
-/* line 137, ../scss/register.scss */
+/* line 174, ../scss/register.scss */
 .selection-container .select-box.facebook {
   background: -moz-linear-gradient(top, #3b5998, #2b4170);
   background: -ms-linear-gradient(top, #3b5998, #2b4170);
   background: -webkit-linear-gradient(top, #3b5998, #2b4170);
 }
-/* line 143, ../scss/register.scss */
+/* line 180, ../scss/register.scss */
 .selection-container .select-box a {
   color: white;
 }
-/* line 148, ../scss/register.scss */
+/* line 185, ../scss/register.scss */
 .selection-container hr {
   width: 15%;
 }
-/* line 151, ../scss/register.scss */
+/* line 188, ../scss/register.scss */
 .selection-container p {
   /*line-height: 2.5em;*/
   font-size: 1.3em;
@@ -10922,45 +10961,77 @@ Primary use:	Page Used for Login/Register Styles
   margin-top: -20px;
 }
 /* line 8, ../scss/home.scss */
-.home-menu i {
-  font-size: 2em;
-  position: relative;
-  top: 75px;
-}
-/* line 14, ../scss/home.scss */
 .home-menu a {
   color: white;
 }
+/* line 12, ../scss/home.scss */
+.home-menu .pray-now-circle-container {
+  width: 50%;
+  position: relative;
+  height: auto;
+  margin: 0 auto;
+}
 /* line 18, ../scss/home.scss */
+.home-menu .pray-now-circle-container i {
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 26, ../scss/home.scss */
 .home-menu .pray-now-circle {
+  position: relative;
   background: #fff;
-  width: 120px;
-  height: 120px;
+  width: 50%;
   border-radius: 100px;
   margin: 0 auto;
   opacity: 0.3;
   cursor: pointer;
 }
-/* line 27, ../scss/home.scss */
+/* line 35, ../scss/home.scss */
+.home-menu .pray-now-circle::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+/* line 41, ../scss/home.scss */
+.home-menu .pray-now-circle .content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  border-radius: 50%;
+}
+/* line 48, ../scss/home.scss */
+.home-menu .pray-now-circle .content::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+/* line 55, ../scss/home.scss */
 .home-menu .pray-now-title {
   font-size: 1.2em;
   font-weight: 100;
   text-transform: uppercase;
   margin: 10px 0;
 }
-/* line 35, ../scss/home.scss */
+/* line 63, ../scss/home.scss */
 .home-menu .add-prayer {
   margin-top: 20px;
 }
 
-/* line 40, ../scss/home.scss */
+/* line 68, ../scss/home.scss */
 .home-body {
   width: 100%;
   text-align: center;
   height: 100%;
   padding: 20px 0;
 }
-/* line 46, ../scss/home.scss */
+/* line 74, ../scss/home.scss */
 .home-body .new-input {
   width: 80%;
   height: 300px;
@@ -10971,7 +11042,7 @@ Primary use:	Page Used for Login/Register Styles
   padding: 20px;
   line-height: 20px;
 }
-/* line 56, ../scss/home.scss */
+/* line 84, ../scss/home.scss */
 .home-body .new-input:focus {
   outline: 0;
 }
