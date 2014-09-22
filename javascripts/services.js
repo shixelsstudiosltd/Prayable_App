@@ -63,8 +63,26 @@ var temp;
                             // this callback will be called asynchronously
                             // when the response is available
                             sessionStorage.setItem('userData',JSON.stringify(data.data));
-                            scope.go('/');
-                            if(!scope.$$phase) scope.$apply();
+
+                            if((data.data.mode)&&(data.data.mode == 'R')){
+                                $.ajax({
+                                    url:"http://prayable-21641.onmodulus.net/friendList",
+                                    //  url:"http://prayable-21641.onmodulus.net/friendList",
+                                    data:{userID:data.data._id},
+                                    method:"POST"
+                                }).success( function(res,textStatus){
+
+                                        scope.go('/login');
+                                        if(!scope.$$phase) scope.$apply();
+                                    }).error(function(data, textstatus) {
+
+                                        console.log(data)
+                                        console.log(textstatus)
+                                        // called asynchronously if an error occurs
+                                        // or server returns response with an error status.
+                                    });
+                            }
+
                             //console.log(data)
                             //console.log(textstatus)
                         }).error(function(data, textstatus) {

@@ -57,7 +57,7 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
 
         }
         $scope.selectGrp =function(){
-            var data = {userid:userData._id}
+            var data = {userID:userData._id}
             $http({
                 method:"POST",
                 //contentType: 'application/json',
@@ -130,7 +130,7 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
 
 
         $scope.selectjrl =function(){
-            var data = {userid:userData._id}
+            var data = {userID:userData._id}
             $http({
                 method:"POST",
                 //contentType: 'application/json',
