@@ -3,7 +3,7 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
 
         $routeProvider
             .when('/',{
-                templateUrl:'partials/home.html',
+                templateUrl:'partials/login.html',
                 controller:'home'
             })
             .when('/login',{
@@ -67,8 +67,8 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 controller:'prayerShare'
             })
             .when('/prayers/add',{
-                templateUrl:'partials/input.html',
-                controller:'input'
+                templateUrl:'partials/prayer_share.html',
+                controller:'prayerShare'
             })
             .when('/emailCnfm/:verificationCode',{
                 templateUrl:'partials/emailCnfm.html',
