@@ -35,8 +35,8 @@ sampleApp.controller('friends',function($rootScope,$scope,$location,$http){
         $http({
             method:"POST",
             //contentType: 'application/json',
-            url:"http://localhost:3000/allFriends",
-             //url:"http://prayable-21641.onmodulus.net/allFriends",
+            //url:"http://localhost:3000/allFriends",
+             url:"http://prayable-21641.onmodulus.net/allFriends",
             data:data,
             crossDomain: true,
             dataType: "json"
@@ -79,8 +79,8 @@ if((data[0].msg)&&(data[0].msg == "no Member Add")){
             $http({
                 method:"POST",
                 //contentType: 'application/json',
-                url:"http://localhost:3000/allUser",
-                //url:"http://prayable-21641.onmodulus.net/allFriends",
+                //url:"http://localhost:3000/allUser",
+                url:"http://prayable-21641.onmodulus.net/allFriends",
                 data:data,
                 crossDomain: true,
                 dataType: "json"
