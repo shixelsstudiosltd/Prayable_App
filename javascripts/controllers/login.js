@@ -25,7 +25,7 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
                             alert(data.msg)
                         }else{
                             sessionStorage.setItem('userData',JSON.stringify(data.data));
-                            $scope.go('#/home');
+                            $scope.go('/home');
                             if(!$scope.$$phase) $scope.$apply();
                         }
 
