@@ -19,6 +19,8 @@
 		border-bottom: 1px solid $light-gray;
 		border-top: 1px solid $light-gray;
 		display: flex;
+		display: -webkit-flex;
+		display: -ms-flexbox;
 
 		.prayer-prayer {
 			background: transparent;
@@ -64,6 +66,7 @@
 			.group-row {
 				height: 50%;
 				display: flex;
+				display: -webkit-flex;
 
 				&.top-row {
 					border-bottom: 1px solid $light-gray;	
@@ -148,6 +151,7 @@
 		.share-media {
 			height: 40%;
 			display: flex;
+			display: -webkit-flex;
 
 			.media-facebook {
 				/*background-color: #2b4170;
@@ -221,6 +225,8 @@
 
 			.p-container {
 				display: flex;
+				display: -webkit-flex;
+				display: -ms-flexbox;
 
 				.p-ele {
 					display: inline;

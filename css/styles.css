@@ -10708,12 +10708,12 @@ Primary use:	Page Used for Login/Register Styles
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
-/* line 45, ../scss/register.scss */
+/* line 47, ../scss/register.scss */
 .page-login .img-logo-register-container .img-logo-register img, .page-register .img-logo-register-container .img-logo-register img {
   max-width: 40%;
-  /*position: absolute;
-  */
 }
 
 /* line 54, ../scss/register.scss */
@@ -10786,9 +10786,11 @@ Primary use:	Page Used for Login/Register Styles
 /* line 117, ../scss/register.scss */
 .glyph-container {
   display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   margin-bottom: 10px;
 }
-/* line 120, ../scss/register.scss */
+/* line 122, ../scss/register.scss */
 .glyph-container div {
   border-radius: 2px 0 0 2px;
   height: 44px;
@@ -10798,28 +10800,28 @@ Primary use:	Page Used for Login/Register Styles
   line-height: 3em;
   text-align: center;
 }
-/* line 130, ../scss/register.scss */
+/* line 132, ../scss/register.scss */
 .glyph-container.m-bottom {
   margin-bottom: 20px;
 }
 
-/* line 134, ../scss/register.scss */
+/* line 136, ../scss/register.scss */
 .f-glass {
   border: 5px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
 
-/* line 139, ../scss/register.scss */
+/* line 141, ../scss/register.scss */
 .social-register {
   width: 80%;
   margin: 0 auto;
 }
 
-/* line 147, ../scss/register.scss */
+/* line 149, ../scss/register.scss */
 .selection-container .t-glass {
   border-radius: 5px;
 }
-/* line 150, ../scss/register.scss */
+/* line 152, ../scss/register.scss */
 .selection-container .select-box {
   border-radius: 2px;
   height: 44px;
@@ -10830,36 +10832,38 @@ Primary use:	Page Used for Login/Register Styles
   text-align: center;
   line-height: 3.8em;
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
 }
-/* line 161, ../scss/register.scss */
+/* line 165, ../scss/register.scss */
 .selection-container .select-box .border-right {
   padding: 0em 1.5em;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
-/* line 165, ../scss/register.scss */
+/* line 169, ../scss/register.scss */
 .selection-container .select-box .border-left {
   padding-left: 1.5em;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
-/* line 169, ../scss/register.scss */
+/* line 173, ../scss/register.scss */
 .selection-container .select-box .border-left h5 {
   line-height: 1.5em;
 }
-/* line 174, ../scss/register.scss */
+/* line 178, ../scss/register.scss */
 .selection-container .select-box.facebook {
   background: -moz-linear-gradient(top, #3b5998, #2b4170);
   background: -ms-linear-gradient(top, #3b5998, #2b4170);
   background: -webkit-linear-gradient(top, #3b5998, #2b4170);
 }
-/* line 180, ../scss/register.scss */
+/* line 184, ../scss/register.scss */
 .selection-container .select-box a {
   color: white;
 }
-/* line 185, ../scss/register.scss */
+/* line 189, ../scss/register.scss */
 .selection-container hr {
   width: 15%;
 }
-/* line 188, ../scss/register.scss */
+/* line 192, ../scss/register.scss */
 .selection-container p {
   /*line-height: 2.5em;*/
   font-size: 1.3em;
@@ -10978,8 +10982,10 @@ Primary use:	Page Used for Login/Register Styles
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
-/* line 26, ../scss/home.scss */
+/* line 28, ../scss/home.scss */
 .home-menu .pray-now-circle {
   position: relative;
   background: #fff;
@@ -10989,13 +10995,13 @@ Primary use:	Page Used for Login/Register Styles
   opacity: 0.3;
   cursor: pointer;
 }
-/* line 35, ../scss/home.scss */
+/* line 37, ../scss/home.scss */
 .home-menu .pray-now-circle::before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-/* line 41, ../scss/home.scss */
+/* line 43, ../scss/home.scss */
 .home-menu .pray-now-circle .content {
   position: absolute;
   top: 0;
@@ -11006,32 +11012,32 @@ Primary use:	Page Used for Login/Register Styles
   padding: 30px;
   border-radius: 50%;
 }
-/* line 48, ../scss/home.scss */
+/* line 50, ../scss/home.scss */
 .home-menu .pray-now-circle .content::before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-/* line 55, ../scss/home.scss */
+/* line 57, ../scss/home.scss */
 .home-menu .pray-now-title {
   font-size: 1.2em;
   font-weight: 100;
   text-transform: uppercase;
   margin: 10px 0;
 }
-/* line 63, ../scss/home.scss */
+/* line 65, ../scss/home.scss */
 .home-menu .add-prayer {
   margin-top: 20px;
 }
 
-/* line 68, ../scss/home.scss */
+/* line 70, ../scss/home.scss */
 .home-body {
   width: 100%;
   text-align: center;
   height: 100%;
   padding: 20px 0;
 }
-/* line 74, ../scss/home.scss */
+/* line 76, ../scss/home.scss */
 .home-body .new-input {
   width: 80%;
   height: 300px;
@@ -11042,7 +11048,7 @@ Primary use:	Page Used for Login/Register Styles
   padding: 20px;
   line-height: 20px;
 }
-/* line 84, ../scss/home.scss */
+/* line 86, ../scss/home.scss */
 .home-body .new-input:focus {
   outline: 0;
 }
@@ -11217,6 +11223,7 @@ Primary use:	Page Used for Login/Register Styles
 /* line 7, ../scss/circles.scss */
 .my-personal-menu ul {
   display: flex;
+  display: -webkit-flex;
   padding: 0;
   margin: 0;
   height: 70px;
@@ -11224,7 +11231,7 @@ Primary use:	Page Used for Login/Register Styles
   background: red;
   border-top: 2px solid #eaeaea;
 }
-/* line 15, ../scss/circles.scss */
+/* line 16, ../scss/circles.scss */
 .my-personal-menu ul li {
   text-align: center;
   line-height: 70px;
@@ -11248,7 +11255,7 @@ Primary use:	Page Used for Login/Register Styles
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
   /* IE6-9 */
 }
-/* line 30, ../scss/circles.scss */
+/* line 31, ../scss/circles.scss */
 .my-personal-menu ul li:hover {
   background: #e6e6e6;
   /* Old browsers */
@@ -11265,16 +11272,16 @@ Primary use:	Page Used for Login/Register Styles
   background: linear-gradient(to bottom, #e6e6e6 0%, #e5e5e5 100%);
   /* W3C */
 }
-/* line 40, ../scss/circles.scss */
+/* line 41, ../scss/circles.scss */
 .my-personal-menu ul li.prayer-hands {
   line-height: 4em;
 }
-/* line 44, ../scss/circles.scss */
+/* line 45, ../scss/circles.scss */
 .my-personal-menu ul li img {
   text-align: center;
 }
 
-/* line 51, ../scss/circles.scss */
+/* line 52, ../scss/circles.scss */
 .my-circle-body-container {
   position: absolute;
   height: 100%;
@@ -11282,20 +11289,21 @@ Primary use:	Page Used for Login/Register Styles
   overflow-y: scroll;
 }
 
-/* line 58, ../scss/circles.scss */
+/* line 59, ../scss/circles.scss */
 .my-circle-container {
   width: 100%;
   background: white;
 }
-/* line 62, ../scss/circles.scss */
+/* line 63, ../scss/circles.scss */
 .my-circle-container .circle-container {
   display: flex;
+  display: -webkit-flex;
   height: 62px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 5px 20px;
 }
-/* line 69, ../scss/circles.scss */
+/* line 71, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-img {
   height: 50px;
   width: 50px;
@@ -11303,34 +11311,36 @@ Primary use:	Page Used for Login/Register Styles
   border: 2px solid lightgrey;
   margin-right: 10px;
 }
-/* line 76, ../scss/circles.scss */
+/* line 78, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-img.group-img {
   background: url("../img/group-img.png") no-repeat center;
   background-size: 35px;
 }
-/* line 81, ../scss/circles.scss */
+/* line 83, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc {
   color: #333333;
   margin-right: 15px;
 }
-/* line 85, ../scss/circles.scss */
+/* line 87, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-1 {
   display: flex;
+  display: -webkit-flex;
 }
-/* line 87, ../scss/circles.scss */
+/* line 90, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-1 .group-name {
   text-transform: capitalize;
   margin-top: 5px;
 }
-/* line 93, ../scss/circles.scss */
+/* line 96, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-2 {
   display: flex;
+  display: -webkit-flex;
 }
-/* line 96, ../scss/circles.scss */
+/* line 100, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-2 .group-members, .my-circle-container .circle-container .circle-desc .desc-row-2 .group-notifications {
   margin-top: 0;
 }
-/* line 100, ../scss/circles.scss */
+/* line 104, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-2 .group-members {
   text-transform: capitalize;
   font-weight: 100;
@@ -11339,20 +11349,20 @@ Primary use:	Page Used for Login/Register Styles
   display: inline;
   margin-right: 15px;
 }
-/* line 112, ../scss/circles.scss */
+/* line 116, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-admin-settings {
   line-height: 60px;
   position: absolute;
   right: 5%;
 }
 
-/* line 126, ../scss/circles.scss */
+/* line 130, ../scss/circles.scss */
 .settings-prayer .circle-photo-container {
   height: 100%;
   width: 40%;
   position: relative;
 }
-/* line 131, ../scss/circles.scss */
+/* line 135, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-container {
   width: 80%;
   height: 100%;
@@ -11361,7 +11371,7 @@ Primary use:	Page Used for Login/Register Styles
   display: table;
   padding: 15px;
 }
-/* line 140, ../scss/circles.scss */
+/* line 144, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-container .circle-photo {
   position: relative;
   margin: 0px auto;
@@ -11369,7 +11379,7 @@ Primary use:	Page Used for Login/Register Styles
   display: table-cell;
   vertical-align: middle;
 }
-/* line 147, ../scss/circles.scss */
+/* line 151, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-container .circle-photo .content {
   position: absolute;
   top: 0;
@@ -11382,13 +11392,13 @@ Primary use:	Page Used for Login/Register Styles
   display: table-cell;
   vertical-align: middle;
 }
-/* line 156, ../scss/circles.scss */
+/* line 160, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-container .circle-photo .content::before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-/* line 165, ../scss/circles.scss */
+/* line 169, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-upload-container {
   height: 100%;
   width: 100%;
@@ -11400,7 +11410,7 @@ Primary use:	Page Used for Login/Register Styles
   top: 0;
   transform: translate(-50%);
 }
-/* line 176, ../scss/circles.scss */
+/* line 180, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-upload-container .upload-button {
   height: 100%;
   width: 100%;
@@ -11411,13 +11421,13 @@ Primary use:	Page Used for Login/Register Styles
   display: table-cell;
   vertical-align: middle;
 }
-/* line 188, ../scss/circles.scss */
+/* line 192, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container {
   height: 100%;
   width: 60%;
   border-left: 1px solid white;
 }
-/* line 193, ../scss/circles.scss */
+/* line 197, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container .circle-group-title {
   height: 25%;
   width: 100%;
@@ -11429,7 +11439,7 @@ Primary use:	Page Used for Login/Register Styles
   padding: 5%;
   color: white;
 }
-/* line 202, ../scss/circles.scss */
+/* line 206, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container .circle-group-desc {
   height: 75%;
   width: 100%;
@@ -11439,18 +11449,18 @@ Primary use:	Page Used for Login/Register Styles
   padding: 5%;
   resize: none;
 }
-/* line 211, ../scss/circles.scss */
+/* line 215, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container .circle-group-desc::-webkit-input-placeholder {
   color: #8f6da8 !important;
   font-style: italic;
 }
-/* line 216, ../scss/circles.scss */
+/* line 220, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container .circle-group-title::-webkit-input-placeholder {
   color: #290440 !important;
   font-style: italic;
 }
 
-/* line 223, ../scss/circles.scss */
+/* line 227, ../scss/circles.scss */
 .circle-add-container {
   height: 68%;
   background: transparent;
@@ -11458,7 +11468,7 @@ Primary use:	Page Used for Login/Register Styles
   position: relative;
   text-align: center;
 }
-/* line 230, ../scss/circles.scss */
+/* line 234, ../scss/circles.scss */
 .circle-add-container:hover {
   background: white;
   /* Old browsers */
@@ -11475,11 +11485,11 @@ Primary use:	Page Used for Login/Register Styles
   background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
   /* W3C */
 }
-/* line 239, ../scss/circles.scss */
+/* line 243, ../scss/circles.scss */
 .circle-add-container:hover .circle-add-user {
   color: black;
 }
-/* line 244, ../scss/circles.scss */
+/* line 248, ../scss/circles.scss */
 .circle-add-container .circle-add-user {
   position: absolute;
   left: 50%;
@@ -11490,7 +11500,7 @@ Primary use:	Page Used for Login/Register Styles
   font-size: 16px;
 }
 
-/* line 256, ../scss/circles.scss */
+/* line 260, ../scss/circles.scss */
 .circle-add-header {
   height: 33%;
   width: 100%;
@@ -11499,24 +11509,24 @@ Primary use:	Page Used for Login/Register Styles
   border-bottom: 1px solid #eaeaea;
   text-indent: 5%;
 }
-/* line 264, ../scss/circles.scss */
+/* line 268, ../scss/circles.scss */
 .circle-add-header h5 {
   display: table-cell;
   vertical-align: middle;
   color: white;
 }
 
-/* line 271, ../scss/circles.scss */
+/* line 275, ../scss/circles.scss */
 .group-add-container {
   height: 15% !important;
 }
 
-/* line 275, ../scss/circles.scss */
+/* line 279, ../scss/circles.scss */
 .circle-prayer-add-container {
   height: 35% !important;
 }
 
-/* line 279, ../scss/circles.scss */
+/* line 283, ../scss/circles.scss */
 .circle-privacy-settings {
   height: 15% !important;
 }
@@ -11899,14 +11909,16 @@ Primary use:	Page Used for Login/Register Styles
   border-bottom: 1px solid #eaeaea;
   border-top: 1px solid #eaeaea;
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
 }
-/* line 23, ../scss/pray.scss */
+/* line 25, ../scss/pray.scss */
 .settings-body-container .settings-prayer .prayer-prayer {
   background: transparent;
   height: 100%;
   width: 100%;
 }
-/* line 28, ../scss/pray.scss */
+/* line 30, ../scss/pray.scss */
 .settings-body-container .settings-prayer .prayer-prayer textarea {
   height: 100%;
   width: 100%;
@@ -11916,16 +11928,16 @@ Primary use:	Page Used for Login/Register Styles
   padding: 5%;
   resize: none;
 }
-/* line 37, ../scss/pray.scss */
+/* line 39, ../scss/pray.scss */
 .settings-body-container .settings-prayer .prayer-prayer textarea::-webkit-input-placeholder {
   color: white !important;
 }
-/* line 42, ../scss/pray.scss */
+/* line 44, ../scss/pray.scss */
 .settings-body-container .settings-group {
   height: 20%;
   background: transparent;
 }
-/* line 46, ../scss/pray.scss */
+/* line 48, ../scss/pray.scss */
 .settings-body-container .settings-group .group-add {
   height: 25%;
   width: 100%;
@@ -11934,31 +11946,32 @@ Primary use:	Page Used for Login/Register Styles
   text-indent: 5%;
   display: table;
 }
-/* line 54, ../scss/pray.scss */
+/* line 56, ../scss/pray.scss */
 .settings-body-container .settings-group .group-add h5 {
   display: table-cell;
   vertical-align: middle;
   color: white;
 }
-/* line 60, ../scss/pray.scss */
+/* line 62, ../scss/pray.scss */
 .settings-body-container .settings-group .group-groups {
   height: 75%;
   background: transparent;
 }
-/* line 64, ../scss/pray.scss */
+/* line 66, ../scss/pray.scss */
 .settings-body-container .settings-group .group-groups .group-row {
   height: 50%;
   display: flex;
+  display: -webkit-flex;
 }
-/* line 68, ../scss/pray.scss */
+/* line 71, ../scss/pray.scss */
 .settings-body-container .settings-group .group-groups .group-row.top-row {
   border-bottom: 1px solid #eaeaea;
 }
-/* line 72, ../scss/pray.scss */
+/* line 75, ../scss/pray.scss */
 .settings-body-container .settings-group .group-groups .group-row .sgroup:nth-child(2) {
   border-right: 0;
 }
-/* line 76, ../scss/pray.scss */
+/* line 79, ../scss/pray.scss */
 .settings-body-container .settings-group .group-groups .group-row .sgroup {
   height: 100%;
   width: 50%;
@@ -11966,7 +11979,7 @@ Primary use:	Page Used for Login/Register Styles
   display: table-cell;
   position: relative;
 }
-/* line 83, ../scss/pray.scss */
+/* line 86, ../scss/pray.scss */
 .settings-body-container .settings-group .group-groups .group-row .sgroup p {
   display: table-cell;
   color: white;
@@ -11974,11 +11987,11 @@ Primary use:	Page Used for Login/Register Styles
   left: 50%;
   transform: translate(-50%, 50%);
 }
-/* line 91, ../scss/pray.scss */
+/* line 94, ../scss/pray.scss */
 .settings-body-container .settings-group .group-groups .group-row .sgroup:nth-child(2) {
   border-right: 0;
 }
-/* line 95, ../scss/pray.scss */
+/* line 98, ../scss/pray.scss */
 .settings-body-container .settings-group .group-groups .group-row .sgroup:hover {
   background: white;
   /* Old browsers */
@@ -11995,21 +12008,21 @@ Primary use:	Page Used for Login/Register Styles
   background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
   /* W3C */
 }
-/* line 104, ../scss/pray.scss */
+/* line 107, ../scss/pray.scss */
 .settings-body-container .settings-group .group-groups .group-row .sgroup:hover p {
   color: #333333;
 }
-/* line 112, ../scss/pray.scss */
+/* line 115, ../scss/pray.scss */
 .settings-body-container .settings-share {
   height: 25%;
   background: transparent;
 }
-/* line 116, ../scss/pray.scss */
+/* line 119, ../scss/pray.scss */
 .settings-body-container .settings-share .share-separator {
   height: 12%;
   background: white;
 }
-/* line 120, ../scss/pray.scss */
+/* line 123, ../scss/pray.scss */
 .settings-body-container .settings-share .share-location {
   height: 24%;
   width: 100%;
@@ -12018,13 +12031,13 @@ Primary use:	Page Used for Login/Register Styles
   border-bottom: 1px solid #eaeaea;
   background: rgba(255, 255, 255, 0.3);
 }
-/* line 128, ../scss/pray.scss */
+/* line 131, ../scss/pray.scss */
 .settings-body-container .settings-share .share-location h5 {
   display: table-cell;
   vertical-align: middle;
   color: white;
 }
-/* line 134, ../scss/pray.scss */
+/* line 137, ../scss/pray.scss */
 .settings-body-container .settings-share .share-share {
   height: 24%;
   background: rgba(255, 255, 255, 0.3);
@@ -12032,19 +12045,20 @@ Primary use:	Page Used for Login/Register Styles
   display: table;
   border-bottom: 1px solid #eaeaea;
 }
-/* line 141, ../scss/pray.scss */
+/* line 144, ../scss/pray.scss */
 .settings-body-container .settings-share .share-share h5 {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
   color: white;
 }
-/* line 148, ../scss/pray.scss */
+/* line 151, ../scss/pray.scss */
 .settings-body-container .settings-share .share-media {
   height: 40%;
   display: flex;
+  display: -webkit-flex;
 }
-/* line 152, ../scss/pray.scss */
+/* line 156, ../scss/pray.scss */
 .settings-body-container .settings-share .share-media .media-facebook {
   /*background-color: #2b4170;
   background: -moz-linear-gradient(top, #3b5998, #2b4170);
@@ -12053,7 +12067,7 @@ Primary use:	Page Used for Login/Register Styles
   border: 1px solid #2b4170;
   text-shadow: 0 -1px -1px #1f2f52;*/
 }
-/* line 160, ../scss/pray.scss */
+/* line 164, ../scss/pray.scss */
 .settings-body-container .settings-share .share-media .media-facebook:hover {
   background-color: #3b5998;
   /* fallback color */
@@ -12061,7 +12075,7 @@ Primary use:	Page Used for Login/Register Styles
   background: -ms-linear-gradient(top, #2b4170, #3b5998);
   background: -webkit-linear-gradient(top, #2b4170, #3b5998);
 }
-/* line 168, ../scss/pray.scss */
+/* line 172, ../scss/pray.scss */
 .settings-body-container .settings-share .share-media .media-twitter {
   /*background-color: #0081ce; 
   background: -moz-linear-gradient(top, #00aced, #0081ce);
@@ -12070,7 +12084,7 @@ Primary use:	Page Used for Login/Register Styles
   border: 1px solid #0081ce;
   text-shadow: 0 -1px -1px #005ea3; */
 }
-/* line 176, ../scss/pray.scss */
+/* line 180, ../scss/pray.scss */
 .settings-body-container .settings-share .share-media .media-twitter:hover {
   background-color: #00aced;
   /* fallback color */
@@ -12078,11 +12092,11 @@ Primary use:	Page Used for Login/Register Styles
   background: -ms-linear-gradient(top, #0081ce, #00aced);
   background: -webkit-linear-gradient(top, #0081ce, #00aced);
 }
-/* line 184, ../scss/pray.scss */
+/* line 188, ../scss/pray.scss */
 .settings-body-container .settings-share .share-media .smedia:nth-child(2) {
   border-right: 0;
 }
-/* line 188, ../scss/pray.scss */
+/* line 192, ../scss/pray.scss */
 .settings-body-container .settings-share .share-media .smedia {
   width: 50%;
   height: 100%;
@@ -12091,7 +12105,7 @@ Primary use:	Page Used for Login/Register Styles
   position: relative;
   border-bottom: 1px solid #eaeaea;
 }
-/* line 196, ../scss/pray.scss */
+/* line 200, ../scss/pray.scss */
 .settings-body-container .settings-share .share-media .smedia p {
   margin: 0;
   position: absolute;
@@ -12100,7 +12114,7 @@ Primary use:	Page Used for Login/Register Styles
   transform: translate(-50%, -50%);
   color: white;
 }
-/* line 207, ../scss/pray.scss */
+/* line 211, ../scss/pray.scss */
 .settings-body-container .settings-privacy {
   height: 20%;
   background: transparent;
@@ -12108,7 +12122,7 @@ Primary use:	Page Used for Login/Register Styles
   display: table;
   position: relative;
 }
-/* line 214, ../scss/pray.scss */
+/* line 218, ../scss/pray.scss */
 .settings-body-container .settings-privacy .privacy-container {
   display: table-cell;
   vertical-align: middle;
@@ -12117,20 +12131,22 @@ Primary use:	Page Used for Login/Register Styles
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 222, ../scss/pray.scss */
+/* line 226, ../scss/pray.scss */
 .settings-body-container .settings-privacy .privacy-container .p-container {
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
 }
-/* line 225, ../scss/pray.scss */
+/* line 231, ../scss/pray.scss */
 .settings-body-container .settings-privacy .privacy-container .p-container .p-ele {
   display: inline;
   color: white;
 }
-/* line 230, ../scss/pray.scss */
+/* line 236, ../scss/pray.scss */
 .settings-body-container .settings-privacy .privacy-container .p-container .p-toggle {
   margin: 0 30px;
 }
-/* line 236, ../scss/pray.scss */
+/* line 242, ../scss/pray.scss */
 .settings-body-container .settings-submit {
   height: 10%;
   text-align: center;
@@ -12150,7 +12166,7 @@ Primary use:	Page Used for Login/Register Styles
   background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
   /* W3C */
 }
-/* line 248, ../scss/pray.scss */
+/* line 254, ../scss/pray.scss */
 .settings-body-container .settings-submit:hover {
   background: #e6e6e6;
   /* Old browsers */
@@ -12167,7 +12183,7 @@ Primary use:	Page Used for Login/Register Styles
   background: linear-gradient(to bottom, #e6e6e6 0%, #e5e5e5 100%);
   /* W3C */
 }
-/* line 258, ../scss/pray.scss */
+/* line 264, ../scss/pray.scss */
 .settings-body-container .settings-submit h4 {
   display: table-cell;
   vertical-align: middle;
@@ -12177,7 +12193,7 @@ Primary use:	Page Used for Login/Register Styles
   font-size: 1.125em;
 }
 
-/* line 273, ../scss/pray.scss */
+/* line 279, ../scss/pray.scss */
 .toggle-location,
 .toggle-lock {
   width: 80px;
@@ -12190,7 +12206,7 @@ Primary use:	Page Used for Login/Register Styles
   border-radius: 50px;
 }
 
-/* line 284, ../scss/pray.scss */
+/* line 290, ../scss/pray.scss */
 .toggle-location:after,
 .toggle-lock:after {
   content: '';
@@ -12208,7 +12224,7 @@ Primary use:	Page Used for Login/Register Styles
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
 }
 
-/* line 300, ../scss/pray.scss */
+/* line 306, ../scss/pray.scss */
 .toggle-location label,
 .toggle-lock label {
   display: block;
@@ -12235,7 +12251,7 @@ Primary use:	Page Used for Login/Register Styles
   background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
 }
 
-/* line 325, ../scss/pray.scss */
+/* line 331, ../scss/pray.scss */
 .toggle-location label:after,
 .toggle-lock label:after {
   content: '';
@@ -12253,19 +12269,19 @@ Primary use:	Page Used for Login/Register Styles
   box-shadow: inset 0px 1px 1px black, 0px 1px 0px rgba(255, 255, 255, 0.9);
 }
 
-/* line 341, ../scss/pray.scss */
+/* line 347, ../scss/pray.scss */
 .toggle-location input[type=checkbox],
 .toggle-lock input[type=checkbox] {
   visibility: hidden;
 }
 
-/* line 345, ../scss/pray.scss */
+/* line 351, ../scss/pray.scss */
 .toggle-location input[type=checkbox]:checked + label,
 .toggle-lock input[type=checkbox]:checked + label {
   left: 54px;
 }
 
-/* line 349, ../scss/pray.scss */
+/* line 355, ../scss/pray.scss */
 .toggle-location input[type=checkbox]:checked + label:after,
 .toggle-lock input[type=checkbox]:checked + label:after {
   background: #8f6da8;

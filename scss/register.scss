@@ -41,6 +41,8 @@ Primary use:	Page Used for Login/Register Styles
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
 
 			img {
 				max-width: 40%;
@@ -114,6 +116,8 @@ Primary use:	Page Used for Login/Register Styles
 
 .glyph-container {
 		display: flex;
+		display: -ms-flexbox; 
+		display: -webkit-flex;
 		margin-bottom: 10px;
 		div {
 			border-radius: 2px 0 0 2px;
@@ -155,6 +159,8 @@ Primary use:	Page Used for Login/Register Styles
 		text-align: center;
 		line-height: 3.8em;
 		display: flex;
+		display: -webkit-flex;
+		display: -ms-flexbox;
 
 		.border-right {
 			padding: 0em 1.5em;
