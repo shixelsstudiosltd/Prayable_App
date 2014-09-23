@@ -4,6 +4,10 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
         $routeProvider
             .when('/',{
                 templateUrl:'partials/login.html',
+                controller:'login'
+            })
+            .when('/home',{
+                templateUrl:'partials/home.html',
                 controller:'home'
             })
             .when('/login',{
