@@ -4,7 +4,7 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
     if(userData && (Object.keys(userData).length > 0)){
         $scope.isLogged = true
         $scope.prayerInfo = {
-            user_id:userData._id,
+            userID:userData._id,
             prayer_text:'',
             group_id:[],
             journal_id :[],

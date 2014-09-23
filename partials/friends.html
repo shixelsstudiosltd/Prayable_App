@@ -17,7 +17,7 @@
 			</div>
 		</div>
 
-		<div ng-show="showList" class="friends-body-container">
+		<div ng-show="ownMemberer" class="friends-body-container">
 
             <div class="friends-container" ng-repeat="friend in friendsSearchList">
 				<div class="container">
@@ -27,8 +27,8 @@
 						<h6 class="user-denomination">Methodist</h6>
 						<h6 class="user-church">Gethsemane United Methodist</h6>
 					</div>
-					<div class="user-arrow">
-						<i ng-click="goToFriendProfile({{friend.id}})" class="fa fa-2x fa-angle-right"></i>
+					<div class="user-arrow" ng-click="goToFriendProfile(friend.id)">
+						<i  class="fa fa-2x fa-angle-right"></i>
 					</div>
 				</div>
 			</div>
@@ -37,7 +37,24 @@
 		</div>
 
 
+        <div ng-show="allUser" class="friends-body-container">
 
+            <div class="friends-container" ng-repeat="friend in friendsSearchList">
+                <div class="container">
+                    <div class="user-img user-img-bg"></div>
+                    <div class="user-desc">
+                        <h4 class="user-name">{{friend.firstName}} {{friend.lastName}}</h4>
+                        <h6 class="user-denomination">Methodist</h6>
+                        <h6 class="user-church">Gethsemane United Methodist</h6>
+                    </div>
+                    <div class="user-arrow" ng-click="goToFriendProfile(friend.id)">
+                        <i  class="fa fa-2x fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
 
 
 
@@ -59,8 +76,8 @@
 		</div>
 		<div class="my-personal-menu">
 			<ul class="ul-four">
-				<li><i class="fa fa-users fa-2x"></i></li>
-				<li><i class="fa fa-search fa-2x"></i></li>
+				<li ng-click="getAllFriends('user')"><i class="fa fa-users fa-2x"></i></li>
+				<li ng-click="getAllUsers('a')"><i class="fa fa-search fa-2x"></i></li>
 				<li><i class="fa fa-cogs fa-2x"></i></li>
 				<li><i class="fa fa-share-square-o fa-2x"></i></li>
 			</ul>
