@@ -1,14 +1,18 @@
 sampleApp.controller('register',function($scope,$rootScope,$location,$http,$translate,$q, facebookService){
 
-    $scope.userData = {email:'',password:''};
+    $scope.userData = {email:'',password:'',firstName:'',lastName:''};
     $scope.rePass = ''
     $scope.errorMsg = ''
     $scope.regUser = function(){
+        if(($scope.userData.firstName) && ($scope.userData.firstName.length > 3)){
+            if(($scope.userData.lastName) && ($scope.userData.lastName.length > 3)){
+
+
         if(($scope.userData.email) && (validateEmail($scope.userData.email))){
             if(($scope.userData.password) && ($scope.userData.password.length > 5 && $scope.userData.password.length < 15)){
                 if(($scope.rePass) && ($scope.rePass == $scope.userData.password)){
                 $scope.errorMsg = "";
-                console.log('Register Function Called '+' email: '+$scope.userData.email+' Password: '+$scope.userData.password)
+                //console.log('Register Function Called '+' email: '+$scope.userData.email+' Password: '+$scope.userData.password)
                     var data ={key:'web',userData:$scope.userData}
                     //var data ='{"key":"web"}'
                     $.ajax({
@@ -68,7 +72,13 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
         }else{
             $scope.errorMsg = "*Mistake in email"
         }
+            }else{
+                $scope.errorMsg = "*Last Name should be greater than 3 characteres"
+            }
 
+        }else{
+            $scope.errorMsg = "*First Name should be greater than 3 characteres"
+        }
     }
 
 
