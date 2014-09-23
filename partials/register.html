@@ -39,7 +39,10 @@
 							</div>
 							<input type="password" placeholder="{{ 'password' | translate }}" ng-model="rePass">
 						</div>
-                    <span style="color:#ffffff;">{{errorMsg}}</span>
+						<div class="error-container">
+							<span style="color:#ffffff;">{{errorMsg}}</span>
+						</div>
+                    	
 						<input type="submit" ng-click="regUser()" value="{{ 'signup' | translate }}">
 					
 					<p>{{ 'or' | translate }}:</p>
@@ -51,7 +54,7 @@
 									<i style="cursor: pointer"  class="fa fa-2x fa-facebook"></i>
 								</div>
 								<div class="border-left">
-									<h5>{{'facebook_signup' | translate}}</h5>
+									<h5>{{'facebookSignUp' | translate}}</h5>
 								</div>
 
 							</div>

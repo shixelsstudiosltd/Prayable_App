@@ -120,6 +120,7 @@ sampleApp.config(function ($translateProvider) {
         newRequest: "New Prayer Request",
         profile: "Profile",
         facebookSignUp: "Sign up with Facebook",
+        facebookLogIn: "Log In with Facebook",
         firstName: "First Name",
         lastName: "Last Name"
     });
@@ -154,6 +155,7 @@ sampleApp.config(function ($translateProvider) {
         newRequest: "New Prayer Request InGerman",
         profile: "Profile InGerman",
         facebookSignUp: "Sign up with Facebook InGerman",
+        facebookLogIn: "Log In with Facebook InGerman",
         firstName: "First Name InGerman",
         lastName: "Last Name InGerman"
 

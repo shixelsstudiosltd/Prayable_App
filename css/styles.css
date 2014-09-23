@@ -10842,28 +10842,29 @@ Primary use:	Page Used for Login/Register Styles
 }
 /* line 169, ../scss/register.scss */
 .selection-container .select-box .border-left {
-  padding-left: 1.5em;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
 }
-/* line 173, ../scss/register.scss */
+/* line 174, ../scss/register.scss */
 .selection-container .select-box .border-left h5 {
   line-height: 1.5em;
 }
-/* line 178, ../scss/register.scss */
+/* line 179, ../scss/register.scss */
 .selection-container .select-box.facebook {
   background: -moz-linear-gradient(top, #3b5998, #2b4170);
   background: -ms-linear-gradient(top, #3b5998, #2b4170);
   background: -webkit-linear-gradient(top, #3b5998, #2b4170);
 }
-/* line 184, ../scss/register.scss */
+/* line 185, ../scss/register.scss */
 .selection-container .select-box a {
   color: white;
 }
-/* line 189, ../scss/register.scss */
+/* line 190, ../scss/register.scss */
 .selection-container hr {
   width: 15%;
 }
-/* line 192, ../scss/register.scss */
+/* line 193, ../scss/register.scss */
 .selection-container p {
   /*line-height: 2.5em;*/
   font-size: 1.3em;
@@ -11296,11 +11297,31 @@ Primary use:	Page Used for Login/Register Styles
 }
 
 /* line 59, ../scss/circles.scss */
+.my-circle-container-empty {
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+/* line 66, ../scss/circles.scss */
+.my-circle-container-empty h3 {
+  color: #eaeaea;
+  font-size: 2.5em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  -webkit-transform: translate(-50%, -120%);
+}
+
+/* line 77, ../scss/circles.scss */
 .my-circle-container {
   width: 100%;
   background: white;
 }
-/* line 63, ../scss/circles.scss */
+/* line 81, ../scss/circles.scss */
 .my-circle-container .circle-container {
   display: flex;
   display: -webkit-flex;
@@ -11309,7 +11330,7 @@ Primary use:	Page Used for Login/Register Styles
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 5px 20px;
 }
-/* line 71, ../scss/circles.scss */
+/* line 89, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-img {
   height: 50px;
   width: 50px;
@@ -11317,36 +11338,36 @@ Primary use:	Page Used for Login/Register Styles
   border: 2px solid lightgrey;
   margin-right: 10px;
 }
-/* line 78, ../scss/circles.scss */
+/* line 96, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-img.group-img {
   background: url("../img/group-img.png") no-repeat center;
   background-size: 35px;
 }
-/* line 83, ../scss/circles.scss */
+/* line 101, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc {
   color: #333333;
   margin-right: 15px;
 }
-/* line 87, ../scss/circles.scss */
+/* line 105, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-1 {
   display: flex;
   display: -webkit-flex;
 }
-/* line 90, ../scss/circles.scss */
+/* line 108, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-1 .group-name {
   text-transform: capitalize;
   margin-top: 5px;
 }
-/* line 96, ../scss/circles.scss */
+/* line 114, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-2 {
   display: flex;
   display: -webkit-flex;
 }
-/* line 100, ../scss/circles.scss */
+/* line 118, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-2 .group-members, .my-circle-container .circle-container .circle-desc .desc-row-2 .group-notifications {
   margin-top: 0;
 }
-/* line 104, ../scss/circles.scss */
+/* line 122, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-2 .group-members {
   text-transform: capitalize;
   font-weight: 100;
@@ -11355,20 +11376,20 @@ Primary use:	Page Used for Login/Register Styles
   display: inline;
   margin-right: 15px;
 }
-/* line 116, ../scss/circles.scss */
+/* line 134, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-admin-settings {
   line-height: 60px;
   position: absolute;
   right: 5%;
 }
 
-/* line 130, ../scss/circles.scss */
+/* line 148, ../scss/circles.scss */
 .settings-prayer .circle-photo-container {
   height: 100%;
   width: 40%;
   position: relative;
 }
-/* line 135, ../scss/circles.scss */
+/* line 153, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-container {
   width: 80%;
   height: 100%;
@@ -11377,7 +11398,7 @@ Primary use:	Page Used for Login/Register Styles
   display: table;
   padding: 15px;
 }
-/* line 144, ../scss/circles.scss */
+/* line 162, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-container .circle-photo {
   position: relative;
   margin: 0px auto;
@@ -11385,7 +11406,7 @@ Primary use:	Page Used for Login/Register Styles
   display: table-cell;
   vertical-align: middle;
 }
-/* line 151, ../scss/circles.scss */
+/* line 169, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-container .circle-photo .content {
   position: absolute;
   top: 0;
@@ -11398,13 +11419,13 @@ Primary use:	Page Used for Login/Register Styles
   display: table-cell;
   vertical-align: middle;
 }
-/* line 160, ../scss/circles.scss */
+/* line 178, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-container .circle-photo .content::before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-/* line 169, ../scss/circles.scss */
+/* line 187, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-upload-container {
   height: 100%;
   width: 100%;
@@ -11416,7 +11437,7 @@ Primary use:	Page Used for Login/Register Styles
   top: 0;
   transform: translate(-50%);
 }
-/* line 180, ../scss/circles.scss */
+/* line 198, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-upload-container .upload-button {
   height: 100%;
   width: 100%;
@@ -11427,13 +11448,13 @@ Primary use:	Page Used for Login/Register Styles
   display: table-cell;
   vertical-align: middle;
 }
-/* line 192, ../scss/circles.scss */
+/* line 210, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container {
   height: 100%;
   width: 60%;
   border-left: 1px solid white;
 }
-/* line 197, ../scss/circles.scss */
+/* line 215, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container .circle-group-title {
   height: 25%;
   width: 100%;
@@ -11445,7 +11466,7 @@ Primary use:	Page Used for Login/Register Styles
   padding: 5%;
   color: white;
 }
-/* line 206, ../scss/circles.scss */
+/* line 224, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container .circle-group-desc {
   height: 75%;
   width: 100%;
@@ -11455,18 +11476,18 @@ Primary use:	Page Used for Login/Register Styles
   padding: 5%;
   resize: none;
 }
-/* line 215, ../scss/circles.scss */
+/* line 233, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container .circle-group-desc::-webkit-input-placeholder {
   color: #8f6da8 !important;
   font-style: italic;
 }
-/* line 220, ../scss/circles.scss */
+/* line 238, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container .circle-group-title::-webkit-input-placeholder {
   color: #290440 !important;
   font-style: italic;
 }
 
-/* line 227, ../scss/circles.scss */
+/* line 245, ../scss/circles.scss */
 .circle-add-container {
   height: 68%;
   background: transparent;
@@ -11474,7 +11495,7 @@ Primary use:	Page Used for Login/Register Styles
   position: relative;
   text-align: center;
 }
-/* line 234, ../scss/circles.scss */
+/* line 252, ../scss/circles.scss */
 .circle-add-container:hover {
   background: white;
   /* Old browsers */
@@ -11491,11 +11512,11 @@ Primary use:	Page Used for Login/Register Styles
   background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
   /* W3C */
 }
-/* line 243, ../scss/circles.scss */
+/* line 261, ../scss/circles.scss */
 .circle-add-container:hover .circle-add-user {
   color: black;
 }
-/* line 248, ../scss/circles.scss */
+/* line 266, ../scss/circles.scss */
 .circle-add-container .circle-add-user {
   position: absolute;
   left: 50%;
@@ -11506,7 +11527,7 @@ Primary use:	Page Used for Login/Register Styles
   font-size: 16px;
 }
 
-/* line 260, ../scss/circles.scss */
+/* line 278, ../scss/circles.scss */
 .circle-add-header {
   height: 33%;
   width: 100%;
@@ -11515,34 +11536,55 @@ Primary use:	Page Used for Login/Register Styles
   border-bottom: 1px solid #eaeaea;
   text-indent: 5%;
 }
-/* line 268, ../scss/circles.scss */
+/* line 286, ../scss/circles.scss */
 .circle-add-header h5 {
   display: table-cell;
   vertical-align: middle;
   color: white;
 }
 
-/* line 275, ../scss/circles.scss */
+/* line 293, ../scss/circles.scss */
 .group-add-container {
   height: 15% !important;
 }
 
-/* line 279, ../scss/circles.scss */
+/* line 297, ../scss/circles.scss */
 .circle-prayer-add-container {
   height: 35% !important;
 }
 
-/* line 283, ../scss/circles.scss */
+/* line 301, ../scss/circles.scss */
 .circle-privacy-settings {
   height: 15% !important;
 }
 
 /* line 1, ../scss/friends.scss */
 .friends-body-container {
-  height: 400px;
-  overflow: scroll;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow-y: scroll;
 }
-/* line 4, ../scss/friends.scss */
+/* line 7, ../scss/friends.scss */
+.friends-body-container .friends-container-empty {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background: white;
+}
+/* line 14, ../scss/friends.scss */
+.friends-body-container .friends-container-empty h3 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  -webkit-transform: translate(-50%, -140%);
+  text-align: center;
+  color: #eaeaea;
+  font-size: 2.5em;
+}
+/* line 25, ../scss/friends.scss */
 .friends-body-container .friends-container {
   width: 100%;
   height: auto;
@@ -11550,12 +11592,12 @@ Primary use:	Page Used for Login/Register Styles
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 10, ../scss/friends.scss */
+/* line 31, ../scss/friends.scss */
 .friends-body-container .friends-container .container {
   display: flex;
   position: relative;
 }
-/* line 13, ../scss/friends.scss */
+/* line 34, ../scss/friends.scss */
 .friends-body-container .friends-container .container .user-img {
   border-radius: 50%;
   margin: 7px 10px 0 0;
@@ -11563,33 +11605,33 @@ Primary use:	Page Used for Login/Register Styles
   width: 65px;
   border: 1px solid lightgrey;
 }
-/* line 20, ../scss/friends.scss */
+/* line 41, ../scss/friends.scss */
 .friends-body-container .friends-container .container .user-img.user-img-bg {
   background: url("../img/user-img.jpg") no-repeat center;
   background-size: contain;
 }
-/* line 26, ../scss/friends.scss */
+/* line 47, ../scss/friends.scss */
 .friends-body-container .friends-container .container .user-desc .user-name {
   font-weight: bold;
 }
-/* line 29, ../scss/friends.scss */
+/* line 50, ../scss/friends.scss */
 .friends-body-container .friends-container .container .user-desc .user-denomination {
   margin-bottom: 0;
   font-style: italic;
 }
-/* line 33, ../scss/friends.scss */
+/* line 54, ../scss/friends.scss */
 .friends-body-container .friends-container .container .user-desc .user-church {
   margin-top: 2px;
   margin-bottom: 13px;
 }
-/* line 38, ../scss/friends.scss */
+/* line 59, ../scss/friends.scss */
 .friends-body-container .friends-container .container .user-arrow {
   position: absolute;
   line-height: 80px;
   right: 5%;
 }
 
-/* line 47, ../scss/friends.scss */
+/* line 68, ../scss/friends.scss */
 .fade-arrow {
   position: fixed;
   z-index: 10;
@@ -11600,7 +11642,7 @@ Primary use:	Page Used for Login/Register Styles
   background: white;
   line-height: 44px;
 }
-/* line 57, ../scss/friends.scss */
+/* line 78, ../scss/friends.scss */
 .fade-arrow .fa {
   -webkit-animation: myfade 1.5s infinite;
   /* Chrome, Safari, Opera */
@@ -11608,68 +11650,68 @@ Primary use:	Page Used for Login/Register Styles
 }
 
 @-webkit-keyframes myfade {
-  /* line 64, ../scss/friends.scss */
+  /* line 85, ../scss/friends.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 65, ../scss/friends.scss */
+  /* line 86, ../scss/friends.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 66, ../scss/friends.scss */
+  /* line 87, ../scss/friends.scss */
   100% {
     opacity: 0;
   }
 }
 
 @-moz-keyframes myfade {
-  /* line 69, ../scss/friends.scss */
+  /* line 90, ../scss/friends.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 70, ../scss/friends.scss */
+  /* line 91, ../scss/friends.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 71, ../scss/friends.scss */
+  /* line 92, ../scss/friends.scss */
   100% {
     opacity: 0;
   }
 }
 
 @-o-keyframes myfade {
-  /* line 74, ../scss/friends.scss */
+  /* line 95, ../scss/friends.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 75, ../scss/friends.scss */
+  /* line 96, ../scss/friends.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 76, ../scss/friends.scss */
+  /* line 97, ../scss/friends.scss */
   100% {
     opacity: 0;
   }
 }
 
 @keyframes myfade {
-  /* line 79, ../scss/friends.scss */
+  /* line 100, ../scss/friends.scss */
   0% {
     opacity: 0;
   }
 
-  /* line 80, ../scss/friends.scss */
+  /* line 101, ../scss/friends.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 81, ../scss/friends.scss */
+  /* line 102, ../scss/friends.scss */
   100% {
     opacity: 0;
   }
@@ -12293,14 +12335,25 @@ Primary use:	Page Used for Login/Register Styles
   background: #8f6da8;
 }
 
-/* line 30, ../scss/styles.scss */
+/* line 1, ../scss/modals.scss */
+.modal-header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 7, ../scss/modals.scss */
+#group-list li {
+  list-style: none;
+}
+
+/* line 31, ../scss/styles.scss */
 html, body {
   width: 100%;
   height: 100%;
   position: fixed;
 }
 
-/* line 36, ../scss/styles.scss */
+/* line 37, ../scss/styles.scss */
 .app-header {
   width: 100%;
   height: 60px;
@@ -12313,12 +12366,12 @@ html, body {
   line-height: 5em;
   font-weight: 100;
 }
-/* line 48, ../scss/styles.scss */
+/* line 49, ../scss/styles.scss */
 .app-header.bg-transparent {
   background: rgba(0, 0, 0, 0.4);
   margin-bottom: 0;
 }
-/* line 53, ../scss/styles.scss */
+/* line 54, ../scss/styles.scss */
 .app-header .app-header-back-button {
   width: 20%;
   float: left;
@@ -12326,15 +12379,15 @@ html, body {
   text-align: center;
   font-size: 4em;
 }
-/* line 60, ../scss/styles.scss */
+/* line 61, ../scss/styles.scss */
 .app-header .app-header-back-button i {
   cursor: pointer;
 }
-/* line 64, ../scss/styles.scss */
+/* line 65, ../scss/styles.scss */
 .app-header .app-header-back-button:hover {
   color: #4e007f;
 }
-/* line 69, ../scss/styles.scss */
+/* line 70, ../scss/styles.scss */
 .app-header .app-header-title {
   width: 60%;
   height: 60px;
@@ -12342,12 +12395,12 @@ html, body {
   text-align: center;
   font-size: 1.5em;
 }
-/* line 78, ../scss/styles.scss */
+/* line 79, ../scss/styles.scss */
 .app-header .app-header-toggle-settings span {
   line-height: 1.5em;
   font-weight: bold;
 }
-/* line 84, ../scss/styles.scss */
+/* line 85, ../scss/styles.scss */
 .app-header .app-header-notifications {
   width: 20%;
   float: left;
@@ -12357,7 +12410,7 @@ html, body {
   cursor: pointer;
   position: relative;
 }
-/* line 93, ../scss/styles.scss */
+/* line 94, ../scss/styles.scss */
 .app-header .app-header-notifications .notification-counter {
   position: absolute;
   height: 25px;
@@ -12369,19 +12422,19 @@ html, body {
   text-align: center;
   margin-top: 10px;
 }
-/* line 104, ../scss/styles.scss */
+/* line 105, ../scss/styles.scss */
 .app-header .app-header-notifications .notification-counter span {
   position: absolute;
   top: -23px;
   right: 8px;
   font-size: 0.5em;
 }
-/* line 112, ../scss/styles.scss */
+/* line 113, ../scss/styles.scss */
 .app-header .app-header-notifications:hover {
   color: #4e007f;
 }
 
-/* line 118, ../scss/styles.scss */
+/* line 119, ../scss/styles.scss */
 .prayable-nav-icon {
   background: #290440;
   width: 60px;
@@ -12397,12 +12450,12 @@ html, body {
   color: white;
   text-align: center;
 }
-/* line 133, ../scss/styles.scss */
+/* line 134, ../scss/styles.scss */
 .prayable-nav-icon:hover {
   background: #1a0228;
 }
 
-/* line 138, ../scss/styles.scss */
+/* line 139, ../scss/styles.scss */
 .prayable-nav-container {
   width: 100%;
   padding: 0;
@@ -12411,13 +12464,13 @@ html, body {
   color: white;
   bottom: -446px;
 }
-/* line 146, ../scss/styles.scss */
+/* line 147, ../scss/styles.scss */
 .prayable-nav-container .prayable-nav-items {
   list-style: none;
   padding: 0;
   text-align: left;
 }
-/* line 150, ../scss/styles.scss */
+/* line 151, ../scss/styles.scss */
 .prayable-nav-container .prayable-nav-items li {
   width: 100%;
   height: 50px;
@@ -12428,7 +12481,7 @@ html, body {
   padding: 10px 25px;
   border-bottom: 1px solid #1e0230;
 }
-/* line 160, ../scss/styles.scss */
+/* line 161, ../scss/styles.scss */
 .prayable-nav-container .prayable-nav-items li .prayable-nav-item-icon {
   padding-right: 20px;
   color: #8f6da8;

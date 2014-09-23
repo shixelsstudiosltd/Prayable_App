@@ -1,6 +1,27 @@
 .friends-body-container {
-	height: 400px;
-	overflow: scroll;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	overflow-y: scroll;
+
+	.friends-container-empty {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+		background: $white;
+
+		h3 {
+			position: absolute;
+			top: 40%; left: 50%;
+			transform: translate(-50%, -150%);
+			-webkit-transform: translate(-50%, -140%);
+			text-align: center;
+			color: $light-gray;
+			font-size: 2.5em;
+
+		}
+	}
 	.friends-container {
 		width: 100%;
 		height: auto;

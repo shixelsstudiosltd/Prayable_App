@@ -167,8 +167,9 @@ Primary use:	Page Used for Login/Register Styles
 			border-right: 1px solid rgba(255,255,255,0.1);
 		}
 		.border-left {
-			padding-left: 1.5em;
 			border-left: 1px solid rgba(0,0,0,0.2);
+			text-align: center;
+			width: 100%;
 
 			h5 {
 				line-height: 1.5em;

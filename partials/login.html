@@ -20,7 +20,10 @@
 							</div>
 							<input type="password" placeholder="{{ 'password' | translate }}" ng-model="userData.password">
 						</div>
-                    <span style="color:#ffffff;">{{errorMsg}}</span>
+						<div class="error-container">
+							<span style="color:#ffffff;">{{errorMsg}}</span>
+						</div>
+                    	
 						<input type="submit" ng-click="loginUser()" value="{{ 'login' | translate }}">
 
 
@@ -33,7 +36,7 @@
 									<i style="cursor: pointer" class="fa fa-2x fa-facebook"></i>
 								</div>
 								<div class="border-left">
-									<h5>Log In With Facebook</h5>
+									<h5>{{'facebookLogIn' | translate}}</h5>
 								</div>
 							</div>
 						</div>

@@ -1,9 +1,9 @@
 /*
 Syntax error: Undefined variable: "$white".
-        on line 7 of /Users/main/Development/Prayable_App/scss/friends.scss
+        on line 12 of /Users/main/Development/Prayable_App/scss/friends.scss
 
 Backtrace:
-/Users/main/Development/Prayable_App/scss/friends.scss:7
+/Users/main/Development/Prayable_App/scss/friends.scss:12
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/script/variable.rb:49:in `_perform'
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/script/node.rb:40:in `perform'
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:294:in `visit_prop'
@@ -87,4 +87,4 @@ org/jruby/RubyKernel.java:1419:in `loop'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$white\".\A         on line 7 of /Users/main/Development/Prayable_App/scss/friends.scss"; }
+  content: "Syntax error: Undefined variable: \"$white\".\A         on line 12 of /Users/main/Development/Prayable_App/scss/friends.scss"; }

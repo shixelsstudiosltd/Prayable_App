@@ -1,0 +1,10 @@
+/* line 1, ../scss/modals.scss */
+.modal-header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 7, ../scss/modals.scss */
+#group-list li {
+  list-style: none;
+}

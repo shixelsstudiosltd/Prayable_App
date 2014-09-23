@@ -1,12 +1,11 @@
 <div class="ngdialog-message">
     <button type="button" class="close ngdialog-close" ng-click="saveSelection('g')"></button>
     <div class="container" style="">
-        <h1>Groups POPUP</h1>
-        <ul>
+        <h1 class="modal-header">Groups POPUP</h1>
+        <ul id="group-list">
             <!-- I left the translation out because this list will be populated -->
                 <li ng-repeat="group in groupList"><input type="checkbox" name="selectedGroups[]" value="{{group._id}}" ng-click="toggleSelection(group._id,'g')" ng-checked="gselection.indexOf(group._id) > -1" > {{group.title}}</li>
         </ul>
 
     </div>
-
 </div>
