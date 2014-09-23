@@ -3,6 +3,10 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
 
         $routeProvider
             .when('/',{
+                templateUrl:'partials/login.html',
+                controller:'login'
+            })
+            .when('/home',{
                 templateUrl:'partials/home.html',
                 controller:'home'
             })
@@ -67,8 +71,8 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 controller:'prayerShare'
             })
             .when('/prayers/add',{
-                templateUrl:'partials/input.html',
-                controller:'input'
+                templateUrl:'partials/prayer_share.html',
+                controller:'prayerShare'
             })
             .when('/emailCnfm/:verificationCode',{
                 templateUrl:'partials/emailCnfm.html',
@@ -89,17 +93,18 @@ sampleApp.config(function ($translateProvider) {
         addCircle: 'Add Prayer Circle',
         email: 'Email',
         password: 'Password.',
-        login: 'LOG IN',
+        login: ' LOG IN',
         signup: 'SIGN UP',
-        register:'Register',
+        register:' Register',
         needaccount:'Need an account?',
         or:'OR',
-        alreadyhaveaccount:'Already have an account',
+        alreadyhaveaccount:'Already have an account?',
         signupwith:'Sign up with',
         loginwith:"Login with",
         prayerShare: "Share a Prayer",
         prayersFor: "Prayer's for",
         prayer: "Prayers",
+        prayNowTitle: "Pray Now",
         when: "when",
         searchCats: "Search Categories...",
         myAccount: "My Account",
@@ -114,23 +119,26 @@ sampleApp.config(function ($translateProvider) {
         addAPrayer: "add a prayer",
         newRequest: "New Prayer Request",
         profile: "Profile",
-        facebookSignUp: "Sign up with Facebook"
+        facebookSignUp: "Sign up with Facebook",
+        firstName: "First Name",
+        lastName: "Last Name"
     });
     $translateProvider.translations('de', {
         addCircle: 'Add Prayer Circle InGerman',
         email: 'Email InGerman',
         password: 'Password.InGerman',
-        login: 'LOG IN InGerman',
+        login: ' LOG IN InGerman',
         signup: 'SIGN UP InGerman',
-        register:'Register InGerman',
+        register:' Register InGerman',
         needaccount:'Need an account? InGerman',
         or:'OR InGerman',
-        alreadyhaveaccount:'Already have an account InGerman',
+        alreadyhaveaccount:'Already have an account? InGerman',
         signupwith:'Sign up with InGerman',
         loginwith:"Login with InGerman",
         prayerShare: "Share a Prayer InGerman",
         prayersFor: "Prayer's for InGerman",
         prayer: "Prayers InGerman",
+        prayNowTitle: "Pray Now InGerman",
         when: "when InGerman",
         searchCats: "Search Categories... InGerman",
         myAccount: "My Account InGerman",
@@ -145,7 +153,9 @@ sampleApp.config(function ($translateProvider) {
         addAPrayer: "add a prayer InGerman",
         newRequest: "New Prayer Request InGerman",
         profile: "Profile InGerman",
-        facebookSignUp: "Sign up with Facebook InGerman"
+        facebookSignUp: "Sign up with Facebook InGerman",
+        firstName: "First Name InGerman",
+        lastName: "Last Name InGerman"
 
     });
     $translateProvider.preferredLanguage('en');
