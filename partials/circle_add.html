@@ -9,14 +9,17 @@
 	<div class="settings-body-container">
 		
 		<div class="settings-prayer circle-prayer-add-container settings">
-			<div class="circle-photo-container">
-				<div class="photo-container">
-					<div class="circle-photo">
-						<div class="content"></div>
+
+            <div class="circle-photo-container" flow-init flow-files-submitted="$flow.upload()" flow-file-success="saveImage($flow)" flow-attrs="{accept:'image/*'}">
+				<div class="photo-container" >
+					<div ng-hide="$flow.files.length" class="circle-photo">
+						<div class="content">
+						</div>
 					</div>
+                    <img ng-show="$flow.files.length" flow-img="$flow.files[0]" width="100" height="100" style="margin-left: 37%">
 				</div>
-				<div class="photo-upload-container">
-					<i class="fa fa-2x fa-camera upload-button"></i>
+				<div class="photo-upload-container" flow-btn>
+					<i ng-hide="$flow.files.length" class="fa fa-2x fa-camera upload-button"></i>
 				</div>
 			</div>
 			<div class="circle-prayer-container">

@@ -76,7 +76,16 @@ sampleApp.controller('circlesAdd',function($rootScope,$scope,$location,$http,ngD
             //console.log($scope.prayerInfo)
         }
 
+        $scope.saveImage = function(flow){
 
+            var abc = !!{png:1,gif:1,jpg:1,jpeg:1}[flow.files[0].getExtension()]
+            if(abc == true){
+                $scope.groupData.picURL = flow.files[0];
+                $scope.img = flow.files.length;
+            }else{
+                flow.cancel()
+            }
+        }
 
         $scope.saveGroup =function(){
             //console.log('clicked')
