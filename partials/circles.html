@@ -10,7 +10,7 @@
        		</li>
        	</ul>
 
-       	<div class="app-header-search-container">
+       	<div ng-show="showSearch" class="app-header-search-container">
 			<div class="app-search-header">
 				<div class="header-search">
 					<input type="text" class="circleSearchField" ng-change="change()" ng-model="searchQuery" placeholder="Search Inbox...">
@@ -26,10 +26,10 @@
 
 		<div class="my-circle-body-container">
 
-			<div class="my-circle-container-empty">
+			<div  ng-show="noMember"  class="my-circle-container-empty">
 				<h3>No Available Circles</h3>
 			</div>
-            <div class="my-circle-container" ng-repeat="group in groupSearchList">
+            <div ng-show="showSearch" class="my-circle-container" ng-repeat="group in groupSearchList">
 				<div class="circle-container">
 					<div class="circle-img group-img"></div>
 					<div class="circle-desc">

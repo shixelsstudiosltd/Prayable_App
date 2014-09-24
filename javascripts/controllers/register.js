@@ -50,16 +50,16 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                                         });
 
                                 }).error(function(data, textstatus) {
-
-                                    console.log(data)
-                                    console.log(textstatus)
+                                    $scope.errorMsg = data
+                                    //console.log(data)
+                                   // console.log(textstatus)
                                     // called asynchronously if an error occurs
                                     // or server returns response with an error status.
                                 });
                         }).error(function(data, textstatus) {
-
-                            console.log(data)
-                            console.log(textstatus)
+                            $scope.errorMsg = data
+                           // console.log(data)
+                            //console.log(textstatus)
                             // called asynchronously if an error occurs
                             // or server returns response with an error status.
                         });
