@@ -44,7 +44,7 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
             })
             .when('/circles/add',{
                 templateUrl:'partials/circle_add.html',
-                controller:'circles'
+                controller:'circlesAdd'
             })
             .when('/friends',{
                 templateUrl:'partials/friends.html',

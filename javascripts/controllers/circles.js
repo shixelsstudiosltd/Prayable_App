@@ -113,11 +113,6 @@ sampleApp.controller('circles',function($rootScope,$scope,$location,$http){
 
 
         
-            $('.photo-container').mouseenter(function(){
-                $('.photo-upload-container').css("display","table");
-                }) .mouseout(function(){
-                $('.photo-upload-container').css("display","none");
-            });
-            
+
 });
     
