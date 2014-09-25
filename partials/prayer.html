@@ -1,5 +1,5 @@
 <div>
-	<div class="body-container bg-gradient">
+	<div class="body-container bg-purple">
 		<ul class="app-header bg-transparent">
             <li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
             <li class="app-header-title">{{'prayer' | translate}}</li>
@@ -9,34 +9,117 @@
        	</ul>
 
        	<div class="prayer-body-container">
-                  <h3 class="prayer-title">Prayer Title</h3>
 
+                  <div class="container profile-header-container">
+                    <div class="row profile-header">
+                      <div class="prayer-profile-container">
+                        <div class="user-photo">
+                          <div></div>
+                        </div>
+                        <div class="user-post-settings">
+                          <p class="user-name">John Doe</p>
+                          <p class="user-post-time">25 min ago</p>
+                        </div>
+                      </div>
+                      <div class="prayer-list-counter">
+                        <div>2 of 33</div>
+                      </div>
+                    </div>
+                  </div>
                   
-                  <div class="prayer-container">
-                        <p class="prayer-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                  </div>
-                  <div class="prayer-container-left"></div>
-                  <div class="prayer-container-right"></div>
 
-                  <div class="prayer-menu-bar">
-                        <div class="prayer-counter">
-                              <span class="underline">2</span> of <span class="underline">33</span>
+                  <div class="container prayer-container">
+                        <div class="row title-header">
+                          <h3 class="prayer-title">Prayer Title</h3>
                         </div>
-                        <div class="prayer-favorite">
-                              <i class="fa fa-2x fa-star-half-o"></i>
+                        <div class="row single-prayer">
+                          <div class="col-sm-10 col-sm-offset-1">
+                            <p class="prayer-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                          </div>
                         </div>
                   </div>
+
+                  <div class="container bar-container">
+                        <div class="row prayer-menu-bar">
+
+                              <div class="col-xs-2 counter-container-column">
+                                    <div class="prayer-count counter-container">
+                                          <i class="fa fa-comment"></i>
+                                          <span class="prayer-pray-counter">525</span>
+                                    </div>
+                              </div>
+                              <div class="col-xs-2 counter-container-column">
+                                    <div class="prayer-comments counter-container">
+                                          <i class="fa fa-comment"></i>
+                                          <span class="prayer-comment-counter">57</span>
+                                    </div>
+                              </div>
+                              <div class="col-xs-2 counter-container-column">
+                                    <div class="prayer-view counter-container">
+                                          <i class="fa fa-eye"></i>
+                                          <span class="prayer-view-counter">901</span>
+                                    </div>
+                              </div>
+                              <div class="col-xs-2 counter-container-column">
+                                    <div class="prayer-shares counter-container">
+                                          <i class="fa fa-share-square-o"></i>
+                                          <span class="prayer-share-counter">41</span>
+                                    </div>
+                              </div>
+                              <div class="col-xs-2 counter-container-column">
+                                    <div class="prayer-favorites counter-container">
+                                          <i class="fa fa-star"></i>
+                                          <span class="prayer-favorites-counter">5</span>
+                                    </div>
+                              </div>
+                              
+                        </div>
+                        <div class="prayer-menu-links">
+                              <div class="row clearfix">
+                                    <button class="pull-left prayer-button pleft">Next Prayer</button>
+                                    <button class="pull-right prayer-button pright">Read Comments</button>
+                              </div>
+                        </div>
+                  </div>
+                  <!-- <div class="container comment-container">
+                    <div class="row prayer-comment-container">
+                      <div class="user-comment-container">
+                        <div class="user-comment-photo">
+                          <div></div>
+                        </div>
+                        <div class="user-comment-settings">
+                          <p class="user-comment-name">Jane Doe</p>
+                          <p class="user-comment-post">3 hrs ago</p>
+                        </div>
+                      </div>
+                      <div class="user-comment-like-container">
+                        <div class="user-likes">
+                          <i class="fa fa-thumbs-o-up"></i>
+                          <span class="user-like-count">10</span>
+                        </div>
+                        <div class="user-dislikes">
+                          <i class="fa fa-thumbs-o-down"></i>
+                          <span class="user-dislike-coun">2</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row user-comment-box">
+                      <p class="user-comment">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                  </div> -->
        		
        		
                         
 
        		<div class="my-personal-menu">
-                        <ul class="ul-three">
-                              <li><i class="fa fa-2x fa-star-o"></i></li>
-                              <li class="prayer-hands"><img src="/img/hands.png"></li>
-                              <li><i class="fa fa-2x fa-book"></i></li>
-                              <li><i class="fa fa-2x fa-external-link"></i></li>
-                        </ul>
+            <ul class="ul-five">
+              <li class="lineH"><img src="/img/hands-2.png"></li>
+              <li class="lineH"><img src="/img/img-comment.png"></li>
+              <li class="lineH"><img src="/img/img-document.png"></li>
+              <li><i class="fa fa-3x fa-share-square-o"></i></li>
+              <li><i class="fa fa-3x fa-star-o"></i></li>
+            </ul>
        		</div>
 
        	</div>

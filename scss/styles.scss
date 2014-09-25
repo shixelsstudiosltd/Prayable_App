@@ -57,6 +57,7 @@ html, body {
 		height: 60px;
 		text-align: center;
 		font-size: 4em;
+		line-height: 60px;
 
 		i {
 			cursor: pointer;
@@ -73,12 +74,22 @@ html, body {
 		float: left;
 		text-align: center;
 		font-size: 1.5em;
+		line-height: 60px;
+		text-transform: uppercase;
 	}
 
 	.app-header-toggle-settings {
 		span {
 			line-height: 1.5em;
 			font-weight: bold;
+
+			i {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translate(-100%, -50%);
+				-webkit-transform: translate(-100%, -50%);
+			}
 		}
 	}
 
@@ -142,7 +153,7 @@ html, body {
 	background: $dark-purple;
 	position: fixed;
 	color: $white;
-	bottom: -446px;
+	bottom: -346px;
 
 	.prayable-nav-items {
 		list-style: none;

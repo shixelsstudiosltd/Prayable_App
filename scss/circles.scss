@@ -11,39 +11,38 @@
 		margin: 0;
 		height: 70px;
 		width: 100%;
-		background: red;
-		border-top: 2px solid $light-gray;
 		li {
 			text-align: center;
-			line-height: 70px;
+			line-height: 85px;
 			display: inline;
-			border-right: 1px solid $light-gray;
-			width: 25%;
-			background: rgb(255,255,255); /* Old browsers */
-			background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
-			background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+			width: 20%;
+			background: $purple-p;
+			color: $white;
 
-			&:hover {
-				background: rgb(230,230,230); /* Old browsers */
-				background: -moz-linear-gradient(top,  rgba(230,230,230,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
-				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(230,230,230,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
-				background: -webkit-linear-gradient(top,  rgba(230,230,230,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
-				background: -o-linear-gradient(top,  rgba(230,230,230,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
-				background: -ms-linear-gradient(top,  rgba(230,230,230,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
-				background: linear-gradient(to bottom,  rgba(230,230,230,1) 0%,rgba(229,229,229,1) 100%); /* W3C */	
+			i {
+				font-size: 2.5em;
+				&:hover {
+					filter: opacity(0.5);
+					-webkit-filter: opacity(0.5);
+					-ms-filter: opacity(0.5);
+				}
 			}
+
 			
-			&.prayer-hands {
-				line-height: 4em;
+			&.lineH {
+				line-height: 65px !important;
+				img {
+					max-height: 43%;
+				}
 			}
 
 			img {
 				text-align: center;
+				&:hover {
+					filter: opacity(0.5);
+					-webkit-filter: opacity(0.5);
+					-ms-filter: opacity(0.5);
+				}
 			}
 		}
 	}	
