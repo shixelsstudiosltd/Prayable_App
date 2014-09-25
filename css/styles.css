@@ -10990,7 +10990,7 @@ Primary use:	Page Used for Login/Register Styles
 }
 /* line 24, ../scss/home.scss */
 .home-menu .pray-now-circle-container i {
-  font-size: 4em;
+  font-size: 2.5em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11958,7 +11958,7 @@ Primary use:	Page Used for Login/Register Styles
 }
 /* line 7, ../scss/prayer.scss */
 .prayer-body-container .profile-header-container {
-  height: 20%;
+  height: auto;
   position: relative;
   z-index: 1;
 }
@@ -12024,17 +12024,21 @@ Primary use:	Page Used for Login/Register Styles
 }
 /* line 71, ../scss/prayer.scss */
 .prayer-body-container .prayer-container {
-  height: 54%;
+  height: 100%;
   position: relative;
   overflow-y: scroll;
 }
 /* line 77, ../scss/prayer.scss */
 .prayer-body-container .bar-container {
-  height: 35%;
+  height: 156px;
   position: relative;
   padding-top: 10px;
+  position: absolute;
+  bottom: 12px;
+  background: #4e007f;
+  width: 100%;
 }
-/* line 83, ../scss/prayer.scss */
+/* line 88, ../scss/prayer.scss */
 .prayer-body-container .title-header {
   text-transform: capitalize;
   text-align: center;
@@ -12054,16 +12058,16 @@ Primary use:	Page Used for Login/Register Styles
   -webkit-filter: opacity(0.8);
   -ms-filter: opacity(0.8);
 }
-/* line 102, ../scss/prayer.scss */
+/* line 107, ../scss/prayer.scss */
 .prayer-body-container .title-header .prayer-title {
   text-transform: uppercase;
   font-weight: 400;
 }
-/* line 108, ../scss/prayer.scss */
+/* line 113, ../scss/prayer.scss */
 .prayer-body-container .single-prayer {
   padding-top: 60px;
 }
-/* line 111, ../scss/prayer.scss */
+/* line 116, ../scss/prayer.scss */
 .prayer-body-container .single-prayer .prayer-txt {
   width: 80%;
   height: 70%;
@@ -12074,7 +12078,7 @@ Primary use:	Page Used for Login/Register Styles
   font-weight: 100;
   text-align: center;
 }
-/* line 123, ../scss/prayer.scss */
+/* line 128, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar {
   position: relative;
   border-top: 1px solid #290440;
@@ -12085,23 +12089,23 @@ Primary use:	Page Used for Login/Register Styles
   height: 75px;
   margin-top: 10px;*/
 }
-/* line 134, ../scss/prayer.scss */
+/* line 139, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .counter-container-column {
   width: 20% !important;
 }
-/* line 136, ../scss/prayer.scss */
+/* line 141, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .counter-container-column .counter-container {
   text-align: center;
 }
-/* line 138, ../scss/prayer.scss */
+/* line 143, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .counter-container-column .counter-container i {
   color: #8f6da8;
 }
-/* line 141, ../scss/prayer.scss */
+/* line 146, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .counter-container-column .counter-container span {
   color: #8f6da8;
 }
-/* line 148, ../scss/prayer.scss */
+/* line 153, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .prayer-counter {
   margin: 0 auto;
   color: white;
@@ -12112,12 +12116,12 @@ Primary use:	Page Used for Login/Register Styles
   text-align: center;
   border-radius: 50%;
 }
-/* line 158, ../scss/prayer.scss */
+/* line 163, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .prayer-counter .underline {
   font-style: underline;
   font-weight: bold;
 }
-/* line 164, ../scss/prayer.scss */
+/* line 169, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .prayer-favorite {
   line-height: 85px;
   height: 50px;
@@ -12125,47 +12129,47 @@ Primary use:	Page Used for Login/Register Styles
   color: white;
   text-align: center;
 }
-/* line 172, ../scss/prayer.scss */
+/* line 177, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .prayer-favorite .fa:hover {
   -webkit-filter: opacity(0.5);
   -moz-filter: opacity(0.5);
   filter: opacity(0.5);
 }
-/* line 180, ../scss/prayer.scss */
+/* line 185, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .prayer-next {
   line-height: 75px;
 }
-/* line 182, ../scss/prayer.scss */
+/* line 187, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .prayer-next p {
   color: white;
   font-size: 1.125em;
 }
-/* line 189, ../scss/prayer.scss */
+/* line 194, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-links {
   position: relative;
 }
-/* line 191, ../scss/prayer.scss */
+/* line 196, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-links .prayer-button {
   background: transparent;
   color: #8f6da8;
-  border: 1px solid #8f6da8;
+  border: 1px solid white;
   border-radius: 5px;
   position: absolute;
   top: 50%;
   padding: 5px 10px;
 }
-/* line 200, ../scss/prayer.scss */
+/* line 205, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-links .prayer-button:hover {
-  border-color: white;
+  border-color: #8f6da8;
 }
-/* line 204, ../scss/prayer.scss */
+/* line 209, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-links .prayer-button.pright {
   right: 0;
   transform: translate(-5%, 50%);
   -webkit-transform: translate(-5%, 50%);
   -ms-transform: translate(-5%, 50%);
 }
-/* line 211, ../scss/prayer.scss */
+/* line 216, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-links .prayer-button.pleft {
   left: 0;
   transform: translate(5%, 50%);
@@ -12173,13 +12177,13 @@ Primary use:	Page Used for Login/Register Styles
   -ms-transform: translate(5%, 50%);
 }
 
-/* line 222, ../scss/prayer.scss */
+/* line 227, ../scss/prayer.scss */
 .comment-container .prayer-comment-container {
   display: flex;
   display: -webkit-flex;
   position: relative;
 }
-/* line 227, ../scss/prayer.scss */
+/* line 232, ../scss/prayer.scss */
 .comment-container .prayer-comment-container .user-comment-container {
   display: flex;
   display: -webkit-flex;
@@ -12189,7 +12193,7 @@ Primary use:	Page Used for Login/Register Styles
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 10px;
 }
-/* line 237, ../scss/prayer.scss */
+/* line 242, ../scss/prayer.scss */
 .comment-container .prayer-comment-container .user-comment-container .user-comment-photo div {
   height: 60px;
   width: 60px;
@@ -12197,23 +12201,23 @@ Primary use:	Page Used for Login/Register Styles
   background: url("../img/user-img.jpg");
   background-size: contain;
 }
-/* line 246, ../scss/prayer.scss */
+/* line 251, ../scss/prayer.scss */
 .comment-container .prayer-comment-container .user-comment-container .user-comment-settings {
   margin-left: 10px;
 }
-/* line 249, ../scss/prayer.scss */
+/* line 254, ../scss/prayer.scss */
 .comment-container .prayer-comment-container .user-comment-container .user-comment-settings .user-comment-name {
   font-size: 16px;
   color: #8f6da8;
   margin-top: 10px;
   margin-bottom: 0;
 }
-/* line 255, ../scss/prayer.scss */
+/* line 260, ../scss/prayer.scss */
 .comment-container .prayer-comment-container .user-comment-container .user-comment-settings .user-comment-post {
   font-size: 12px;
   color: #8f6da8;
 }
-/* line 262, ../scss/prayer.scss */
+/* line 267, ../scss/prayer.scss */
 .comment-container .prayer-comment-container .user-comment-like-container {
   display: flex;
   height: 70px;
@@ -12223,16 +12227,16 @@ Primary use:	Page Used for Login/Register Styles
   right: 0;
   transform: translate(-75%, -50%);
 }
-/* line 270, ../scss/prayer.scss */
+/* line 275, ../scss/prayer.scss */
 .comment-container .prayer-comment-container .user-comment-like-container .user-likes {
   color: #8f6da8;
 }
-/* line 273, ../scss/prayer.scss */
+/* line 278, ../scss/prayer.scss */
 .comment-container .prayer-comment-container .user-comment-like-container .user-dislikes {
   color: #8f6da8;
 }
 
-/* line 281, ../scss/prayer.scss */
+/* line 286, ../scss/prayer.scss */
 .user-comment-box .user-comment {
   color: #8f6da8;
   width: 85%;

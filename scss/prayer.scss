@@ -5,7 +5,7 @@
 	position: absolute;
 
 	.profile-header-container {
-		height: 20%;
+		height: auto;
 		position: relative;
 		z-index: 1;
 
@@ -69,15 +69,20 @@
 	}
 
 	.prayer-container {	
-		height: 54%;
+		height: 100%;
 		position: relative;
 		overflow-y: scroll;
 	}
 
 	.bar-container {
-		height: 35%;
+		height: 156px;
 		position: relative;
 		padding-top: 10px;
+		position: absolute;
+		bottom: 12px;
+		background: $purple;
+		width: 100%;
+
 	}
 
 	.title-header {
@@ -191,14 +196,14 @@
 		.prayer-button {
 			background: transparent;
 			color: $light-purple;
-			border: 1px solid $light-purple;
+			border: 1px solid $white;
 			border-radius: 5px;
 			position: absolute;
 			top: 50%;
 			padding: 5px 10px;
 
 			&:hover {
-				border-color: $white;
+				border-color: $light-purple;
 			}
 
 			&.pright {
