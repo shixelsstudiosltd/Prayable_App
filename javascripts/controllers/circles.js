@@ -11,6 +11,8 @@ sampleApp.controller('circles',function($rootScope,$scope,$location,$http){
     $scope.isLogged = false
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     if(userData && (Object.keys(userData).length > 0)){
+        $scope.noMember = false;
+        $scope.showSearch = false;
         $scope.isLogged = true;
         //var data = {userID:userData._id}
         /*FB.ui({
@@ -38,7 +40,8 @@ sampleApp.controller('circles',function($rootScope,$scope,$location,$http){
             }).success(function(data, textstatus) {
                     // this callback will be called asynchronously
                     // when the response is available
-
+                    $scope.noMember = false;
+                    $scope.showSearch = true;
                     $scope.groupList = data;
                     $scope.groupSearchList = data;
                     console.log(data)
@@ -110,11 +113,6 @@ sampleApp.controller('circles',function($rootScope,$scope,$location,$http){
 
 
         
-            $('.photo-container').mouseenter(function(){
-                $('.photo-upload-container').css("display","table");
-                }) .mouseout(function(){
-                $('.photo-upload-container').css("display","none");
-            });
-            
+
 });
     

@@ -2,7 +2,7 @@ sampleApp.controller('friends',function($rootScope,$scope,$location,$http){
     $scope.isLogged = false
     $scope.ownMemberer = false;
     $scope.allUser = false;
-    $scope.noMemberer = false;
+    $scope.noMember = false;
     $scope.showSearch = false;
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     if(userData && (Object.keys(userData).length > 0)){
@@ -46,11 +46,11 @@ sampleApp.controller('friends',function($rootScope,$scope,$location,$http){
 if((data[0].msg)&&(data[0].msg == "no Member Add")){
      $scope.ownMemberer = false;
     $scope.allUser = false;
-    $scope.noMemberer = true;
+    $scope.noMember = true;
 
 }else{
     $scope.allUser = false;
-    $scope.noMemberer = false;
+    $scope.noMember = false;
     $scope.showSearch = true;
      $scope.ownMemberer = true;
                 $scope.friendsList = data[0];
@@ -85,7 +85,7 @@ if((data[0].msg)&&(data[0].msg == "no Member Add")){
                 crossDomain: true,
                 dataType: "json"
             }).success(function(data, textstatus) {
-                    $scope.noMemberer = false;
+                    $scope.noMember = false;
                     $scope.showSearch = true;
                      $scope.ownMemberer = false;
                     $scope.allUser = true;

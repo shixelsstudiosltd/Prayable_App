@@ -1,0 +1,11 @@
+<div class="ngdialog-message">
+    <button type="button" class="close ngdialog-close" ng-click="saveSelection()"></button>
+    <div class="container" style="">
+        <h1 class="modal-header">Friends POPUP</h1>
+        <ul id="group-list">
+            <!-- I left the translation out because this list will be populated -->
+            <li ng-repeat="friend in friendsList"><input type="checkbox" name="selectedFriends[]" value="{{friend.id}}" ng-click="toggleSelection(friend.id)" ng-checked="fselection.indexOf(friend.id) > -1" > {{friend.userInfo[0].firstName}} {{friend.userInfo[0].lastName}}</li>
+        </ul>
+
+    </div>
+</div>
