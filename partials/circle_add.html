@@ -10,7 +10,7 @@
 		
 		<div class="settings-prayer circle-prayer-add-container settings">
 
-            <div class="circle-photo-container" flow-init flow-files-submitted="$flow.upload()" flow-file-success="saveImage($flow)" flow-attrs="{accept:'image/*'}">
+            <div class="circle-photo-container" flow-init="saveImage($flow)" flow-files-submitted="saveImage($flow)"   flow-file-success="saveImage($flow)" flow-attrs="{accept:'image/*'}">
 				<div class="photo-container" >
 					<div ng-hide="$flow.files.length" class="circle-photo">
 						<div class="content">
