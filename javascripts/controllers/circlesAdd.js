@@ -19,8 +19,8 @@ sampleApp.controller('circlesAdd',function($rootScope,$scope,$location,$http,ngD
             $http({
                 method:"POST",
                 //contentType: 'application/json',
-                url:"http://localhost:3000/allGroup",
-                //url:"http://prayable-21641.onmodulus.net/allFriends",
+                //url:"http://localhost:3000/allGroup",
+                url:"http://prayable-21641.onmodulus.net/allFriends",
                 data:data,
                 crossDomain: true,
                 dataType: "json"
@@ -124,8 +124,8 @@ var data ={groupData:$scope.groupData}
                     $.ajax({
                         method:"POST",
                         //contentType: 'application/json',
-                        url:"http://localhost:3000/group",
-                        //url:"http://prayable-21641.onmodulus.net/group",
+                        //url:"http://localhost:3000/group",
+                        url:"http://prayable-21641.onmodulus.net/group",
                         data:data,
                         crossDomain: true,
                         dataType: "json"
