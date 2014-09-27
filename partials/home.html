@@ -12,7 +12,7 @@
                 </li>
            </ul>
         </div>
-        <div class="home-menu">
+       <!-- <div class="home-menu">
 
                 <div ng-click="go('/prayers')" class="pray-now">
                     <div class="pray-now-circle-container">
@@ -33,21 +33,74 @@
                             <div class="content"></div>
                         </div>
                     </div>
-                    <div class="pray-now-title">{{'addAPrayer' | translate}}</div>
+                    <div class="home-circle-title">{{'addAPrayer' | translate}}</div>
                 </div>
             </a>
+        </div> -->
+
+        <div class="container home-body-container">
+            <div class="home-circles-container">
+                <div class="row circle-row">
+                    <div class="col-xs-6 home-circle">
+                        <div ng-click="go('/prayers')" class="pray-now">
+                            <div class="home-c-container">
+                                <i class="fa"><img src="/prayable_app/img/hands.png" class="img-responsive"></i>
+                                <div class="home-circle-content">
+                                    <div class="content"></div>
+                                </div>
+                            </div>
+                            <div class="home-circle-title">{{'pray' | translate}}</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 home-circle">
+                        <a href="#/feed">
+                            <div class="home-c-container">
+                                <i class="fa fa-rss"></i>
+                                <div class="home-circle-content">
+                                    <div class="content"></div>
+                                </div>
+                            </div>
+                            <div class="home-circle-title">{{'prayerFeed' | translate}}</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row circle-row">
+                    <div class="col-xs-6 home-circle">
+                        <a href="#/prayers/add">
+                            <div class="home-c-container">
+                                <i class="fa fa-plus"></i>
+                                <div class="home-circle-content">
+                                    <div class="content"></div>
+                                </div>
+                            </div>
+                            <div class="home-circle-title">{{'addAPrayer' | translate}}</div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 home-circle">
+                        <a href="#/activites">
+                            <div class="home-c-container">
+                                <i class="fa fa-tachometer"></i>
+                                <div class="home-circle-content">
+                                    <div class="content"></div>
+                                </div>
+                            </div>
+                            <div class="home-circle-title">{{'myActivities' | translate}}</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
+
         <div ng-click="menu" class="prayable-nav-icon"><i class="fa fa-navicon"></i></div>
         <div class="prayable-nav-container">
             <ul class="prayable-nav-items">
                 <a href="#/profile/1"><li><i class="prayable-nav-item-icon fa fa-user"></i>{{'myAccount' | translate}}</li></a>
                 <a href="#/inbox"><li><i class="prayable-nav-item-icon fa fa-envelope"></i>{{'inbox' | translate}}</li></a>
-                <a href="#/feed"><li><i class="prayable-nav-item-icon fa fa-rss"></i>{{'prayerFeed' | translate}}</li></a>
                 <a href="#/prayers"><li><i class="prayable-nav-item-icon fa fa-list"></i>{{'myPrayers' | translate}}</li></a>
                 <a href="#/friends"><li><i class="prayable-nav-item-icon fa fa-group"></i>{{'friends' | translate}}</li></a>
                 <a href="#/circles"><li><i class="prayable-nav-item-icon fa fa-group"></i>{{'prayerCircles' | translate}}</li></a>
                 <a href="#/journal"><li><i class="prayable-nav-item-icon fa fa-book"></i>{{'myJournal' | translate}}</li></a>
-                <a href="#/activites"><li><i class="prayable-nav-item-icon fa fa-tachometer"></i>{{'myActivities' | translate}}</li></a>
+                
                 <a href="#/settings"><li><i class="prayable-nav-item-icon fa fa-cog"></i>{{'settings' | translate}}</li></a>
             </ul>
         </div>

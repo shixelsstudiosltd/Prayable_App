@@ -23,7 +23,7 @@ Primary use:	Page used for common styles
 /*------------------------------*\
     $STYLES
 \*------------------------------*/
-/* line 39, ../scss/variables.scss */
+/* line 40, ../scss/variables.scss */
 .body-container {
   min-height: 100%;
   height: auto;
@@ -32,35 +32,41 @@ Primary use:	Page used for common styles
   margin: 0 auto;
 }
 
-/* line 47, ../scss/variables.scss */
+/* line 48, ../scss/variables.scss */
 .bg-main {
   background: url("../img/bg-login.png") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 53, ../scss/variables.scss */
+/* line 54, ../scss/variables.scss */
+.bg-purple {
+  background-color: #4e007f;
+  position: absolute;
+}
+
+/* line 59, ../scss/variables.scss */
 .bg-input {
   background: url("../img/bg-main.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 59, ../scss/variables.scss */
+/* line 65, ../scss/variables.scss */
 .bg-prayers {
   background: url("../img/bg-prayers.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 65, ../scss/variables.scss */
+/* line 71, ../scss/variables.scss */
 .bg-home {
   background: url("../img/bg-home.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 71, ../scss/variables.scss */
+/* line 77, ../scss/variables.scss */
 .bg-pic-gradient {
   background: url("../img/bg-gradient.png") no-repeat center fixed;
   background-size: 300%;
@@ -68,7 +74,7 @@ Primary use:	Page used for common styles
   background-position: bottom;
 }
 
-/* line 78, ../scss/variables.scss */
+/* line 84, ../scss/variables.scss */
 .bg-gradient {
   height: 100%;
   width: 100%;
@@ -91,7 +97,7 @@ Primary use:	Page used for common styles
   /* IE6-9 */
 }
 
-/* line 92, ../scss/variables.scss */
+/* line 98, ../scss/variables.scss */
 input[type="text"], input[type="password"], input[type="submit"] {
   display: block;
   width: 100%;
@@ -99,14 +105,14 @@ input[type="text"], input[type="password"], input[type="submit"] {
   color: white;
 }
 
-/* line 99, ../scss/variables.scss */
+/* line 105, ../scss/variables.scss */
 input[type="text"], input[type="password"] {
   text-indent: 25px;
   border-radius: 0 2px 2px 0;
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* line 105, ../scss/variables.scss */
+/* line 111, ../scss/variables.scss */
 input[type="submit"] {
   font-size: 16px;
   font-weight: bolder;
@@ -10984,7 +10990,7 @@ Primary use:	Page Used for Login/Register Styles
 }
 /* line 24, ../scss/home.scss */
 .home-menu .pray-now-circle-container i {
-  font-size: 2em;
+  font-size: 2.5em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11058,6 +11064,133 @@ Primary use:	Page Used for Login/Register Styles
 /* line 92, ../scss/home.scss */
 .home-body .new-input:focus {
   outline: 0;
+}
+
+/* line 98, ../scss/home.scss */
+.home-body-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+/* line 105, ../scss/home.scss */
+.home-circles-container {
+  height: 100%;
+  padding-top: 10%;
+}
+@media screen and (max-width: 640px) {
+  /* line 105, ../scss/home.scss */
+  .home-circles-container {
+    padding-top: 20%;
+  }
+}
+/* line 113, ../scss/home.scss */
+.home-circles-container .circle-row {
+  height: 30%;
+}
+/* line 116, ../scss/home.scss */
+.home-circles-container .circle-row:nth-child(1) {
+  margin-bottom: 85px;
+}
+@media screen and (max-width: 768px) {
+  /* line 121, ../scss/home.scss */
+  .home-circles-container .circle-row:nth-child(1) {
+    margin-bottom: 70px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 127, ../scss/home.scss */
+  .home-circles-container .circle-row:nth-child(1) {
+    margin-bottom: 5%;
+  }
+}
+/* line 132, ../scss/home.scss */
+.home-circles-container .home-circle {
+  text-align: center;
+}
+/* line 134, ../scss/home.scss */
+.home-circles-container .home-circle .home-circle-title {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+/* line 142, ../scss/home.scss */
+.home-circles-container .home-circle .home-c-container {
+  max-width: 50%;
+  position: relative;
+  height: auto;
+  margin: 0 auto;
+}
+@media screen and (max-width: 560px) {
+  /* line 142, ../scss/home.scss */
+  .home-circles-container .home-circle .home-c-container {
+    max-width: 60%;
+  }
+}
+/* line 153, ../scss/home.scss */
+.home-circles-container .home-circle .home-c-container i {
+  font-size: 4em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.3);
+}
+/* line 162, ../scss/home.scss */
+.home-circles-container .home-circle .home-c-container i img {
+  filter: opacity(0.4);
+  -webkit-filter: opacity(0.4);
+  -ms-filter: opacity(0.4);
+}
+/* line 168, ../scss/home.scss */
+.home-circles-container .home-circle .home-c-container .home-circle-content {
+  position: relative;
+  background: #fff;
+  max-width: 60%;
+  border-radius: 100px;
+  margin: 0 auto;
+  opacity: 0.3;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  /* line 168, ../scss/home.scss */
+  .home-circles-container .home-circle .home-c-container .home-circle-content {
+    max-width: 83%;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 168, ../scss/home.scss */
+  .home-circles-container .home-circle .home-c-container .home-circle-content {
+    max-width: 100%;
+  }
+}
+/* line 185, ../scss/home.scss */
+.home-circles-container .home-circle .home-c-container .home-circle-content::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+/* line 191, ../scss/home.scss */
+.home-circles-container .home-circle .home-c-container .home-circle-content .content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  border-radius: 50%;
+}
+/* line 198, ../scss/home.scss */
+.home-circles-container .home-circle .home-c-container .home-circle-content .content::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 
 /* line 1, ../scss/inbox.scss */
@@ -11235,60 +11368,46 @@ Primary use:	Page Used for Login/Register Styles
   margin: 0;
   height: 70px;
   width: 100%;
-  background: red;
-  border-top: 2px solid #eaeaea;
 }
-/* line 16, ../scss/circles.scss */
+/* line 14, ../scss/circles.scss */
 .my-personal-menu ul li {
   text-align: center;
-  line-height: 70px;
+  line-height: 85px;
   display: inline;
-  border-right: 1px solid #eaeaea;
-  width: 25%;
-  background: white;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, white 0%, #e5e5e5 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e5e5e5));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, white 0%, #e5e5e5 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, white 0%, #e5e5e5 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, white 0%, #e5e5e5 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
-  /* IE6-9 */
+  width: 20%;
+  background: #6601a0;
+  color: white;
 }
-/* line 31, ../scss/circles.scss */
-.my-personal-menu ul li:hover {
-  background: #e6e6e6;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #e6e6e6 0%, #e5e5e5 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6e6e6), color-stop(100%, #e5e5e5));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #e6e6e6 0%, #e5e5e5 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #e6e6e6 0%, #e5e5e5 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #e6e6e6 0%, #e5e5e5 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #e6e6e6 0%, #e5e5e5 100%);
-  /* W3C */
+/* line 22, ../scss/circles.scss */
+.my-personal-menu ul li i {
+  font-size: 2.5em;
 }
-/* line 41, ../scss/circles.scss */
-.my-personal-menu ul li.prayer-hands {
-  line-height: 4em;
+/* line 24, ../scss/circles.scss */
+.my-personal-menu ul li i:hover {
+  filter: opacity(0.5);
+  -webkit-filter: opacity(0.5);
+  -ms-filter: opacity(0.5);
 }
-/* line 45, ../scss/circles.scss */
+/* line 32, ../scss/circles.scss */
+.my-personal-menu ul li.lineH {
+  line-height: 65px !important;
+}
+/* line 34, ../scss/circles.scss */
+.my-personal-menu ul li.lineH img {
+  max-height: 43%;
+}
+/* line 39, ../scss/circles.scss */
 .my-personal-menu ul li img {
   text-align: center;
 }
+/* line 41, ../scss/circles.scss */
+.my-personal-menu ul li img:hover {
+  filter: opacity(0.5);
+  -webkit-filter: opacity(0.5);
+  -ms-filter: opacity(0.5);
+}
 
-/* line 52, ../scss/circles.scss */
+/* line 51, ../scss/circles.scss */
 .my-circle-body-container {
   position: absolute;
   height: 100%;
@@ -11296,7 +11415,7 @@ Primary use:	Page Used for Login/Register Styles
   overflow-y: scroll;
 }
 
-/* line 59, ../scss/circles.scss */
+/* line 58, ../scss/circles.scss */
 .my-circle-container-empty {
   background: white;
   width: 100%;
@@ -11304,7 +11423,7 @@ Primary use:	Page Used for Login/Register Styles
   position: absolute;
   z-index: 1;
 }
-/* line 66, ../scss/circles.scss */
+/* line 65, ../scss/circles.scss */
 .my-circle-container-empty h3 {
   color: #eaeaea;
   font-size: 2.5em;
@@ -11316,12 +11435,12 @@ Primary use:	Page Used for Login/Register Styles
   -webkit-transform: translate(-50%, -120%);
 }
 
-/* line 77, ../scss/circles.scss */
+/* line 76, ../scss/circles.scss */
 .my-circle-container {
   width: 100%;
   background: white;
 }
-/* line 81, ../scss/circles.scss */
+/* line 80, ../scss/circles.scss */
 .my-circle-container .circle-container {
   display: flex;
   display: -webkit-flex;
@@ -11330,7 +11449,7 @@ Primary use:	Page Used for Login/Register Styles
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 5px 20px;
 }
-/* line 89, ../scss/circles.scss */
+/* line 88, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-img {
   height: 50px;
   width: 50px;
@@ -11338,36 +11457,36 @@ Primary use:	Page Used for Login/Register Styles
   border: 2px solid lightgrey;
   margin-right: 10px;
 }
-/* line 96, ../scss/circles.scss */
+/* line 95, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-img.group-img {
   background: url("../img/group-img.png") no-repeat center;
   background-size: 35px;
 }
-/* line 101, ../scss/circles.scss */
+/* line 100, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc {
   color: #333333;
   margin-right: 15px;
 }
-/* line 105, ../scss/circles.scss */
+/* line 104, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-1 {
   display: flex;
   display: -webkit-flex;
 }
-/* line 108, ../scss/circles.scss */
+/* line 107, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-1 .group-name {
   text-transform: capitalize;
   margin-top: 5px;
 }
-/* line 114, ../scss/circles.scss */
+/* line 113, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-2 {
   display: flex;
   display: -webkit-flex;
 }
-/* line 118, ../scss/circles.scss */
+/* line 117, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-2 .group-members, .my-circle-container .circle-container .circle-desc .desc-row-2 .group-notifications {
   margin-top: 0;
 }
-/* line 122, ../scss/circles.scss */
+/* line 121, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-desc .desc-row-2 .group-members {
   text-transform: capitalize;
   font-weight: 100;
@@ -11376,20 +11495,20 @@ Primary use:	Page Used for Login/Register Styles
   display: inline;
   margin-right: 15px;
 }
-/* line 134, ../scss/circles.scss */
+/* line 133, ../scss/circles.scss */
 .my-circle-container .circle-container .circle-admin-settings {
   line-height: 60px;
   position: absolute;
   right: 5%;
 }
 
-/* line 148, ../scss/circles.scss */
+/* line 147, ../scss/circles.scss */
 .settings-prayer .circle-photo-container {
   height: 100%;
   width: 40%;
   position: relative;
 }
-/* line 153, ../scss/circles.scss */
+/* line 152, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-container {
   width: 80%;
   height: 100%;
@@ -11398,7 +11517,7 @@ Primary use:	Page Used for Login/Register Styles
   display: table;
   padding: 15px;
 }
-/* line 162, ../scss/circles.scss */
+/* line 161, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-container .circle-photo {
   position: relative;
   margin: 0px auto;
@@ -11406,7 +11525,7 @@ Primary use:	Page Used for Login/Register Styles
   display: table-cell;
   vertical-align: middle;
 }
-/* line 169, ../scss/circles.scss */
+/* line 168, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-container .circle-photo .content {
   position: absolute;
   top: 0;
@@ -11419,13 +11538,13 @@ Primary use:	Page Used for Login/Register Styles
   display: table-cell;
   vertical-align: middle;
 }
-/* line 178, ../scss/circles.scss */
+/* line 177, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-container .circle-photo .content::before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-/* line 187, ../scss/circles.scss */
+/* line 186, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-upload-container {
   height: 100%;
   width: 100%;
@@ -11437,7 +11556,7 @@ Primary use:	Page Used for Login/Register Styles
   top: 0;
   transform: translate(-50%);
 }
-/* line 198, ../scss/circles.scss */
+/* line 197, ../scss/circles.scss */
 .settings-prayer .circle-photo-container .photo-upload-container .upload-button {
   height: 100%;
   width: 100%;
@@ -11448,13 +11567,13 @@ Primary use:	Page Used for Login/Register Styles
   display: table-cell;
   vertical-align: middle;
 }
-/* line 210, ../scss/circles.scss */
+/* line 209, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container {
   height: 100%;
   width: 60%;
   border-left: 1px solid white;
 }
-/* line 215, ../scss/circles.scss */
+/* line 214, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container .circle-group-title {
   height: 25%;
   width: 100%;
@@ -11466,7 +11585,7 @@ Primary use:	Page Used for Login/Register Styles
   padding: 5%;
   color: white;
 }
-/* line 224, ../scss/circles.scss */
+/* line 223, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container .circle-group-desc {
   height: 75%;
   width: 100%;
@@ -11476,18 +11595,18 @@ Primary use:	Page Used for Login/Register Styles
   padding: 5%;
   resize: none;
 }
-/* line 233, ../scss/circles.scss */
+/* line 232, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container .circle-group-desc::-webkit-input-placeholder {
   color: #8f6da8 !important;
   font-style: italic;
 }
-/* line 238, ../scss/circles.scss */
+/* line 237, ../scss/circles.scss */
 .settings-prayer .circle-prayer-container .circle-group-title::-webkit-input-placeholder {
   color: #290440 !important;
   font-style: italic;
 }
 
-/* line 245, ../scss/circles.scss */
+/* line 244, ../scss/circles.scss */
 .circle-add-container {
   height: 68%;
   background: transparent;
@@ -11495,7 +11614,7 @@ Primary use:	Page Used for Login/Register Styles
   position: relative;
   text-align: center;
 }
-/* line 252, ../scss/circles.scss */
+/* line 251, ../scss/circles.scss */
 .circle-add-container:hover {
   background: white;
   /* Old browsers */
@@ -11512,11 +11631,11 @@ Primary use:	Page Used for Login/Register Styles
   background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
   /* W3C */
 }
-/* line 261, ../scss/circles.scss */
+/* line 260, ../scss/circles.scss */
 .circle-add-container:hover .circle-add-user {
   color: black;
 }
-/* line 266, ../scss/circles.scss */
+/* line 265, ../scss/circles.scss */
 .circle-add-container .circle-add-user {
   position: absolute;
   left: 50%;
@@ -11527,7 +11646,7 @@ Primary use:	Page Used for Login/Register Styles
   font-size: 16px;
 }
 
-/* line 278, ../scss/circles.scss */
+/* line 277, ../scss/circles.scss */
 .circle-add-header {
   height: 33%;
   width: 100%;
@@ -11536,24 +11655,24 @@ Primary use:	Page Used for Login/Register Styles
   border-bottom: 1px solid #eaeaea;
   text-indent: 5%;
 }
-/* line 286, ../scss/circles.scss */
+/* line 285, ../scss/circles.scss */
 .circle-add-header h5 {
   display: table-cell;
   vertical-align: middle;
   color: white;
 }
 
-/* line 293, ../scss/circles.scss */
+/* line 292, ../scss/circles.scss */
 .group-add-container {
   height: 15% !important;
 }
 
-/* line 297, ../scss/circles.scss */
+/* line 296, ../scss/circles.scss */
 .circle-prayer-add-container {
   height: 35% !important;
 }
 
-/* line 301, ../scss/circles.scss */
+/* line 300, ../scss/circles.scss */
 .circle-privacy-settings {
   height: 15% !important;
 }
@@ -11838,71 +11957,157 @@ Primary use:	Page Used for Login/Register Styles
   position: absolute;
 }
 /* line 7, ../scss/prayer.scss */
-.prayer-body-container .prayer-title {
+.prayer-body-container .profile-header-container {
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+/* line 12, ../scss/prayer.scss */
+.prayer-body-container .profile-header-container .profile-header {
+  display: flex;
+  display: -webkit-flex;
+  margin-top: 55px;
+  border-bottom: 1px solid #290440;
+  background: #4e007f;
+}
+/* line 20, ../scss/prayer.scss */
+.prayer-body-container .profile-header-container .prayer-profile-container {
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  height: auto;
+}
+/* line 26, ../scss/prayer.scss */
+.prayer-body-container .profile-header-container .prayer-profile-container .user-photo {
+  padding: 10px;
+}
+/* line 28, ../scss/prayer.scss */
+.prayer-body-container .profile-header-container .prayer-profile-container .user-photo div {
+  height: 65px;
+  width: 65px;
+  background: url("../img/user-img.jpg") center;
+  background-size: contain;
+  border-radius: 50%;
+}
+/* line 37, ../scss/prayer.scss */
+.prayer-body-container .profile-header-container .prayer-profile-container .user-post-settings .user-name {
+  font-size: 20px;
+  color: #8f6da8;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+/* line 43, ../scss/prayer.scss */
+.prayer-body-container .profile-header-container .prayer-profile-container .user-post-settings .user-post-time {
+  font-size: 16px;
+  color: #8f6da8;
+  font-weight: 100;
+}
+/* line 51, ../scss/prayer.scss */
+.prayer-body-container .profile-header-container .prayer-list-counter {
+  height: 85px;
+  position: relative;
+  width: 100px;
+}
+/* line 55, ../scss/prayer.scss */
+.prayer-body-container .profile-header-container .prayer-list-counter div {
+  color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  font-size: 16px;
+  font-weight: 100;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+/* line 71, ../scss/prayer.scss */
+.prayer-body-container .prayer-container {
+  height: 100%;
+  position: relative;
+  overflow-y: scroll;
+}
+/* line 77, ../scss/prayer.scss */
+.prayer-body-container .bar-container {
+  height: 156px;
+  position: relative;
+  padding-top: 10px;
+  position: absolute;
+  bottom: 12px;
+  background: #4e007f;
+  width: 100%;
+}
+/* line 88, ../scss/prayer.scss */
+.prayer-body-container .title-header {
   text-transform: capitalize;
   text-align: center;
   color: white;
-  margin-top: 80px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: fixed;
+  margin: 0 auto;
+  background: #4e007f;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  width: 90%;
+  filter: opacity(0.8);
+  -webkit-filter: opacity(0.8);
+  -ms-filter: opacity(0.8);
 }
-/* line 14, ../scss/prayer.scss */
-.prayer-body-container .prayer-container {
-  width: 80%;
-  height: 50%;
-  background: white url("../img/logo-pray-g.png") no-repeat center;
-  background-position-y: 8%;
-  background-size: 10em;
-  padding-top: 7em;
-  border: 15px solid #cfcfcf;
-  margin: 1em auto 0;
-  position: relative;
-  z-index: 5;
-  overflow: hidden;
+/* line 107, ../scss/prayer.scss */
+.prayer-body-container .title-header .prayer-title {
+  text-transform: uppercase;
+  font-weight: 400;
 }
-/* line 27, ../scss/prayer.scss */
-.prayer-body-container .prayer-container .prayer-txt {
+/* line 113, ../scss/prayer.scss */
+.prayer-body-container .single-prayer {
+  padding-top: 60px;
+}
+/* line 116, ../scss/prayer.scss */
+.prayer-body-container .single-prayer .prayer-txt {
   width: 80%;
   height: 70%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  overflow-y: scroll;
   margin: 10px auto;
-  font-size: 1em;
-  padding-top: 10px;
-  border-top: 1px solid #cfcfcf;
+  font-size: 22px;
+  color: #8f6da8;
   line-height: 1.5em;
-  text-align: justify;
+  font-weight: 100;
+  text-align: center;
 }
-/* line 42, ../scss/prayer.scss */
-.prayer-body-container .prayer-container-left, .prayer-body-container .prayer-container-right {
-  position: absolute;
-  height: 40%;
-  width: 30%;
-  z-index: 4;
-  background: rgba(255, 255, 255, 0.7);
-  border: 10px solid #cfcfcf;
-  top: 25%;
-}
-/* line 52, ../scss/prayer.scss */
-.prayer-body-container .prayer-container-left {
-  left: -10%;
-}
-/* line 56, ../scss/prayer.scss */
-.prayer-body-container .prayer-container-right {
-  right: -10%;
-}
-/* line 60, ../scss/prayer.scss */
+/* line 128, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar {
-  width: 100%;
   position: relative;
+  border-top: 1px solid #290440;
+  border-bottom: 1px solid #290440;
+  padding: 1px 0;
+  /*width: 100%;
+  
   height: 75px;
-  margin-top: 10px;
+  margin-top: 10px;*/
 }
-/* line 66, ../scss/prayer.scss */
+/* line 139, ../scss/prayer.scss */
+.prayer-body-container .prayer-menu-bar .counter-container-column {
+  width: 20% !important;
+}
+/* line 141, ../scss/prayer.scss */
+.prayer-body-container .prayer-menu-bar .counter-container-column .counter-container {
+  text-align: center;
+}
+/* line 143, ../scss/prayer.scss */
+.prayer-body-container .prayer-menu-bar .counter-container-column .counter-container i {
+  color: #8f6da8;
+}
+/* line 146, ../scss/prayer.scss */
+.prayer-body-container .prayer-menu-bar .counter-container-column .counter-container span {
+  color: #8f6da8;
+}
+/* line 153, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .prayer-counter {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  margin: 0 auto;
   color: white;
   background: #8f6da8;
   line-height: 75px;
@@ -11911,27 +12116,131 @@ Primary use:	Page Used for Login/Register Styles
   text-align: center;
   border-radius: 50%;
 }
-/* line 78, ../scss/prayer.scss */
+/* line 163, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .prayer-counter .underline {
   font-style: underline;
   font-weight: bold;
 }
-/* line 84, ../scss/prayer.scss */
+/* line 169, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .prayer-favorite {
-  position: absolute;
-  right: 25%;
-  transform: translate(75%, 25%);
-  line-height: 62px;
+  line-height: 85px;
   height: 50px;
   width: 50px;
   color: white;
   text-align: center;
 }
-/* line 94, ../scss/prayer.scss */
+/* line 177, ../scss/prayer.scss */
 .prayer-body-container .prayer-menu-bar .prayer-favorite .fa:hover {
   -webkit-filter: opacity(0.5);
   -moz-filter: opacity(0.5);
   filter: opacity(0.5);
+}
+/* line 185, ../scss/prayer.scss */
+.prayer-body-container .prayer-menu-bar .prayer-next {
+  line-height: 75px;
+}
+/* line 187, ../scss/prayer.scss */
+.prayer-body-container .prayer-menu-bar .prayer-next p {
+  color: white;
+  font-size: 1.125em;
+}
+/* line 194, ../scss/prayer.scss */
+.prayer-body-container .prayer-menu-links {
+  position: relative;
+}
+/* line 196, ../scss/prayer.scss */
+.prayer-body-container .prayer-menu-links .prayer-button {
+  background: transparent;
+  color: #8f6da8;
+  border: 1px solid white;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  padding: 5px 10px;
+}
+/* line 205, ../scss/prayer.scss */
+.prayer-body-container .prayer-menu-links .prayer-button:hover {
+  border-color: #8f6da8;
+}
+/* line 209, ../scss/prayer.scss */
+.prayer-body-container .prayer-menu-links .prayer-button.pright {
+  right: 0;
+  transform: translate(-5%, 50%);
+  -webkit-transform: translate(-5%, 50%);
+  -ms-transform: translate(-5%, 50%);
+}
+/* line 216, ../scss/prayer.scss */
+.prayer-body-container .prayer-menu-links .prayer-button.pleft {
+  left: 0;
+  transform: translate(5%, 50%);
+  -webkit-transform: translate(5%, 50%);
+  -ms-transform: translate(5%, 50%);
+}
+
+/* line 227, ../scss/prayer.scss */
+.comment-container .prayer-comment-container {
+  display: flex;
+  display: -webkit-flex;
+  position: relative;
+}
+/* line 232, ../scss/prayer.scss */
+.comment-container .prayer-comment-container .user-comment-container {
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 10px;
+}
+/* line 242, ../scss/prayer.scss */
+.comment-container .prayer-comment-container .user-comment-container .user-comment-photo div {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: url("../img/user-img.jpg");
+  background-size: contain;
+}
+/* line 251, ../scss/prayer.scss */
+.comment-container .prayer-comment-container .user-comment-container .user-comment-settings {
+  margin-left: 10px;
+}
+/* line 254, ../scss/prayer.scss */
+.comment-container .prayer-comment-container .user-comment-container .user-comment-settings .user-comment-name {
+  font-size: 16px;
+  color: #8f6da8;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+/* line 260, ../scss/prayer.scss */
+.comment-container .prayer-comment-container .user-comment-container .user-comment-settings .user-comment-post {
+  font-size: 12px;
+  color: #8f6da8;
+}
+/* line 267, ../scss/prayer.scss */
+.comment-container .prayer-comment-container .user-comment-like-container {
+  display: flex;
+  height: 70px;
+  display: -webkit-flex;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-75%, -50%);
+}
+/* line 275, ../scss/prayer.scss */
+.comment-container .prayer-comment-container .user-comment-like-container .user-likes {
+  color: #8f6da8;
+}
+/* line 278, ../scss/prayer.scss */
+.comment-container .prayer-comment-container .user-comment-like-container .user-dislikes {
+  color: #8f6da8;
+}
+
+/* line 286, ../scss/prayer.scss */
+.user-comment-box .user-comment {
+  color: #8f6da8;
+  width: 85%;
+  margin: 0 auto 10px;
 }
 
 /* line 1, ../scss/pray.scss */
@@ -12378,29 +12687,40 @@ html, body {
   height: 60px;
   text-align: center;
   font-size: 4em;
+  line-height: 60px;
 }
-/* line 61, ../scss/styles.scss */
+/* line 62, ../scss/styles.scss */
 .app-header .app-header-back-button i {
   cursor: pointer;
 }
-/* line 65, ../scss/styles.scss */
+/* line 66, ../scss/styles.scss */
 .app-header .app-header-back-button:hover {
   color: #4e007f;
 }
-/* line 70, ../scss/styles.scss */
+/* line 71, ../scss/styles.scss */
 .app-header .app-header-title {
   width: 60%;
   height: 60px;
   float: left;
   text-align: center;
   font-size: 1.5em;
+  line-height: 60px;
+  text-transform: uppercase;
 }
-/* line 79, ../scss/styles.scss */
+/* line 82, ../scss/styles.scss */
 .app-header .app-header-toggle-settings span {
   line-height: 1.5em;
   font-weight: bold;
 }
-/* line 85, ../scss/styles.scss */
+/* line 86, ../scss/styles.scss */
+.app-header .app-header-toggle-settings span i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-100%, -50%);
+  -webkit-transform: translate(-100%, -50%);
+}
+/* line 96, ../scss/styles.scss */
 .app-header .app-header-notifications {
   width: 20%;
   float: left;
@@ -12410,7 +12730,7 @@ html, body {
   cursor: pointer;
   position: relative;
 }
-/* line 94, ../scss/styles.scss */
+/* line 105, ../scss/styles.scss */
 .app-header .app-header-notifications .notification-counter {
   position: absolute;
   height: 25px;
@@ -12422,19 +12742,19 @@ html, body {
   text-align: center;
   margin-top: 10px;
 }
-/* line 105, ../scss/styles.scss */
+/* line 116, ../scss/styles.scss */
 .app-header .app-header-notifications .notification-counter span {
   position: absolute;
   top: -23px;
   right: 8px;
   font-size: 0.5em;
 }
-/* line 113, ../scss/styles.scss */
+/* line 124, ../scss/styles.scss */
 .app-header .app-header-notifications:hover {
   color: #4e007f;
 }
 
-/* line 119, ../scss/styles.scss */
+/* line 130, ../scss/styles.scss */
 .prayable-nav-icon {
   background: #290440;
   width: 60px;
@@ -12450,27 +12770,27 @@ html, body {
   color: white;
   text-align: center;
 }
-/* line 134, ../scss/styles.scss */
+/* line 145, ../scss/styles.scss */
 .prayable-nav-icon:hover {
   background: #1a0228;
 }
 
-/* line 139, ../scss/styles.scss */
+/* line 150, ../scss/styles.scss */
 .prayable-nav-container {
   width: 100%;
   padding: 0;
   background: #290440;
   position: fixed;
   color: white;
-  bottom: -446px;
+  bottom: -346px;
 }
-/* line 147, ../scss/styles.scss */
+/* line 158, ../scss/styles.scss */
 .prayable-nav-container .prayable-nav-items {
   list-style: none;
   padding: 0;
   text-align: left;
 }
-/* line 151, ../scss/styles.scss */
+/* line 162, ../scss/styles.scss */
 .prayable-nav-container .prayable-nav-items li {
   width: 100%;
   height: 50px;
@@ -12481,7 +12801,7 @@ html, body {
   padding: 10px 25px;
   border-bottom: 1px solid #1e0230;
 }
-/* line 161, ../scss/styles.scss */
+/* line 172, ../scss/styles.scss */
 .prayable-nav-container .prayable-nav-items li .prayable-nav-item-icon {
   padding-right: 20px;
   color: #8f6da8;

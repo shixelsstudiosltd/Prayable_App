@@ -1,0 +1,57 @@
+<div ng-show="isLogged">
+	<div class="body-container bg-main">
+		<ul class="app-header">
+            <li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
+            <li class="app-header-title">{{'friends' | translate}}</li>
+            <li class="app-header-toggle-settings">
+       			<span class="app-toggle-settings-icon fa-3x">&plus;</span>
+       		</li>
+       	</ul>
+
+       	<div ng-show="(noMemberer || showSearch)" class="app-header-search-container">
+			<div class="app-search-header">
+				<div class="header-search">
+                    <input type="text" class="friendsSearchField" ng-change="change()" ng-model="searchQuery" placeholder="Search Inbox...">
+					<div class="app-search-bar-icon"><i class="fa fa-search"></i></div>
+				</div>
+			</div>
+		</div>
+
+		<div ng-show="showList" class="friends-body-container">
+
+            <div class="friends-container" ng-repeat="friend in friendsSearchList">
+				<div class="container">
+					<div class="user-img user-img-bg"></div>
+					<div class="user-desc">
+						<h4 class="user-name">{{friend.userInfo[0].firstName}} {{friend.userInfo[0].lastName}}</h4>
+						<h6 class="user-denomination">Methodist</h6>
+						<h6 class="user-church">Gethsemane United Methodist</h6>
+					</div>
+					<div class="user-arrow">
+						<i ng-click="goToFriendProfile({{friend.id}})" class="fa fa-2x fa-angle-right"></i>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+        <div ng-show="noMemberer" class="friends-body-container">
+            <div class="friends-container-empty">
+                <h3>No Friends found</h3>
+            </div>
+
+        </div>
+
+		<div class="my-personal-menu">
+			<ul class="ul-four">
+				<li><i class="fa fa-users fa-2x"></i></li>
+				<li><i class="fa fa-search fa-2x"></i></li>
+				<li><i class="fa fa-cogs fa-2x"></i></li>
+				<li><i class="fa fa-share-square-o fa-2x"></i></li>
+			</ul>
+		</div>
+
+	</div>
+</div>

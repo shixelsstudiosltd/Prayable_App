@@ -16,6 +16,7 @@ Primary use:	Page used for common styles
 \*------------------------------*/
 
 $purple: #4e007f;
+$purple-p: #6601a0;
 $black: #000;
 $black-t: rgba(0,0,0,0.4);
 $white: #fff;
@@ -47,6 +48,11 @@ $light-purple: #8f6da8;
 .bg-main {
 	background: url('../img/bg-login.png') no-repeat center fixed;
 	background-size: cover;
+	position: absolute;
+}
+
+.bg-purple {
+	background-color: $purple;
 	position: absolute;
 }
 
