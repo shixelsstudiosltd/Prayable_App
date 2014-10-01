@@ -1,4 +1,4 @@
-var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','facebook.services','ngDialog','flow'])
+var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','facebook.services','ngDialog','flow','btford.socket-io'])
     .config(['$routeProvider',function($routeProvider){
 
         $routeProvider
@@ -77,6 +77,10 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
             .when('/emailCnfm/:verificationCode',{
                 templateUrl:'partials/emailCnfm.html',
                 controller:'emailCnfm'
+            })
+            .when('/chat',{
+                templateUrl:'partials/chatExample.html',
+                controller:'chat'
             })
 /*
             .when('/error',{
@@ -162,7 +166,39 @@ sampleApp.config(function ($translateProvider) {
     });
     $translateProvider.preferredLanguage('en');
 });
+sampleApp.factory('socketTest', function($rootScope) {
+    var socket =io.connect("http://localhost:3000/");
+    return {
+        on: function (eventName, callback) {
+            socket.on(eventName, function () {
+                var args = arguments;
+                $rootScope.$apply(function () {
+                    callback.apply(socket, args);
+                });
+            });
+        },
+        emit: function (eventName, data, callback) {
+            socket.emit(eventName, data, function () {
+                var args = arguments;
+                $rootScope.$apply(function () {
+                    if (callback) {
+                        callback.apply(socket, args);
+                    }
+                });
+            })
+        }
+    };
+});
 
+/*sampleApp.factory('mySocket', function (socketFactory) {
+    var socket =io.connect("http://localhost:3000/");
+    mySocket = socketFactory({
+        ioSocket: myIoSocket
+    });
+
+    return mySocket;
+});
+*/
 /*sampleApp.controller('navController',function($rootScope,$scope,$location,$http,$cookies,$translate){
     $scope.changeLanguage = function (key) {
         $translate.use(key);
