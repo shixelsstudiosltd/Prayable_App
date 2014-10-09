@@ -1,8 +1,7 @@
 sampleApp.controller('chat',function($rootScope,$scope,$location,socketTest){
 
-    socketTest.on('init', function (data) {
-        $scope.name = data.name;
-        $scope.users = data.users;
+    socketTest.on('connected', function (data) {
+        console.log(data)
     });
 
 
