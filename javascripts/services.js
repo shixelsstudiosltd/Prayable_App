@@ -1,4 +1,4 @@
-angular.module('facebook.services', []).factory('facebookService', function($q) {
+angular.module('facebook.services', []).factory('facebookService', function($q,socketTest) {
 
 
 
@@ -71,9 +71,19 @@ var temp;
                                     data:{userID:data.data._id},
                                     method:"POST"
                                 }).success( function(res,textStatus){
+                                        socketTest.emit('addMeToSocket',{userID:data.data._id})
+                                        socketTest.on('userAdded',function(){
+                                            sessionStorage.setItem('userData',JSON.stringify(data.data));
+                                            scope.go('/home');
+                                            if(!scope.$$phase) scope.$apply();
+                                        })
 
-                                        scope.go('/login');
-                                        if(!scope.$$phase) scope.$apply();
+                                        socketTest.on('User is already there in socket',function(){
+                                            sessionStorage.setItem('userData',JSON.stringify(data.data));
+                                            scope.go('/home');
+                                            if(!scope.$$phase) scope.$apply();
+                                        })
+
                                     }).error(function(data, textstatus) {
                                         scope.errorMsg = data
                                        // console.log(data)
@@ -81,6 +91,17 @@ var temp;
                                         // called asynchronously if an error occurs
                                         // or server returns response with an error status.
                                     });
+                            }else{
+                                socketTest.emit('addMeToSocket',{userID:data.data._id})
+                                socketTest.on('userAdded',function(){
+                                    scope.go('/home');
+                                    if(!scope.$$phase) scope.$apply();
+                                })
+
+                                socketTest.on('User is already there in socket',function(){
+                                    scope.go('/home');
+                                    if(!scope.$$phase) scope.$apply();
+                                })
                             }
 
                             //console.log(data)

@@ -1,4 +1,4 @@
-sampleApp.controller('login',function($rootScope,$scope,$location,$http,$translate,$q, facebookService){
+sampleApp.controller('login',function($rootScope,$scope,$location,$http,$translate,$q, facebookService,socketTest){
 
 
     $scope.userData = {email:'',password:''};
@@ -24,9 +24,20 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
                         if(data.code == 400){
                             alert(data.msg)
                         }else{
-                            sessionStorage.setItem('userData',JSON.stringify(data.data));
-                            $scope.go('/home');
-                            if(!$scope.$$phase) $scope.$apply();
+
+                              socketTest.emit('addMeToSocket',{userID:data.data._id})
+                              socketTest.on('userAdded',function(){
+                                  sessionStorage.setItem('userData',JSON.stringify(data.data));
+                                  $scope.go('/home');
+                                  if(!$scope.$$phase) $scope.$apply();
+                              })
+
+                            socketTest.on('User is already there in socket',function(){
+                                sessionStorage.setItem('userData',JSON.stringify(data.data));
+                                $scope.go('/home');
+                                if(!$scope.$$phase) $scope.$apply();
+                            })
+
                         }
 
                         //console.log(data)
