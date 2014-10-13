@@ -190,6 +190,9 @@ sampleApp.factory('socketTest', function($rootScope) {
                     }
                 });
             })
+        },
+        socket:function(){
+            return socket
         }
     };
 });
@@ -203,9 +206,14 @@ sampleApp.factory('socketTest', function($rootScope) {
     return mySocket;
 });
 */
-/*sampleApp.controller('navController',function($rootScope,$scope,$location,$http,$cookies,$translate){
+sampleApp.controller('chatDiv',function($rootScope,$scope,$location,$http,$cookies,$translate,socketTest){
     $scope.changeLanguage = function (key) {
         $translate.use(key);
     };
-
-});*/
+     socketTest.on('RequestForNewChat',function(msg){
+        console.log(msg)
+    })
+    socketTest.on('RequestForResumeChat',function(msg){
+        console.log(msg)
+    })
+});

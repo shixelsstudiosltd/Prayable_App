@@ -24,8 +24,8 @@ sampleApp.controller('login',function($rootScope,$scope,$location,$http,$transla
                         if(data.code == 400){
                             alert(data.msg)
                         }else{
-
-                              socketTest.emit('addMeToSocket',{userID:data.data._id})
+                        var socket= socketTest.socket()
+                              socketTest.emit('addMeToSocket',{userID:data.data._id,socketID:socket.socket.sessionid})
                               socketTest.on('userAdded',function(){
                                   sessionStorage.setItem('userData',JSON.stringify(data.data));
                                   $scope.go('/home');
