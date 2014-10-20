@@ -7,14 +7,18 @@
        			<span class="app-toggle-settings-icon"><i class="fa fa-tasks"></i></span>
        		</li>
        	</ul>
+
+
        	<div class="inbox-message-container">
-       		<div class="push-message">
+            <div ng-repeat="message in messages">
+       		<div class="push-message" style="float:right; margin-right: -5%;" ng-show="(message.from == userID)">
+
        			<div class="user-photo-section">
        				<div class="message-user-photo"></div>
        			</div>
        			<div class="user-message-section">
        				<div class="user-message-content">
-       					<p class="message">Lorem ipsum dolor sit amet, consecte adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+       					<p class="message">{{message.message}}aaaaaa tempor incididunt ut labore et dolore magna aliqua.</p>
        					<div class="message-attachment">
        						<hr>
        						<p><i class="fa fa-paperclip"></i> <span class="attachment-name">InboxMessage.psd</span></p>
@@ -30,7 +34,7 @@
        		</div> <!-- End Push Message -->
        		<div class="clearfix"></div>
 
-       		<div class="pull-message">
+       		<div class="pull-message" style="float:left;" ng-show="(message.from == userID)">
        			<div class="user-timestamp-section">
        				<div>
        					<p><span class="message-time">5:40 pm</span><br>
@@ -38,11 +42,11 @@
        					<i class="fa fa-trash-o"></i>
        				</p>
        				</div>
-       				
+
        			</div>
        			<div class="user-message-section">
        				<div class="user-message-content">
-       					<p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       					<p class="message">{{message.message}} sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
        					<div class="message-attachment">
        						<hr>
        						<p><i class="fa fa-paperclip"></i> <span class="attachment-name">InboxMessage.psd</span></p>
@@ -54,11 +58,11 @@
        			</div>
        		</div> <!-- End Pull Message -->
 
+            </div>
 
 
 
 
-       		
 
 
 
