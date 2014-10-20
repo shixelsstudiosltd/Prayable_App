@@ -11,8 +11,8 @@ sampleApp.controller('messages',function($rootScope,$scope,$location,$http){
     $http({
         method:"POST",
         //contentType: 'application/json',
-        url:"http://localhost:3000/getMessage",
-        //url:"http://prayable-21641.onmodulus.net/getMessage",
+        //url:"http://localhost:3000/getMessage",
+        url:"http://prayable-21641.onmodulus.net/getMessage",
         data:data,
         crossDomain: true,
         dataType: "json"
