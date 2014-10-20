@@ -1,0 +1,107 @@
+
+.activities-body-container {
+	
+	padding: 0 30px;
+	position: absolute;
+	height: 100%;
+	overflow-y: scroll;
+	width: 100%;
+
+
+	.activity-container:first-child {
+		margin-top: 10px;
+	}
+	.activity-container:last-child {
+		margin-bottom: 80px;
+	}
+
+	.activity-container {
+		width: 100%;
+		height: 70px;
+		border: $white-t-l 2px solid;
+		display: flex;
+		display: -webkit-flex;
+		border-radius: 5px;
+		margin-bottom: 20px;
+
+		.activity-icon-box {
+			background: $white-t-l;
+			position: relative;
+			min-width: 70px;
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+			&::before {
+				display: block;
+				content: "";
+				padding-top: 100%;
+			}
+			.activity-icon {
+				position: absolute;
+				left: 50%;top: 50%;
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+				padding: 30px;
+				text-align: center;
+
+				&.act-icon-fast {
+					background: url('/img/act-fast.png') no-repeat center;
+				}
+				&.act-icon-bible {
+					background: url('/img/act-bible.png') no-repeat center;
+				}
+				&.act-icon-hands {
+					background: url('/img/act-hands.png') no-repeat center;
+				}
+			}
+		}
+		.activity-desc-box {
+			display: flex;
+			display: -webkit-flex;
+			width: 100%;
+			clear: both;
+			position: relative;
+			.activity-desc {
+				padding: 10px;
+				width: 100%;
+				float: left;
+				position: relative;
+				z-index: 1;
+				h3 {
+					margin-top: 0;
+					color: $white;
+					font-size: 22px;
+					margin-bottom: 8px;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					white-space: nowrap;
+					width: 70%;
+				}
+				h5 {	
+					color: $white-t;
+					margin-top: 0;
+					width: 70%;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+			.activity-time {
+				background: $purple;
+				float: right;
+				width: 80px;
+				padding: 5px;
+				right: 0;
+				position: absolute;
+				z-index: 2;
+				p {
+					line-height: 18px;
+					color: $light-purple;
+					margin-bottom: 0;
+					text-align: right;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}
+

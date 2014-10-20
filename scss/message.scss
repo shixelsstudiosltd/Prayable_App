@@ -1,0 +1,158 @@
+.inbox-message-input {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: $purple;
+	padding-bottom: 20px;
+
+	.message-input {
+		width: 70%;
+		margin: 0 auto;
+
+		textarea {
+			width: 100%;
+			border: 2px solid $white-t-l;
+			background: transparent;
+			resize: none;
+			border-radius: 5px;
+			margin-bottom: 10px;
+		}
+
+		.message-fields {
+			width: 100%;
+			.media-button-container {
+				button {
+					display: inline-block;
+					margin-right: 10px;
+					height: 30px; width: 30px;
+					background: $light-purple;
+					border: 0;
+					border-radius: 5px;
+					color: $white;
+				}
+			}
+			.reply-button-container {
+				button {
+					height: 30px;
+					background: $light-purple;
+					color: $white;
+					border-radius:5px;
+					border: 0;
+					font-weight: 100;
+					padding: 0 24px;
+					font-size: 1.375em;
+					letter-spacing: 1px;
+				}
+			}
+		}
+	}
+}
+
+
+.inbox-message-container {
+	width: 100%;
+	padding: 0px 30px;
+	position: relative;
+
+	div {
+		display: inline-block;
+	}
+
+	.pull-message, .push-message {
+		.user-photo-section, .user-timestamp-section {
+			width: 20%;
+
+		}
+	}
+
+	.pull-message, .push-message {
+		width: 100%;
+		position: relative;
+	}
+
+
+	.pull-message {
+
+		.user-message-section {
+			position: absolute;
+			transform: translate(34%);
+			-webkit-transform: translate(34%);
+			-ms-transform: translate(34%);
+		}
+		.user-photo-section  {
+			.message-user-photo {
+				right: 0;
+			}
+		}
+		.user-timestamp-section, .user-message-section {
+		}
+	}
+
+
+
+
+	.push-message {
+		.user-photo-section, .user-message-section {
+		}
+		.user-timestamp-section {
+				p {
+					text-align: right;
+			}
+		}
+	}
+
+	
+	.user-message-section {	
+		width: 60%;
+		padding: 0 10px;
+
+		.user-message-content {
+			background: $light-purple;
+			border-radius: 5px;
+
+			p.message {
+				color: $white;
+				font-weight: 200;
+				letter-spacing: 0.5px;
+				padding: 10px 15px 0;
+				font-size: 1.125em;
+			}
+
+			.message-attachment {
+				hr {
+					margin: 10px 0; 
+				}
+				width: 100%;
+				padding: 0 15px;
+				color: $white-t-l;
+				font-weight: 100;
+				text-align: center;
+			}
+		}
+	}
+	.user-timestamp-section {
+		position: absolute;
+		p {
+			color: $white-t-l;
+			font-weight: 100;
+			.fa {
+				color: $white-t;
+				font-size: 1.375em;
+			}
+		}
+	}
+	
+}
+
+
+
+///////////////////////////////////////////////////////
+.message-user-photo {
+	background: url('/img/user-img.jpg') no-repeat center;
+	background-size: contain;
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+}

@@ -71,6 +71,9 @@
 	height: 100%;
 	width: 100%;
 	overflow-y: scroll;
+	top: 60px;
+	padding-bottom: 140px;
+
 	
 	.message-box {
 		background: $purple;
@@ -81,11 +84,40 @@
 		padding: 0.5em 1.5em;
 		border-top: 1px solid rgba(179,179,179,0.1);
 		border-bottom: 1px solid rgba(0,0,0,0.9);
+		position: relative;
+
+		.message-sender-img {
+			width: 60px; height: 60px;
+			background: red;
+			border-radius: 50%;
+			position: relative;
+			display: table;
+
+		}
 
 		.message-content-container {
 			.message-content-header {
 				.message-sender {
+					
+				}
+				h4 {
+					display: inline-block;
+					margin-right: 10px;
+				}
+				.online-activity {
+					display: inline-block;
+					font-size: 40px;
+					line-height: 1px;
+					position: absolute;
+					top: 26px;
 
+					&.offline {
+						color: $offline;
+					}
+
+					&.online {
+						color: $online;
+					}
 				}
 				.message-date {
 					position: relative;
@@ -99,49 +131,20 @@
 			}
 		}
 
-		&.viewed {
-			background: $darker-purple;
-			.message-notification {
-				display: none;
-			}
-			.message-content-container {
-				.message-content-header {
-					.message-sender {
-						h4 {
-							color: $dark-gray;
-						}
-					}
-					.message-date {
-						position: relative;
-						h5 {
-							color: $dark-gray;
-						}
-						span {
-							color: $purple;
-						}
-					}
-				}
-			}
-			.message-content {
-				p {
-					font-weight: 100;
-					letter-spacing: 0.5px;
-					color: $gray;
-				}
-			}
-		}
-
 		.message-notification {
-			padding-top: 25px;
+			padding-top: 20px;
+			height: 100%;
+			width: 30px;
+			position: relative;
 
-			div {
-				height: 9px;
-				width: 9px;
-				position: absolute;
-				margin-left: -10px;
-				border-radius: 50%;
-				background: $light-purple;
+		
+
+			input[type="checkbox"] {
+				height: 20px;
+				width: 20px;
+				position: relative;
 			}
+
 		}
 
 		.message-content-container {
@@ -150,13 +153,17 @@
 			.message-content-header {
 				.message-sender {
 					h4 {
-						color: $white;
+						color: $white-t;
 						margin-bottom: 0;
+						font-weight: 200;
+						letter-spacing: 0.5px;
+						font-size: 20px;
 					}
 				}
 				.message-date {
 					h5 {
-						color: $white;
+						color: $white-t-l;
+						font-weight: 100;
 					}
 				}
 			}
@@ -165,7 +172,39 @@
 		.message-content {
 			p {
 				color: $light-gray;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				width: 90%;
+				overflow: hidden;
+				font-weight: 100;
+				letter-spacing: 0.5px;
 			}
+		}
+
+		&.new {
+			background: rgba(255,255,255,0.1);
+		}
+	} /* Closes Message Box*/
+}
+
+.message-menu-container {
+	width: 100%;
+	background: $purple-p;
+	height: 80px;
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+
+	div {
+		width: 20%;
+		display: inline-block;
+		text-align: center;
+		line-height: 80px;
+		float: left;
+
+		.fa {
+			color: $white;
+			font-size: 2em;
 		}
 	}
 }

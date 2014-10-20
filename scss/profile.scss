@@ -6,46 +6,92 @@
 
 	.account-photo {
 		width: 100%;
-		height: 35%;
+		height: 50%;
 		position: relative;
-		background: url('../img/user-img.jpg') no-repeat center;
+		background: url('/img/ab-bg.png') center;
 		background-size: cover;
 		border-top: 1px solid $gray;
-		border-bottom: 2px solid $gray;
+		border-bottom: 2px solid $white-t-l;
+		text-align: center;
+		padding-top: 60px;
+
+		.account-profile-photo {
+			width: 25%;
+			position: relative;
+			margin: 15px auto 0;
+			background: url('/img/user-img.jpg') no-repeat center;
+			background-size: contain;
+			border: 1px solid $white;
+			border-radius: 50%;
+
+			&::before {
+				padding-top: 100%;;
+				display: block;
+				content: "";
+
+				.photo {
+					position: absolute;
+					top: 0; left: 0; right: 0; bottom: 0;
+
+				}
+			} 
+		}
+
+		.account-profile-name {
+			color: $white;
+			font-weight: 100;
+			font-size: 18px;
+			margin-bottom: 5px;
+		}
+		.account-profile-denomination {
+			color: $white-t-l;
+			font-weight: 100;
+			margin-bottom: 5px;
+		}
+		.account-profile-location {
+			color: $white-t-l;
+			font-weight: 100;
+			margin-bottom: 15px;
+		}
+		.edit-profile {
+			background: transparent;
+			border: 1px solid $white;
+			padding: 5px 25px;
+			border-radius: 5px;
+			color: $white;
+			font-weight: 100;
+		}
+
 	}
 
 	.account-menu-container {
-		height: 65%;
+		height: 50%;
 		width: 100%;
-		background: red;
 		position: absolute;
 		.account-menu-header {
-			padding: 10px 1em 0px;
+			padding: 7px 1em 0px;
 			position: relative;
-			height: 35%;
+			height: 10%;
 			width: 100%;
-			background: $white;
-			.user-name {
-				font-weight: bold;
-			}
-			.user-denomination {
-				font-weight: 100;
-				font-style: italic;
-			}
-			.user-church {
-				font-weight: bold;
-			}
+			background: $dark-purple;
+
 			.account-header-line {
-				ul {
-					padding: 0;
+				display: -webkit-flex;
+				display: flex;
+				.account-line {
+					width: 50%;
+					display: inline-block;
 					text-align: center;
 
-					li {
-						display: inline;
+					&:nth-child(1) {
+						border-right: 1px solid $white-t-l;
+					}
 
-						&:nth-child(2) {
-							margin: 0 3em;
-						}
+					p {
+						margin-bottom: 0;
+						text-align: center;
+						color: $white-t;
+						font-weight: 100;
 					}
 				}
 			}
@@ -68,28 +114,36 @@
 			}
 		}
 		.account-menu {
-			height: 65%;
+			height: 90%;
 			position: relative;
 			z-index: 1;
 			width: 100%;
 			.account-row {
-				height: 50%;
-				border-top: 1px solid $gray;
+				height: 33.33%;
+				border-top: 1px solid $white-t-l;
 				display: flex;
+				display: -webkit-flex;
 
 				.row-item {
-					width: 33.33%;
-					border-right: 1px solid $gray;
-					background: $white;
+					width: 50%;
+					
+					background: $purple;
 					height: 100%;
 					text-align: center;
 					position: relative;
+
+					&:nth-child(1) {
+						border-right: 1px solid $white-t-l;	
+					}
 
 					div {
 						position: absolute;
 						top: 50%;
 						left: 50%;
 						transform: translate(-50%, -50%);
+						i, h6 {
+							color: $white-t;
+						}
 					}
 
 					h6 {
@@ -103,3 +157,129 @@
 		}
 	}
 }
+
+
+//////////////////* EDITS *///////////////////////
+
+
+
+.account-change-photo-section {
+	width: 100%;
+	border-bottom: 1px solid $white-t-l;
+	padding: 60px 15px 15px;
+
+	.account-profile-photo {
+		width: 25%;
+		position: relative;
+		margin: 15px auto 0;
+		background: url('/img/user-img.jpg') no-repeat center;
+		background-size: 105%;
+		border: 1px solid $white;
+		border-radius: 50%;
+
+		&::before {
+			padding-top: 100%;;
+			display: block;
+			content: "";
+
+			.photo {
+				position: absolute;
+				top: 0; left: 0; right: 0; bottom: 0;
+
+			}
+		} 
+	}
+}
+
+.account-change-personal {
+	.edit-profile {
+		&:nth-child(1) {
+			border-bottom: 1px solid $white-t-l;	
+		}
+		
+		padding: 20px 30px;
+		.edit-row {
+			margin-bottom: 5px;
+			clear: both;
+		}
+		.edit-row div {
+			display: inline-block;
+			width: 48%;
+
+			&:last-child {
+				float: right;
+			}
+
+			label {
+				color: $white-t;
+				font-weight: 100;
+			}
+			input[type="text"] {
+				border: 1px solid $white-t;
+				color: $white-t;
+				padding: 5px;
+				border-radius: 5px;
+			}
+			select {
+				background: url('/img/select-bg.png') no-repeat right;
+				color: $white-t;
+				appearance: none;
+				-webkit-appearance: none;
+				font-weight: 100;
+				padding-left: 15px;
+				padding: 5px;
+				display: block;
+				width: 100%;
+			}
+		}
+		.edit-group {
+			margin-bottom: 5px;
+			clear: both;
+			label {
+				color: $white-t;
+				font-weight: 100;
+			}
+			select {
+				background: url('/img/select-bg.png') no-repeat right;
+				color: $white-t;
+				appearance: none;
+				-webkit-appearance: none;
+				font-weight: 100;
+				padding-left: 15px;
+				padding: 5px;
+				display: block;
+				width: 48%;
+			}
+			textarea {
+				border: 1px solid $white-t;
+				resize: none;
+				padding: 15px;
+				font-weight: 100;
+				color: $white-t;
+				background: transparent;
+				width: 100%;
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+.save-profile-button {
+	width: 100%;
+	background: $light-purple;
+	border-radius: 5px;
+	border: 0;
+	color: white;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 5px;
+	letter-spacing: 1px;
+}
+
+.profile-body-container {
+	padding: 0 30px;
+	overflow-y: scroll;
+	padding-bottom: 20px;
+}
+
+

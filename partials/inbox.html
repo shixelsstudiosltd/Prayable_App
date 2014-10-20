@@ -1,173 +1,232 @@
 <div>
 	<div class="inbox-container">
-		<ul class="app-header">
-       		<li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
-       		<li class="app-header-title">{{ 'inbox' | translate }}</li>
-       		<li class="app-header-notifications"><i class="fa fa-bell"></i></li>
-       </ul>
-		<div class="app-header-search-container">
-			<div class="app-search-header">
-				<div class="header-search">
-					<input type="text" placeholder="Search Inbox...">
-					<div class="app-search-bar-icon"><i class="fa fa-search"></i></div>
-				</div>
-				<div class="app-message-compose-container">
-					<div class="message-compose">
-						<i class="fa fa-pencil"></i>
-					</div>
-				</div>
-			</div>
-		</div>
+		<ul class="app-header bg-transparent">
+            <li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
+            <li class="app-header-title">{{'inbox' | translate}}</li>
+            <li class="app-header-toggle-settings">
+       			<span class="app-toggle-settings-icon"><i class="fa fa-tasks"></i></span>
+       		</li>
+       	</ul>
+
 		<div class="message-container">
-			<div class="message-box">
-				<div class="message-notification">
-					<div></div>
-				</div>
-				<div class="message-content-container">
-					<div class="message-content-header clearfix">
-						<div class="message-sender pull-left">
-							<h4>Jane Doe</h4>
-						</div>
-						<div class="message-date pull-right">
-							<h5>05/11/14</h5>
-							<span class="message-reply"><i class="fa fa-reply"></i></span>
-						</div>
-					</div>
-					<div class="message-content">
-						<p>This is a system test to see what I like.</p>
-					</div>
-				</div>
-			</div>
-			<div class="message-box">
-				<div class="message-notification">
-					<div></div>
-				</div>
-				<div class="message-content-container">
-					<div class="message-content-header clearfix">
-						<div class="message-sender pull-left">
-							<h4>Mike Dill</h4>
-						</div>
-						<div class="message-date pull-right">
-							<h5>05/11/14</h5>
-						</div>
-					</div>
-					<div class="message-content">
-						<p>This is a system test to see what I like.</p>
-					</div>
-				</div>
-			</div>
-			<div class="message-box viewed">
-				<div class="message-notification">
-					<div></div>
-				</div>
-				<div class="message-content-container">
-					<div class="message-content-header clearfix">
-						<div class="message-sender pull-left">
-							<h4>Tom Cat</h4>
-						</div>
-						<div class="message-date pull-right">
-							<h5>05/11/14</h5>
-							<span><i class="fa fa-reply"></i></span>
-						</div>
-					</div>
-					<div class="message-content">
-						<p>This is a system test to see what I like.</p>
-					</div>
-				</div>
-			</div>
-			<div class="message-box viewed">
-				<div class="message-notification">
-					<div></div>
-				</div>
-				<div class="message-content-container">
-					<div class="message-content-header clearfix">
-						<div class="message-sender pull-left">
-							<h4>Tom Cat</h4>
-						</div>
-						<div class="message-date pull-right">
-							<h5>05/11/14</h5>
-						</div>
-					</div>
-					<div class="message-content">
-						<p>This is a system test to see what I like.</p>
-					</div>
-				</div>
-			</div>
-			<div class="message-box viewed">
-				<div class="message-notification">
-					<div></div>
-				</div>
-				<div class="message-content-container">
-					<div class="message-content-header clearfix">
-						<div class="message-sender pull-left">
-							<h4>Tom Cat</h4>
-						</div>
-						<div class="message-date pull-right">
-							<h5>05/11/14</h5>
-						</div>
-					</div>
-					<div class="message-content">
-						<p>This is a system test to see what I like.</p>
-					</div>
-				</div>
-			</div>
-			<div class="message-box viewed">
-				<div class="message-notification">
-					<div></div>
-				</div>
-				<div class="message-content-container">
-					<div class="message-content-header clearfix">
-						<div class="message-sender pull-left">
-							<h4>Tom Cat</h4>
-						</div>
-						<div class="message-date pull-right">
-							<h5>05/11/14</h5>
-						</div>
-					</div>
-					<div class="message-content">
-						<p>This is a system test to see what I like.</p>
-					</div>
-				</div>
-			</div>
-			<div class="message-box">
-				<div class="message-notification">
-					<div></div>
-				</div>
-				<div class="message-content-container">
-					<div class="message-content-header clearfix">
-						<div class="message-sender pull-left">
-							<h4>Tom Cat</h4>
-						</div>
-						<div class="message-date pull-right">
-							<h5>05/11/14</h5>
-						</div>
-					</div>
-					<div class="message-content">
-						<p>This is a system test to see what I like.</p>
-					</div>
-				</div>
-			</div>
-			<div class="message-box">
-				<div class="message-notification">
-					<div></div>
-				</div>
-				<div class="message-content-container">
-					<div class="message-content-header clearfix">
-						<div class="message-sender pull-left">
-							<h4>Tom Cat</h4>
-						</div>
-						<div class="message-date pull-right">
-							<h5>05/11/14</h5>
-						</div>
-					</div>
-					<div class="message-content">
-						<p>This is a system test to see what I like.</p>
-					</div>
-				</div>
-			</div>
-			<div class="message-box"></div>
 
+			<div class="message-box">
+				<div class="message-notification">		
+					<input type="checkbox" name="user-read" class="user-read" value="none">
+				</div>
+				<div class="message-sender-img">
+					<div class="sender-img"></div>
+				</div>
+				<div class="message-content-container">
+					<div class="message-content-header clearfix">
+						<div class="message-sender pull-left">
+							<h4>Rachel Witz</h4><p class="online-activity offline">&middot;</p>
+						</div>
+						<div class="message-date pull-right">
+							<h5>5:40 pm</h5>
+						</div>
+					</div>
+					<div class="message-content">
+						<p>This is a system test to see what I like. and you swil cdwlncld klwcndklw nilcknlkwn</p>
+					</div>
+				</div>
+			</div> <!-- Close of Message -->
 
+			<div class="message-box new">
+				<div class="message-notification">		
+					<input type="checkbox" name="user-read" class="user-read" value="none">
+				</div>
+				<div class="message-sender-img">
+					<div class="sender-img"></div>
+				</div>
+				<div class="message-content-container">
+					<div class="message-content-header clearfix">
+						<div class="message-sender pull-left">
+							<h4>Sara Jones</h4><p class="online-activity online">&middot;</p>
+						</div>
+						<div class="message-date pull-right">
+							<h5>1:15 pm</h5>
+						</div>
+					</div>
+					<div class="message-content">
+						<p>Tom I was looking for some prayers that came across my screen and I was hoping that you knew where I could find them.</p>
+					</div>
+				</div>
+			</div> <!-- Close of Message -->
+
+			<div class="message-box">
+				<div class="message-notification">		
+					<input type="checkbox" name="user-read" class="user-read" value="none">
+				</div>
+				<div class="message-sender-img">
+					<div class="sender-img"></div>
+				</div>
+				<div class="message-content-container">
+					<div class="message-content-header clearfix">
+						<div class="message-sender pull-left">
+							<h4>James Cameron</h4><p class="online-activity online">&middot;</p>
+						</div>
+						<div class="message-date pull-right">
+							<h5>10:47 am</h5>
+						</div>
+					</div>
+					<div class="message-content">
+						<p>Hey Buddy, I just shared your journal with my colleague and he couldn't like it any more!</p>
+					</div>
+				</div>
+			</div> <!-- Close of Message -->
+
+			<div class="message-box new">
+				<div class="message-notification">		
+					<input type="checkbox" name="user-read" class="user-read" value="none">
+				</div>
+				<div class="message-sender-img">
+					<div class="sender-img"></div>
+				</div>
+				<div class="message-content-container">
+					<div class="message-content-header clearfix">
+						<div class="message-sender pull-left">
+							<h4>Poly Leone</h4><p class="online-activity online">&middot;</p>
+						</div>
+						<div class="message-date pull-right">
+							<h5>Yesterday</h5>
+						</div>
+					</div>
+					<div class="message-content">
+						<p>Check out this prayer I read last night! I though of you when I fist saw it.</p>
+					</div>
+				</div>
+			</div> <!-- Close of Message -->
+
+			<div class="message-box">
+				<div class="message-notification">		
+					<input type="checkbox" name="user-read" class="user-read" value="none">
+				</div>
+				<div class="message-sender-img">
+					<div class="sender-img"></div>
+				</div>
+				<div class="message-content-container">
+					<div class="message-content-header clearfix">
+						<div class="message-sender pull-left">
+							<h4>Richard Nixon</h4><p class="online-activity online">&middot;</p>
+						</div>
+						<div class="message-date pull-right">
+							<h5>Yesterday</h5>
+						</div>
+					</div>
+					<div class="message-content">
+						<p>Ok it's complicated!</p>
+					</div>
+				</div>
+			</div> <!-- Close of Message -->
+
+			<div class="message-box">
+				<div class="message-notification">		
+					<input type="checkbox" name="user-read" class="user-read" value="none">
+				</div>
+				<div class="message-sender-img">
+					<div class="sender-img"></div>
+				</div>
+				<div class="message-content-container">
+					<div class="message-content-header clearfix">
+						<div class="message-sender pull-left">
+							<h4>James Cameron</h4><p class="online-activity offline">&middot;</p>
+						</div>
+						<div class="message-date pull-right">
+							<h5>Yesterday</h5>
+						</div>
+					</div>
+					<div class="message-content">
+						<p>No prayers in mind?</p>
+					</div>
+				</div>
+			</div> <!-- Close of Message -->
+
+			<div class="message-box">
+				<div class="message-notification">		
+					<input type="checkbox" name="user-read" class="user-read" value="none">
+				</div>
+				<div class="message-sender-img">
+					<div class="sender-img"></div>
+				</div>
+				<div class="message-content-container">
+					<div class="message-content-header clearfix">
+						<div class="message-sender pull-left">
+							<h4>Suma Ann</h4><p class="online-activity offline">&middot;</p>
+						</div>
+						<div class="message-date pull-right">
+							<h5>Wednesday</h5>
+						</div>
+					</div>
+					<div class="message-content">
+						<p>Seriously? I am running out of my stock and I don't know what to do.</p>
+					</div>
+				</div>
+			</div> <!-- Close of Message -->
+
+			<div class="message-box">
+				<div class="message-notification">		
+					<input type="checkbox" name="user-read" class="user-read" value="none">
+				</div>
+				<div class="message-sender-img">
+					<div class="sender-img"></div>
+				</div>
+				<div class="message-content-container">
+					<div class="message-content-header clearfix">
+						<div class="message-sender pull-left">
+							<h4>Tisha Leone</h4><p class="online-activity offline">&middot;</p>
+						</div>
+						<div class="message-date pull-right">
+							<h5>Sep 19</h5>
+						</div>
+					</div>
+					<div class="message-content">
+						<p>I met Sumowa at town hall.</p>
+					</div>
+				</div>
+			</div> <!-- Close of Message -->
+
+			<div class="message-box">
+				<div class="message-notification">		
+					<input type="checkbox" name="user-read" class="user-read" value="none">
+				</div>
+				<div class="message-sender-img">
+					<div class="sender-img"></div>
+				</div>
+				<div class="message-content-container">
+					<div class="message-content-header clearfix">
+						<div class="message-sender pull-left">
+							<h4>Abdul Hannan</h4><p class="online-activity online">&middot;</p>
+						</div>
+						<div class="message-date pull-right">
+							<h5>Dec 13, 2013</h5>
+						</div>
+					</div>
+					<div class="message-content">
+						<p>Let me know when you read this message.</p>
+					</div>
+				</div>
+			</div> <!-- Close of Message -->
+			
+
+		</div> <!-- Closes Message Container -->
+
+		<div class="message-menu-container">
+			<div class="message-create">
+				<i class="fa fa-pencil-square-o"></i>
+			</div>
+			<div class="message-new">
+				<i class="fa fa-inbox"></i>
+			</div>
+			<div class="message-reply">
+				<i class="fa fa-reply"></i>
+			</div>
+			<div class="message-cancel">
+				<i class="fa fa-ban"></i>
+			</div>
+			<div class="message-trash">
+				<i class="fa fa-trash-o"></i>
+			</div>
 		</div>
 	</div>
 

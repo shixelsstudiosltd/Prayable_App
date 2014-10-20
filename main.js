@@ -22,8 +22,16 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 templateUrl:'partials/profile.html',
                 controller:'profile'
             })
+            .when('/profile/:userProbfileId/edit',{
+                templateUrl:'partials/profile_edit.html',
+                controller:'profile'
+            })
             .when('/inbox',{
                 templateUrl:'partials/inbox.html',
+                controller:'inbox'
+            })
+            .when('/inbox/message',{
+                templateUrl:'partials/message.html',
                 controller:'inbox'
             })
             .when('/requests',{
@@ -36,6 +44,10 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
             })
             .when('/prayers',{
                 templateUrl:'partials/prayers.html',
+                controller:'prayers'
+            })
+            .when('/feed',{
+                templateUrl:'partials/feed.html',
                 controller:'prayers'
             })
             .when('/circles',{
@@ -82,13 +94,13 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 templateUrl:'partials/chatExample.html',
                 controller:'chat'
             })
-/*
+
             .when('/error',{
                 templateUrl:'views/error.html'
-            })*/
+            })
             .otherwise({
                 redirectTo:"/"
-            })
+            });
 
     }]);//Config
 
@@ -98,6 +110,7 @@ sampleApp.config(function ($translateProvider) {
         email: 'Email',
         password: 'Password.',
         login: ' LOG IN',
+        journals: 'Journals',
         signup: 'SIGN UP',
         register:' Register',
         needaccount:'Need an account?',
@@ -123,6 +136,7 @@ sampleApp.config(function ($translateProvider) {
         addAPrayer: "add a prayer",
         newRequest: "New Prayer Request",
         profile: "Profile",
+        profileEdit: "Edit Profile",
         facebookSignUp: "Sign up with Facebook",
         facebookLogIn: "Log In with Facebook",
         firstName: "First Name",
@@ -134,6 +148,7 @@ sampleApp.config(function ($translateProvider) {
         password: 'Password.InGerman',
         login: ' LOG IN InGerman',
         signup: 'SIGN UP InGerman',
+        journals: 'Journals InGerman',
         register:' Register InGerman',
         needaccount:'Need an account? InGerman',
         or:'OR InGerman',
@@ -158,6 +173,7 @@ sampleApp.config(function ($translateProvider) {
         addAPrayer: "add a prayer InGerman",
         newRequest: "New Prayer Request InGerman",
         profile: "Profile InGerman",
+        profileEdit: "Edit Profile InGerman",
         facebookSignUp: "Sign up with Facebook InGerman",
         facebookLogIn: "Log In with Facebook InGerman",
         firstName: "First Name InGerman",

@@ -14,7 +14,7 @@ Primary use:	Page used for common styles
 /*------------------------------*\
     $STYLES
 \*------------------------------*/
-/* line 40, ../scss/variables.scss */
+/* line 44, ../scss/variables.scss */
 .body-container {
   min-height: 100%;
   height: auto;
@@ -23,41 +23,41 @@ Primary use:	Page used for common styles
   margin: 0 auto;
 }
 
-/* line 48, ../scss/variables.scss */
+/* line 52, ../scss/variables.scss */
 .bg-main {
   background: url("../img/bg-login.png") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 54, ../scss/variables.scss */
+/* line 58, ../scss/variables.scss */
 .bg-purple {
   background-color: #4e007f;
   position: absolute;
 }
 
-/* line 59, ../scss/variables.scss */
+/* line 63, ../scss/variables.scss */
 .bg-input {
   background: url("../img/bg-main.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 65, ../scss/variables.scss */
+/* line 69, ../scss/variables.scss */
 .bg-prayers {
   background: url("../img/bg-prayers.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 71, ../scss/variables.scss */
+/* line 75, ../scss/variables.scss */
 .bg-home {
   background: url("../img/bg-home.jpg") no-repeat center fixed;
   background-size: cover;
   position: absolute;
 }
 
-/* line 77, ../scss/variables.scss */
+/* line 81, ../scss/variables.scss */
 .bg-pic-gradient {
   background: url("../img/bg-gradient.png") no-repeat center fixed;
   background-size: 300%;
@@ -65,7 +65,7 @@ Primary use:	Page used for common styles
   background-position: bottom;
 }
 
-/* line 84, ../scss/variables.scss */
+/* line 88, ../scss/variables.scss */
 .bg-gradient {
   height: 100%;
   width: 100%;
@@ -88,7 +88,7 @@ Primary use:	Page used for common styles
   /* IE6-9 */
 }
 
-/* line 98, ../scss/variables.scss */
+/* line 102, ../scss/variables.scss */
 input[type="text"], input[type="password"], input[type="submit"] {
   display: block;
   width: 100%;
@@ -96,14 +96,14 @@ input[type="text"], input[type="password"], input[type="submit"] {
   color: white;
 }
 
-/* line 105, ../scss/variables.scss */
+/* line 109, ../scss/variables.scss */
 input[type="text"], input[type="password"] {
   text-indent: 25px;
   border-radius: 0 2px 2px 0;
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-/* line 111, ../scss/variables.scss */
+/* line 115, ../scss/variables.scss */
 input[type="submit"] {
   font-size: 16px;
   font-weight: bolder;

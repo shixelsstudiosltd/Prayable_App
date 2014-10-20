@@ -26,12 +26,20 @@ Primary use:	Page Used for Importing Stylesheets
 @import "prayer";
 @import "pray";
 @import "modals";
+@import "activities";
+@import "journals";
+@import "feed";
+@import "message";
 
 
 html, body {
 	width: 100%;
 	height:100%;
 	position: fixed;
+}
+
+button, textarea, input {
+	outline: none !important;
 }
 
 .app-header {
@@ -79,6 +87,12 @@ html, body {
 	}
 
 	.app-header-toggle-settings {
+		float: left;
+		width: 20%;
+		height: 60px;
+		line-height: 60px;
+		font-size: 3em;
+		text-align: center;
 		span {
 			line-height: 1.5em;
 			font-weight: bold;

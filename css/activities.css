@@ -1,14 +1,27 @@
 /*
-Syntax error: Undefined variable: "$purple".
-        on line 5 of /Users/main/Development/Prayable_App/scss/inbox.scss
-
-1: /Users/main/Development/Prayable_App/scss/inbox.scss
+Syntax error: Undefined variable: "$white-t-l".
+        on line 21 of /Users/main/Development/Prayable_App/scss/activities.scss
 
 Backtrace:
-/Users/main/Development/Prayable_App/scss/inbox.scss:5
+/Users/main/Development/Prayable_App/scss/activities.scss:21
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/script/variable.rb:49:in `_perform'
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/script/node.rb:40:in `perform'
+/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/script/list.rb:70:in `_perform'
+org/jruby/RubyArray.java:2336:in `collect'
+/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/script/list.rb:69:in `_perform'
+/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/script/node.rb:40:in `perform'
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:294:in `visit_prop'
+org/jruby/RubyKernel.java:2096:in `send'
+/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+org/jruby/RubyArray.java:2336:in `collect'
+/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `visit_children'
+/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:316:in `visit_rule'
 org/jruby/RubyKernel.java:2096:in `send'
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
@@ -78,4 +91,4 @@ org/jruby/RubyKernel.java:1419:in `loop'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$purple\".\A         on line 5 of /Users/main/Development/Prayable_App/scss/inbox.scss\A \A 1: /Users/main/Development/Prayable_App/scss/inbox.scss"; }
+  content: "Syntax error: Undefined variable: \"$white-t-l\".\A         on line 21 of /Users/main/Development/Prayable_App/scss/activities.scss"; }

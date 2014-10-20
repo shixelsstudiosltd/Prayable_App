@@ -1,11 +1,11 @@
 /*
 Syntax error: Undefined variable: "$purple".
-        on line 5 of /Users/main/Development/Prayable_App/scss/inbox.scss
+        on line 5 of /Users/main/Development/Prayable_App/scss/message.scss
 
-1: /Users/main/Development/Prayable_App/scss/inbox.scss
+1: /Users/main/Development/Prayable_App/scss/message.scss
 
 Backtrace:
-/Users/main/Development/Prayable_App/scss/inbox.scss:5
+/Users/main/Development/Prayable_App/scss/message.scss:5
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/script/variable.rb:49:in `_perform'
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/script/node.rb:40:in `perform'
 /Applications/Scout.app/Contents/Resources/vendor/gems/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:294:in `visit_prop'
@@ -78,4 +78,4 @@ org/jruby/RubyKernel.java:1419:in `loop'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$purple\".\A         on line 5 of /Users/main/Development/Prayable_App/scss/inbox.scss\A \A 1: /Users/main/Development/Prayable_App/scss/inbox.scss"; }
+  content: "Syntax error: Undefined variable: \"$purple\".\A         on line 5 of /Users/main/Development/Prayable_App/scss/message.scss\A \A 1: /Users/main/Development/Prayable_App/scss/message.scss"; }

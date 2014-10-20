@@ -1,30 +1,40 @@
 <div>
-	<div class="body-container bg-main">
+	<div class="body-container bg-purple">
 		<ul class="app-header bg-transparent">
             <li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
             <li class="app-header-title">{{'profile' | translate}}</li>
             <li class="app-header-toggle-settings">
-       			<span class="app-toggle-settings-icon fa-2x"><i class="fa fa-wrench"></i></span>
-       		</li>
-       	</ul>
+                  <i class="fa fa-cog"></i>
+                  </li>
+            </ul>
        	<div class="account-container">
-       		<div class="account-photo"></div>
+       		<div class="account-photo">
+                        <div class="account-profile-photo">
+                              <div class="photo"></div>
+                        </div>
+                        <div class="account-profile-name">
+                              <span class="profile-first-name">Kevin</span> <span class="middle-name">Peter</span> <span class="profile-last-name">O'brian</span>
+                        </div>
+                        <div class="account-profile-denomination">
+                              <span class"profile-denomination">Catholic</span>
+                        </div>
+                        <div class="account-profile-location">
+                              <i class="fa fa-map-marker"></i> <span class="profile-location"><span class="profile-city">New York City</span>, <span class="profile-couuntry">USA</span></span>
+                        </div>
+                        <button class="edit-profile">
+                              <i class="fa fa-pencil-square-o"></i> Edit Profile
+                        </button>
+                  </div>
        		<div class="account-menu-container">
        			<div class="account-menu-header">
-       				<h4 class="user-name">Jane Doe</h4>
-                              <h6 class="user-denomination">Catholic</h6>
-                              <h6 class="user-church">Gethsemane United Methodist Church</h6>
        				<div class="account-header-line">
-       					<ul>
-       						<li><i class="fa fa-globe"></i> 32 Prayers</li>
-       						<li>|</li>
-       						<li><i class="fa fa-users"></i> 6 Friends</li>
-       					</ul>
+                                    <div class="account-line">
+                                          <p><i class="fa fa-globe"></i> 32 Prayers</p>
+                                    </div>
+                                    <div class="account-line">
+                                          <p><i class="fa fa-users"></i> 6 Friends</p>
+                                    </div>
        				</div>
-                              <div class="user-add">
-                                    <i class="fa fa-check"></i>
-                                    <h6>add user</h6>
-                              </div>
        			</div>
                         <div class="account-menu">
                               <div class="account-row">
@@ -41,20 +51,25 @@
                                                 <h6>Friends</h6>
                                           </div>
                                     </div>
-                                    <div class="row-item">
-                                          <div>
-                                                <i class="fa fa-3x fa-cog"></i>
-                                                <h6>Settings</h6>
-                                          </div>
-                                    </div>
+                                    
                               </div>
                               <div class="account-row">
                                     <div class="row-item">
                                           <div>
-                                                <i class="fa fa-3x fa-map-marker"></i>
-                                                <h6>Location</h6>
+                                                <i class="fa fa-3x fa-cog"></i>
+                                                <h6>About</h6>
                                           </div>
                                     </div>
+                                    <div class="row-item">
+                                          <div>
+                                                <i class="fa fa-3x fa-map-marker"></i>
+                                                <h6>Prayers</h6>
+                                          </div>
+                                    </div>
+
+                              </div>
+                              <div class="account-row">
+                                    
                                     <div class="row-item">
                                           <div>
                                                 <i class="fa fa-3x fa-rss"></i>

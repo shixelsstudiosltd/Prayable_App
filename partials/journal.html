@@ -1,3 +1,300 @@
 <div>
+	<div class="body-container bg-purple">
+		<ul class="app-header bg-transparent">
+            <li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
+            <li class="app-header-title">{{'journals' | translate}}</li>
+            <li class="app-header-toggle-settings">
+            	<i class="fa fa-search"></i>
+       		</li>
+       	</ul>
+       	<div class="journal-body-container">
 
+       		<div class="journal-toggle">
+       			<div class="journal-list active">
+       				<button class="toggle-content">
+       					
+       					<p><i class="fa fa-file-text-o"></i> Journals</p>
+       				</button>
+       			</div>
+       			<div class="journal-create">
+       				<button class="toggle-content">
+       					
+       					<p><i class="fa fa-pencil-square-o"></i>Create New</p>
+       				</button>
+       			</div>
+       		</div>
+
+       		<div class="journals-main-container">
+       			<div class="journal-filter">
+       			<div class="journal-month">
+       				<div class="toggle-content">
+       					<select class="toggle-month">
+	       					<option value="January">January</option>       
+						    <option value="February">February</option>       
+						    <option value="March">March</option>       
+						    <option value="April">April</option>       
+						    <option value="May">May</option>       
+						    <option value="June">June</option>       
+						    <option value="July">July</option>       
+						    <option value="August">August</option>       
+						    <option value="September">September</option>       
+						    <option value="October">October</option>       
+						    <option value="November">November</option>       
+						    <option value="December">December</option>    
+	       				</select>
+       				</div>
+       			</div>
+       			<div class="journal-year">
+       				<div class="toggle-content">
+       					<select class="toggle-year" dir="rtl">
+	       					<option value="2014">2014</option>
+	       					<option value="2015">2015</option>
+	       					<option value="2016">2016</option>
+	       					<option value="2017">2017</option>
+	       					<option value="2018">2018</option>
+	       					<option value="2019">2019</option>
+	       					<option value="2020">2020</option>
+	       				</select>
+       				</div>
+       			</div>
+       		</div>
+
+<!-- ******************************************************************************** -->
+
+       		<div class="journal-entry-container">
+       			<div class="journal-entry">
+       				<div class="journal-entry-header">
+       					<h3 class="journal-entry-title">Title of the Journal</h3>
+       					<div class="journal-entry-date">
+       						<p><span>Sept 25, 2014</span><br><span class="entry-time">11:05 pm</span></p>
+       					</div>
+       				</div>
+       				<div class="journal-entry-content">
+       					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       				</div>
+       				<div class="journal-entry-footer">
+       					<div class="entry-looks">
+       						<i class="fa fa-camera"></i>
+       						<p><span class="journal-photo-count">6</span> Photos</p>
+       					</div>
+       					<div class="entry-tags">
+       						<i class="fa fa-tag"></i>
+       						<p><span class="journal-tag-count">3</span> Tags</p>
+       					</div>
+       					<div class="entry-share">
+       						<i class="fa fa-share-square-o"></i>
+       						<p>Share</p>
+       					</div>
+       				</div>
+       			</div> <!-- Closes Journal Entry -->
+
+       			<div class="journal-entry">
+       				<div class="journal-entry-header">
+       					<h3 class="journal-entry-title">Title of the Journal</h3>
+       					<div class="journal-entry-date">
+       						<p><span>Sept 25, 2014</span><br><span class="entry-time">11:05 pm</span></p>
+       					</div>
+       				</div>
+       				<div class="journal-entry-content">
+       					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       				</div>
+       				<div class="journal-entry-footer">
+       					<div class="entry-looks">
+       						<i class="fa fa-camera"></i>
+       						<p><span class="journal-photo-count">6</span> Photos</p>
+       					</div>
+       					<div class="entry-tags">
+       						<i class="fa fa-tag"></i>
+       						<p><span class="journal-tag-count">3</span> Tags</p>
+       					</div>
+       					<div class="entry-share">
+       						<i class="fa fa-share-square-o"></i>
+       						<p>Share</p>
+       					</div>
+       				</div>
+       			</div> <!-- Closes Journal Entry -->
+
+       			<div class="journal-entry">
+       				<div class="journal-entry-header">
+       					<h3 class="journal-entry-title">Title of the Journal</h3>
+       					<div class="journal-entry-date">
+       						<p><span>Sept 25, 2014</span><br><span class="entry-time">11:05 pm</span></p>
+       					</div>
+       				</div>
+       				<div class="journal-entry-content">
+       					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       				</div>
+       				<div class="journal-entry-footer">
+       					<div class="entry-looks">
+       						<i class="fa fa-camera"></i>
+       						<p><span class="journal-photo-count">6</span> Photos</p>
+       					</div>
+       					<div class="entry-tags">
+       						<i class="fa fa-tag"></i>
+       						<p><span class="journal-tag-count">3</span> Tags</p>
+       					</div>
+       					<div class="entry-share">
+       						<i class="fa fa-share-square-o"></i>
+       						<p>Share</p>
+       					</div>
+       				</div>
+       			</div> <!-- Closes Journal Entry -->
+
+
+       		</div> <!-- Closes Journal Entry Container -->
+</div>
+
+<!-- ******************************************************************************** -->
+
+       		
+       		<div class="journals-create-main-container">
+       			<div class="journal-create-date">
+       				
+       				<div class="create-month-box create-date">
+       					<select class="create-month">
+	       					<option value="January">January</option>       
+						    <option value="February">February</option>       
+						    <option value="March">March</option>       
+						    <option value="April">April</option>       
+						    <option value="May">May</option>       
+						    <option value="June">June</option>       
+						    <option value="July">July</option>       
+						    <option value="August">August</option>       
+						    <option value="September">September</option>       
+						    <option value="October">October</option>       
+						    <option value="November">November</option>       
+						    <option value="December">December</option>    
+	       				</select>
+       				</div>
+       				<div class="create-day-box create-date">
+       					<select class="create-day">
+	       					<option value="1">1</option>       
+						    <option value="2">2</option>       
+						    <option value="3">3</option>       
+						    <option value="4">4</option>       
+						    <option value="5">5</option>       
+						    <option value="6">6</option>       
+						    <option value="7">7</option>       
+						    <option value="8">8</option>       
+						    <option value="9">9</option>       
+						    <option value="10">10</option>       
+						    <option value="11">11</option>       
+						    <option value="12">12</option>       
+						    <option value="13">13</option>       
+						    <option value="14">14</option>       
+						    <option value="15">15</option>       
+						    <option value="16">16</option>       
+						    <option value="17">17</option>       
+						    <option value="18">18</option>       
+						    <option value="19">19</option>       
+						    <option value="20">20</option>       
+						    <option value="21">21</option>       
+						    <option value="22">22</option>       
+						    <option value="23">23</option>       
+						    <option value="24">24</option>       
+						    <option value="25">25</option>       
+						    <option value="26">26</option>       
+						    <option value="27">27</option>       
+						    <option value="28">28</option>       
+						    <option value="29">29</option>       
+						    <option value="30">30</option>       
+						    <option value="31">31</option>
+	       				</select>
+       				</div>
+       				
+       				<div class="create-year-box create-date">
+       					<select class="create-year">
+	       					<option value="2014">2014</option>
+	       					<option value="2015">2015</option>
+	       					<option value="2016">2016</option>
+	       					<option value="2017">2017</option>
+	       					<option value="2018">2018</option>
+	       					<option value="2019">2019</option>
+	       					<option value="2020">2020</option>
+	       				</select>
+       				</div>
+       			</div>
+
+       			<div class="journal-create-title">
+       				<input placeholder="Please Enter Title" name="journal-title" type="text">
+       			</div>
+
+       			<div style="position:relative;">
+       			<div class="journal-create-box-content">
+       				<div class="create-box-header">
+       					<div class="create-text">
+       						<i class="fa fa-file-text-o"></i>
+       						<p>Text</p>
+       					</div>
+       					<div class="create-photo">
+       						<i class="fa fa-camera"></i>
+       						<p>Photo</p>
+       					</div>
+       					<div class="create-tag">
+       						<i class="fa fa-tag"></i>
+       						<p>Tag</p>
+       					</div>
+       				</div>
+       				<div class="create-box-content">
+       					<div class="tag-content" style="display:none">
+       						<textarea placeholder="Separated by comma..." name="create-tag" class="create-tag"></textarea>
+       					</div>
+       					<div class="photo-content" style="display:none">
+       						<div class="photo-content-box">
+       							<div class="photo-img">
+       								<div class="content">
+       									<i class="fa fa-times-circle-o"></i>
+       									<p>Tap to remove</p>
+       								</div>
+       							</div>
+       						</div>
+       						
+       						<div class="photo-content-box">
+       							<div class="photo-img">
+       								<div class="content">
+       									<i class="fa fa-times-circle-o"></i>
+       									<p>Tap to remove</p>
+       								</div>
+       							</div>
+       						</div>
+       						<div class="photo-content-box">
+       							<div class="photo-img">
+       								<div class="content">
+       									<i class="fa fa-times-circle-o"></i>
+       									<p>Tap to remove</p>
+       								</div>
+       							</div>
+       						</div>
+       						<div class="photo-content-add-photo-box photo-content-box">
+       							<div class="photo-img">
+       								<div class="content">
+	       								<i class="fa fa-camera fa-2x"></i>
+	       								<p>Tap to add photo</p>
+       								</div>
+       							</div>	
+       						</div>
+       					</div>
+       					<div class="text-content">
+       						<textarea name="create-text" class="create-text" placeholder="Enter Journal Content..."></textarea>
+       					</div>
+
+       					<div class="text-content-text-add">
+       						<button><i class="fa fa-plus-square"></i> Add Journal Entry</button>
+       					</div>
+
+       				</div>
+
+
+       				<div class="create-box-save">
+       					<button class="cancel-button">Cancel</button>
+       					<button class="save-button">Save</button>
+       				</div>
+       				
+       			</div> <!-- closes create box content -->
+       			</div>
+
+       		</div>
+
+       	</div>
+	</div>
 </div>

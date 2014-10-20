@@ -1,0 +1,141 @@
+.prayer-feed-container {
+	position: relative;
+	padding: 0 30px;
+	padding-bottom: 70px;
+	position: absolute;
+	height: 100%;
+	overflow-y: scroll;
+
+	.feed-prayer {
+		width: 100%;
+		border: 1px solid $dark-purple;
+		margin-bottom: 15px;
+		border-radius: 5px;
+
+		&:nth-child(1) {
+			margin-top: 20px;
+		}
+
+		.feed-prayer-header {
+			width: 100%;
+			background: $black-t;
+			height: 85px;
+			border-bottom: 1px solid $dark-purple;
+
+			.feed-header-content {
+				height: 100%;
+				width: 70%;
+				margin: 0 auto;
+
+				@media screen and (max-width: 620px) {
+					width: 90%;
+				}
+			}
+
+			.feed-user-photo, .feed-user-name, .feed-post-time {
+				display: inline-block;
+				float: left;
+				line-height: 85px;
+			}
+			.feed-user-photo {
+				margin-right: 25px;
+				@media screen and (max-width: 620px) {
+					margin-right: 10px;
+				}
+			}
+			.feed-user-name {
+				margin-right: 15px;
+			}
+			.feed-post-time {
+				float: right;
+			}
+
+
+
+			.feed-user-name {
+				color: $light-purple;
+				font-size: 24px;
+				font-weight: 200;
+
+				@media screen and (max-width: 620px) {
+					font-size: 18px;
+				}
+			}
+
+			.feed-post-time {
+				color: $white-t-l;
+				font-weight: 100;
+			}
+			.feed-user-photo {
+				
+				position: relative;
+				width: 70px; height: 70px;
+				display: inline-block;
+				border-radius: 50%;
+				margin-top: 7px;
+				background: url('/img/user-img.jpg') no-repeat center;
+				background-size: contain;
+
+				
+			}	
+			
+		} /* Closes Plrayer Feed Header */
+
+		.feed-prayer-text {
+			text-align: center;
+			.feed-prayer-title {
+				width: 100%;
+				color: $white;
+				font-size: 20px;
+				font-weight: 200;
+				background: $purple;
+				padding-top: 5px;
+			}
+			.prayer-text p {
+				padding: 0 15px;
+				color: $light-purple;
+				padding-top: 5px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				height: 135px;
+				width: 100%;
+				-webkit-line-clamp: 5;
+				-webkit-box-orient: vertical;
+				display: block;
+				display: -webkit-box;
+				font-weight: 200;
+				font-size: 18px;
+				width: 50%;
+				margin: 0 auto;
+
+				@media screen and (max-width: 620px) {
+					width: 75%;
+				}
+			}
+		} /* Closes Fed Prayer Text */
+
+		.feed-prayer-icon-bar {
+			border-top: 1px solid $black-t;
+			border-bottom: 1px solid $black-t;
+			padding: 5px 0;
+			margin: 0 auto 20px;
+			width: 95%;
+			div:nth-child(1) {
+				float: none;
+			}
+			div {
+				width: 20%;
+				float: left;
+				display: inline-block;
+				text-align: center;
+				color: $white-t-l;
+				font-weight: 100;
+
+				.fa, span {
+					display: inline-block;
+				}
+			}
+		}
+
+	}
+}

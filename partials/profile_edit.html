@@ -1,0 +1,103 @@
+<div>
+	<div class="body-container bg-purple">
+		<ul class="app-header bg-transparent">
+            <li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
+            <li class="app-header-title">{{'profileEdit' | translate}}</li>
+            <li class="app-header-toggle-settings">
+            	<i class="fa fa-cog"></i>
+       		</li>
+       	</ul>
+       	<div class="account-container profile-body-container">
+       		<div class="account-change-photo-section">
+	       		<div class="account-profile-photo">
+	       			<div class="photo">
+	       			</div>
+	       		</div>
+	       	</div>
+
+	       	<div class="account-change-personal">
+		       	<div class="edit-profile">
+		       		<div class="edit-row">
+		       			<div class="fname">
+		       				<label for="profile-first-name">First Name:</label>
+		       				<input type="text" name="profile-first-name">
+		       			</div>
+		       			<div class="lname">
+		       				<label for="profile-last-name">Last Name:</label>
+		       				<input type="text" name="profile-last-name">
+		       			</div>
+		       		</div>
+		       		<div class="edit-group">
+		       			<label for="profile-denomination">Denomination:</label>
+		       			<select class="profile-denomination" name="profile-denomination">
+		       				<option value="">- Select Faith -</option>
+		       				<option value="Apostolic">Apostolic</option>
+		       				<option value="Baptist">Baptist</option>
+		       				<option value="Catholic">Catholic</option>
+		       				<option value="Christian">Christian</option>
+		       				<option value="Episcopalian">Episcopalian</option>
+		       				<option value="Evangelical">Evangelical</option>
+		       				<option value="Jehovah's Witness">Jehovah's Witness</option>
+		       				<option value="Lutheran">Lutheran</option>
+		       				<option value="Methodist">Methodist</option>
+		       				<option value="Mormon">Mormon</option>
+		       				<option value="Nondenominational">Nondenominational</option>
+		       				<option value="Orthodox">Orthodox</option>
+		       				<option value="Presbyterian">Presbyterian</option>
+		       				<option value="Protestant">Protestant</option>
+		       				<option value="Pentecostal">Pentecostal</option>
+		       				<option value="Seventh-Day Adventist">Seventh-Day Adventist</option>
+		       			</select>
+		       		</div>
+		       		<div class="edit-row">
+		       			<div class="edit-country">
+		       				<label for="profile-country">Country:</label>
+		       				<input type="text" name="profile-country">
+		       			</div>
+		       			<div class="edit-city">
+		       				<label for="profile-city">City:</label>
+		       				<input type="text" name="profile-city">
+		       			</div>
+		       		</div>
+		       		<div class="edit-group">
+		       			<label for="profile-about">About:</label>
+		       			<textarea placeholder="Write something about you..." name="profile-about"></textarea>
+		       		</div>
+		       	</div> <!-- Closes "editProfile" Inputs -->
+
+		       	<div class="edit-profile">
+		       		<div class="edit-row">
+		       			<div class="">
+		       				<label for="profile-privacy">Profile Privacy:</label>
+		       				<select name="profile-privacy">
+		       					<option value="">- Select Privacy -</option>
+		       					<option value="Private">Private</option>
+		       					<option value="Public">Public</option>
+		       				</select>
+		       			</div>
+		       			<div class="">
+		       				<label for="profile-last-name">When Logged In:</label>
+		       				<select name="profile-logged">
+		       					<option value="">- Select Option -</option>
+		       					<option value="Available">Available</option>
+		       					<option value="Busy">Busy</option>
+		       					<option value="Invisible">Invisible<option>
+		       					<option value="Logged In">Logged In</option>
+		       				</select>
+
+		       			</div>
+		       		</div>
+		       	</div>
+		       	<button class="save-profile-button">Save Changes</button>
+	       	</div> <!-- Closes Personal Sectoin -->
+
+
+
+
+       	</div>
+
+       	
+       	
+    </div>
+
+</div>
