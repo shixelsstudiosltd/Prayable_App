@@ -11,14 +11,14 @@
 
        	<div class="inbox-message-container">
             <div ng-repeat="message in messages">
-       		<div class="push-message" style="float:right; margin-right: -5%;" ng-show="(message.from == userID)">
+       		<div class="push-message" style="float:right; margin-right: -5%;" ng-show="!(message.from == userID)">
 
        			<div class="user-photo-section">
        				<div class="message-user-photo"></div>
        			</div>
        			<div class="user-message-section">
        				<div class="user-message-content">
-       					<p class="message">{{message.message}}aaaaaa tempor incididunt ut labore et dolore magna aliqua.</p>
+       					<p class="message">{{message.message}}.</p>
        					<div class="message-attachment">
        						<hr>
        						<p><i class="fa fa-paperclip"></i> <span class="attachment-name">InboxMessage.psd</span></p>
@@ -46,7 +46,7 @@
        			</div>
        			<div class="user-message-section">
        				<div class="user-message-content">
-       					<p class="message">{{message.message}} sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       					<p class="message">{{message.message}}.</p>
        					<div class="message-attachment">
        						<hr>
        						<p><i class="fa fa-paperclip"></i> <span class="attachment-name">InboxMessage.psd</span></p>
@@ -73,7 +73,7 @@
        	<div class="inbox-message-input">
        		<div class="message-input">
 
-       			<textarea></textarea>
+       			<textarea ng-model="replyData.text"></textarea>
        			<div class="message-fields">
        				<div class="media-button-container pull-left">
        					<button class="smiley-button">
@@ -87,7 +87,7 @@
        					</button>
        				</div>
        				<div class="reply-button-container pull-right">
-       					<button class="reply-button">Reply</button>
+       					<button class="reply-button" ng-click="sendMessage()">Reply</button>
        				</div>
        			</div>
        		</div>

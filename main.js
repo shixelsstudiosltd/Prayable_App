@@ -232,4 +232,24 @@ sampleApp.controller('chatDiv',function($rootScope,$scope,$location,$http,$cooki
     socketTest.on('RequestForResumeChat',function(msg){
         console.log(msg)
     })
+    socketTest.on('message',function(msg){
+        console.log(msg)
+    })
+
+    socketTest.on('update',function(msg){
+        console.log(msg)
+    })
+
+    socketTest.on('error',function(msg){
+        console.log(msg)
+    })
+
+
+
+
+
+
+
 });
+
+
