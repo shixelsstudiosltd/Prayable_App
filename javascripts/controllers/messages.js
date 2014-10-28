@@ -13,8 +13,8 @@ sampleApp.controller('messages',function($rootScope,$scope,$location,$http,socke
     $http({
         method:"POST",
         //contentType: 'application/json',
-        //url:"http://localhost:3000/getMessage",
-        url:"http://prayable-21641.onmodulus.net/getMessage",
+        url:"http://localhost:3000/getMessage",
+        //url:"http://prayable-21641.onmodulus.net/getMessage",
         data:data,
         crossDomain: true,
         dataType: "json"
@@ -24,8 +24,8 @@ sampleApp.controller('messages',function($rootScope,$scope,$location,$http,socke
             $http({
                 method:"GET",
                 //contentType: 'application/json',
-                //url:"http://localhost:3000/user/"+userIDTo,
-                url:"http://prayable-21641.onmodulus.net/user/"+userIDTo,
+                url:"http://localhost:3000/user/"+userIDTo,
+                //url:"http://prayable-21641.onmodulus.net/user/"+userIDTo,
                 crossDomain: true,
                 dataType: "json"
             }).success(function(userTowInfo, textstatus) {
@@ -61,14 +61,20 @@ sampleApp.controller('messages',function($rootScope,$scope,$location,$http,socke
 
     ///////////////////////////////////////////////
 
-/*
+
 
     socketTest.on('newRoomCreated',function(msg){
-        console.log(msg)
-        alert(msg)
+        console.log('newRoomCreated')
+        var roomCheck = rooms.filter(function(room) {
+            return room.roomID === roomInfo.roomID; // filter out appropriate one
+        });
+        if((roomCheck.length == 0) || (roomCheck == undefined)){
+            rooms.push(roomInfo)
+        }
     })
     socketTest.on('RoomResumed',function(roomInfo){
-        console.log(roomInfo)
+        console.log("RoomResumed")
+
         var roomCheck = rooms.filter(function(room) {
             return room.roomID === roomInfo.roomID; // filter out appropriate one
         });
@@ -79,8 +85,22 @@ sampleApp.controller('messages',function($rootScope,$scope,$location,$http,socke
 
     })
 
+    socketTest.on('messageDelivered',function(msg){
+        console.log('messageDelivered')
+        var TempData = {message:msg.data.messageData.text,timeDate:msg.data.timeDate,from:userData._id}
+        var tempmsges =$scope.messages
+        tempmsges.push(TempData)
+        $scope.messages = tempmsges
+    })
 
-*/
+    socketTest.on('message',function(msg){
+        console.log('message2');
+          if(userIDTo == msg.data.memberID.memberTwo){
+              var TempData = {message:msg.data.messageData.text,timeDate:msg.data.timeDate,from:msg.data.memberID.memberTwo}
+              var tempmsges =$scope.messages
+              tempmsges.push(TempData)
+              $scope.messages = tempmsges}
+    })
 
     $scope.go = function (path){
         $location.path(path);

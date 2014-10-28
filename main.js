@@ -230,9 +230,12 @@ sampleApp.controller('chatDiv',function($rootScope,$scope,$location,$http,$cooki
         console.log(msg)
     })
     socketTest.on('RequestForResumeChat',function(msg){
+        console.log('RequestForResumeChat')
+        socketTest.emit('joinTheRoom',msg)
         console.log(msg)
     })
     socketTest.on('message',function(msg){
+       console.log('message');
         console.log(msg)
     })
 
