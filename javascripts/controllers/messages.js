@@ -87,7 +87,7 @@ sampleApp.controller('messages',function($rootScope,$scope,$location,$http,socke
 
     socketTest.on('messageDelivered',function(msg){
         console.log('messageDelivered')
-        var TempData = {message:msg.data.messageData.text,timeDate:msg.data.timeDate,from:userData._id}
+        var TempData = {message:msg.data.messageData,timeDate:msg.data.timeDate,from:userData._id}
         var tempmsges =$scope.messages
         tempmsges.push(TempData)
         $scope.messages = tempmsges
