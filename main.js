@@ -183,9 +183,20 @@ sampleApp.config(function ($translateProvider) {
     $translateProvider.preferredLanguage('en');
 });
 sampleApp.factory('socketTest', function($rootScope) {
-    //var socket =io.connect("http://localhost:8080");
-    //var socket =io.connect("http://localhost:3000");
-    var socket =io.connect("http://prayable-21641.onmodulus.net");
+    var socketID = sessionStorage.getItem('sessionID');
+    var userData =  JSON.parse(sessionStorage.getItem('userData'));
+    if(socketID && (userData && (Object.keys(userData).length > 0))){
+        console.log("exist")
+        console.log(socketID)
+        //var socket =io.connect("http://localhost:3000")
+        var socket =io.connect("https://prayable-21641.onmodulus.net");
+        socket.emit('checkSocketConnetion',{socketID:socketID,userID:userData._id})
+    }else{
+        console.log("not--exist")
+        //var socket =io.connect("http://localhost:3000");
+        var socket =io.connect("https://prayable-21641.onmodulus.net");
+    }
+
     $.support.cors=true
     //var socket =io.connect("http://prayable-21641.onmodulus.net");
     return {
@@ -226,17 +237,26 @@ sampleApp.controller('chatDiv',function($rootScope,$scope,$location,$http,$cooki
     $scope.changeLanguage = function (key) {
         $translate.use(key);
     };
+    socketTest.on('connected',function(msg){
+        var socket= socketTest.socket()
+        sessionStorage.setItem('sessionID',socket.socket.sessionid);
+    })
      socketTest.on('RequestForNewChat',function(msg){
         console.log(msg)
     })
     socketTest.on('RequestForResumeChat',function(msg){
         console.log('RequestForResumeChat')
         socketTest.emit('joinTheRoom',msg)
-        console.log(msg)
+
     })
     socketTest.on('message',function(msg){
-       console.log('message');
-        console.log(msg)
+        console.log('mg1')
+        var Url = $location.$$path;
+        if(Url == '/inbox/message/'+msg.data.memberID.memberOne)
+        {}else{
+            $location.path('/inbox/message/'+msg.data.memberID.memberOne)
+            if(!$scope.$$phase) $scope.$apply();
+        }
     })
 
     socketTest.on('update',function(msg){
@@ -247,8 +267,15 @@ sampleApp.controller('chatDiv',function($rootScope,$scope,$location,$http,$cooki
         console.log(msg)
     })
 
+    socketTest.on('reconnectSocket',function(msg){
 
+        var userData =  JSON.parse(sessionStorage.getItem('userData'));
+        if(userData && (Object.keys(userData).length > 0)){
+            var socket= socketTest.socket()
+            socketTest.emit('addMeToSocket',{userID:userID._id,socketID:socket.socket.sessionid})
+        }
 
+    })
 
 
 

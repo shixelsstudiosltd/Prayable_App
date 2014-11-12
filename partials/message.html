@@ -37,8 +37,8 @@
        		<div class="pull-message" style="float:left;" ng-show="(message.from == userID)">
        			<div class="user-timestamp-section">
        				<div>
-       					<p><span class="message-time">5:40 pm</span><br>
-       					<span class="message-date">Sept 10, 2014</span><br>
+       					<p><span class="message-time">{{room.latestMessage.timeDate[0]}}</span><br>
+       					<span class="message-date">{{room.latestMessage.timeDate[1]}}</span><br>
        					<i class="fa fa-trash-o"></i>
        				</p>
        				</div>

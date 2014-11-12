@@ -10,7 +10,8 @@ sampleApp.controller('inbox',function($rootScope,$scope,$location,$http){
         $scope.msgStatus = ''
         var data = {userID:userData._id}
         $scope.openRoom = function(id){
-            alert("a"+id)
+            $location.path('/inbox/message/'+userID)
+              if(!$scope.$$phase) $scope.$apply();
         }
 
         $http({
