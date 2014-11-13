@@ -57,11 +57,33 @@ sampleApp.controller('messages',function($rootScope,$scope,$location,$http,socke
 
     }
 
+    $scope.checkMessageStatus = function(){
+        var tempmsges =$scope.messages
+        var data = {id:''}
+        if(tempmsges[tempmsges.length-1].from != userData._id){
+        if(tempmsges[tempmsges.length-1].is_read == false){
+            tempmsges[tempmsges.length-1].is_read = true
+           data.id = tempmsges[tempmsges.length-1]._id
+            $http({
+                method:"POST",
+                //contentType: 'application/json',
+               // url:"http://localhost:3000/changeMessageStatus",
+                url:"http://prayable-21641.onmodulus.net/changeMessageStatus",
+                data:data,
+                crossDomain: true,
+                dataType: "json"
+            }).success(function(msg, textstatus) {
+console.log(textstatus)
 
 
-    ///////////////////////////////////////////////
+                })
 
+        }
 
+        $scope.messages = tempmsges
+        console.log($scope.messages);
+        }
+    }
 
     socketTest.on('newRoomCreated',function(msg){
         console.log('newRoomCreated')

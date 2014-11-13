@@ -9,7 +9,7 @@ sampleApp.controller('inbox',function($rootScope,$scope,$location,$http){
         $scope.room = '';
         $scope.msgStatus = ''
         var data = {userID:userData._id}
-        $scope.openRoom = function(id){
+        $scope.openRoom = function(userID){
             $location.path('/inbox/message/'+userID)
               if(!$scope.$$phase) $scope.$apply();
         }
