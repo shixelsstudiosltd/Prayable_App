@@ -1,4 +1,4 @@
-sampleApp.controller('inbox',function($rootScope,$scope,$location,$http){
+sampleApp.controller('inbox',function($rootScope,$scope,$location,$http,ngDialog){
 
 
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
@@ -9,8 +9,10 @@ sampleApp.controller('inbox',function($rootScope,$scope,$location,$http){
         $scope.room = '';
         $scope.msgStatus = '';
         $scope.roomSelected=[];
+        $scope.friendsList = '';
         var data = {userID:userData._id}
         $scope.openRoom = function(userID){
+            ngDialog.closeAll()
             $location.path('/inbox/message/'+userID)
               if(!$scope.$$phase) $scope.$apply();
         }
@@ -83,6 +85,36 @@ sampleApp.controller('inbox',function($rootScope,$scope,$location,$http){
 
 
 
+        $scope.selectFriendForNewMessage =function(){
+            var data = {userID:userData._id}
+            $http({
+                method:"POST",
+                //contentType: 'application/json',
+                //url:"http://localhost:3000/allFriends",
+                url:"http://prayable-21641.onmodulus.net/allFriends",
+                data:data,
+                crossDomain: true,
+                dataType: "json"
+            }).success(function(data, textstatus) {
+                    // this callback will be called asynchronously
+                    // when the response is available
+                    $scope.friendsList = data[0];
+                    //console.log(data)
+                    ngDialog.open({
+                        template: './partials/friends_popup.html',
+                        className: 'friends_popup',
+                        scope: $scope
+                    });
+
+                    // console.log(textstatus)
+                }).error(function(data, textstatus) {
+
+                    //console.log(data)
+                    console.log(textstatus)
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+                });
+        }
 
     }else{
         $location.path('/login')

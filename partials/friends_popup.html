@@ -1,0 +1,12 @@
+<div class="ngdialog-message">
+
+    <div class="container" style="">
+        <h1>Friends POPUP</h1>
+        <ul>
+            <!-- I left the translation out because this list will be populated -->
+            <li ng-repeat="friend in friendsList" ng-click="openRoom(friend.id)">{{friend.userInfo[0].firstName}} {{friend.userInfo[0].lastName}}</li>
+        </ul>
+
+    </div>
+
+</div>
