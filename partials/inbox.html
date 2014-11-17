@@ -11,14 +11,15 @@
 		<div class="message-container">
 
 
-			<div class="message-box {{room.status}}" ng-repeat="room in rooms" ng-click="openRoom(room.userInfo[0]._id)">
+			<div class="message-box {{room.status}}" ng-repeat="room in rooms" >
 				<div class="message-notification">		
-					<input type="checkbox" name="user-read" class="user-read" value="{{room.room.roomID}}">
+					<input type="checkbox" name="user-read" class="user-read" value="{{room.room.roomID}}" ng-model="roomSelected" ng-click="toggleSelection(room.room.roomID)" ng-checked="roomSelected.indexOf(room.room.roomID) > -1">
 				</div>
-				<div class="message-sender-img">
+
+				<div class="message-sender-img" ng-click="openRoom(room.userInfo[0]._id)">
 					<div class="sender-img"></div>
 				</div>
-				<div class="message-content-container">
+				<div class="message-content-container" ng-click="openRoom(room.userInfo[0]._id)">
 					<div class="message-content-header clearfix">
 						<div class="message-sender pull-left">
 							<h4>{{room.userInfo[0].firstName}} {{room.userInfo[0].lastName}}</h4><p class="online-activity online">&middot;</p>
@@ -31,6 +32,7 @@
 						<p>{{room.latestMessage.message}}</p>
 					</div>
 				</div>
+
 			</div> <!-- Close of Message -->
 
 
@@ -49,7 +51,7 @@
 			<div class="message-cancel">
 				<i class="fa fa-ban"></i>
 			</div>
-			<div class="message-trash">
+			<div class="message-trash" ng-click="closeChatRoom()">
 				<i class="fa fa-trash-o"></i>
 			</div>
 		</div>

@@ -59,6 +59,7 @@ sampleApp.controller('messages',function($rootScope,$scope,$location,$http,socke
 
     $scope.checkMessageStatus = function(){
         var tempmsges =$scope.messages
+        if(tempmsges.length > 0 ){
         var data = {id:''}
         if(tempmsges[tempmsges.length-1].from != userData._id){
         if(tempmsges[tempmsges.length-1].is_read == false){
@@ -82,6 +83,7 @@ console.log(textstatus)
 
         $scope.messages = tempmsges
         console.log($scope.messages);
+        }
         }
     }
 
