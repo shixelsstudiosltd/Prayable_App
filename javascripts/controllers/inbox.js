@@ -84,6 +84,23 @@ sampleApp.controller('inbox',function($rootScope,$scope,$location,$http,ngDialog
         }
 
 
+        $scope.blockthatRoom = function(){
+            var data ={ roomID : $scope.roomSelected}
+            if($scope.roomSelected.length > 0){
+                $http({
+                    method:"POST",
+                    //contentType: 'application/json',
+                    //url:"http://localhost:3000/blockRoom",
+                    url:"http://prayable-21641.onmodulus.net/blockRoom",
+                    data:data,
+                    crossDomain: true,
+                    dataType: "json"
+                }).success(function(room1, textstatus) {
+
+
+                 })
+            }
+        }
 
         $scope.selectFriendForNewMessage =function(){
             var data = {userID:userData._id}

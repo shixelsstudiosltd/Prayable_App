@@ -9,6 +9,8 @@ sampleApp.controller('messages',function($rootScope,$scope,$location,$http,socke
     $scope.messages='';
     $scope.userTowInfo= '';
     $scope.replyData = {text:''}
+    $scope.err = ''
+    $scope.isAnyErr = false;
     var rooms = [];
     $http({
         method:"POST",
@@ -125,6 +127,12 @@ console.log(textstatus)
               tempmsges.push(TempData)
               $scope.messages = tempmsges}
     })
+
+    socketTest.on('roomIsBlockedByUser',function(msg){
+        $scope.err = msg
+        $scope.isAnyErr = true;
+    })
+
 
     $scope.go = function (path){
         $location.path(path);
