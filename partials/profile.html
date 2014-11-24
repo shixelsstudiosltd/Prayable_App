@@ -3,20 +3,24 @@
 		<ul class="app-header bg-transparent">
             <li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
             <li class="app-header-title">{{'profile' | translate}}</li>
-            <li class="app-header-toggle-settings">
+            <li class="app-header-toggle-settings" ng-hide="ownUser">
                   <i class="fa fa-cog"></i>
                   </li>
+
+            <li class="app-header-toggle-settings" ng-show="ownUser" ng-click="friendsOption()">
+                <i class="fa  fa-1x fa-users"></i>
+            </li>
             </ul>
        	<div class="account-container">
        		<div class="account-photo">
                         <div class="account-profile-photo">
-                              <div class="photo"></div>
+                              <div class="photo"><img src="{{profileInfo.pictureUrl}}"></div>
                         </div>
                         <div class="account-profile-name">
-                              <span class="profile-first-name">Kevin</span> <span class="middle-name">Peter</span> <span class="profile-last-name">O'brian</span>
+                              <span class="profile-first-name">{{profileInfo.firstName}}</span> <span class="middle-name">{{profileInfo.lastName}}</span> <span class="profile-last-name">O'brian</span>
                         </div>
                         <div class="account-profile-denomination">
-                              <span class"profile-denomination">Catholic</span>
+                              <span class="profile-denomination">Catholic</span>
                         </div>
                         <div class="account-profile-location">
                               <i class="fa fa-map-marker"></i> <span class="profile-location"><span class="profile-city">New York City</span>, <span class="profile-couuntry">USA</span></span>
@@ -29,7 +33,7 @@
        			<div class="account-menu-header">
        				<div class="account-header-line">
                                     <div class="account-line">
-                                          <p><i class="fa fa-globe"></i> 32 Prayers</p>
+                                          <p><i class="fa fa-globe"></i> {{prayers.length}} Prayers</p>
                                     </div>
                                     <div class="account-line">
                                           <p><i class="fa fa-users"></i> 6 Friends</p>
@@ -38,14 +42,14 @@
        			</div>
                         <div class="account-menu">
                               <div class="account-row">
-                                    <div class="row-item">
+                                    <div class="row-item" ng-click="changePage('inbox')">
                                           <div>
                                                 <i class="fa fa-3x fa-comments-o"></i>
                                                 <h6>Chat</h6>
                                           </div>
                                           
                                     </div>
-                                    <div class="row-item">
+                                    <div class="row-item"  ng-click="changePage('friend')">
                                           <div>
                                                 <i class="fa fa-3x fa-users"></i>
                                                 <h6>Friends</h6>
@@ -54,13 +58,13 @@
                                     
                               </div>
                               <div class="account-row">
-                                    <div class="row-item">
+                                    <div class="row-item"  ng-click="changePage('about')">
                                           <div>
                                                 <i class="fa fa-3x fa-cog"></i>
                                                 <h6>About</h6>
                                           </div>
                                     </div>
-                                    <div class="row-item">
+                                    <div class="row-item"  ng-click="changePage('prayer')">
                                           <div>
                                                 <i class="fa fa-3x fa-map-marker"></i>
                                                 <h6>Prayers</h6>
@@ -70,13 +74,13 @@
                               </div>
                               <div class="account-row">
                                     
-                                    <div class="row-item">
+                                    <div class="row-item"  ng-click="changePage('rss')">
                                           <div>
                                                 <i class="fa fa-3x fa-rss"></i>
                                                 <h6>Feed</h6>
                                           </div> 
                                     </div>
-                                    <div class="row-item">
+                                    <div class="row-item"  ng-click="changePage('share')">
                                           <div>
                                                 <i class="fa fa-3x fa-share-square-o"></i>
                                                 <h6>Share</h6>

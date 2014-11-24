@@ -32,7 +32,7 @@ sampleApp.controller('messages',function($rootScope,$scope,$location,$http,socke
                 dataType: "json"
             }).success(function(userTowInfo, textstatus) {
                     $scope.isAnyMessage = true;
-                    $scope.userTowInfo = userTowInfo
+                    $scope.userTowInfo = userTowInfo.data
                 })
         })
 
