@@ -9,12 +9,14 @@ sampleApp.controller('profile',function($rootScope,$scope,$location,$http,ngDial
     $scope.ownUser = false
 if(userData._id == userID){
     //console.log('own profile')
-    $scope.ownUser = false
+    $scope.ownUser = true
+    $scope.profileInfo ={_id:userData._id,email:userData.email}
+    $scope.prayers = userData.prayerList;
+    $scope.friends = userData.friendList;
+    $scope.isLogged = true;
 }else{
 
-    $scope.ownUser = true
-}
-
+    $scope.ownUser = false
     $http({
         method:"GET",
         //contentType: 'application/json',
@@ -56,6 +58,9 @@ if(userData._id == userID){
                     })
             }
         })
+}
+
+
 
 
     $scope.changePage =function(key){

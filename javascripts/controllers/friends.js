@@ -32,7 +32,7 @@ sampleApp.controller('friends',function($rootScope,$scope,$location,$http){
             if(key == 'user'){
                 var data = {userID:userData._id}
             }
-        $http({
+       /*$http({
             method:"POST",
             //contentType: 'application/json',
             //url:"http://localhost:3000/allFriends",
@@ -66,7 +66,22 @@ if((data[0].msg)&&(data[0].msg == "no Member Add")){
                 console.log(textstatus)
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
-            });
+            });*/
+
+if(userData.friendList.length > 0){
+    $scope.allUser = false;
+    $scope.noMember = false;
+    $scope.showSearch = true;
+    $scope.ownMemberer = true;
+    $scope.friendsList = userData.friendList[0];
+    $scope.friendsSearchList = userData.friendList[0];
+    $scope.searchQuery=''
+}else{
+    $scope.ownMemberer = false;
+    $scope.allUser = false;
+    $scope.noMember = true;
+}
+
 
     }
 

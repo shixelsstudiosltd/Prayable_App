@@ -3,11 +3,11 @@
 		<ul class="app-header bg-transparent">
             <li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
             <li class="app-header-title">{{'profile' | translate}}</li>
-            <li class="app-header-toggle-settings" ng-hide="ownUser">
+            <li class="app-header-toggle-settings" ng-show="ownUser">
                   <i class="fa fa-cog"></i>
                   </li>
 
-            <li class="app-header-toggle-settings" ng-show="ownUser" ng-click="friendsOption()">
+            <li class="app-header-toggle-settings" ng-hide="ownUser" ng-click="friendsOption()">
                 <i class="fa  fa-1x fa-users"></i>
             </li>
             </ul>
