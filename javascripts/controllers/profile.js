@@ -80,7 +80,7 @@ var ownUser = $scope.ownUser
                 if(ownUser == true){
                     $location.path('/friends')
                 }else{
-                    $location.path('/friends')
+                    $location.path('/friends/'+userID)
                 }
 
                 if(!$scope.$$phase) $scope.$apply();

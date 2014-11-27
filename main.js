@@ -62,6 +62,10 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 templateUrl:'partials/friends.html',
                 controller:'friends'
             })
+            .when('/friends/:userID',{
+                templateUrl:'partials/friends.html',
+                controller:'friends'
+            })
             .when('/activities',{
                 templateUrl:'partials/activities.html',
                 controller:'activities'
