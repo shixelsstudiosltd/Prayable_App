@@ -2,63 +2,12 @@ sampleApp.controller('profile',function($rootScope,$scope,$location,$http,ngDial
 
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     var Url = $location.$$path;
-    var userID = Url.substr(9,Url.length);
+    var userID = (Url.substr(9,Url.length)).trim();
     $scope.profileInfo = '';
     $scope.prayers = '';
     $scope.isLogged = false
     $scope.ownUser = false
-if(userData._id == userID){
-    //console.log('own profile')
-    $scope.ownUser = true
-    $scope.profileInfo ={_id:userData._id,email:userData.email}
-    $scope.prayers = userData.prayerList;
-    $scope.friends = userData.friendList;
-    $scope.isLogged = true;
-}else{
 
-    $scope.ownUser = false
-    $http({
-        method:"GET",
-        //contentType: 'application/json',
-        url:"http://localhost:3000/user/"+userID,
-        //url:"http://prayable-21641.onmodulus.net/user/"+userID,
-        crossDomain: true,
-        dataType: "json"
-    }).success(function(profile, textstatus) {
-            if((profile.status == -1) && (profile.status == -2)){
-                console.log(profile.error)
-            }else{
-
-                $scope.profileInfo = profile.data
-                $scope.isLogged = true;
-
-                $http({
-                    method:"POST",
-                    //contentType: 'application/json',
-                   // url:"http://localhost:3000/getPrayer",
-                    url:"http://prayable-21641.onmodulus.net/getPrayer",
-                    data:{userID:userID},
-                    crossDomain: true,
-                    dataType: "json"
-                }).success(function(prayers, textstatus) {
-                        $scope.prayers = prayers
-                        $http({
-                            method:"POST",
-                            //contentType: 'application/json',
-                            //url:"http://localhost:3000/allFriends",
-                            url:"http://prayable-21641.onmodulus.net/allFriends",
-                            data:{userID:userID},
-                            crossDomain: true,
-                            dataType: "json"
-                        }).success(function(friends, textstatus) {
-                                $scope.friends = friends
-
-                            })
-
-                    })
-            }
-        })
-}
 
 
 
@@ -123,6 +72,66 @@ var ownUser = $scope.ownUser
     });
 
     }
+
+
+
+    if((userData._id == userID)||((userID == '')&&(userData && (Object.keys(userData).length > 0)))){
+        //console.log('own profile')
+        $scope.ownUser = true
+        $scope.profileInfo ={_id:userData._id,email:userData.email}
+        $scope.prayers = userData.prayerList;
+        $scope.friends = userData.friendList;
+        $scope.isLogged = true;
+    }else if(userData._id != userID){
+
+        $scope.ownUser = false
+        $http({
+            method:"GET",
+            //contentType: 'application/json',
+            url:"http://localhost:3000/user/"+userID,
+            //url:"http://prayable-21641.onmodulus.net/user/"+userID,
+            crossDomain: true,
+            dataType: "json"
+        }).success(function(profile, textstatus) {
+                if((profile.status == -1) && (profile.status == -2)){
+                    console.log(profile.error)
+                }else{
+
+                    $scope.profileInfo = profile.data
+                    $scope.isLogged = true;
+
+                    $http({
+                        method:"POST",
+                        //contentType: 'application/json',
+                        // url:"http://localhost:3000/allRequestedPrayers",
+                        url:"http://prayable-21641.onmodulus.net/allRequestedPrayers",
+                        data:{userID:userID},
+                        crossDomain: true,
+                        dataType: "json"
+                    }).success(function(prayers, textstatus) {
+                            $scope.prayers = prayers
+                            $http({
+                                method:"POST",
+                                //contentType: 'application/json',
+                                //url:"http://localhost:3000/allFriends",
+                                url:"http://prayable-21641.onmodulus.net/allFriends",
+                                data:{userID:userID},
+                                crossDomain: true,
+                                dataType: "json"
+                            }).success(function(friends, textstatus) {
+                                    $scope.friends = friends
+
+                                })
+
+                        })
+                }
+            })
+    }else{
+        $location.path('/')
+        if(!$scope.$$phase) $scope.$apply();
+    }
+
+
 
 
         $scope.go = function (path){

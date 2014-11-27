@@ -22,7 +22,11 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 templateUrl:'partials/profile.html',
                 controller:'profile'
             })
-            .when('/profile/:userProbfileId/edit',{
+            .when('/profile',{
+                templateUrl:'partials/profile.html',
+                controller:'profile'
+            })
+            .when('/profile/edit',{
                 templateUrl:'partials/profile_edit.html',
                 controller:'profile'
             })

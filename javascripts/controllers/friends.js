@@ -6,7 +6,7 @@ sampleApp.controller('friends',function($rootScope,$scope,$location,$http){
     $scope.showSearch = false;
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     var Url = $location.$$path;
-    var userID = Url.substr(9,Url.length);
+    var userID = (Url.substr(9,Url.length)).trim();
 
 
 
