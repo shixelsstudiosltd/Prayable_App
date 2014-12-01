@@ -22,7 +22,7 @@
 				<div class="message-content-container" ng-click="openRoom(room.userInfo[0]._id)">
 					<div class="message-content-header clearfix">
 						<div class="message-sender pull-left">
-							<h4>{{room.userInfo[0].firstName}} {{room.userInfo[0].lastName}}</h4><p class="online-activity online">&middot;</p>
+							<h4>{{room.userInfo[0].firstName}} {{room.userInfo[0].lastName}}</h4><p class="online-activity {{room.userStatus}}">&middot;</p>
 						</div>
 						<div class="message-date pull-right">
 							<h5>{{room.latestMessage.timeDate[0]}}</h5>

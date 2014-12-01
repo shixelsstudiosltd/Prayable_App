@@ -194,7 +194,7 @@ sampleApp.factory('socketTest', function($rootScope) {
     var socketID = sessionStorage.getItem('sessionID');
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     if(socketID && (userData && (Object.keys(userData).length > 0))){
-        console.log("exist")
+      // console.log("exist")
         console.log(socketID)
         //var socket =io.connect("http://localhost:3000")
         var socket =io.connect("https://prayable-21641.onmodulus.net");
@@ -285,7 +285,26 @@ sampleApp.controller('chatDiv',function($rootScope,$scope,$location,$http,$cooki
 
     })
 
+    socketTest.on('listOfOnlineUser',function(clients){
+        console.log(clients)
+        var userData =  JSON.parse(sessionStorage.getItem('userData'));
+        if(userData && (Object.keys(userData).length > 0)){
+         var userFriendList = userData.friendList[0]
+            var userListTemp1;
+            var userListTemp2;
+             userListTemp1 = userFriendList.filter(function(user) {
+                 userListTemp2 = clients.filter(function(client) {
+                    return user.id === client.userID; // filter out appropriate one
+                });
+                //return user.userID === data.userID; // filter out appropriate one
+            });
+        }
+        if((userListTemp2)&&(userListTemp2.length > 0)){
+            //console.log(userListTemp2+'aaa')
+            sessionStorage.setItem('onlineUser',JSON.stringify(userListTemp2));
+        }
 
+    })
 
 
 });

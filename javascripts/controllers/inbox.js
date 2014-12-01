@@ -2,6 +2,7 @@ sampleApp.controller('inbox',function($rootScope,$scope,$location,$http,ngDialog
 
 
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
+    var onlineFriend =  JSON.parse(sessionStorage.getItem('onlineUser'));
     $scope.isLogged = false
     if(userData && (Object.keys(userData).length > 0)){
         $scope.noRooms = false;
@@ -29,8 +30,20 @@ sampleApp.controller('inbox',function($rootScope,$scope,$location,$http,ngDialog
                 $scope.rooms = room
                 for(var i =0; i < room.length; i++  ){
                    if($scope.rooms[i].latestMessage.is_read == false){$scope.rooms[i].status = 'new'}else{$scope.rooms[i].status = ''}
+                   var userOnlineTemp =  onlineFriend;
+                    userListTemp1 = userOnlineTemp.filter(function(onlineUser) {
+                          var UIndex =  $scope.rooms[i].room.membersID.indexOf(onlineUser.userID)
+
+                        if(UIndex > 0){
+
+                            $scope.rooms[i].userStatus = 'online';
+                        }else{
+
+                            $scope.rooms[i].userStatus = 'offline';
+                        }
+                    })
                 }
-                    console.log(room)
+                    //console.log(room)
         })
 
         $scope.toggleSelection = function toggleSelection(selectionID) {
