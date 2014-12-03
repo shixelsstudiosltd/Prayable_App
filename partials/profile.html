@@ -26,17 +26,17 @@
                               <i class="fa fa-map-marker"></i> <span class="profile-location"><span class="profile-city">New York City</span>, <span class="profile-couuntry">USA</span></span>
                         </div>
                         <button class="edit-profile">
-                              <i class="fa fa-pencil-square-o"></i> Edit Profile
+                              <i class="fa fa-pencil-square-o"></i> {{'profileEdit' | translate}}
                         </button>
                   </div>
        		<div class="account-menu-container">
        			<div class="account-menu-header">
        				<div class="account-header-line">
                                     <div class="account-line">
-                                          <p><i class="fa fa-globe"></i> {{prayers.length}} Prayers</p>
+                                          <p><img src="/img/act-hands_pale-sm.png">{{prayers.length}} {{'prayers' | translate}}</p>
                                     </div>
                                     <div class="account-line">
-                                          <p><i class="fa fa-users"></i> 6 Friends</p>
+                                          <p><i class="fa fa-user"></i> 6 {{'friends | translate}}</p>
                                     </div>
        				</div>
        			</div>
@@ -45,14 +45,14 @@
                                     <div class="row-item" ng-click="changePage('inbox')">
                                           <div>
                                                 <i class="fa fa-3x fa-comments-o"></i>
-                                                <h6>Chat</h6>
+                                                <h6>{{'inbox | translate}}</h6>
                                           </div>
                                           
                                     </div>
                                     <div class="row-item"  ng-click="changePage('friend')">
                                           <div>
-                                                <i class="fa fa-3x fa-users"></i>
-                                                <h6>Friends</h6>
+                                                <i class="fa fa-3x fa-user"></i>
+                                                <h6>{{'friends | translate}}</h6>
                                           </div>
                                     </div>
                                     
@@ -60,14 +60,14 @@
                               <div class="account-row">
                                     <div class="row-item"  ng-click="changePage('about')">
                                           <div>
-                                                <i class="fa fa-3x fa-cog"></i>
-                                                <h6>About</h6>
+                                                <i class="fa fa-3x fa-users"></i>
+                                                <h6>{{'prayerCircles' | translate}}</h6>
                                           </div>
                                     </div>
                                     <div class="row-item"  ng-click="changePage('prayer')">
                                           <div>
-                                                <i class="fa fa-3x fa-map-marker"></i>
-                                                <h6>Prayers</h6>
+                                               <img src="/img/act-hands_pale.png">
+                                                <h6>{{'prayers' | translate}}</h6>
                                           </div>
                                     </div>
 
@@ -77,13 +77,13 @@
                                     <div class="row-item"  ng-click="changePage('rss')">
                                           <div>
                                                 <i class="fa fa-3x fa-rss"></i>
-                                                <h6>Feed</h6>
+                                                <h6>{{'prayerFeed | translate}}</h6>
                                           </div> 
                                     </div>
                                     <div class="row-item"  ng-click="changePage('share')">
                                           <div>
                                                 <i class="fa fa-3x fa-share-square-o"></i>
-                                                <h6>Share</h6>
+                                                <h6>{{'share | translate}}</h6>
                                           </div>
                                     </div>
                               </div>
