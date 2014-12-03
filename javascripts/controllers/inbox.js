@@ -1,4 +1,4 @@
-sampleApp.controller('inbox',function($rootScope,$scope,$location,$http,ngDialog){
+sampleApp.controller('inbox',function($rootScope,$scope,$location,$http,ngDialog,socketTest){
 
 
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
@@ -11,6 +11,7 @@ sampleApp.controller('inbox',function($rootScope,$scope,$location,$http,ngDialog
         $scope.msgStatus = '';
         $scope.roomSelected=[];
         $scope.friendsList = '';
+        var roomTemp;
         var data = {userID:userData._id}
         $scope.openRoom = function(userID){
             ngDialog.closeAll()
@@ -28,9 +29,11 @@ sampleApp.controller('inbox',function($rootScope,$scope,$location,$http,ngDialog
             dataType: "json"
         }).success(function(room, textstatus) {
                 $scope.rooms = room
+                roomTemp = room
                 for(var i =0; i < room.length; i++  ){
                    if($scope.rooms[i].latestMessage.is_read == false){$scope.rooms[i].status = 'new'}else{$scope.rooms[i].status = ''}
                    var userOnlineTemp =  onlineFriend;
+                    if((userOnlineTemp)&&(userOnlineTemp.length > 0)){
                     userListTemp1 = userOnlineTemp.filter(function(onlineUser) {
                           var UIndex =  $scope.rooms[i].room.membersID.indexOf(onlineUser.userID)
 
@@ -42,6 +45,7 @@ sampleApp.controller('inbox',function($rootScope,$scope,$location,$http,ngDialog
                             $scope.rooms[i].userStatus = 'offline';
                         }
                     })
+                    }
                 }
                     //console.log(room)
         })
@@ -145,6 +149,46 @@ sampleApp.controller('inbox',function($rootScope,$scope,$location,$http,ngDialog
                     // or server returns response with an error status.
                 });
         }
+
+        socketTest.on('listOfOnlineUser',function(clients){
+            //console.log('inbox page')
+
+            var userFriendList = userData.friendList[0]
+                var userListTemp1;
+                var userListTemp2;
+                userListTemp1 = userFriendList.filter(function(user) {
+                    userListTemp2 = clients.filter(function(client) {
+                        return user.id === client.userID; // filter out appropriate one
+                    });
+                    //return user.userID === data.userID; // filter out appropriate one
+                });
+            if((userListTemp2)&&(userListTemp2.length > 0)){
+                //console.log(userListTemp2+'aaa')
+                var userOnlineTemp = userListTemp2
+                for(var i =0; i < $scope.rooms.length; i++  ){
+                        userListTemp1 = userOnlineTemp.filter(function(onlineUser) {
+                            var UIndex =  $scope.rooms[i].room.membersID.indexOf(onlineUser.userID)
+
+                            if(UIndex > 0){
+
+                                $scope.rooms[i].userStatus = 'online';
+                            }else{
+
+                                $scope.rooms[i].userStatus = 'offline';
+                            }
+                        })
+                }
+
+            }else{
+                if((roomTemp)&&(roomTemp.length > 0)){
+                    for(var i =0; i <roomTemp.length; i++  ){
+                        $scope.rooms[i].userStatus = 'offline';
+                    }
+                }
+            }
+
+
+        })
 
     }else{
         $location.path('/login')

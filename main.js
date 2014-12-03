@@ -302,6 +302,10 @@ sampleApp.controller('chatDiv',function($rootScope,$scope,$location,$http,$cooki
         if((userListTemp2)&&(userListTemp2.length > 0)){
             //console.log(userListTemp2+'aaa')
             sessionStorage.setItem('onlineUser',JSON.stringify(userListTemp2));
+
+
+        }else{
+            sessionStorage.setItem('onlineUser',JSON.stringify(userListTemp2));
         }
 
     })
