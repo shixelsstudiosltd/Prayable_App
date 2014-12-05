@@ -71,6 +71,7 @@ var temp;
                                     data:{userID:data.data._id},
                                     method:"POST"
                                 }).success( function(res,textStatus){
+                                        var socket= socketTest.socket()
                                         socketTest.emit('addMeToSocket',{userID:data.data._id,socketID:socket.socket.sessionid})
                                         socketTest.on('userAdded',function(){
                                             sessionStorage.setItem('userData',JSON.stringify(data.data));
