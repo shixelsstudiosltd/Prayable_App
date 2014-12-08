@@ -15,8 +15,8 @@ sampleApp.controller('messages',function($rootScope,$scope,$location,$http,socke
     $http({
         method:"POST",
         //contentType: 'application/json',
-        url:"http://localhost:3000/getMessage",
-        //url:"http://prayable-21641.onmodulus.net/getMessage",
+        //url:"http://localhost:3000/getMessage",
+        url:"http://prayable-21641.onmodulus.net/getMessage",
         data:data,
         crossDomain: true,
         dataType: "json"
@@ -26,8 +26,8 @@ sampleApp.controller('messages',function($rootScope,$scope,$location,$http,socke
             $http({
                 method:"GET",
                 //contentType: 'application/json',
-                url:"http://localhost:3000/user/"+userIDTo,
-                //url:"http://prayable-21641.onmodulus.net/user/"+userIDTo,
+                //url:"http://localhost:3000/user/"+userIDTo,
+                url:"http://prayable-21641.onmodulus.net/user/"+userIDTo,
                 crossDomain: true,
                 dataType: "json"
             }).success(function(userTowInfo, textstatus) {
