@@ -6,8 +6,8 @@ sampleApp.controller('emailCnfm',function($rootScope,$scope,$location,$http){
     var verificationCode = Url.substr(11,Url.length)
 
     $http({
-        url:"http://localhost:3000/emailCnfm/"+verificationCode,
-        //url:"http://prayable-21641.onmodulus.net/emailCnfm/"+verificationCode,
+        //url:"http://localhost:3000/emailCnfm/"+verificationCode,
+        url:"http://prayable-21641.onmodulus.net/emailCnfm/"+verificationCode,
         method:"POST"
     }).success( function(res,textStatus){
 if(res == 'error'){

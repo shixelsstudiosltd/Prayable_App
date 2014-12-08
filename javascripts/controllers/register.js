@@ -27,8 +27,8 @@ sampleApp.controller('register',function($scope,$rootScope,$location,$http,$tran
                             // this callback will be called asynchronously
                             // when the response is available
                             $.ajax({
+                                //url:"http://localhost:3000/sendVerfMail",
                                 url:"http://prayable-21641.onmodulus.net/sendVerfMail",
-                              //  url:"http://prayable-21641.onmodulus.net/sendVerfMail",
                                 data:{email:data.data.email,key:"verify",userID:data.data._id},
                                 method:"POST"
                             }).success( function(res,textStatus){
