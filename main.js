@@ -50,6 +50,10 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 templateUrl:'partials/prayers.html',
                 controller:'prayers'
             })
+            .when('/prayers/category/:catID',{
+                templateUrl:'partials/prayerCategory.html',
+                controller:'prayerCat'
+            })
             .when('/feed',{
                 templateUrl:'partials/feed.html',
                 controller:'prayers'

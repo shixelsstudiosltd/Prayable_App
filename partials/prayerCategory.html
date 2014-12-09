@@ -1,0 +1,68 @@
+<div ng-show="isLogged">
+	<div class="body-container bg-purple">
+		<ul class="app-header bg-transparent">
+            <li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
+            <li class="app-header-title">{{'prayer' | translate}}</li>
+            <li class="app-header-toggle-settings">
+       			<span class="app-toggle-settings-icon"><i class="fa fa-tasks"></i></span>
+       		</li>
+       	</ul>
+       	<div class="prayer-feed-container">
+       		<div class="feed-prayer" ng-repeat="prayer in prayerList">
+       			<div class="feed-prayer-header">
+       				<div class="feed-header-content">
+       					<div class="feed-user-photo">
+	       					<div class="user-photo"></div>
+	       					
+	       				</div>
+	       				<div class="feed-user-name">
+	       					<p class="user-name">John Doe</p>
+	       				</div>
+	       				<div class="feed-post-time">
+	       					<p class="post-time">25 min ago</p>
+	       				</div>
+       				</div>
+
+       				
+       			</div> <!-- Closes Feed Header -->
+       			<div class="clearfix"></div>
+       			<div class="feed-prayer-text">
+       				<div class="feed-prayer-title">{{prayer.topic}}</div>
+       				<div class="prayer-text">
+       					<p>{{prayer.description}}
+						</p>
+       				</div>
+       			</div> <!-- Closes prayer text -->
+
+       			<div class="feed-prayer-icon-bar">
+       				<div class="prayer-prayers">
+       					<i class="fa fa-comment"></i>
+                        <span class="prayer-pray-counter">55</span>
+       				</div>
+       				<div class="prayer-comments">
+       					<i class="fa fa-comment"></i>
+                        <span class="prayer-comment-counter">57</span>
+       				</div>
+       				<div class="prayer-views">
+       					<i class="fa fa-eye"></i>
+                        <span class="prayer-view-counter">90</span>
+       				</div>
+       				<div class="prayer-share">
+       					<i class="fa fa-share-square-o"></i>
+                        <span class="prayer-share-counter">41</span>
+       				</div>
+       				<div class="prayer-favorite">
+       					<i class="fa fa-star"></i>
+                        <span class="prayer-favorites-counter">5</span>
+       				</div>
+       			</div>
+
+       		</div> <!-- End of Single Feed Prayer -->
+
+
+       	</div>
+
+
+
+    </div>
+</div>

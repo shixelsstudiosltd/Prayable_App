@@ -65,6 +65,10 @@ sampleApp.controller('prayers',function($rootScope,$scope,$location,$http){
 
     }
 
+    $scope.goToCat = function(catID){
+        $scope.go('/prayers/category/'+catID);
+        if(!$scope.$$phase) $scope.$apply();
+    }
 
 
 
