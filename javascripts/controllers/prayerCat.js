@@ -12,8 +12,8 @@ sampleApp.controller('prayerCat',function($rootScope,$scope,$location,$http){
         $http({
             method:"POST",
             //contentType: 'application/json',
-            url:"http://localhost:3000/getPrayer",
-            //url:"http://prayable-21641.onmodulus.net/getPrayer",
+            //url:"http://localhost:3000/getPrayer",
+            url:"http://prayable-21641.onmodulus.net/getPrayer",
             data:data,
             crossDomain: true,
             dataType: "json"
@@ -23,7 +23,6 @@ sampleApp.controller('prayerCat',function($rootScope,$scope,$location,$http){
                 // when the response is available
                 $scope.prayerList = data;
                // $scope.prayerSerachList = data;
-console.log(data)
             }).error(function(data, textstatus) {
 
                 //console.log(data)

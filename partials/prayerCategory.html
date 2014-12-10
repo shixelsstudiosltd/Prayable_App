@@ -16,7 +16,7 @@
 	       					
 	       				</div>
 	       				<div class="feed-user-name">
-	       					<p class="user-name">John Doe</p>
+	       					<p class="user-name">{{prayer.userInfo[0].firstName}} {{prayer.userInfo[0].lastName}}</p>
 	       				</div>
 	       				<div class="feed-post-time">
 	       					<p class="post-time">25 min ago</p>
@@ -27,9 +27,9 @@
        			</div> <!-- Closes Feed Header -->
        			<div class="clearfix"></div>
        			<div class="feed-prayer-text">
-       				<div class="feed-prayer-title">{{prayer.topic}}</div>
+       				<div class="feed-prayer-title">{{prayer.prayerInfo.topic}}</div>
        				<div class="prayer-text">
-       					<p>{{prayer.description}}
+       					<p>{{prayer.prayerInfo.description}}
 						</p>
        				</div>
        			</div> <!-- Closes prayer text -->
