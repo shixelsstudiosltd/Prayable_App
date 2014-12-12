@@ -5,10 +5,17 @@ sampleApp.controller('prayerCat',function($rootScope,$scope,$location,$http){
     var prayerCat = Url.substr(18,Url.length);
     $scope.isLogged = false;
     if(userData && (Object.keys(userData).length > 0)){
-        $scope.Noprayer = true;
+        $scope.isprayer = false;
         //$scope.showSearch = false;
         $scope.isLogged = true;
         var data = {prayerCat:prayerCat}
+        $scope.goToPrayer = function(payerID){
+            //console.log(payerID)
+            $scope.go('/prayer/'+payerID);
+            if(!$scope.$$phase) $scope.$apply();
+        }
+
+
         $http({
             method:"POST",
             //contentType: 'application/json',
@@ -21,7 +28,11 @@ sampleApp.controller('prayerCat',function($rootScope,$scope,$location,$http){
 
                 // this callback will be called asynchronously
                 // when the response is available
-                $scope.prayerList = data;
+                if(data.length > 0 ){
+                    $scope.isprayer = true
+                    $scope.prayerList = data;
+                }
+
                // $scope.prayerSerachList = data;
             }).error(function(data, textstatus) {
 

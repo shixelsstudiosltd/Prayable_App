@@ -42,7 +42,7 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 templateUrl:'partials/requests.html',
                 controller:'requests'
             })
-            .when('/prayer',{
+            .when('/prayer/:prayerID',{
                 templateUrl:'partials/prayer.html',
                 controller:'prayer'
             })
