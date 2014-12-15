@@ -45,7 +45,7 @@
                               <div class="col-xs-2 counter-container-column">
                                     <div class="prayer-count counter-container">
                                           <i class="fa fa-comment"></i>
-                                          <span class="prayer-pray-counter">55</span>
+                                          <span class="prayer-pray-counter">{{prayerData.commentsCount}}</span>
                                     </div>
                               </div>
                               <div class="col-xs-2 counter-container-column">
@@ -66,10 +66,10 @@
                                           <span class="prayer-share-counter">41</span>
                                     </div>
                               </div>
-                              <div class="col-xs-2 counter-container-column">
+                              <div class="col-xs-2 counter-container-column"  ng-click="createStar(prayerData.prayerInfo._id)">
                                     <div class="prayer-favorites counter-container">
                                           <i class="fa fa-star"></i>
-                                          <span class="prayer-favorites-counter">5</span>
+                                          <span class="prayer-favorites-counter">{{prayerData.likeCount}}</span>
                                     </div>
                               </div>
                               
