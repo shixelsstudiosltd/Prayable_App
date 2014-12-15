@@ -7,13 +7,16 @@ sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
     if(userData && (Object.keys(userData).length > 0)){
         $scope.isprayer = false;
         $scope.isLogged = true;
-        var data = {prayerID:prayerID}
+        var dataID = {prayerID:prayerID}
+
+
+
         $http({
             method:"POST",
             //contentType: 'application/json',
             //url:"http://localhost:3000/getOnPrayer",
             url:"http://prayable-21641.onmodulus.net/getOnPrayer",
-            data:data,
+            data:dataID,
             crossDomain: true,
             dataType: "json"
         }).success(function(data, textstatus) {
@@ -23,6 +26,27 @@ sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
                 if(data){
                     $scope.isprayer = true
                     $scope.prayerData = data;
+                    $http({
+                        method:"POST",
+                        //contentType: 'application/json',
+                        //url:"http://localhost:3000/seenPrayer",
+                        url:"http://prayable-21641.onmodulus.net/seenPrayer",
+                        data:dataID,
+                        crossDomain: true,
+                        dataType: "json"
+                    }).success(function(data2, textstatus2) {
+                            //console.log(data2)
+                            var tempSeen  =   parseInt($scope.prayerData.prayerInfo.prayerSeen)+1;
+                            $scope.prayerData.prayerInfo.prayerSeen = tempSeen;
+                            // $scope.prayerSerachList = data;
+                        }).error(function(data2, textstatus2) {
+
+                            //console.log(data)
+                            // console.log(textstatus)
+                            // called asynchronously if an error occurs
+                            // or server returns response with an error status.
+                        });
+
                 }
 
                 // $scope.prayerSerachList = data;
@@ -39,8 +63,8 @@ sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
             $http({
                 method:"POST",
                 //contentType: 'application/json',
-                url:"http://localhost:3000/saveLike",
-                //url:"http://prayable-21641.onmodulus.net/saveLike",
+                //url:"http://localhost:3000/saveLike",
+                url:"http://prayable-21641.onmodulus.net/saveLike",
                 data:data,
                 crossDomain: true,
                 dataType: "json"
