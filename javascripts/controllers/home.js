@@ -1,6 +1,12 @@
 sampleApp.controller('home',function($rootScope,$scope,$location){
+    var userData =  JSON.parse(sessionStorage.getItem('userData'));
+    if(userData && (Object.keys(userData).length > 0)){
+        $scope.activityCount = userData.activityCount
 
-
+    }else{
+        $location.path('/')
+        if(!$scope.$$phase) $scope.$apply();
+    }
 
         $scope.go = function (path){
             $location.path(path);

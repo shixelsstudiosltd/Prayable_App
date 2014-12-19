@@ -168,6 +168,7 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
         }
         $scope.selectfeed =function(){
             $scope.prayerInfo.newsFeed = true;
+
         }
         $scope.fbShare =function(){
             $scope.prayerInfo.fbShare = true;
