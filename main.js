@@ -318,6 +318,14 @@ sampleApp.controller('chatDiv',function($rootScope,$scope,$location,$http,$cooki
 
     })
 
+    socketTest.on('activityCreated',function(msg){
+        var userData =  JSON.parse(sessionStorage.getItem('userData'));
+        var userData =  JSON.parse(sessionStorage.getItem('userData')); if(userData && (Object.keys(userData).length > 0)){
+         userData.activityCount++;
+            sessionStorage.setItem('userData',JSON.stringify(userData));
+        }
+    })
+
 
 });
 
