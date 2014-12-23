@@ -1,7 +1,7 @@
 sampleApp.controller('home',function($rootScope,$scope,$location){
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     if(userData && (Object.keys(userData).length > 0)){
-        $scope.activityCount = userData.activityCount
+        $scope.notificationCount = userData.notificationCount
 
     }else{
         $location.path('/')
