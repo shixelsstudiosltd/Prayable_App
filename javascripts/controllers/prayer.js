@@ -113,4 +113,9 @@ sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
             $location.path(path);
         }
 
+    $scope.back = function (path){
+        history.back();
+        $scope.$apply();
+    };
+
 })

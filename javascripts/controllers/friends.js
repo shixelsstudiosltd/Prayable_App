@@ -8,6 +8,10 @@ sampleApp.controller('friends',function($rootScope,$scope,$location,$http){
     var Url = $location.$$path;
     var userID = (Url.substr(9,Url.length)).trim();
 
+    $scope.back = function (path){
+        history.back();
+        $scope.$apply();
+    };
 
 
     $scope.change = function(){

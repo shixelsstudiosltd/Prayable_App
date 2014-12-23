@@ -196,6 +196,10 @@ sampleApp.controller('inbox',function($rootScope,$scope,$location,$http,ngDialog
     }
 
 
+    $scope.back = function (path){
+        history.back();
+        $scope.$apply();
+    };
 
 
         $scope.go = function (path){

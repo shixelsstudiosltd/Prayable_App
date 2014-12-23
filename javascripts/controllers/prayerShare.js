@@ -183,6 +183,10 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
 
 
 
+    $scope.back = function (path){
+        history.back();
+        $scope.$apply();
+    };
 
 
 

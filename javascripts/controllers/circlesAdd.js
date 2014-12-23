@@ -2,7 +2,9 @@ sampleApp.controller('circlesAdd',function($rootScope,$scope,$location,$http,ngD
 
     $scope.back = function (path){
         history.back();
+        $scope.$apply();
     };
+
 
     $scope.go = function (path){
         $location.path(path);

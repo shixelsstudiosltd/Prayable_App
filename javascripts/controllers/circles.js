@@ -1,8 +1,10 @@
 sampleApp.controller('circles',function($rootScope,$scope,$location,$http){
 
-   $scope.back = function (path){
+    $scope.back = function (path){
         history.back();
+        $scope.$apply();
     };
+
 
     $scope.go = function (path){
         $location.path(path);

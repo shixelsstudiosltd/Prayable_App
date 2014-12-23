@@ -7,7 +7,10 @@ sampleApp.controller('profile',function($rootScope,$scope,$location,$http,ngDial
     $scope.prayers = '';
     $scope.isLogged = false
     $scope.ownUser = false
-
+    $scope.back = function (path){
+        history.back();
+        $scope.$apply();
+    };
 
 
 

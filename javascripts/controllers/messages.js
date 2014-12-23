@@ -133,6 +133,10 @@ console.log(textstatus)
         $scope.isAnyErr = true;
     })
 
+    $scope.back = function (path){
+        history.back();
+        $scope.$apply();
+    };
 
     $scope.go = function (path){
         $location.path(path);

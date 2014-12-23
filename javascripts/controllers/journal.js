@@ -1,4 +1,8 @@
 sampleApp.controller('journal',function($rootScope,$scope,$location){
+    $scope.back = function (path){
+        history.back();
+        $scope.$apply();
+    };
 
 
 

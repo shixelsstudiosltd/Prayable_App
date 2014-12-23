@@ -102,7 +102,12 @@ sampleApp.controller('prayerCat',function($rootScope,$scope,$location,$http){
         if(!$scope.$$phase) $scope.$apply();
     }
 
-        $scope.go = function (path){
+    $scope.back = function (path){
+        history.back();
+        $scope.$apply();
+    };
+
+    $scope.go = function (path){
             $location.path(path);
         }
 
