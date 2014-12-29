@@ -81,9 +81,17 @@ var ownUser = $scope.ownUser
     if((userData._id == userID)||((userID == '')&&(userData && (Object.keys(userData).length > 0)))){
         //console.log('own profile')
         $scope.ownUser = true
-        $scope.profileInfo ={_id:userData._id,email:userData.email}
-        $scope.prayers = userData.prayerList;
-        $scope.friends = userData.friendList;
+        $scope.profileInfo ={_id:userData._id,email:userData.email,pictureUrl:userData.pictureUrl,firstName:userData.firstName,lastName:userData.lastName}
+       if(userData.prayerList.length  == 0){
+           $scope.prayers = '-'
+       }else
+       {$scope.prayers = userData.prayerList.length;
+       }
+       if(((userData.friendList[0].msg)&&(userData.friendList[0].msg == 'no Member Add'))||(userData.friendList[0].length == 0)){
+           $scope.friends = '-'
+       }else{
+           $scope.friends = userData.friendList[0].length
+       }
         $scope.isLogged = true;
     }else if(userData._id != userID){
 
@@ -99,7 +107,6 @@ var ownUser = $scope.ownUser
                 if((profile.status == -1) && (profile.status == -2)){
                     console.log(profile.error)
                 }else{
-
                     $scope.profileInfo = profile.data
                     $scope.isLogged = true;
 

@@ -300,13 +300,16 @@ sampleApp.controller('chatDiv',function($rootScope,$scope,$location,$http,$cooki
          var userFriendList = userData.friendList[0]
             var userListTemp1;
             var userListTemp2;
+              if((userFriendList.msg) && (userFriendList.msg == 'no Member Add'))
+              {}else{
              userListTemp1 = userFriendList.filter(function(user) {
                  userListTemp2 = clients.filter(function(client) {
                     return user.id === client.userID; // filter out appropriate one
                 });
                 //return user.userID === data.userID; // filter out appropriate one
             });
-        }
+              }
+              }
         if((userListTemp2)&&(userListTemp2.length > 0)){
             //console.log(userListTemp2+'aaa')
             sessionStorage.setItem('onlineUser',JSON.stringify(userListTemp2));
