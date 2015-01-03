@@ -1,4 +1,4 @@
-<div>
+<div ng-show="isLogged">
 	<div class="body-container bg-purple">
 		<ul class="app-header bg-transparent">
             <li ng-click="back()" class="app-header-back-button"><i class="fa fa-angle-left"></i></li>
@@ -8,155 +8,22 @@
        		</li>
        	</ul>
        	<div class="activities-body-container">
-       		<div class="activity-container">
-       			<div class="activity-icon-box">
-       				<div class="activity-icon act-icon-fast">
-       				</div>
-       			</div>
-       			<div class="activity-desc-box">
-       				<div class="activity-desc">	
-       					<h3>Fasting</h3>
-       					<h5 class="act-one">Starts <span class="act-start">4:30am</span> - Ends <span class="act-end">6:07pm</span></h5>
-       				</div>
-       				<div class="activity-time">
-       					<p>
-       					Added<br>
-       					<span class="act-day">Today</span><br>
-       					<span class="act-day-time">6:37pm</span>
-       					</p>
-       				</div>
-       			</div>
-       		</div>
-       		<div class="activity-container">
-       			<div class="activity-icon-box">
-       				<div class="activity-icon act-icon-bible">
-       				</div>
-       			</div>
-       			<div class="activity-desc-box">
-       				<div class="activity-desc">	
-       					<h3>Finish Reading Bible in 15 Days</h3>
-       					<h5 class="act-one">Starts <span class="act-start">Sept 19</span> - Ends <span class="act-end">Oct 14</span></h5>
-       				</div>
-       				<div class="activity-time">
-       					<p>
-       					Added<br>
-       					<span class="act-day">Today</span><br>
-       					<span class="act-day-time">7:02am</span>
-       					</p>
-       				</div>
-       			</div>
-       		</div>
-       		<div class="activity-container">
-       			<div class="activity-icon-box">
-       				<div class="activity-icon act-icon-hands">
-       				</div>
-       			</div>
-       			<div class="activity-desc-box">
-       				<div class="activity-desc">	
-       					<h3>Prayer Schedule</h3>
-       					<h5 class="act-repeat">Next <span class="act-type">Prayer</span> at <span class="act-repeat-time">6:07pm</span></h5>
-       				</div>
-       				<div class="activity-time">
-       					<p>
-       					Added<br>
-       					<span class="act-day">Yesterday</span><br>
-       					<span class="act-day-time">11:02 am</span>
-       					</p>
-       				</div>
-       			</div>
-       		</div>
-       		<div class="activity-container">
-       			<div class="activity-icon-box">
-       				<div class="activity-icon act-icon-hands">
-       				</div>
-       			</div>
-       			<div class="activity-desc-box">
-       				<div class="activity-desc">	
-       					<h3>Devotional</h3>
-       					<h5 class="act-repeat">Next <span class="act-type">Devotional</span> at <span class="act-repeat-time">7:05pm</span></h5>
-       				</div>
-       				<div class="activity-time">
-       					<p>
-       					Added<br>
-       					<span class="act-day">Yesterday</span><br>
-       					<span class="act-day-time">10:07 am</span>
-       					</p>
-       				</div>
-       			</div>
-       		</div>
-       		<div class="activity-container">
-       			<div class="activity-icon-box">
-       				<div class="activity-icon act-icon-hands">
-       				</div>
-       			</div>
-       			<div class="activity-desc-box">
-       				<div class="activity-desc">	
-       					<h3>Devotional</h3>
-       					<h5 class="act-repeat">Next <span class="act-type">Devotional</span> at <span class="act-repeat-time">7:05 pm</span></h5>
-       				</div>
-       				<div class="activity-time">
-       					<p>
-       					Added<br>
-       					<span class="act-day">Yesterday</span><br>
-       					<span class="act-day-time">10:07 am</span>
-       					</p>
-       				</div>
-       			</div>
-       		</div>
 
-       		<div class="activity-container">
+       		<div class="activity-container" ng-repeat="activity in activities">
        			<div class="activity-icon-box">
-       				<div class="activity-icon act-icon-fast">
+       				<div class="activity-icon act-icon-{{activity.typeInfo.title}}">
        				</div>
        			</div>
        			<div class="activity-desc-box">
        				<div class="activity-desc">	
-       					<h3>Fasting</h3>
-       					<h5 class="act-one">Starts <span class="act-start">4:30am</span> - Ends <span class="act-end">6:07pm</span></h5>
+       					<h3>{{activity.activityInfo.title}}</h3>
+       					<h5 class="act-one">Starts <span class="act-start">{{activity.activityInfo.StartDateTime[0]}}</span> - Ends <span class="act-end">{{activity.activityInfo.EndDateTime[0]}}</span></h5>
        				</div>
        				<div class="activity-time">
        					<p>
        					Added<br>
-       					<span class="act-day">Today</span><br>
-       					<span class="act-day-time">6:37pm</span>
-       					</p>
-       				</div>
-       			</div>
-       		</div>
-       		<div class="activity-container">
-       			<div class="activity-icon-box">
-       				<div class="activity-icon act-icon-bible">
-       				</div>
-       			</div>
-       			<div class="activity-desc-box">
-       				<div class="activity-desc">	
-       					<h3>Finish Reading Bible in 15 Days</h3>
-       					<h5 class="act-one">Starts <span class="act-start">Sept 19</span> - Ends <span class="act-end">Oct 14</span></h5>
-       				</div>
-       				<div class="activity-time">
-       					<p>
-       					Added<br>
-       					<span class="act-day">Today</span><br>
-       					<span class="act-day-time">7:02am</span>
-       					</p>
-       				</div>
-       			</div>
-       		</div>
-       		<div class="activity-container">
-       			<div class="activity-icon-box">
-       				<div class="activity-icon act-icon-hands">
-       				</div>
-       			</div>
-       			<div class="activity-desc-box">
-       				<div class="activity-desc">	
-       					<h3>Prayer Schedule</h3>
-       					<h5 class="act-repeat">Next <span class="act-type">Prayer</span> at <span class="act-repeat-time">6:07pm</span></h5>
-       				</div>
-       				<div class="activity-time">
-       					<p>
-       					Added<br>
-       					<span class="act-day">Yesterday</span><br>
-       					<span class="act-day-time">11:02 am</span>
+       					<span class="act-day">{{activity.activityInfo.CreatedDateTime[1]}}</span><br>
+       					<span class="act-day-time">{{activity.activityInfo.CreatedDateTime[0]}}</span>
        					</p>
        				</div>
        			</div>
