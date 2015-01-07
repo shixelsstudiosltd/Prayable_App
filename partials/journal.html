@@ -100,7 +100,7 @@
        			<div class="journal-create-date">
        				
        				<div class="create-month-box create-date">
-       					<select class="create-month">
+       					<select class="create-month" ng-model="journalData.month">
 	       					<option value="January">January</option>       
 						    <option value="February">February</option>       
 						    <option value="March">March</option>       
@@ -116,7 +116,7 @@
 	       				</select>
        				</div>
        				<div class="create-day-box create-date">
-       					<select class="create-day">
+       					<select class="create-day" ng-model="journalData.day">
 	       					<option value="1">1</option>       
 						    <option value="2">2</option>       
 						    <option value="3">3</option>       
@@ -152,20 +152,20 @@
        				</div>
        				
        				<div class="create-year-box create-date">
-       					<select class="create-year">
-	       					<option value="2014">2014</option>
+       					<select class="create-year"  ng-model="journalData.year" ng-options="a for a in year">
+	       					<!--<option value="2014">2014</option>
 	       					<option value="2015">2015</option>
 	       					<option value="2016">2016</option>
 	       					<option value="2017">2017</option>
 	       					<option value="2018">2018</option>
 	       					<option value="2019">2019</option>
-	       					<option value="2020">2020</option>
+	       					<option value="2020">2020</option>-->
 	       				</select>
        				</div>
        			</div>
 
        			<div class="journal-create-title">
-       				<input placeholder="Please Enter Title" name="journal-title" type="text">
+       				<input placeholder="Please Enter Title" name="journal-title" type="text" ng-model="journalData.title">
        			</div>
 
        			<div style="position:relative;">
@@ -173,7 +173,7 @@
        				<div class="create-box-header">
        					<div class="create-text">
        						<i class="fa fa-file-text-o"></i>
-       						<p>Text</p>
+       						<p >Text</p>
        					</div>
        					<div class="create-photo">
        						<i class="fa fa-camera"></i>
@@ -186,35 +186,22 @@
        				</div>
        				<div class="create-box-content">
        					<div class="tag-content" style="display:none">
-       						<textarea placeholder="Separated by comma..." name="create-tag" class="create-tag"></textarea>
+       						<textarea placeholder="Separated by comma..." name="create-tag"  ng-model="journalData.tag" class="create-tag"></textarea>
        					</div>
-       					<div class="photo-content" style="display:none">
-       						<div class="photo-content-box">
+       					<div class="photo-content photo_box" style="display:none" flow-init="saveImage($flow)" flow-files-submitted="saveImage($flow)"   flow-file-success="saveImage($flow)" flow-attrs="{accept:'image/*'}">
+
+                            <div class="photo-content-box" ng-repeat="file in $flow.files">
        							<div class="photo-img">
-       								<div class="content">
+                                    <img ng-show="$flow.files.length" flow-img="file" style="width: 100%; height: 100%" >
+       								<div class="content" ng-click="deletePic($flow,$index)">
        									<i class="fa fa-times-circle-o"></i>
        									<p>Tap to remove</p>
        								</div>
        							</div>
        						</div>
        						
-       						<div class="photo-content-box">
-       							<div class="photo-img">
-       								<div class="content">
-       									<i class="fa fa-times-circle-o"></i>
-       									<p>Tap to remove</p>
-       								</div>
-       							</div>
-       						</div>
-       						<div class="photo-content-box">
-       							<div class="photo-img">
-       								<div class="content">
-       									<i class="fa fa-times-circle-o"></i>
-       									<p>Tap to remove</p>
-       								</div>
-       							</div>
-       						</div>
-       						<div class="photo-content-add-photo-box photo-content-box">
+
+       						<div class="photo-content-add-photo-box photo-content-box" flow-btn>
        							<div class="photo-img">
        								<div class="content">
 	       								<i class="fa fa-camera fa-2x"></i>
@@ -224,19 +211,19 @@
        						</div>
        					</div>
        					<div class="text-content">
-       						<textarea name="create-text" class="create-text" placeholder="Enter Journal Content..."></textarea>
+       						<textarea  ng-model="journalData.text" name="create-text" class="create-text" placeholder="Enter Journal Content..."></textarea>
        					</div>
 
        					<div class="text-content-text-add">
-       						<button><i class="fa fa-plus-square"></i> Add Journal Entry</button>
+       						<button ><i class="fa fa-plus-square"></i> Add Journal Entry</button>
        					</div>
 
        				</div>
+                   <div>{{error}}</div>
 
-
-       				<div class="create-box-save">
+       				<div class="create-box-save" style="position: static; margin-top: 7%">
        					<button class="cancel-button">Cancel</button>
-       					<button class="save-button">Save</button>
+       					<button class="save-button" ng-click="saveJournal()">Save</button>
        				</div>
        				
        			</div> <!-- closes create box content -->

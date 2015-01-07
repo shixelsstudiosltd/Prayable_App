@@ -6,9 +6,17 @@ sampleApp.controller('journal',function($rootScope,$scope,$location,$http){
 
     $scope.isLogged = false
     $scope.showSearch = false;
+    $scope.error = '';
+
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     if(userData && (Object.keys(userData).length > 0)){
-
+        var date = new Date()
+        var year = parseInt(date.getFullYear())
+        $scope.year = []
+        for(var i=0; i<5; i++){
+            $scope.year.push(year++)
+        }
+        $scope.journalData = {userID:userData._id,day:'1',month:'January',year: date.getFullYear(),fileData:[]}
         $scope.journalList = '';
         $http({
             method:"POST",
@@ -33,6 +41,85 @@ sampleApp.controller('journal',function($rootScope,$scope,$location,$http){
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
             });
+
+
+        //$scope.journalEventDate = {time:'',month:'',year:''}
+
+
+        $scope.saveJournal = function(){
+            if($scope.journalData.text){
+                if($scope.journalData.title){
+                    if($scope.journalData.tag){
+                        $scope.journalData.tag = $scope.journalData.tag.split(',')
+                    }
+
+                    $http({
+                        method:"POST",
+                        //contentType: 'application/json',
+                        //url:"http://localhost:3000/createJournal",
+                        url:"http://prayable-21641.onmodulus.net/createJournal",
+                        data:{journalData:$scope.journalData},
+                        crossDomain: true,
+                        dataType: "json"
+                    }).success(function(data, textstatus) {
+                            // this callback will be called asynchronously
+                            // when the response is available
+
+                            console.log(data)
+                        }).error(function(data, textstatus) {
+
+                            //console.log(data)
+                            console.log(textstatus)
+                            // called asynchronously if an error occurs
+                            // or server returns response with an error status.
+                        });
+
+
+                }else {
+                    $scope.error = 'Please Add Title for the Journal';
+                }
+            }else {
+                $scope.error = 'Please Add Text for the Journal';
+            }
+        }
+
+        var getFileReader = function( $scope ) {
+
+            var fileReader = new FileReader();
+
+            fileReader.onloadend = function() {
+
+               //console.log(fileReader.result);
+                $scope.journalData.fileData.push(fileReader.result)
+            }
+
+            return fileReader;
+        };
+        $scope.saveImage = function(flow){
+
+            if(flow){
+                for(var i=0; i < flow.files.length;i++){
+                    var abc = !!{png:1,gif:1,jpg:1,jpeg:1}[flow.files[i].getExtension()]
+                    if(abc == true){
+
+                        var fileReader = getFileReader( $scope ),
+                            file = flow.files[i].file;
+
+                        fileReader.readAsDataURL(file);
+
+                        $scope.$apply();
+
+                    }else{
+                        flow.cancel()
+                    }
+                }
+
+            }
+        }
+
+$scope.deletePic = function(flow,imgIndex){
+    flow.files.splice(imgIndex, 1);
+        }
 
 
     }else{
