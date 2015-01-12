@@ -1,4 +1,4 @@
-sampleApp.controller('fasts',function($rootScope,$scope,$location){
+sampleApp.controller('activityTypeAdd',function($rootScope,$scope,$location){
 
 
 

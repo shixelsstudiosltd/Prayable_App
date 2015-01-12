@@ -78,10 +78,15 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
                 templateUrl:'partials/activities.html',
                 controller:'activities'
             })
-            .when('/fasts',{
-                templateUrl:'partials/fasts.html',
-                controller:'fasts'
+            .when('/activities/:activityType',{
+                templateUrl:'partials/activityType.html',
+                controller:'activityType'
             })
+            .when('/activities/:activityType/add',{
+                templateUrl:'partials/activityTypeAdd.html',
+                controller:'activityTypeAdd'
+            })
+
             .when('/notification',{
                 templateUrl:'partials/notification.html',
                 controller:'notification'
