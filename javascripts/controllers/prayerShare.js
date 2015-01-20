@@ -8,7 +8,7 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
             prayer_text:'',
             group_id:[],
             journal_id :[],
-            is_private:true,
+            is_notPrivate:true,
             gps_enabled:true,
             gps_location:'',
             newsFeed:false,

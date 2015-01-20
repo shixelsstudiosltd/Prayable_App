@@ -99,8 +99,8 @@ var ownUser = $scope.ownUser
         $http({
             method:"GET",
             //contentType: 'application/json',
-            url:"http://localhost:3000/user/"+userID,
-            //url:"http://prayable-21641.onmodulus.net/user/"+userID,
+            //url:"http://localhost:3000/user/"+userID,
+            url:"http://prayable-21641.onmodulus.net/user/"+userID,
             crossDomain: true,
             dataType: "json"
         }).success(function(profile, textstatus) {

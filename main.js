@@ -56,7 +56,7 @@ var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','fa
             })
             .when('/feed',{
                 templateUrl:'partials/feed.html',
-                controller:'prayers'
+                controller:'feed'
             })
             .when('/circles',{
                 templateUrl:'partials/circles.html',
