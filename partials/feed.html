@@ -29,11 +29,11 @@
        				
        			</div> <!-- Closes Feed Header -->
        			<div class="clearfix"></div>
-       			<div class="feed-prayer-text">
+       			<div class="feed-prayer-text" ng-click="goToPrayer(feed.prayerInfo._id)">
        				<div class="feed-prayer-title">Our Father</div>
        				<div class="prayer-text">
        					<p>
-							{{feed.prayersInfo.prayer_text}}
+							{{feed.prayerInfo.prayer_text}}
 						</p>
        				</div>
        			</div> <!-- Closes prayer text -->
@@ -43,21 +43,21 @@
        					<i class="fa fa-comment"></i>
                         <span class="prayer-pray-counter">55</span>
        				</div>
-       				<div class="prayer-comments">
+       				<div class="prayer-comments" ng-click="goToPrayer(feed.prayerInfo._id)">
        					<i class="fa fa-comment"></i>
-                        <span class="prayer-comment-counter">57</span>
+                        <span class="prayer-comment-counter">{{feed.commentsCount}}</span>
        				</div>
        				<div class="prayer-views">
        					<i class="fa fa-eye"></i>
-                        <span class="prayer-view-counter">{{feed.prayersInfo.prayerSeen}}</span>
+                        <span class="prayer-view-counter">{{feed.prayerInfo.prayerSeen}}</span>
        				</div>
        				<div class="prayer-share">
        					<i class="fa fa-share-square-o"></i>
                         <span class="prayer-share-counter">41</span>
        				</div>
-       				<div class="prayer-favorite">
+       				<div class="prayer-favorite" ng-click="createStar(feed.prayerInfo._id)">
        					<i class="fa fa-star"></i>
-                        <span class="prayer-favorites-counter">5</span>
+                        <span class="prayer-favorites-counter">{{feed.likeCount}}</span>
        				</div>
        			</div>
 
