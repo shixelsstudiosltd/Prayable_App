@@ -42,32 +42,39 @@ sampleApp.controller('circles',function($rootScope,$scope,$location,$http){
             }).success(function(data, textstatus) {
                     // this callback will be called asynchronously
                     // when the response is available
-                    $scope.noMember = false;
-                    $scope.showSearch = true;
-                    $scope.groupList = data;
-                    $scope.groupSearchList = data;
-                    console.log(data)
-                    $scope.searchQuery=''
-                    $scope.change = function(){
-                        var str = $(".circleSearchField").val();
+                     if(data.length > 0){
+                         $scope.noMember = false;
+                         $scope.showSearch = true;
+                         $scope.groupList = data;
+                         $scope.groupSearchList = data;
+                         console.log(data)
+                         $scope.searchQuery=''
+                         $scope.change = function(){
+                             var str = $(".circleSearchField").val();
 
-                        switch (event.keyCode){
-                            case 32:{
-                                if(str.length > 1 ){
-                                    filterResult(str)
-                                }else{
+                             switch (event.keyCode){
+                                 case 32:{
+                                     if(str.length > 1 ){
+                                         filterResult(str)
+                                     }else{
 
-                                }
-                                break;
-                            };
-                            default :{
-                                filterResult(str);
-                                break;
-                            };
+                                     }
+                                     break;
+                                 };
+                                 default :{
+                                     filterResult(str);
+                                     break;
+                                 };
 
-                        };
+                             };
 
-                    };
+                         };
+                     }else{
+                         $scope.noMember = true;
+                         $scope.showSearch = false;
+                     }
+
+
 
 
 

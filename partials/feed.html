@@ -55,7 +55,7 @@
        					<i class="fa fa-share-square-o"></i>
                         <span class="prayer-share-counter">41</span>
        				</div>
-       				<div class="prayer-favorite" >
+       				<div class="prayer-favorite" ng-click="createStar(feed.prayerInfo._id)">
        					<i class="fa fa-star"></i>
                         <span class="prayer-favorites-counter">{{feed.likeCount}}</span>
        				</div>
@@ -64,6 +64,9 @@
        		</div> <!-- End of Single Feed Prayer -->
 
 
+			<div ng-show="isFeeds">
+				<h1>You have NO Feeds</h1>
+			</div>
        	</div>
 
 

@@ -4,6 +4,7 @@ sampleApp.controller('prayerCat',function($rootScope,$scope,$location,$http){
     var Url = $location.$$path;
     var prayerCat = Url.substr(18,Url.length);
     $scope.isLogged = false;
+    $scope.isPrayerCat = false;
     if(userData && (Object.keys(userData).length > 0)){
         $scope.isprayer = false;
         //$scope.showSearch = false;
@@ -82,11 +83,15 @@ sampleApp.controller('prayerCat',function($rootScope,$scope,$location,$http){
             dataType: "json"
         }).success(function(data, textstatus) {
 
+
+
                 // this callback will be called asynchronously
                 // when the response is available
                 if(data.length > 0 ){
                     $scope.isprayer = true
                     $scope.prayerList = data;
+                }else{
+                    $scope.isPrayerCat = true;
                 }
 
                // $scope.prayerSerachList = data;

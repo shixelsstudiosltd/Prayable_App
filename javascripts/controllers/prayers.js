@@ -12,6 +12,8 @@ sampleApp.controller('prayers',function($rootScope,$scope,$location,$http){
     }).success(function(data, textstatus) {
             // this callback will be called asynchronously
             // when the response is available
+
+
             $scope.prayerList = data;
             $scope.prayerSerachList = data;
             //console.log(data)

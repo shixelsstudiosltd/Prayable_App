@@ -1,6 +1,7 @@
 sampleApp.controller('activities',function($rootScope,$scope,$location,$http){
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     $scope.isLogged = false
+    $scope.isActivity = false
 
 
     if(userData && (Object.keys(userData).length > 0)){
@@ -17,11 +18,17 @@ sampleApp.controller('activities',function($rootScope,$scope,$location,$http){
             dataType: "json"
         }).success(function(activities, textstatus) {
                 console.log(activities)
+            if(activities.length > 0){
                 $scope.activities = activities
+
+            }else{
+                $scope.isActivity = true;
+            }
+
 
             }).error(function(err,data){
 
-
+            $scope.isActivity = true;
             })
 
     }else{

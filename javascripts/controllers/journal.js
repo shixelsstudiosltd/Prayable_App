@@ -5,6 +5,7 @@ sampleApp.controller('journal',function($rootScope,$scope,$location,$http){
     };
 
     $scope.isLogged = false
+    $scope.isJournal = false
     $scope.showSearch = false;
     $scope.error = '';
 
@@ -29,13 +30,19 @@ sampleApp.controller('journal',function($rootScope,$scope,$location,$http){
         }).success(function(data, textstatus) {
                 // this callback will be called asynchronously
                 // when the response is available
-                $scope.isLogged = true;
-                $scope.showSearch = true;
-                $scope.journalList = data;
+            if(data.length > 0){
+                $scope.journalList = data
+                scope.isLogged = true;
+                scope.showSearch = true;
+                $scope.isJournal = true;
+            }else{
+                $scope.isJournal = false;
+                scope.showSearch = false;
+            }
 
-                 console.log(data)
+
             }).error(function(data, textstatus) {
-
+            $scope.isJournal = false;
                 //console.log(data)
                 console.log(textstatus)
                 // called asynchronously if an error occurs

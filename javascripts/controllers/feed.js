@@ -1,6 +1,7 @@
 sampleApp.controller('feed',function($rootScope,$scope,$location,$http){
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     $scope.isLogged = false
+    $scope.isFeeds = false
 
 
     if(userData && (Object.keys(userData).length > 0)){
@@ -17,11 +18,16 @@ sampleApp.controller('feed',function($rootScope,$scope,$location,$http){
             dataType: "json"
         }).success(function(feeds, textstatus) {
             console.log(feeds)
+               if(feeds.length > 0){
+                   $scope.feeds = feeds
 
-            $scope.feeds = feeds
+               }else{
+                   $scope.isFeeds = true;
+               }
+
 
         }).error(function(err,data){
-
+            $scope.isFeeds = true;
 
         })
 
@@ -30,8 +36,8 @@ sampleApp.controller('feed',function($rootScope,$scope,$location,$http){
             $http({
                 method:"POST",
                 //contentType: 'application/json',
-                //url:"http://localhost:3000/saveLike",
-                url:"http://prayable-21641.onmodulus.net/saveLike",
+                url:"http://localhost:3000/saveLike",
+                //url:"http://prayable-21641.onmodulus.net/saveLike",
                 data:data,
                 crossDomain: true,
                 dataType: "json"
