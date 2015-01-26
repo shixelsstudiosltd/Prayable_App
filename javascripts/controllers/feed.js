@@ -11,8 +11,8 @@ sampleApp.controller('feed',function($rootScope,$scope,$location,$http){
         $http({
             method:"POST",
             //contentType: 'application/json',
-            url:"http://localhost:3000/getAllFeeds",
-            //url:"http://prayable-21641.onmodulus.net/getAllFeeds",
+            //url:"http://localhost:3000/getAllFeeds",
+            url:"http://prayable-21641.onmodulus.net/getAllFeeds",
             data:{userID:userData._id},
             crossDomain: true,
             dataType: "json"
