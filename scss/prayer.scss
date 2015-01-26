@@ -69,17 +69,16 @@
 	}
 
 	.prayer-container {	
-		height: 100%;
+		height: auto;
 		position: relative;
 		overflow-y: scroll;
 	}
 
 	.bar-container {
-		height: 156px;
-		position: relative;
+		height: 130px;
 		padding-top: 10px;
-		position: absolute;
-		bottom: 12px;
+		/*position: absolute;
+		bottom: 70px;*/
 		background: $purple;
 		width: 100%;
 
@@ -221,71 +220,109 @@
 			}
 		}
 	}
-}
 
-.comment-container {
-	.prayer-comment-container {
-		display: flex;
-		display: -webkit-flex;
-		position: relative;
+	.comment-container {
+		position: absolute;
+		bottom: 70px;
+	}
 
-		.user-comment-container {
+	.comment-row {
+		.prayer-comment-container {
 			display: flex;
 			display: -webkit-flex;
-			width: 100%;
 			position: relative;
-			padding-bottom: 10px;
-			border-bottom: 1px solid $white-t-l;
-			margin-bottom: 10px;
 
-			.user-comment-photo {
-				div {
-					height: 60px;
-					width: 60px;
-					border-radius: 50%;
-					background: url('../img/user-img.jpg');
-					background-size: contain;
+			.user-comment-container {
+				display: flex;
+				display: -webkit-flex;
+				width: 100%;
+				position: relative;
+				padding-bottom: 10px;
+				border-bottom: 1px solid $white-t-l;
+				margin-bottom: 10px;
+
+				.user-comment-photo {
+					div {
+						height: 60px;
+						width: 60px;
+						border-radius: 50%;
+						background: url('../img/user-img.jpg');
+						background-size: contain;
+					}
+				}
+
+				.user-comment-settings {
+				margin-left: 10px;
+
+					.user-comment-name {
+						font-size: 16px;
+						color: $light-purple;
+						margin-top: 10px;
+						margin-bottom: 0; 
+					}
+					.user-comment-post {
+						font-size: 12px;
+						color: $light-purple;
+					}
 				}
 			}
 
-			.user-comment-settings {
-			margin-left: 10px;
-
-				.user-comment-name {
-					font-size: 16px;
+			.user-comment-like-container {
+				display: flex;
+				height: 70px;
+				display: -webkit-flex;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translate(-75%, -50%);
+				.user-likes {
 					color: $light-purple;
-					margin-top: 10px;
-					margin-bottom: 0; 
 				}
-				.user-comment-post {
-					font-size: 12px;
+				.user-dislikes {
 					color: $light-purple;
 				}
 			}
 		}
+	}
 
-		.user-comment-like-container {
-			display: flex;
-			height: 70px;
-			display: -webkit-flex;
-			position: absolute;
-			top: 50%;
-			right: 0;
-			transform: translate(-75%, -50%);
-			.user-likes {
-				color: $light-purple;
-			}
-			.user-dislikes {
-				color: $light-purple;
-			}
+	.user-comment-form {
+		margin-top: 20px;
+		textarea {
+			width: 70%;
+			height: 150px;
+			border-radius: 5px;
+			float: left;
+			padding: 5px;
+			background-color: $white-t-l;
+			border: 1px solid $white-t;
+			color: $light-purple;
+		}
+		button {
+			width: 23%;
+			height: 60px;
+			margin-bottom: 30px;
+			float: right;
+			background: transparent;
+			border-radius: 5px;
+			color: $light-purple;
+			font-size: 16px;
+			border: 1px solid $light-purple;
+		}
+		button:hover {
+			border: 1px solid $white;
+			color: $white;
+		}
+	}
+
+	.user-comment-box {
+		padding-bottom: 10px;
+		border-bottom: 1px solid $dark-purple;
+		.user-comment {
+			color: $light-purple;
+			width: 85%;
+			margin: 0 auto 10px;
 		}
 	}
 }
 
-.user-comment-box {
-	.user-comment {
-		color: $light-purple;
-		width: 85%;
-		margin: 0 auto 10px;
-	}
-}
+

@@ -1,12 +1,12 @@
 sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
 
-    var userData =  JSON.parse(sessionStorage.getItem('userData'));
+   // var userData =  JSON.parse(sessionStorage.getItem('userData'));
     var Url = $location.$$path;
     var prayerID = Url.substr(8,Url.length);
-    $scope.isLogged = false;
-    if(userData && (Object.keys(userData).length > 0)){
+    $scope.isLogged = true;
+    //if(userData && (Object.keys(userData).length > 0)){
         $scope.isprayer = false;
-        $scope.isLogged = true;
+      //  $scope.isLogged = true;
         var dataID = {prayerID:prayerID}
 
 
