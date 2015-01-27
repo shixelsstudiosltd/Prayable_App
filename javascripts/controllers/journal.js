@@ -4,7 +4,7 @@ sampleApp.controller('journal',function($rootScope,$scope,$location,$http){
         $scope.$apply();
     };
 
-    $scope.isLogged = false
+    $scope.isLogged = true
     $scope.isJournal = false
     $scope.showSearch = false;
     $scope.error = '';

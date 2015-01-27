@@ -150,7 +150,7 @@
                             $templateCache.put(options.template, template);
 
                             if (options.showClose) {
-                                template += '<div class="ngdialog-close"></div>';
+                                //template += '<div class="ngdialog-close"></div>';
                             }
 
                             self.$result = $dialog = $el('<div id="ngdialog' + globalID + '" class="ngdialog"></div>');

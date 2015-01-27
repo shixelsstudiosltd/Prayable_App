@@ -9191,7 +9191,7 @@ Primary use:	Page Used for Login/Register Styles
   width: 100%; }
   .ngdialog-message .container button {
     color: #fff;
-    margin: 10px 20px; }
+    margin: 10px 20px !important; }
   .ngdialog-message .container h1 {
     margin: 0px;
     font-size: 26px;
