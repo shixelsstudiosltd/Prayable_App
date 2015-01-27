@@ -9189,7 +9189,7 @@ Primary use:	Page Used for Login/Register Styles
   color: #fff;
   border-radius: 5px 5px 0 0;
   width: 100%; }
-  .ngdialog-message .container button.close {
+  .ngdialog-message .container button.close.ngdialog-close {
     color: #fff !important;
     margin: 10px 20px !important; }
   .ngdialog-message .container h1 {
