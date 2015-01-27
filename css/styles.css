@@ -9187,30 +9187,45 @@ Primary use:	Page Used for Login/Register Styles
 .ngdialog-message .container {
   background-color: #4e007f;
   color: #fff;
-  border-radius: 5px 5px 0 0; }
+  border-radius: 5px 5px 0 0;
+  width: 100%; }
   .ngdialog-message .container button {
     color: #fff;
     margin: 10px 20px; }
   .ngdialog-message .container h1 {
     margin: 0px;
-    font-size: 22px;
+    font-size: 26px;
     line-height: 50px;
     font-family: sans-serif; }
 .ngdialog-message .message-box {
-  background-color: #8f6da8;
+  background-color: #68298d;
   border-radius: 0 0 5px 5px;
-  color: #4e007f;
-  padding: 10px; }
+  color: #8f6da8;
+  padding: 10px 20px;
+  text-align: center; }
   .ngdialog-message .message-box h3 {
     margin: 0px 0px 10px 0px;
-    font-size: 16px; }
+    font-size: 22px;
+    text-align: left; }
   .ngdialog-message .message-box ul {
     list-style: none;
     margin: 0px;
     padding: 0px 0px 20px 0px;
-    border-bottom: 1px solid #4e007f; }
+    border-bottom: 1px solid #290440; }
     .ngdialog-message .message-box ul li {
-      font-size: 20px; }
+      font-size: 20px;
+      text-align: left; }
+  .ngdialog-message .message-box button {
+    width: 50%;
+    padding: 10px 0;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #8a47b2;
+    color: #fff;
+    border: none;
+    margin-top: 20px; }
+  .ngdialog-message .message-box button:hover {
+    background-color: #4e007f; }
 
 html, body {
   width: 100%;

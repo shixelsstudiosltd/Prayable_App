@@ -1,13 +1,14 @@
 <div class="ngdialog-message">
 	<button type="button" class="close ngdialog-close" ng-click="saveSelection('j')"></button>
 	<div class="container">
-	    <h1>Share Journal</h1>
+	    <h1><img src="img/share-icon.png"> Share Journal</h1>
 	</div>
 	<div class="message-box">
 		<h3>Share to your Journal: </h3>
 	    <ul>
 	        <!-- I left the translation out because this list will be populated -->
 	        <li ng-repeat="journal in journalList"><input type="checkbox" name="selectedJournals[]" value="{{journal._id}}" ng-click="toggleSelection(journal._id,'j')" ng-checked="jselection.indexOf(journal._id) > -1" > {{journal.title}}</li>
+	        <li><input type="checkbox" /> Daily Prayers</li>
 	    </ul>
 	    <button type="button" onclick="alert('Journal Shared');">SHARE</button>
 	</div>
