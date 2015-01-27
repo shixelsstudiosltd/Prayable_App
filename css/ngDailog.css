@@ -78,11 +78,11 @@
 }
 
 .ngdialog-content {
-    background: white;
+    background: transparent;
     -webkit-backface-visibility: hidden;
     -webkit-animation: ngdialog-fadein 0.5s;
     animation: ngdialog-fadein 0.5s;
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     margin-top: 5%;
 }

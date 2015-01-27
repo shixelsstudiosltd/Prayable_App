@@ -1,5 +1,5 @@
 sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog,$http){
-    $scope.isLogged = false
+    $scope.isLogged = true
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     if(userData && (Object.keys(userData).length > 0)){
         $scope.isLogged = true
