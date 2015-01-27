@@ -1,6 +1,6 @@
 sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog,$http){
     $scope.isLogged = false;
-    //var userData =  JSON.parse(sessionStorage.getItem('userData'));
+    var userData =  JSON.parse(sessionStorage.getItem('userData'));
     if(userData && (Object.keys(userData).length > 0)){
         $scope.isLogged = true;
         $scope.prayerInfo = {
@@ -18,7 +18,7 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
 
         $scope.savePrayer =function(){
             //console.log('clicked')
-            console.log($scope.prayerInfo)
+            console.log($scope.prayerInfo);
             var data = {key:'R',prayerData:$scope.prayerInfo}
             if($scope.prayerInfo.prayer_text.length > 10){
                 $.ajax({
@@ -33,10 +33,10 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
                         // this callback will be called asynchronously
                         // when the response is available
                         if(data.code == 400){
-                            alert(data.msg)
+                            alert(data.msg);
                         }else{
-                            console.log(data.id)
-                            alert('Prayer is Created')
+                            console.log(data.id);
+                            alert('Prayer is Created');
                            /* $scope.go('/');
                             if(!$scope.$$phase) $scope.$apply();*/
                         }
@@ -45,14 +45,14 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
                         //console.log(textstatus)
                     }).error(function(data, textstatus) {
 
-                        console.log(data)
-                        console.log(textstatus)
+                        console.log(data);
+                        console.log(textstatus);
                         // called asynchronously if an error occurs
                         // or server returns response with an error status.
                     });
 
             }else{
-                console.log('Prayer Should be greater than 10 characters')
+                console.log('Prayer Should be greater than 10 characters');
             }
 
         }
@@ -65,7 +65,7 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
                 url:"http://prayable-21641.onmodulus.net/allGroup",
                 data:data,
                 crossDomain: true,
-                dataType: "json"
+                dataType: "json";
             }).success(function(data, textstatus) {
                     // this callback will be called asynchronously
                     // when the response is available
@@ -74,14 +74,14 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
                     ngDialog.open({
                         template: './partials/groups_popup.html',
                         className: 'group_popup',
-                        scope: $scope
+                        scope: $scope;
                     });
 
                     // console.log(textstatus)
                 }).error(function(data, textstatus) {
 
                     //console.log(data)
-                    console.log(textstatus)
+                    console.log(textstatus);
                     // called asynchronously if an error occurs
                     // or server returns response with an error status.
                 });
@@ -91,41 +91,41 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
         $scope.toggleSelection = function toggleSelection(selectionID,key) {
             var tempData;
             if(key == 'g'){
-                tempData = $scope.gselection
+                tempData = $scope.gselection;
             }else if(key == 'j'){
-                tempData=$scope.jselection
+                tempData=$scope.jselection;
             }
             var idx = tempData.indexOf(selectionID);
 
             // is currently selected
             if (idx > -1) {
                 tempData.splice(idx, 1);
-                trasferData(tempData,key)
+                trasferData(tempData,key);
             }
 
             // is newly selected
             else {
                 tempData.push(selectionID);
-                trasferData(tempData,key)
+                trasferData(tempData,key);
             }
 
         };
 
         function trasferData(tempData,key){
             if(key =='g'){
-                $scope.gselection = tempData
+                $scope.gselection = tempData;
             }else if(key == 'j'){
-                $scope.jselection= tempData
+                $scope.jselection= tempData;
             }
         }
 
         $scope.saveSelection = function(key){
             if(key == 'g'){
-                $scope.prayerInfo.group_id = $scope.gselection
+                $scope.prayerInfo.group_id = $scope.gselection;
             }else if(key == 'j'){
-                $scope.prayerInfo.journal_id = $scope.jselection
+                $scope.prayerInfo.journal_id = $scope.jselection;
             }
-            //console.log($scope.prayerInfo)
+            //console.log($scope.prayerInfo);
         }
 
 
@@ -138,7 +138,7 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
                 url:"http://prayable-21641.onmodulus.net/allJournal",
                 data:data,
                 crossDomain: true,
-                dataType: "json"
+                dataType: "json";
             }).success(function(data, textstatus) {
                     // this callback will be called asynchronously
                     // when the response is available
@@ -147,14 +147,14 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
                     ngDialog.open({
                         template: './partials/journal_popup.html',
                         className: 'journal_popup',
-                        scope: $scope
+                        scope: $scope;
                     });
 
                     // console.log(textstatus)
                 }).error(function(data, textstatus) {
 
                     //console.log(data)
-                    console.log(textstatus)
+                    console.log(textstatus);
                     // called asynchronously if an error occurs
                     // or server returns response with an error status.
                 });
@@ -163,7 +163,7 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
             ngDialog.open({
                 template: './partials/message_popup.html',
                 className: 'message_popup',
-                scope: $scope
+                scope: $scope;
             });
         }
         $scope.selectfeed =function(){
