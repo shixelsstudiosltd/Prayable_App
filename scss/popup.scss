@@ -5,8 +5,8 @@
 		border-radius: 5px 5px 0 0;
 		width: 100%;
 
-		.close button {
-			color: $white;
+		button.close {
+			color: $white!important;
 			margin: 10px 20px!important;
 		}
 
