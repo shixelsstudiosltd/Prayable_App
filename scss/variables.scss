@@ -87,6 +87,12 @@ $share-purple-btn: #8a47b2;
 	background-position: bottom;
 }
 
+.bg-prayer-gradient {
+	background: url('../img/add_prayer_bg_gradient.jpg') repeat-x left;
+	background-size: cover;
+	position: absolute;
+}
+
 .bg-gradient {
 	height: 100%;
 	width: 100%;
