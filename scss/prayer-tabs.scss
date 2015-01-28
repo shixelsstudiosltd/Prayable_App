@@ -1,0 +1,41 @@
+.add-prayer-body-container {
+	//padding: 0 30px;
+	.addPrayer {
+		ul {
+		    list-style: none;
+		    padding: 0;
+		    margin: 0;
+			li {
+			    float: left;
+			    border-bottom-width: 0;
+			    text-transform: uppercase;
+				font-size: 18px;
+			    background-color: $add-pray-tab-purple-bg;
+			    color: $white;
+			    text-align: center;
+			    width: 50%;
+			    line-height: 35px;
+			}
+		}
+		.active {
+		    background-color: $add-pray-active-purple;
+		    color: $light-purple;
+		}
+		.mainView {
+			clear: both;
+			margin: 0 30px;
+			padding-top: 20px;
+			
+			textarea {
+				width: 100%;
+				height: 120px;
+				border: 1px solid $add-pray-tab-purple-bg;
+				background-color: transparent;
+				border-radius: 5px;
+				color: $light-purple;
+				padding: 10px;
+				resize: none;
+			}
+		}
+	}
+}

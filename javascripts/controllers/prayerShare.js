@@ -1,5 +1,5 @@
 sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog,$http){
-    $scope.isLogged = false;
+    $scope.isLogged = true;
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     if(userData && (Object.keys(userData).length > 0)){
         $scope.isLogged = true;
@@ -175,6 +175,21 @@ sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog
         }
         $scope.twitShare =function(){
             $scope.prayerInfo.twitShare = true;
+        }
+        $scope.tabs = [{
+                title: 'To Followers',
+                url: 'followers.tpl.html'
+            }, {
+                title: 'Direct',
+                url: 'direct.tpl.html'
+            }
+        ];
+        $scope.currentTab = 'followers.tpl.html';
+        $scope.onClickTab = function(tab){
+            $scope.currentTab = tab.url;
+        }
+        $scope.isActiveTab = function(tabUrl){
+            return tabUrl == $scope.currentTab;
         }
     }else{
         $location.path('/')
