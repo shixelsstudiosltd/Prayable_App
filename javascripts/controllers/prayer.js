@@ -1,12 +1,14 @@
 sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
 
-   // var userData =  JSON.parse(sessionStorage.getItem('userData'));
+    var userData =  JSON.parse(sessionStorage.getItem('userData'));
     var Url = $location.$$path;
     var prayerID = Url.substr(8,Url.length);
-    $scope.isLogged = true;
-    //if(userData && (Object.keys(userData).length > 0)){
+    $scope.isLogged = false;
+    $scope.showComments = false;
+
+    if(userData && (Object.keys(userData).length > 0)){
         $scope.isprayer = false;
-      //  $scope.isLogged = true;
+        $scope.isLogged = true;
         var dataID = {prayerID:prayerID}
 
 
@@ -14,13 +16,13 @@ sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
         $http({
             method:"POST",
             //contentType: 'application/json',
-            //url:"http://localhost:3000/getOnPrayer",
-            url:"http://prayable-21641.onmodulus.net/getOnPrayer",
+            url:"http://localhost:3000/getOnPrayer",
+            //url:"http://prayable-21641.onmodulus.net/getOnPrayer",
             data:dataID,
             crossDomain: true,
             dataType: "json"
         }).success(function(data, textstatus) {
-//console.log(data)
+console.log(data)
                 // this callback will be called asynchronously
                 // when the response is available
                 if(data){
@@ -102,6 +104,10 @@ sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
                 });
         }
 
+
+        $scope.showComment = function(){
+            $scope.showComments = true
+        }
 
     }else{
         $location.path('/')

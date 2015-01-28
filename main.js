@@ -1,5 +1,8 @@
 var sampleApp = angular.module("myApp",['ngCookies','pascalprecht.translate','facebook.services','ngDialog','flow','btford.socket-io'])
-    .config(['$routeProvider',function($routeProvider){
+    .config(['$routeProvider','$httpProvider',function($routeProvider,$httpProvider){
+
+        $httpProvider.defaults.useXDomain = false;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
         $routeProvider
             .when('/',{

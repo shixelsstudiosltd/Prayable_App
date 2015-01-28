@@ -81,12 +81,12 @@
                         <div class="prayer-menu-links">
                               <div class="row clearfix">
                                     <button class="pull-left prayer-button pleft">Next Prayer</button>
-                                    <button class="pull-right prayer-button pright">Read Comments</button>
+                                    <button class="pull-right prayer-button pright" ng-click="showComment()">Read Comments</button>
                               </div>
                         </div>
                   </div>
 
-                    <div class="comment-row">
+                    <div class="comment-row" ng-show="showComments" ng-repeat="comment in prayerData.comments">
                     <div class="row prayer-comment-container">
                       <div class="user-comment-container">
                         <div class="user-comment-photo">
