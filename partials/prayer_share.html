@@ -16,16 +16,19 @@
 						<li ng-repeat="tab in tabs"
 							ng-class="{active:isActiveTab(tab.url)}"
 							ng-click="onClickTab(tab)">{{tab.title}}</li>
-							<!--li>Desmond</li-->
+							<!--li class="active">To Followers</li>
+							<li>Direct</li-->
 					</ul>
 					<div class="mainView">
-						<div ng-include="currentTab"></div>
+						<div ng-include="currentTab">
+						</div>
 					</div>
 				</div>
 
 				<script type="text/ng-template" id="followers.tpl.html">
 					<div id="viewFollowers">
-						<p>The design flow for followers goes here</p>
+							<textarea>Write Your Prayer...</textarea>
+							<label><input type="" /></label>
 					</div>
 				</script>
 

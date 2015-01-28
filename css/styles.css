@@ -9232,27 +9232,36 @@ Primary use:	Page Used for Login/Register Styles
   .ngdialog-message .message-box button:hover {
     background-color: #4e007f; }
 
-.add-prayer-body-container {
-  padding: 0 30px; }
-  .add-prayer-body-container .addPrayer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-  .add-prayer-body-container .addPrayer li {
+.add-prayer-body-container .addPrayer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .add-prayer-body-container .addPrayer ul li {
     float: left;
-    border: 1px solid #000;
     border-bottom-width: 0;
-    margin: 3px 3px 0px 3px;
-    padding: 5px 5px 0px 5px;
-    background-color: #CCC;
-    color: #696969; }
-  .add-prayer-body-container .mainView {
-    border: 1px solid black;
-    clear: both;
-    padding: 0 1em; }
-  .add-prayer-body-container .active {
-    background-color: #FFF;
-    color: #000; }
+    text-transform: uppercase;
+    font-size: 18px;
+    background-color: #77389c;
+    color: #fff;
+    text-align: center;
+    width: 50%;
+    line-height: 35px; }
+.add-prayer-body-container .addPrayer .active {
+  background-color: #8a47b2;
+  color: #8f6da8; }
+.add-prayer-body-container .addPrayer .mainView {
+  clear: both;
+  margin: 0 30px;
+  padding-top: 20px; }
+  .add-prayer-body-container .addPrayer .mainView textarea {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #77389c;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #8f6da8;
+    padding: 10px;
+    resize: none; }
 
 html, body {
   width: 100%;
