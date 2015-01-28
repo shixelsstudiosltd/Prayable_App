@@ -1,4 +1,5 @@
 sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog,$http){
+    $("[name='my-checkbox']").bootstrapSwitch();
     $scope.isLogged = true;
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
     if(userData && (Object.keys(userData).length > 0)){
