@@ -1,11 +1,10 @@
 sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
 
-    var userData =  JSON.parse(sessionStorage.getItem('userData'));
+   var userData =  JSON.parse(sessionStorage.getItem('userData'));
     var Url = $location.$$path;
     var prayerID = Url.substr(8,Url.length);
     $scope.isLogged = false;
     $scope.showComments = false;
-
     if(userData && (Object.keys(userData).length > 0)){
         $scope.isprayer = false;
         $scope.isLogged = true;
@@ -22,7 +21,7 @@ sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
             crossDomain: true,
             dataType: "json"
         }).success(function(data, textstatus) {
-console.log(data)
+//console.log(data)
                 // this callback will be called asynchronously
                 // when the response is available
                 if(data){
