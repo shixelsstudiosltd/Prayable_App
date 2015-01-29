@@ -5419,9 +5419,8 @@ button.close {
   display: inline-block;
   direction: ltr;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 20px;
   border: 1px solid;
-  border-color: #cccccc;
   position: relative;
   text-align: left;
   overflow: hidden;
@@ -5438,7 +5437,7 @@ button.close {
 .bootstrap-switch .bootstrap-switch-container {
   display: inline-block;
   top: 0;
-  border-radius: 4px;
+  border-radius: 20px;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 

@@ -1,6 +1,6 @@
 sampleApp.controller('prayerShare',function($rootScope,$scope,$location,ngDialog,$http){
     $scope.isLogged = true;
-
+    //function call to style share button
     $("[name='my-checkbox']").bootstrapSwitch();
 
     var userData =  JSON.parse(sessionStorage.getItem('userData'));
