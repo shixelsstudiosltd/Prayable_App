@@ -9,9 +9,7 @@ sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
         $scope.isprayer = false;
         $scope.isLogged = true;
         var dataID = {prayerID:prayerID}
-
-
-
+        $scope.commentData = {};
         $http({
             method:"POST",
             //contentType: 'application/json',
@@ -21,7 +19,7 @@ sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
             crossDomain: true,
             dataType: "json"
         }).success(function(data, textstatus) {
-//console.log(data)
+console.log(data)
                 // this callback will be called asynchronously
                 // when the response is available
                 if(data){
@@ -107,6 +105,40 @@ sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
         $scope.showComment = function(){
             $scope.showComments = true
         }
+
+        $scope.makeComment = function(){
+           $scope.commentData.userID = userData._id
+           $scope.commentData.prayerID =  $scope.prayerData.prayerInfo._id
+
+            $http({
+                method:"POST",
+                //contentType: 'application/json',
+                //url:"http://localhost:3000/saveComment",
+                url:"http://prayable-21641.onmodulus.net/saveComment",
+                data: {commentData:$scope.commentData},
+                crossDomain: true,
+                dataType: "json"
+            }).success(function(data, textstatus) {
+
+                if(data.status == 400){
+                    console.log(data.msg)
+                }else if(data.status == 200){
+                    $scope.prayerData.comments.push({commentInfo:data.data.commentInfo,userInfo:{_id:userData._id,firstName:userData.firstName,lastName:userData.lastName}})
+                }
+
+
+            }).error(function(data, textstatus) {
+
+                //console.log(data)
+
+            });
+        }
+        $scope.clearComment = function(){
+            $('.commentBox').val('')
+
+        }
+
+
 
     }else{
         $location.path('/')

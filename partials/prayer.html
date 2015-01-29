@@ -113,9 +113,9 @@
                     </div>
                   </div>
                   <form class="container user-comment-form" id="comment-form">
-                    <textarea id="prayer_comment">Add your comment...</textarea> 
-                    <button type="button" onclick="alert(document.getElementById('prayer_comment').value);">Post Comment</button><br />
-                    <button type="cancel">Cancel</button>
+                    <textarea id="prayer_comment" class="commentBox" ng-model="commentData.commentText">Add your comment...</textarea>
+                    <button type="button" ng-click="makeComment()">Post Comment</button><br />
+                    <button type="cancel" ng-click="clearComment()">Cancel</button>
                   </form>
                   </div>
                   
