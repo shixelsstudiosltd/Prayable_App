@@ -15,8 +15,8 @@ sampleApp.controller('prayer',function($rootScope,$scope,$location,$http){
         $http({
             method:"POST",
             //contentType: 'application/json',
-            url:"http://localhost:3000/getOnPrayer",
-            //url:"http://prayable-21641.onmodulus.net/getOnPrayer",
+            //url:"http://localhost:3000/getOnPrayer",
+            url:"http://prayable-21641.onmodulus.net/getOnPrayer",
             data:dataID,
             crossDomain: true,
             dataType: "json"
