@@ -107,6 +107,9 @@ input[type="submit"] {
   margin-bottom: 22.5px;
   border: 2px solid rgba(255, 255, 255, 0.7); }
 
+.clear {
+  clear: both; }
+
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -5420,7 +5423,6 @@ button.close {
   direction: ltr;
   cursor: pointer;
   border-radius: 20px;
-  border: 1px solid;
   position: relative;
   text-align: left;
   overflow: hidden;
@@ -5461,8 +5463,8 @@ button.close {
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
-  color: #fff;
-  background: #428bca; }
+  color: rgba(255, 255, 255, 0.7);
+  background: #d693fe; }
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-info,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-info {
@@ -5486,16 +5488,15 @@ button.close {
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
-  color: #000;
-  background: #eeeeee; }
+  color: #8a47b2;
+  background: #d693fe; }
 
 .bootstrap-switch .bootstrap-switch-label {
   text-align: center;
   margin-top: -1px;
   margin-bottom: -1px;
   z-index: 100;
-  color: #333333;
-  background: #ffffff; }
+  background: #77389c; }
 
 .bootstrap-switch .bootstrap-switch-handle-on {
   border-bottom-left-radius: 3px;
@@ -5574,7 +5575,6 @@ button.close {
   border-top-left-radius: 3px; }
 
 .bootstrap-switch.bootstrap-switch-focused {
-  border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
@@ -9426,36 +9426,104 @@ Primary use:	Page Used for Login/Register Styles
   .ngdialog-message .message-box button:hover {
     background-color: #4e007f; }
 
-.add-prayer-body-container .addPrayer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0; }
-  .add-prayer-body-container .addPrayer ul li {
-    float: left;
-    border-bottom-width: 0;
-    text-transform: uppercase;
-    font-size: 18px;
-    background-color: #77389c;
-    color: #fff;
-    text-align: center;
-    width: 50%;
-    line-height: 35px; }
-.add-prayer-body-container .addPrayer .active {
-  background-color: #8a47b2;
-  color: #8f6da8; }
-.add-prayer-body-container .addPrayer .mainView {
-  clear: both;
-  margin: 0 30px;
-  padding-top: 20px; }
-  .add-prayer-body-container .addPrayer .mainView textarea {
-    width: 100%;
-    height: 120px;
-    border: 1px solid #77389c;
-    background-color: transparent;
-    border-radius: 5px;
-    color: #8f6da8;
-    padding: 10px;
-    resize: none; }
+.add-prayer-body-container {
+  -webkit-font-smoothing: antialiased; }
+  .add-prayer-body-container .addPrayer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .add-prayer-body-container .addPrayer ul li {
+      float: left;
+      border-bottom-width: 0;
+      text-transform: uppercase;
+      font-size: 18px;
+      background-color: #77389c;
+      color: #fff;
+      text-align: center;
+      width: 50%;
+      line-height: 35px; }
+  .add-prayer-body-container .addPrayer .active {
+    background-color: #8a47b2;
+    color: #8f6da8; }
+  .add-prayer-body-container .addPrayer .mainView {
+    clear: both;
+    margin: 0 30px;
+    padding-top: 20px;
+    color: #8f6da8; }
+    .add-prayer-body-container .addPrayer .mainView textarea {
+      width: 100%;
+      height: 120px;
+      border: 1px solid #77389c;
+      background-color: transparent;
+      border-radius: 5px;
+      text-indent: 10px;
+      resize: none; }
+    .add-prayer-body-container .addPrayer .mainView input {
+      border: 1px solid #77389c;
+      text-indent: 10px;
+      margin-bottom: 8px;
+      border-radius: 5px;
+      height: 30px; }
+    .add-prayer-body-container .addPrayer .mainView .share-label {
+      width: 100%;
+      text-align: right; }
+    .add-prayer-body-container .addPrayer .mainView .label-wrap {
+      width: 100%;
+      border-bottom: 1px solid #77389c;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      font-size: 18px; }
+    .add-prayer-body-container .addPrayer .mainView .tag-output {
+      margin-bottom: 15px; }
+      .add-prayer-body-container .addPrayer .mainView .tag-output span {
+        background-color: #8a47b2;
+        color: #fff;
+        display: block;
+        float: left;
+        font-size: smaller;
+        margin: 0 9px 9px 0;
+        text-indent: 5px;
+        border-radius: 5px; }
+      .add-prayer-body-container .addPrayer .mainView .tag-output button {
+        background-color: #77389c;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        color: #8f6da8;
+        margin-left: 10px; }
+    .add-prayer-body-container .addPrayer .mainView .rows {
+      width: 100%;
+      margin-bottom: 20px; }
+    .add-prayer-body-container .addPrayer .mainView .sgroup, .add-prayer-body-container .addPrayer .mainView .smedia {
+      background-color: #8a47b2;
+      color: #8f6da8;
+      float: left;
+      width: 48%;
+      margin-right: 4%;
+      border-radius: 5px;
+      text-indent: 5px;
+      line-height: 38px; }
+      .add-prayer-body-container .addPrayer .mainView .sgroup p, .add-prayer-body-container .addPrayer .mainView .smedia p {
+        margin: 0px;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold; }
+      .add-prayer-body-container .addPrayer .mainView .sgroup img, .add-prayer-body-container .addPrayer .mainView .smedia img {
+        float: left;
+        padding: 5px;
+        background-color: #77389c;
+        border-radius: 5px 0 0 5px; }
+    .add-prayer-body-container .addPrayer .mainView .last {
+      margin-right: 0px; }
+    .add-prayer-body-container .addPrayer .mainView .settings {
+      width: 100%;
+      text-align: center;
+      background-color: #77389c;
+      border-radius: 5px;
+      cursor: pointer; }
+      .add-prayer-body-container .addPrayer .mainView .settings h4 {
+        line-height: 35px;
+        color: #fff; }
 
 html, body {
   width: 100%;

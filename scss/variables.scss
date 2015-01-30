@@ -37,8 +37,7 @@ $online: #B6FF00;
 $offline: #0e5b27;
 $share-purple-bd: #68298d;
 $share-purple-btn: #8a47b2;
-$add-pray-active-purple: #8a47b2;
-$add-pray-tab-purple-bg: #77389c;
+$share-btn: #77389c;
 
 
 /*------------------------------*\
@@ -130,4 +129,8 @@ input[type="submit"] {
 	border-radius: 3px;
 	margin-bottom: 22.5px;
 	border: 2px solid $white-t;
+}
+
+.clear {
+	clear: both;
 }

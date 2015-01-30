@@ -1,5 +1,5 @@
 .add-prayer-body-container {
-	//padding: 0 30px;
+	-webkit-font-smoothing: antialiased;
 	.addPrayer {
 		ul {
 		    list-style: none;
@@ -10,7 +10,7 @@
 			    border-bottom-width: 0;
 			    text-transform: uppercase;
 				font-size: 18px;
-			    background-color: $add-pray-tab-purple-bg;
+			    background-color: $share-btn;
 			    color: $white;
 			    text-align: center;
 			    width: 50%;
@@ -18,23 +18,101 @@
 			}
 		}
 		.active {
-		    background-color: $add-pray-active-purple;
+		    background-color: $share-purple-btn;
 		    color: $light-purple;
 		}
 		.mainView {
 			clear: both;
 			margin: 0 30px;
 			padding-top: 20px;
-			
+			color: $light-purple;
 			textarea {
 				width: 100%;
 				height: 120px;
-				border: 1px solid $add-pray-tab-purple-bg;
+				border: 1px solid $share-btn;
 				background-color: transparent;
 				border-radius: 5px;
-				color: $light-purple;
-				padding: 10px;
+				text-indent: 10px;
 				resize: none;
+			}
+			input {
+				border: 1px solid $share-btn;
+				text-indent: 10px;
+				margin-bottom: 8px;
+				border-radius: 5px;
+				height: 30px;
+			}
+			.share-label {
+				width: 100%;
+				text-align: right;
+			}
+			.label-wrap {
+				width: 100%;
+				border-bottom: 1px solid $share-btn;
+				padding-bottom: 5px;
+				margin-bottom: 15px;
+				font-size: 18px;
+			}
+			.tag-output {
+				margin-bottom: 15px;
+				span {
+					background-color: $share-purple-btn;
+					color: $white;
+					display: block;
+					float: left;
+					font-size: smaller;
+					margin: 0 9px 9px 0;
+					text-indent: 5px;
+					border-radius: 5px;
+				}
+				button {
+					background-color: $share-btn;
+					border: none;
+					border-radius: 0 5px 5px 0;
+		    		color: $light-purple;
+					margin-left: 10px;
+				}
+			}
+			.rows {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			.sgroup, .smedia {
+				background-color: $share-purple-btn;
+		    	color: $light-purple;
+				float: left;
+				width: 48%;
+				margin-right: 4%;
+				border-radius: 5px;
+				text-indent: 5px;
+				line-height: 38px;
+				p {
+					margin: 0px;
+					font-size: 16px;
+					text-transform: uppercase;
+					text-align: center;
+					font-weight: bold;
+				}
+				img {
+					float: left;
+					padding: 5px;
+					background-color: $share-btn;
+					border-radius: 5px 0 0 5px;
+				}
+			}
+			.last {
+				margin-right: 0px;
+			}
+			.settings {
+				width: 100%;
+				text-align: center;
+				background-color: $share-btn;
+				border-radius: 5px;
+				cursor: pointer;
+				h4 {
+					line-height: 35px;
+					color: $white;
+				}
 			}
 		}
 	}
