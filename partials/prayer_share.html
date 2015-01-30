@@ -13,55 +13,55 @@
 			<div class="addPrayer">
 				<div id="tabs" ng-controller="prayerShare">
 					<ul>
-						<!--li ng-repeat="tab in tabs"
+						<li ng-repeat="tab in tabs"
 							ng-class="{active:isActiveTab(tab.url)}"
-							ng-click="onClickTab(tab)">{{tab.title}}</li-->
-							<li class="active">To Followers</li>
-							<li>Direct</li>
+							ng-click="onClickTab(tab)">{{tab.title}}</li>
+							<!--li class="active">To Followers</li>
+							<li>Direct</li-->
 					</ul>
 					<div class="mainView">
 						<div ng-include="currentTab">
-							<textarea placeholder="Write Your Prayer..."></textarea>
-							<label class="share-label">Share Location: <input type="checkbox" name="my-checkbox" checked data-size="mini"></label>
-							<label class="label-wrap"><img src="img/add_ppl.png" width="20" /> Tag People:</label>
-							<input type="text" id="share_tag" placeholder="Start typing a name to tag..." name="check" ng-model="prayerInfo.gps_enabled" />
-							<div class="tag-output">
-								<span>Penelope Cruz <button type="button">X</button></span> 
-								<span>Angelica <button type="button">X</button></span> 
-								<span>Jack Sparrow <button type="button">X</button></span>
-								<div class="clear"></div>
-							</div>
-
-							<label class="label-wrap"><img src="img/add_prayer.png" width="20" /> Add Prayer To:</label>
-							<div class="rows">
-								<div class="sgroup" ng-click="selectGrp()">
-									<img src="img/share-group-icon.png" /> <p>Groups</p>
-								</div>
-								<div class="sgroup last" ng-click="selectjrl()">
-									<img src="img/share-journal-icon.png" /><p>Journal</p>
-								</div>
-								<div class="clear"></div>
-							</div>
-
-							<label class="label-wrap"><img src="img/share-btn-purple.png" width="20" /> Share To:</label>
-							<div class="rows">
-								<div class="media-facebook smedia">
-									<img src="img/fb-icon.png" /><p ng-click="fbShare()">Facebook</p>
-								</div>
-								<div class="media-twitter smedia last">
-									<img src="img/tw-icon.png" /><p ng-click="twitShare()">Twitter</p>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="settings-submit settings" ng-click="savePrayer()">
-								<h4>Add Prayer</h4>
-							</div>
 						</div>
 					</div>
 				</div>
 
 				<script type="text/ng-template" id="followers.tpl.html">
 					<div id="viewFollowers">
+						<textarea placeholder="Write Your Prayer..."></textarea>
+						<label class="share-label">Share Location: <input type="checkbox" name="my-checkbox" checked data-size="mini"></label>
+						<label class="label-wrap"><img src="img/add_ppl.png" width="20" /> Tag People:</label>
+						<input type="text" id="share_tag" placeholder="Start typing a name to tag..." name="check" ng-model="prayerInfo.gps_enabled" />
+						<div class="tag-output">
+							<span>Penelope Cruz <button type="button">X</button></span> 
+							<span>Angelica <button type="button">X</button></span> 
+							<span>Jack Sparrow <button type="button">X</button></span>
+							<div class="clear"></div>
+						</div>
+
+						<label class="label-wrap"><img src="img/add_prayer.png" width="20" /> Add Prayer To:</label>
+						<div class="rows">
+							<div class="sgroup" ng-click="selectGrp()">
+								<img src="img/share-group-icon.png" /> <p>Groups</p>
+							</div>
+							<div class="sgroup last" ng-click="selectjrl()">
+								<img src="img/share-journal-icon.png" /><p>Journal</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<label class="label-wrap"><img src="img/share-btn-purple.png" width="20" /> Share To:</label>
+						<div class="rows">
+							<div class="media-facebook smedia">
+								<img src="img/fb-icon.png" /><p ng-click="fbShare()">Facebook</p>
+							</div>
+							<div class="media-twitter smedia last">
+								<img src="img/tw-icon.png" /><p ng-click="twitShare()">Twitter</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="settings-submit settings" ng-click="savePrayer()">
+							<h4>Add Prayer</h4>
+						</div>
 					</div>
 				</script>
 
