@@ -9393,7 +9393,7 @@ Primary use:	Page Used for Login/Register Styles
     margin: 10px; }
   .ngdialog-message .container h1 {
     margin: 0px;
-    font-size: 26px;
+    font-size: 22px;
     line-height: 50px;
     font-family: sans-serif; }
 .ngdialog-message .message-box {
@@ -9404,7 +9404,7 @@ Primary use:	Page Used for Login/Register Styles
   text-align: center; }
   .ngdialog-message .message-box h3 {
     margin: 0px 0px 10px 0px;
-    font-size: 22px;
+    font-size: 18px;
     text-align: left; }
   .ngdialog-message .message-box ul {
     list-style: none;
@@ -9412,7 +9412,7 @@ Primary use:	Page Used for Login/Register Styles
     padding: 0px 0px 20px 0px;
     border-bottom: 1px solid #290440; }
     .ngdialog-message .message-box ul li {
-      font-size: 20px;
+      font-size: 16px;
       text-align: left; }
   .ngdialog-message .message-box button {
     width: 50%;
