@@ -70,7 +70,7 @@
                                           <span class="prayer-share-counter">41</span>
                                     </div>
                               </div>
-                              <div class="col-xs-2 counter-container-column"  ng-click="createStar(prayerData.prayerInfo._id)">
+                              <div class="col-xs-2 counter-container-column"  ng-click="createStar(prayerData.prayerInfo._id,'P','')">
                                     <div class="prayer-favorites counter-container">
                                           <i class="fa fa-star"></i>
                                           <span class="prayer-favorites-counter">{{prayerData.likeCount}}</span>
@@ -87,7 +87,7 @@
                   </div>
                     <div class="comment-row" ng-show="showComments" ng-repeat="comment in prayerData.comments">
                     <div class="row prayer-comment-container">
-                      <div class="user-comment-container">
+                      <div class="user-comment-container" ng-click="goToProfile(comment.userInfo._id)">
                         <div class="user-comment-photo">
                           <div></div>
                         </div>
@@ -98,8 +98,8 @@
                       </div>
                       <div class="user-comment-like-container">
                         <div class="user-likes">
-                          <i class="fa fa-thumbs-o-up"></i>
-                          <span class="user-like-count">10</span>
+                          <i class="fa fa-thumbs-o-up" ng-click="createStar(comment.commentInfo._id,'C',comment.userInfo._id)"></i>
+                          <span class="user-like-count" ng-click="listOfLiker()">{{comment.LikeCount}}</span>
                         </div>
                         <div class="user-dislikes">
                           <i class="fa fa-thumbs-o-down"></i>

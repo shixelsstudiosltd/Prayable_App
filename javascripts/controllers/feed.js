@@ -32,7 +32,7 @@ sampleApp.controller('feed',function($rootScope,$scope,$location,$http){
         })
 
         $scope.createStar = function(payerID){
-            var data ={prayerID:payerID, userID:userData._id}
+            var data ={prayerID:payerID, userID:userData._id,key:"P"}
             $http({
                 method:"POST",
                 //contentType: 'application/json',

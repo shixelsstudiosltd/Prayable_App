@@ -57,40 +57,77 @@ console.log(data)
                 // or server returns response with an error status.
             });
 
-        $scope.createStar = function(payerID){
-            var data ={prayerID:payerID, userID:userData._id}
+        $scope.createStar = function(ID,key,commenterID){
+            var comData
+            if(key == 'C'){
+                 comData = {prayerID:prayerID,commentID:ID,userID:userData._id,key:key,commenterID:commenterID}
+            }else{
+                comData ={prayerID:ID, userID:userData._id,key:key}
+            }
+
+
             $http({
                 method:"POST",
                 //contentType: 'application/json',
                 //url:"http://localhost:3000/saveLike",
                 url:"http://prayable-21641.onmodulus.net/saveLike",
-                data:data,
+                data:comData,
                 crossDomain: true,
                 dataType: "json"
             }).success(function(data, textstatus) {
 
-                    // this callback will be called asynchronously
-                    // when the response is available
-                    //console.log(data)
+               // if(key == 'C'){
+                    console.log(data)
+                //}else{
+
                     if(data.status == 400){
                         //console.log('some error in server please retry')
                     }else if(data.status == 201){
                         //console.log('This prayer is already liked by you')
+                        if(key == 'C'){
+                            var commentIDTemp = data.data.commentID
+                            var commentListTemp = $scope.prayerData.comments
+                            var commentTemp = commentListTemp.filter(function(comment) {
+                                if(commentIDTemp === comment.commentInfo._id){
+                                    comment.LikeCount --;
+                                }  // filter out appropriate one
 
-                        var prayerIDTemp = data.data.prayerID
-                            if(prayerIDTemp === $scope.prayerData.prayerInfo._id){
-                                $scope.prayerData.likeCount --;
+                            });
+                            if((commentTemp)&&(commentTemp.length > 0) ){
+                                $scope.prayerData.comments = commentListTemp
+                            }
+                        }else {
+                            var prayerIDTemp = data.data.prayerID
+                            if (prayerIDTemp === $scope.prayerData.prayerInfo._id) {
+                                $scope.prayerData.likeCount--;
                             }  // filter out appropriate one
+                        }
 
                     }else{//data.status == 200
-                        var prayerIDTemp = data.data.prayerID
+                        if(key == 'C'){
+                            var commentIDTemp = data.data.commentID
+                            var commentListTemp = $scope.prayerData.comments
+                            var commentTemp = commentListTemp.filter(function(comment) {
+                                if(commentIDTemp === comment.commentInfo._id){
+                                    comment.LikeCount ++;
+                                }  // filter out appropriate one
 
+                            });
+                            if((commentTemp)&&(commentTemp.length > 0) ){
+                                $scope.prayerData.comments = commentListTemp
+                            }
+                        }else{
+                            var prayerIDTemp = data.data.prayerID
                             if(prayerIDTemp === $scope.prayerData.prayerInfo._id){
                                 $scope.prayerData.likeCount ++;
                             }  // filter out appropriate one
+                        }
 
-                        //$scope.prayerList.likeCount ++;
                     }
+               // }
+
+
+
                     // $scope.prayerSerachList = data;
                 }).error(function(data, textstatus) {
 
@@ -107,8 +144,9 @@ console.log(data)
         }
 
         $scope.makeComment = function(){
-           $scope.commentData.userID = userData._id
-           $scope.commentData.prayerID =  $scope.prayerData.prayerInfo._id
+           if($scope.commentData.commentText){
+            $scope.commentData.userID = userData._id
+            $scope.commentData.prayerID =  $scope.prayerData.prayerInfo._id
 
             $http({
                 method:"POST",
@@ -132,12 +170,19 @@ console.log(data)
                 //console.log(data)
 
             });
+           }else{
+alert('Please Add some text ')
+           }
         }
         $scope.clearComment = function(){
             $('.commentBox').val('')
-
         }
 
+        $scope.goToProfile = function(profID){
+
+            $location.path('/profile/'+profID)
+            if(!$scope.$$phase) $scope.$apply();
+        }
 
 
     }else{
